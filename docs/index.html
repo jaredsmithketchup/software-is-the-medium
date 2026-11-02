@@ -166,7 +166,7 @@
 <p><strong>Need</strong></p>
 <ul><li>Spreadsheet: formulas are code, cells are data. Same cut.</li><li>The old name, if a programmer asks: von Neumann. A stored program acting on stored state. You do not need the name.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The twist: you choose which is which.</li></ul></div>
+<ul><li>But they are not stuck that way.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the definition they keep.</li><li><strong>Content:</strong> Code is the rules. Data is the values those rules act on. Press jump: the rule is code, the height is data.</li><li><strong>Visual:</strong> two cards, jump example.</li><li><strong>Refs:</strong> <code>ch00</code> §1.</li></ul></div>
   </aside>
 </section>
@@ -174,19 +174,19 @@
 <section data-num="6" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>You choose the line</h2>
-    <ul class="content"><li>Rules can travel as files</li><li>Files can change how the game behaves</li><li>Mods do this</li><li>You choose the line</li></ul>
+    <h2>Code and data can trade places</h2>
+    <ul class="content"><li>A rule can be saved in a file</li><li>A file can change what the game does</li><li>A mod swaps that file and does not recompile the engine</li><li>You decide which is which</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §1.1–1.3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S6</h5><p><strong>Say</strong></p>
-<ul><li>Rules can travel as files. Files can change how the game behaves.</li><li>Mods do this. They swap data. They do not recompile the engine.</li><li>The line is a choice you make, not a law of nature.</li></ul>
+<ul><li>Last slide split them. Code is the rule. Data is the value. Jump is the rule. Height is the value.</li><li>That split is not locked. You can save a rule in a file. You can make a file change what the game does.</li><li>A mod does this. It replaces a data file. Nobody recompiles the engine. The game still changes.</li><li>So you decide: does this live in the program, or in a file someone can edit?</li></ul>
 <p><strong>Need</strong></p>
-<ul><li>Code shipped as data: QuakeC into progs.dat, Quake III .qvm, DOOM 3 idScript, Unreal Blueprints in .uasset files.</li><li>Data that acts: a DOOM WAD holds maps, sprites, sounds, even monster behavior tables. DOOM 3 .decl files. In a table-based engine, the data on a thing decides what it is.</li></ul>
+<ul><li>Code shipped as a data file: QuakeC compiled into progs.dat. Quake III .qvm. DOOM 3 idScript. Unreal Blueprints stored in .uasset.</li><li>Data that changes behavior: a DOOM WAD holds maps, sprites, sounds, and behavior tables. DOOM 3 .decl files.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>So the career question is simple.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the line is a decision, not a law.</li><li><strong>Content:</strong> Rules can travel as files. Files can change how the game behaves. Mods do this. You choose the line.</li><li><strong>Visual:</strong> two cards, arrow both ways.</li><li><strong>Refs:</strong> <code>ch00</code> §1.1–1.3.</li></ul></div>
+<ul><li>That decision is the question you keep.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the boundary is a decision, not a law.</li><li><strong>Content:</strong> A rule can be saved in a file. A file can change what the game does. A mod swaps that file and does not recompile the engine. You decide which is which.</li><li><strong>Visual:</strong> two cards, arrow both ways.</li><li><strong>Refs:</strong> <code>ch00</code> §1.1–1.3.</li></ul></div>
   </aside>
 </section>
 
@@ -211,27 +211,27 @@
 
 <section data-num="8" data-state="act-a" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 3</p>
-    <h2>In, middle, out</h2>
+    <h2>Input, process, output</h2>
 
-    <ul class="divider-claims"><li>Every program has the same shape</li><li>Something in</li><li>Something happens</li><li>Something out</li></ul>
+    <ul class="divider-claims"><li>Every program is input, process, output</li><li>Something comes in</li><li>Code acts on data</li><li>Something goes out</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S8</h5><p><strong>Pace:</strong> section 3, 5 minutes. 15 seconds.</p>
 <p><strong>Say</strong></p>
-<ul><li>Every program has the same shape.</li><li>Something comes in. Something happens. Something goes out.</li></ul>
+<ul><li>Every program is three things: input, process, output.</li><li>Input comes in. Process is code acting on data. Output goes out.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Three boxes. No exceptions.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> give every program a shape.</li><li><strong>Content:</strong> Every program has the same shape. Something in. Something happens. Something out.</li><li><strong>Visual:</strong> three boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
+<ul><li>Same three boxes. No exceptions.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> give every program a shape.</li><li><strong>Content:</strong> Every program is input, process, output. Something comes in. Code acts on data. Something goes out.</li><li><strong>Visual:</strong> three boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="9" data-state="act-a" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>In, middle, out</h2>
-    <div class="diagram-row"><ul class="content"><li>In: keys, files, packets</li><li>Middle: rules acting on values</li><li>Out: pixels, sound, saved files</li><li>Size and speed change</li><li>The shape does not</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+    <h2>Input, process, output</h2>
+    <div class="diagram-row"><ul class="content"><li>Input: keys, files, packets</li><li>Process: code over data</li><li>Output: pixels, sound, saved files</li><li>Scale and speed change</li><li>The shape does not</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="8" y="8" width="112" height="72" rx="12" fill="#075985"/>
-  <text x="64" y="36" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">IN</text>
+  <text x="64" y="36" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
   <text x="64" y="56" font-size="11" fill="#E0F2FE" text-anchor="middle">keys, files</text>
   <text x="64" y="70" font-size="11" fill="#E0F2FE" text-anchor="middle">packets</text>
 
@@ -239,15 +239,15 @@
   <polygon points="142,38 154,44 142,50" fill="#9CA3AF"/>
 
   <rect x="164" y="8" width="112" height="72" rx="12" fill="#312E81"/>
-  <text x="220" y="36" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">MIDDLE</text>
-  <text x="220" y="58" font-size="11" fill="#E0E7FF" text-anchor="middle">rules act</text>
-  <text x="220" y="72" font-size="11" fill="#E0E7FF" text-anchor="middle">on values</text>
+  <text x="220" y="36" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
+  <text x="220" y="58" font-size="11" fill="#E0E7FF" text-anchor="middle">code over</text>
+  <text x="220" y="72" font-size="11" fill="#E0E7FF" text-anchor="middle">data</text>
 
   <line x1="280" y1="44" x2="298" y2="44" stroke="#9CA3AF" stroke-width="2"/>
   <polygon points="298,38 310,44 298,50" fill="#9CA3AF"/>
 
   <rect x="320" y="8" width="112" height="72" rx="12" fill="#064E3B"/>
-  <text x="376" y="36" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUT</text>
+  <text x="376" y="36" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
   <text x="376" y="56" font-size="11" fill="#A7F3D0" text-anchor="middle">pixels, sound</text>
   <text x="376" y="70" font-size="11" fill="#A7F3D0" text-anchor="middle">saved files</text>
 
@@ -259,12 +259,12 @@
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S9</h5><p><strong>Say</strong></p>
-<ul><li>In: a key, a file, a network packet.</li><li>Middle: rules acting on values.</li><li>Out: pixels, sound, a file written to disk.</li><li>A calculator, a save dialog, and a game engine are the same three boxes. They differ in size, speed, and where you draw the line.</li></ul>
+<ul><li>Input: a key, a file, a network packet.</li><li>Process: code over data.</li><li>Output: pixels, sound, a file written to disk.</li><li>A calculator, a save dialog, and a game engine are the same three boxes. They differ in size, speed, and where you draw the boundary.</li></ul>
 <p><strong>Need</strong></p>
-<ul><li>Save button: click in, state written, file out.</li></ul>
+<ul><li>Save button: the click is input, writing the state is process, the file is output.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>And the shape stacks.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the three boxes, with examples.</li><li><strong>Content:</strong> In: keys, files, packets. Middle: rules acting on values. Out: pixels, sound, saved files. Size and speed change. The shape does not.</li><li><strong>Visual:</strong> three boxes and arrows.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
+<ul><li>And the same shape stacks.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the three boxes, with examples.</li><li><strong>Content:</strong> Input: keys, files, packets. Process: code over data. Output: pixels, sound, saved files. Scale and speed change. The shape does not.</li><li><strong>Visual:</strong> three boxes and arrows.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
   </aside>
 </section>
 
@@ -272,35 +272,35 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The same shape, stacked</h2>
-    <ul class="content"><li>You, the game, the operating system, the hardware</li><li>Each layer is in, middle, out</li><li>A game is a stack of programs, not one</li></ul>
+    <ul class="content"><li>You, the game, the operating system, the hardware</li><li>Each layer is input, process, output</li><li>A game is a stack of programs, not one</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §2.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S10</h5><p><strong>Say</strong></p>
-<ul><li>You, the game, the runtime, the operating system, the hardware, the physical world.</li><li>Every seam is the same exchange: something in, something out.</li><li>A game is not one program. It is a stack of them.</li><li>One keypress crosses several of those seams before you see a result.</li></ul>
+<ul><li>You, the game, the runtime, the operating system, the hardware, the physical world.</li><li>Every seam is the same exchange: input, process, output.</li><li>A game is not one program. It is a stack of them.</li><li>One keypress crosses several of those seams before you see a result.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>So here is the claim.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the shape repeats at every layer.</li><li><strong>Content:</strong> You, the game, the operating system, the hardware. Each layer is in, middle, out. A game is a stack of programs, not one.</li><li><strong>Visual:</strong> six layers, an exchange at every seam.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the shape repeats at every layer.</li><li><strong>Content:</strong> You, the game, the operating system, the hardware. Each layer is input, process, output. A game is a stack of programs, not one.</li><li><strong>Visual:</strong> six layers, an exchange at every seam.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="11" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>Nothing runs without an edge</h2>
-    <ul class="content"><li>There is no software without an edge</li><li>Only software whose edge is hidden</li><li>When you are lost: what came in, what went out, what happened in the middle?</li></ul>
+    <h2>No software without IO</h2>
+    <ul class="content"><li>There is no software without IO</li><li>Only software whose IO is hidden</li><li>When you are lost: where is the input, where is the output, what is in the middle?</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §2.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S11</h5><p><strong>Say</strong></p>
-<ul><li>There is no software without an edge. Only software whose edge is hidden.</li><li>The edges are the architecture. Interfaces are the spine.</li><li>When you are lost, ask this: what came in, what went out, what is in the middle?</li></ul>
+<ul><li>There is no software without IO. Only software whose IO is hidden.</li><li>The boundaries are the architecture.</li><li>When you are lost, ask: where is the input, where is the output, what is in the middle?</li></ul>
 <p><strong>Need</strong></p>
-<ul><li>Use that question for the rest of the day. It works at every scale.</li></ul>
+<ul><li>"In the middle" means process. Do not rename the three boxes. The question points at them.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>So far the shape runs once. Games do not.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the claim, then the escape question.</li><li><strong>Content:</strong> There is no software without an edge. Only software whose edge is hidden. When you are lost: what came in, what went out, what happened in the middle?</li><li><strong>Visual:</strong> the sentence, three ghosted boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the claim, then the escape question.</li><li><strong>Content:</strong> There is no software without IO. Only software whose IO is hidden. When you are lost: where is the input, where is the output, what is in the middle?</li><li><strong>Visual:</strong> the sentence, three ghosted boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
   </aside>
 </section>
 
@@ -324,21 +324,21 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>A person is in the loop</h2>
-    <div class="diagram-row"><ul class="content"><li>The game shows you something</li><li>You see it, decide, and act</li><li>That act is the next input</li><li>Then it happens again</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 168" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+    <div class="diagram-row"><ul class="content"><li>Output reaches the person</li><li>They perceive, decide, and act</li><li>That act returns as the next input</li><li>Then process runs again</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 168" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="16" y="10" width="112" height="48" rx="10" fill="#075985"/>
-  <text x="72" y="39" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">IN</text>
+  <text x="72" y="39" font-size="12" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
 
   <line x1="132" y1="34" x2="150" y2="34" stroke="#9CA3AF" stroke-width="2"/>
   <polygon points="150,28 162,34 150,40" fill="#9CA3AF"/>
 
   <rect x="174" y="10" width="112" height="48" rx="10" fill="#312E81"/>
-  <text x="230" y="39" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">MIDDLE</text>
+  <text x="230" y="39" font-size="12" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
 
   <line x1="290" y1="34" x2="308" y2="34" stroke="#9CA3AF" stroke-width="2"/>
   <polygon points="308,28 320,34 308,40" fill="#9CA3AF"/>
 
   <rect x="332" y="10" width="112" height="48" rx="10" fill="#064E3B"/>
-  <text x="388" y="39" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUT</text>
+  <text x="388" y="39" font-size="12" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
 
   <path d="M388 58 V92 H72 V66" fill="none" stroke="#34D399" stroke-width="2"/>
   <polygon points="66,66 78,66 72,54" fill="#34D399"/>
@@ -354,29 +354,29 @@
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S13</h5><p><strong>Say</strong></p>
-<ul><li>Point at the top row. In, middle, out.</li><li>Point at the return path. You see the picture, you decide, you act.</li><li>That act is the next input.</li><li>If the game feels responsive or laggy, your body is reading the shape of this loop.</li></ul>
+<ul><li>Point at the top row. Input, process, output.</li><li>Point at the return path. The person perceives the output, decides, and acts.</li><li>That act is the next input.</li><li>If the game feels responsive or laggy, your body is reading the shape of this loop.</li></ul>
 <p><strong>Need</strong></p>
-<ul><li>See, decide, act is the same three boxes as in, middle, out. Do not make it a second theory.</li></ul>
+<ul><li>Perceive, decide, act maps onto input, process, output. Same three boxes. Not a second theory.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>There is a name for steering by what you just saw. You can forget the name.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> draw the person.</li><li><strong>Content:</strong> The game shows you something. You see it, decide, and act. That act is the next input. Then it happens again.</li><li><strong>Visual:</strong> in, middle, out, return path labeled with the person.</li><li><strong>Refs:</strong> <code>ch00</code> §3.1–3.2.</li></ul></div>
+<ul><li>That steering has a name. Cybernetics.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> draw the person.</li><li><strong>Content:</strong> Output reaches the person. They perceive, decide, and act. That act returns as the next input. Then process runs again.</li><li><strong>Visual:</strong> input, process, output, with the return path.</li><li><strong>Refs:</strong> <code>ch00</code> §3.1–3.2.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="14" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>You steer by what you see</h2>
-    <ul class="content"><li>You look at what just happened, and you correct</li><li>That is the whole idea</li><li>A game with no player is a simulation</li><li>Put a person in it, and they are steering</li></ul>
+    <h2>Cybernetics</h2>
+    <ul class="content"><li>Cybernetics is watching your own output and correcting</li><li>A game with no player is a simulation</li><li>Put a person in the loop, and they are steering</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §3.1–3.2.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S14</h5><p><strong>Say</strong></p>
-<ul><li>You look at what just happened, and you correct. That is the whole idea.</li><li>The word is cybernetics. Forget the word if you want. Keep the picture.</li><li>A game with no player is a simulation. Put a person in it, and they are steering.</li><li>A thermostat does this. A player does it faster, and cares more.</li></ul>
+<ul><li>Cybernetics means you watch the output and correct.</li><li>Keep the word. It is the name of the loop with a person in it.</li><li>A game with no player is a simulation. Put a person in the loop, and they are steering.</li><li>A thermostat does this. A player does it faster, and cares more.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The limit on that loop is time.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the idea, then drop the jargon.</li><li><strong>Content:</strong> You look at what just happened, and you correct. That is the whole idea. A game with no player is a simulation. Put a person in it, and they are steering.</li><li><strong>Visual:</strong> look, correct, repeat.</li><li><strong>Refs:</strong> <code>ch00</code> §3.1–3.2.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the idea, then say it in plain words.</li><li><strong>Content:</strong> Cybernetics is watching your own output and correcting. A game with no player is a simulation. Put a person in the loop, and they are steering.</li><li><strong>Visual:</strong> look, correct, repeat.</li><li><strong>Refs:</strong> <code>ch00</code> §3.1–3.2.</li></ul></div>
   </aside>
 </section>
 
@@ -402,17 +402,17 @@
 <section data-num="16" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>Once through, or again and again</h2>
-    <ul class="content"><li>Some software runs once: a bake, a compile, a batch</li><li>A game runs again and again, and the last picture changes the next input</li><li>A game is a one-pass job inside a loop that cannot be late</li></ul>
+    <h2>Pipeline and loop</h2>
+    <ul class="content"><li>A pipeline runs once: a bake, a compile, a batch</li><li>A loop feeds output back into the next input</li><li>A game is a pipeline inside a loop that cannot be late</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §3.3–3.4.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S16</h5><p><strong>Say</strong></p>
-<ul><li>Some software runs once and is done. A bake. A compile. A batch export.</li><li>A game runs again, and the last picture changes what you do next.</li><li>A game engine is a one-pass job sitting inside a loop that is not allowed to be late.</li><li>If the loop misses its time, the machine sometimes answers. That is what lag feels like.</li></ul>
+<ul><li>A pipeline runs once and is done. A bake. A compile. A batch export.</li><li>A loop feeds the output back in as the next input. A game does this.</li><li>A game engine is a pipeline sitting inside a loop that is not allowed to be late.</li><li>If the loop misses its time, the machine sometimes answers. That is what lag feels like.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Now the five parts. This is the bridge to every engine.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> two kinds of software.</li><li><strong>Content:</strong> Some software runs once: a bake, a compile, a batch. A game runs again and again, and the last picture changes the next input. A game is a one-pass job inside a loop that cannot be late.</li><li><strong>Visual:</strong> a straight arrow beside a loop.</li><li><strong>Refs:</strong> <code>ch00</code> §3.3–3.4.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> two kinds of software.</li><li><strong>Content:</strong> A pipeline runs once: a bake, a compile, a batch. A loop feeds output back into the next input. A game is a pipeline inside a loop that cannot be late.</li><li><strong>Visual:</strong> a straight arrow beside a loop.</li><li><strong>Refs:</strong> <code>ch00</code> §3.3–3.4.</li></ul></div>
   </aside>
 </section>
 
@@ -652,7 +652,7 @@
 <section data-num="25" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>The picture is not the world</h2>
+    <h2>The renderer reads the world</h2>
     <ul class="content"><li>The renderer does not live inside the simulation</li><li>It reads the world and draws it</li><li>Turn the picture off, and the world can still be running</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §3.</p>
@@ -677,7 +677,7 @@
 <p><strong>Say</strong></p>
 <ul><li>They feel different because the fill changes.</li><li>Nobody adds a sixth part.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>First cut: the middle, and the pipes.</li></ul></div>
+<ul><li>First cut: core, and channels.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why engines feel different.</li><li><strong>Content:</strong> If every engine is the same five parts, why do they feel different? Because the fill changes. The parts do not.</li><li><strong>Visual:</strong> five ghosted boxes, a stamp: fills, never new parts.</li><li><strong>Refs:</strong> <code>ch01</code> §4–5.</li></ul></div>
   </aside>
 </section>
@@ -685,17 +685,17 @@
 <section data-num="27" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>The middle is the game</h2>
-    <ul class="content"><li>The world and the simulation are the game</li><li>Sound, UI, network, and asset files are pipes in and out</li><li>Different file types, same idea: a container for the fill</li></ul>
+    <h2>Core and channels</h2>
+    <ul class="content"><li>Core is state and the simulation</li><li>Channels are the pipes: assets in, audio out, UI out, network</li><li>A WAD, a pk3, and a uasset are different containers for the same idea</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S27</h5><p><strong>Say</strong></p>
-<ul><li>The world and the simulation are the game.</li><li>Sound, UI, network, and asset files are pipes. In or out.</li><li>A WAD, a pk3, and a uasset are different containers for the same idea.</li><li>three.js has no built-in audio. That is an empty pipe. The app holds it.</li></ul>
+<ul><li>Core is state and the simulation. That is the game.</li><li>Channels are the pipes: assets in, audio out, UI out, network.</li><li>A WAD, a pk3, and a uasset are different containers for the same idea.</li><li>three.js has no built-in audio. That is an empty channel. The app holds it.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The fill people argue about most is the clock.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> core versus pipes.</li><li><strong>Content:</strong> The world and the simulation are the game. Sound, UI, network, and asset files are pipes in and out. Different file types, same idea: a container for the fill.</li><li><strong>Visual:</strong> a spine, pipes on the sides.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> core versus channels.</li><li><strong>Content:</strong> Core is state and the simulation. Channels are the pipes: assets in, audio out, UI out, network. A WAD, a pk3, and a uasset are different containers for the same idea.</li><li><strong>Visual:</strong> a spine, pipes on the sides.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
   </aside>
 </section>
 
@@ -840,33 +840,33 @@
 <section data-num="34" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>A baked map, plus a list</h2>
-    <ul class="content"><li>The level is pre-cut into rooms, so the engine can reject whole rooms at once</li><li>Moving things sit in a flat list</li><li>Fast for a static world</li><li>Weak if everything moves</li></ul>
+    <h2>BSP and a flat list</h2>
+    <ul class="content"><li>BSP pre-cuts the level into rooms, so the engine can reject whole rooms at once</li><li>Entities sit in a flat list</li><li>Fast for a static world</li><li>Weak if everything moves</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §5, <code>Eng/DOOM</code>, <code>Eng/Q3A</code>, <code>Eng/DOOM3</code>.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S34</h5><p><strong>Say</strong></p>
-<ul><li>The level is compiled. Pre-cut into rooms. The engine can reject a whole room without looking inside it.</li><li>Moving things are a flat list, placed in the map. They are not hanging off a tree.</li><li>Gold for a world that does not reshape itself. It fights you if everything moves.</li></ul>
+<ul><li>BSP means the level is pre-cut into rooms. The engine can reject a whole room without looking inside it.</li><li>Entities are a flat list, placed in the map. They are not hanging off a tree.</li><li>Fast for a world that does not reshape itself. It fights you if everything moves.</li></ul>
 <p><strong>Need</strong></p>
-<ul><li>The room test is a BSP, a binary space partition. You do not need the expansion unless asked. "Pre-cut rooms, cheap reject" is enough.</li><li>DOOM shipped on a 386 because a room test beats searching the whole world.</li></ul>
+<ul><li>BSP is binary space partition. Say "pre-cut rooms" if the room goes blank. DOOM shipped on a 386 because a room test beats searching the whole world.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The machine-shaped answer.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the id Tech family, in one line.</li><li><strong>Content:</strong> The level is pre-cut into rooms, so the engine can reject whole rooms at once. Moving things sit in a flat list. Fast for a static world. Weak if everything moves.</li><li><strong>Visual:</strong> split rooms beside a flat list.</li><li><strong>Refs:</strong> <code>ch02</code> §5, <code>Eng/DOOM</code>, <code>Eng/Q3A</code>, <code>Eng/DOOM3</code>.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the id Tech family, in one line.</li><li><strong>Content:</strong> BSP pre-cuts the level into rooms, so the engine can reject whole rooms at once. Entities sit in a flat list. Fast for a static world. Weak if everything moves.</li><li><strong>Visual:</strong> split rooms beside a flat list.</li><li><strong>Refs:</strong> <code>ch02</code> §5, <code>Eng/DOOM</code>, <code>Eng/Q3A</code>, <code>Eng/DOOM3</code>.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="35" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Tables the machine can scan</h2>
+    <h2>ECS</h2>
     <ul class="content"><li>Put the same kind of fact in one column</li><li>Let a system sweep that column</li><li>A thousand bullets are one list, not a thousand objects</li><li>What a thing is, is the data on it</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §6, <code>Eng/OpenEngine</code>.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S35</h5><p><strong>Say</strong></p>
-<ul><li>Stop thinking in objects for a second.</li><li>Put every position in one column. Every velocity in another. A system sweeps the column.</li><li>A thousand bullets are one list, not a thousand little objects.</li><li>What a thing is, is the data attached to it. That is the point of this family. It scales. It is harder for a person to read.</li></ul>
+<ul><li>ECS: entity, component, system.</li><li>Put every position in one column. A system sweeps that column.</li><li>A thousand bullets are one list, not a thousand little objects.</li><li>What a thing is, is the data attached to it. That is the point of this family. It scales. It is harder for a person to read.</li></ul>
 <p><strong>Need</strong></p>
 <ul><li>The name is ECS: entity, component, system. Entity is the id. Components are the columns. Systems are the sweeps.</li></ul>
 <p><strong>Next</strong></p>
@@ -1409,16 +1409,16 @@
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>Questions, and where to read next</h2>
-    <ul class="content"><li>If a question stalls, ask what came in, what went out, and what is in the middle</li><li>Then ask which of the five parts it is</li><li>The reference is the long version of this talk</li><li>Read it once, then use it per task</li></ul>
+    <ul class="content"><li>If a question stalls, ask where the input is, where the output is, and what is in the middle</li><li>Then ask which of the five parts it is</li><li>The reference is the long version of this talk</li><li>Read it once, then use it per task</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §10, <code>engines</code>.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S64</h5><p><strong>Say</strong></p>
-<ul><li>If a question stalls, I am going to do what I told you to do. What came in, what went out, what is in the middle? Which of the five parts is it?</li><li>The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this gun work" question goes to the four steps.</li><li>Further reading, if they want shelves: id Software's public source for DOOM, Quake, Quake III, and DOOM 3. three.js and Babylon.js. Godot. Unreal's docs.</li></ul>
+<ul><li>If a question stalls, I am going to do what I told you to do. Where is the input, where is the output, what is in the middle? Which of the five parts is it?</li><li>The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this gun work" question goes to the four steps.</li><li>Further reading, if they want shelves: id Software's public source for DOOM, Quake, Quake III, and DOOM 3. three.js and Babylon.js. Godot. Unreal's docs.</li></ul>
 <p><strong>Need</strong></p>
 <ul><li>Do not open a new topic in the answer. Point at a part, then stop.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> hand them the shelf, then take questions.</li><li><strong>Content:</strong> If a question stalls, ask what came in, what went out, and what is in the middle. Then ask which of the five parts it is. The reference is the long version of this talk. Read it once, then use it per task.</li><li><strong>Visual:</strong> where to go next.</li><li><strong>Refs:</strong> <code>ch00</code> §10, <code>engines</code>.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> hand them the shelf, then take questions.</li><li><strong>Content:</strong> If a question stalls, ask where the input is, where the output is, and what is in the middle. Then ask which of the five parts it is. The reference is the long version of this talk. Read it once, then use it per task.</li><li><strong>Visual:</strong> where to go next.</li><li><strong>Refs:</strong> <code>ch00</code> §10, <code>engines</code>.</li></ul></div>
   </aside>
 </section>
   </div>

@@ -16,7 +16,7 @@ gun (S50–S55) or the last line (S63). Cut S59 first, then shorten S44–S49.
 
 Pace: about 77 minutes of talk, then questions. Section openers are 15 seconds.
 
-Lost in the room? Ask: what came in, what went out, what is in the middle?
+Lost in the room? Ask: where is the input, where is the output, what is in the middle?
 Then name the part: state, logic, input, output, or clock.
 
 ---
@@ -100,24 +100,25 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- The twist: you choose which is which.
+- But they are not stuck that way.
 
-## S6 — You choose the line
+## S6 — Code and data can trade places
 
 **Say**
 
-- Rules can travel as files. Files can change how the game behaves.
-- Mods do this. They swap data. They do not recompile the engine.
-- The line is a choice you make, not a law of nature.
+- Last slide split them. Code is the rule. Data is the value. Jump is the rule. Height is the value.
+- That split is not locked. You can save a rule in a file. You can make a file change what the game does.
+- A mod does this. It replaces a data file. Nobody recompiles the engine. The game still changes.
+- So you decide: does this live in the program, or in a file someone can edit?
 
 **Need**
 
-- Code shipped as data: QuakeC into progs.dat, Quake III .qvm, DOOM 3 idScript, Unreal Blueprints in .uasset files.
-- Data that acts: a DOOM WAD holds maps, sprites, sounds, even monster behavior tables. DOOM 3 .decl files. In a table-based engine, the data on a thing decides what it is.
+- Code shipped as a data file: QuakeC compiled into progs.dat. Quake III .qvm. DOOM 3 idScript. Unreal Blueprints stored in .uasset.
+- Data that changes behavior: a DOOM WAD holds maps, sprites, sounds, and behavior tables. DOOM 3 .decl files.
 
 **Next**
 
-- So the career question is simple.
+- That decision is the question you keep.
 
 ## S7 — The question you keep
 
@@ -135,42 +136,42 @@ Then name the part: state, logic, input, output, or clock.
 
 - What shape does all of this live in?
 
-## S8 — In, middle, out
+## S8 — Input, process, output
 
 **Pace:** section 3, 5 minutes. 15 seconds.
 
 **Say**
 
-- Every program has the same shape.
-- Something comes in. Something happens. Something goes out.
+- Every program is three things: input, process, output.
+- Input comes in. Process is code acting on data. Output goes out.
 
 **Next**
 
-- Three boxes. No exceptions.
+- Same three boxes. No exceptions.
 
-## S9 — In, middle, out
+## S9 — Input, process, output
 
 **Say**
 
-- In: a key, a file, a network packet.
-- Middle: rules acting on values.
-- Out: pixels, sound, a file written to disk.
-- A calculator, a save dialog, and a game engine are the same three boxes. They differ in size, speed, and where you draw the line.
+- Input: a key, a file, a network packet.
+- Process: code over data.
+- Output: pixels, sound, a file written to disk.
+- A calculator, a save dialog, and a game engine are the same three boxes. They differ in size, speed, and where you draw the boundary.
 
 **Need**
 
-- Save button: click in, state written, file out.
+- Save button: the click is input, writing the state is process, the file is output.
 
 **Next**
 
-- And the shape stacks.
+- And the same shape stacks.
 
 ## S10 — The same shape, stacked
 
 **Say**
 
 - You, the game, the runtime, the operating system, the hardware, the physical world.
-- Every seam is the same exchange: something in, something out.
+- Every seam is the same exchange: input, process, output.
 - A game is not one program. It is a stack of them.
 - One keypress crosses several of those seams before you see a result.
 
@@ -178,17 +179,17 @@ Then name the part: state, logic, input, output, or clock.
 
 - So here is the claim.
 
-## S11 — Nothing runs without an edge
+## S11 — No software without IO
 
 **Say**
 
-- There is no software without an edge. Only software whose edge is hidden.
-- The edges are the architecture. Interfaces are the spine.
-- When you are lost, ask this: what came in, what went out, what is in the middle?
+- There is no software without IO. Only software whose IO is hidden.
+- The boundaries are the architecture.
+- When you are lost, ask: where is the input, where is the output, what is in the middle?
 
 **Need**
 
-- Use that question for the rest of the day. It works at every scale.
+- "In the middle" means process. Do not rename the three boxes. The question points at them.
 
 **Next**
 
@@ -211,26 +212,26 @@ Then name the part: state, logic, input, output, or clock.
 
 **Say**
 
-- Point at the top row. In, middle, out.
-- Point at the return path. You see the picture, you decide, you act.
+- Point at the top row. Input, process, output.
+- Point at the return path. The person perceives the output, decides, and acts.
 - That act is the next input.
 - If the game feels responsive or laggy, your body is reading the shape of this loop.
 
 **Need**
 
-- See, decide, act is the same three boxes as in, middle, out. Do not make it a second theory.
+- Perceive, decide, act maps onto input, process, output. Same three boxes. Not a second theory.
 
 **Next**
 
-- There is a name for steering by what you just saw. You can forget the name.
+- That steering has a name. Cybernetics.
 
-## S14 — You steer by what you see
+## S14 — Cybernetics
 
 **Say**
 
-- You look at what just happened, and you correct. That is the whole idea.
-- The word is cybernetics. Forget the word if you want. Keep the picture.
-- A game with no player is a simulation. Put a person in it, and they are steering.
+- Cybernetics means you watch the output and correct.
+- Keep the word. It is the name of the loop with a person in it.
+- A game with no player is a simulation. Put a person in the loop, and they are steering.
 - A thermostat does this. A player does it faster, and cares more.
 
 **Next**
@@ -255,13 +256,13 @@ Then name the part: state, logic, input, output, or clock.
 
 - Two kinds of software. Do not mix them up.
 
-## S16 — Once through, or again and again
+## S16 — Pipeline and loop
 
 **Say**
 
-- Some software runs once and is done. A bake. A compile. A batch export.
-- A game runs again, and the last picture changes what you do next.
-- A game engine is a one-pass job sitting inside a loop that is not allowed to be late.
+- A pipeline runs once and is done. A bake. A compile. A batch export.
+- A loop feeds the output back in as the next input. A game does this.
+- A game engine is a pipeline sitting inside a loop that is not allowed to be late.
 - If the loop misses its time, the machine sometimes answers. That is what lag feels like.
 
 **Next**
@@ -416,16 +417,16 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- First cut: the middle, and the pipes.
+- First cut: core, and channels.
 
-## S27 — The middle is the game
+## S27 — Core and channels
 
 **Say**
 
-- The world and the simulation are the game.
-- Sound, UI, network, and asset files are pipes. In or out.
+- Core is state and the simulation. That is the game.
+- Channels are the pipes: assets in, audio out, UI out, network.
 - A WAD, a pk3, and a uasset are different containers for the same idea.
-- three.js has no built-in audio. That is an empty pipe. The app holds it.
+- three.js has no built-in audio. That is an empty channel. The app holds it.
 
 **Next**
 
@@ -519,29 +520,28 @@ Then name the part: state, logic, input, output, or clock.
 
 - Now the static-world answer. This is how DOOM fit on a 386.
 
-## S34 — A baked map, plus a list
+## S34 — BSP and a flat list
 
 **Say**
 
-- The level is compiled. Pre-cut into rooms. The engine can reject a whole room without looking inside it.
-- Moving things are a flat list, placed in the map. They are not hanging off a tree.
-- Gold for a world that does not reshape itself. It fights you if everything moves.
+- BSP means the level is pre-cut into rooms. The engine can reject a whole room without looking inside it.
+- Entities are a flat list, placed in the map. They are not hanging off a tree.
+- Fast for a world that does not reshape itself. It fights you if everything moves.
 
 **Need**
 
-- The room test is a BSP, a binary space partition. You do not need the expansion unless asked. "Pre-cut rooms, cheap reject" is enough.
-- DOOM shipped on a 386 because a room test beats searching the whole world.
+- BSP is binary space partition. Say "pre-cut rooms" if the room goes blank. DOOM shipped on a 386 because a room test beats searching the whole world.
 
 **Next**
 
 - The machine-shaped answer.
 
-## S35 — Tables the machine can scan
+## S35 — ECS
 
 **Say**
 
-- Stop thinking in objects for a second.
-- Put every position in one column. Every velocity in another. A system sweeps the column.
+- ECS: entity, component, system.
+- Put every position in one column. A system sweeps that column.
 - A thousand bullets are one list, not a thousand little objects.
 - What a thing is, is the data attached to it. That is the point of this family. It scales. It is harder for a person to read.
 
@@ -977,7 +977,7 @@ Then name the part: state, logic, input, output, or clock.
 
 **Say**
 
-- If a question stalls, I am going to do what I told you to do. What came in, what went out, what is in the middle? Which of the five parts is it?
+- If a question stalls, I am going to do what I told you to do. Where is the input, where is the output, what is in the middle? Which of the five parts is it?
 - The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this gun work" question goes to the four steps.
 - Further reading, if they want shelves: id Software's public source for DOOM, Quake, Quake III, and DOOM 3. three.js and Babylon.js. Godot. Unreal's docs.
 

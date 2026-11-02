@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="8" y="8" width="112" height="72" rx="12" fill="#075985"/>
-  <text x="64" y="36" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">IN</text>
+  <text x="64" y="36" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
   <text x="64" y="56" font-size="11" fill="#E0F2FE" text-anchor="middle">keys, files</text>
   <text x="64" y="70" font-size="11" fill="#E0F2FE" text-anchor="middle">packets</text>
 
@@ -8,15 +8,15 @@
   <polygon points="142,38 154,44 142,50" fill="#9CA3AF"/>
 
   <rect x="164" y="8" width="112" height="72" rx="12" fill="#312E81"/>
-  <text x="220" y="36" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">MIDDLE</text>
-  <text x="220" y="58" font-size="11" fill="#E0E7FF" text-anchor="middle">rules act</text>
-  <text x="220" y="72" font-size="11" fill="#E0E7FF" text-anchor="middle">on values</text>
+  <text x="220" y="36" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
+  <text x="220" y="58" font-size="11" fill="#E0E7FF" text-anchor="middle">code over</text>
+  <text x="220" y="72" font-size="11" fill="#E0E7FF" text-anchor="middle">data</text>
 
   <line x1="280" y1="44" x2="298" y2="44" stroke="#9CA3AF" stroke-width="2"/>
   <polygon points="298,38 310,44 298,50" fill="#9CA3AF"/>
 
   <rect x="320" y="8" width="112" height="72" rx="12" fill="#064E3B"/>
-  <text x="376" y="36" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUT</text>
+  <text x="376" y="36" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
   <text x="376" y="56" font-size="11" fill="#A7F3D0" text-anchor="middle">pixels, sound</text>
   <text x="376" y="70" font-size="11" fill="#A7F3D0" text-anchor="middle">saved files</text>
 

@@ -50,10 +50,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** two cards, jump example.
 - **Refs:** `ch00` §1.
 
-## S6 — You choose the line
+## S6 — Code and data can trade places
 
-- **Goal:** the line is a decision, not a law.
-- **Content:** Rules can travel as files. Files can change how the game behaves. Mods do this. You choose the line.
+- **Goal:** the boundary is a decision, not a law.
+- **Content:** A rule can be saved in a file. A file can change what the game does. A mod swaps that file and does not recompile the engine. You decide which is which.
 - **Visual:** two cards, arrow both ways.
 - **Refs:** `ch00` §1.1–1.3.
 
@@ -64,31 +64,31 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** one question, two answers, takeaway strip.
 - **Refs:** `ch00` §1.
 
-## S8 — Section 3 intro: In, middle, out *(divider)*
+## S8 — Section 3 intro: Input, process, output *(divider)*
 
 - **Goal:** give every program a shape.
-- **Content:** Every program has the same shape. Something in. Something happens. Something out.
+- **Content:** Every program is input, process, output. Something comes in. Code acts on data. Something goes out.
 - **Visual:** three boxes.
 - **Refs:** `ch00` §2.
 
-## S9 — In, middle, out
+## S9 — Input, process, output
 
 - **Goal:** the three boxes, with examples.
-- **Content:** In: keys, files, packets. Middle: rules acting on values. Out: pixels, sound, saved files. Size and speed change. The shape does not.
+- **Content:** Input: keys, files, packets. Process: code over data. Output: pixels, sound, saved files. Scale and speed change. The shape does not.
 - **Visual:** three boxes and arrows.
 - **Refs:** `ch00` §2.
 
 ## S10 — The same shape, stacked
 
 - **Goal:** the shape repeats at every layer.
-- **Content:** You, the game, the operating system, the hardware. Each layer is in, middle, out. A game is a stack of programs, not one.
+- **Content:** You, the game, the operating system, the hardware. Each layer is input, process, output. A game is a stack of programs, not one.
 - **Visual:** six layers, an exchange at every seam.
 - **Refs:** `ch00` §2.
 
-## S11 — Nothing runs without an edge
+## S11 — No software without IO
 
 - **Goal:** the claim, then the escape question.
-- **Content:** There is no software without an edge. Only software whose edge is hidden. When you are lost: what came in, what went out, what happened in the middle?
+- **Content:** There is no software without IO. Only software whose IO is hidden. When you are lost: where is the input, where is the output, what is in the middle?
 - **Visual:** the sentence, three ghosted boxes.
 - **Refs:** `ch00` §2.
 
@@ -102,14 +102,14 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 ## S13 — A person is in the loop
 
 - **Goal:** draw the person.
-- **Content:** The game shows you something. You see it, decide, and act. That act is the next input. Then it happens again.
-- **Visual:** in, middle, out, return path labeled with the person.
+- **Content:** Output reaches the person. They perceive, decide, and act. That act returns as the next input. Then process runs again.
+- **Visual:** input, process, output, with the return path.
 - **Refs:** `ch00` §3.1–3.2.
 
-## S14 — You steer by what you see
+## S14 — Cybernetics
 
-- **Goal:** name the idea, then drop the jargon.
-- **Content:** You look at what just happened, and you correct. That is the whole idea. A game with no player is a simulation. Put a person in it, and they are steering.
+- **Goal:** name the idea, then say it in plain words.
+- **Content:** Cybernetics is watching your own output and correcting. A game with no player is a simulation. Put a person in the loop, and they are steering.
 - **Visual:** look, correct, repeat.
 - **Refs:** `ch00` §3.1–3.2.
 
@@ -120,10 +120,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** a chain of delays, one budget bar.
 - **Refs:** `ch00` §3.3–3.4.
 
-## S16 — Once through, or again and again
+## S16 — Pipeline and loop
 
 - **Goal:** two kinds of software.
-- **Content:** Some software runs once: a bake, a compile, a batch. A game runs again and again, and the last picture changes the next input. A game is a one-pass job inside a loop that cannot be late.
+- **Content:** A pipeline runs once: a bake, a compile, a batch. A loop feeds output back into the next input. A game is a pipeline inside a loop that cannot be late.
 - **Visual:** a straight arrow beside a loop.
 - **Refs:** `ch00` §3.3–3.4.
 
@@ -183,7 +183,7 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** two columns, same five parts.
 - **Refs:** `ch01` §6, `Eng/DOOM`, `Eng/UE5`.
 
-## S25 — The picture is not the world
+## S25 — The renderer reads the world
 
 - **Goal:** correct the common mistake.
 - **Content:** The renderer does not live inside the simulation. It reads the world and draws it. Turn the picture off, and the world can still be running.
@@ -197,10 +197,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** five ghosted boxes, a stamp: fills, never new parts.
 - **Refs:** `ch01` §4–5.
 
-## S27 — The middle is the game
+## S27 — Core and channels
 
-- **Goal:** core versus pipes.
-- **Content:** The world and the simulation are the game. Sound, UI, network, and asset files are pipes in and out. Different file types, same idea: a container for the fill.
+- **Goal:** core versus channels.
+- **Content:** Core is state and the simulation. Channels are the pipes: assets in, audio out, UI out, network. A WAD, a pk3, and a uasset are different containers for the same idea.
 - **Visual:** a spine, pipes on the sides.
 - **Refs:** `ch01` §3.
 
@@ -250,14 +250,14 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** a small tree, sword on a hand.
 - **Refs:** `ch02` §3–4.
 
-## S34 — A baked map, plus a list
+## S34 — BSP and a flat list
 
 - **Goal:** the id Tech family, in one line.
-- **Content:** The level is pre-cut into rooms, so the engine can reject whole rooms at once. Moving things sit in a flat list. Fast for a static world. Weak if everything moves.
+- **Content:** BSP pre-cuts the level into rooms, so the engine can reject whole rooms at once. Entities sit in a flat list. Fast for a static world. Weak if everything moves.
 - **Visual:** split rooms beside a flat list.
 - **Refs:** `ch02` §5, `Eng/DOOM`, `Eng/Q3A`, `Eng/DOOM3`.
 
-## S35 — Tables the machine can scan
+## S35 — ECS
 
 - **Goal:** ECS without the jargon first.
 - **Content:** Put the same kind of fact in one column. Let a system sweep that column. A thousand bullets are one list, not a thousand objects. What a thing is, is the data on it.
@@ -471,6 +471,6 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 ## S64 — Questions, and where to read next
 
 - **Goal:** hand them the shelf, then take questions.
-- **Content:** If a question stalls, ask what came in, what went out, and what is in the middle. Then ask which of the five parts it is. The reference is the long version of this talk. Read it once, then use it per task.
+- **Content:** If a question stalls, ask where the input is, where the output is, and what is in the middle. Then ask which of the five parts it is. The reference is the long version of this talk. Read it once, then use it per task.
 - **Visual:** where to go next.
 - **Refs:** `ch00` §10, `engines`.
