@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 110" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 160" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <text x="350" y="24" font-size="16" font-weight="700" fill="#D8B4FE" text-anchor="middle">what does "talking to software" actually consist of?</text>
+  <text x="350" y="47" font-size="12" font-weight="400" fill="#A78BFA" text-anchor="middle">a stack of four things — not a magic box. Fact, not promotion.</text>
   <g font-size="14" font-weight="700" fill="#E9D5FF" text-anchor="middle">
     <rect x="8" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
     <text x="88" y="51">BACKEND</text>

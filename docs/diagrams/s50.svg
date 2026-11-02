@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 120" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 170" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <text x="440" y="22" font-size="17" font-weight="700" fill="#6EE7B7" text-anchor="middle">where do YOU sit in this machine?</text>
+  <text x="440" y="44" font-size="13" font-weight="400" fill="#94A3B8" text-anchor="middle">every role feeds the machine — know what your part feeds</text>
   <g font-size="16" font-weight="700" fill="#D1FAE5" text-anchor="middle">
     <circle cx="120" cy="40" r="6" fill="#34D399"/>
     <rect x="40" y="60" width="160" height="46" rx="23" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>

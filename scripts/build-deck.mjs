@@ -158,11 +158,11 @@ function slideHtml(s) {
     const kicker = s.section ? '<p class="kicker">Section ' + s.section + '</p>' : '';
     return [
       '<section data-num="' + s.num + '" data-state="act-' + s.act.toLowerCase() + '" data-background-color="#111827">',
-      '  <div class="divider"><span class="chip">' + s.actLabel + '</span>' + kicker,
+      '  <div class="main"><div class="divider"><span class="chip">' + s.actLabel + '</span>' + kicker,
       '    <h2>' + inlineMd(s.title) + '</h2>',
       diagram ? '<div class="diagram divider-diagram">' + diagram + '</div>' : '',
-      claims ? '    <ul class="divider-claims">' + claims + '</ul>' : '',
-      '  </div>',
+      (!diagram && claims) ? '    <ul class="divider-claims">' + claims + '</ul>' : '',
+      '  </div></div>',
       '  <aside class="notes">\n' + notes + '\n  </aside>',
       '</section>',
     ].join('\n');
@@ -172,11 +172,13 @@ function slideHtml(s) {
   const hasDiag = !!diagram;
   return [
     '<section data-num="' + s.num + '" data-state="act-' + s.act.toLowerCase() + '"' + (hasDiag ? ' class="has-diagram"' : '') + '>',
-    '  <span class="chip">' + s.actLabel + '</span>',
-    '  <h2>' + inlineMd(s.title) + '</h2>',
+    '  <div class="main">',
+    '    <span class="chip">' + s.actLabel + '</span>',
+    '    <h2>' + inlineMd(s.title) + '</h2>',
     hasDiag
-      ? '  <div class="diagram-row">' + (claims ? '<ul class="content">' + claims + '</ul>' : '') + '<div class="diagram">' + diagram + '</div></div>'
-      : (claims ? '  <ul class="content">' + claims + '</ul>' : ''),
+      ? '    <div class="diagram-row">' + (claims ? '<ul class="content">' + claims + '</ul>' : '') + '<div class="diagram">' + diagram + '</div></div>'
+      : (claims ? '    <ul class="content">' + claims + '</ul>' : ''),
+    '  </div>',
     refsText ? '<p class="refs">' + inlineMd(refsText) + '</p>' : '',
     '  <aside class="notes">\n' + notes + '\n  </aside>',
     '</section>',
