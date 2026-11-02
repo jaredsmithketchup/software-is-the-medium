@@ -45,6 +45,14 @@ mode: open the site, press `S` — a second window shows the current slide, its
 speaker card, the next-slide preview, and a timer. Put it on the presenter's
 screen; the first window is the audience view.
 
+**Speaker view layout** is customized: notes.js embeds a patched speaker-window
+stylesheet (`scripts/patch-speaker-css.mjs`, idempotent) that puts current +
+next slides side-by-side on top and splits the notes below into two panes —
+references (`decknotes`) on the left at 60%, speaker card (`cards`) on the
+right at 40%. **After bumping the reveal vendor after any update, re-run
+`node scripts/patch-speaker-css.mjs` before committing.** The popup must stay
+same-origin (GitHub Pages serves it from the same site).
+
 ## Conventions
 
 - **Folder names are singular:** `Reference/`, `Presentation/`. A link that
