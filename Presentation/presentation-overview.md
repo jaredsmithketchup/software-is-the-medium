@@ -32,7 +32,7 @@ Treat skepticism about AI as reasonable; no adoption or employment promises.
 
 By the end, students should be able to:
 
-1. Separate a rule from a value using an example from their own discipline.
+1. Separate logic from a value using an example from their own discipline.
 2. Trace input, processing, output, and feedback; distinguish frame interval
    from end-to-end input latency.
 3. Use the **five-part mental model** to locate an engine question:
@@ -40,7 +40,7 @@ By the end, students should be able to:
 | Part | Plain-language question | Weapon example |
 |---|---|---|
 | State | What is remembered? | Ammo, target health, weapon pose |
-| Logic | What changes it? | Fire eligibility, hit test, damage rule |
+| Logic | What changes it? | Fire eligibility, hit tests, damage logic |
 | Input | What crosses in? | Fire command from a button or packet |
 | Output | What is presented? | Flash, sound, animation, HUD |
 | Clock | When does work run? | Simulation tick, cooldown, presentation cadence |
@@ -120,9 +120,9 @@ Section intros are S1, S5, S13, S18, S21, and S27.
   file or decision they contribute to a game. Connect it to software without
   implying everyone must become a programmer. Transition: "What is this medium
   made of?"
-- **S5-S12:** jump rule versus jump height; code stored in files; data-driven
+- **S5-S12:** jump logic versus jump height; code stored in files; data-driven
   config layers; input-process-output; feedback; latency; then the five parts.
-  At S12, ask where ammo belongs and where the rule that spends it belongs.
+  At S12, ask where ammo belongs and where the logic that spends it belongs.
   Protect this comprehension check.
 - **S13-S17:** map the five parts to engine responsibilities. Explain timing
   budgets and state versus presentation. Use a sword attached to a hand for a
@@ -134,7 +134,7 @@ Section intros are S1, S5, S13, S18, S21, and S27.
   Name who supplies data and who checks a handoff; ownership varies by team.
   Reserve three of the eleven minutes for the exercise below at S25, then use
   S26 to show that the same questions work in Doom 3.
-- **S27-S33:** reconnect feedback, contrast explicit rules with learned weights,
+- **S27-S33:** reconnect feedback, contrast explicit logic with learned weights,
   distinguish existing neural techniques from forecasts, and explain tool-
   enabled AI with permission and verification limits. End with the reusable
   questions, not a product pitch. Stop after S33; do not add a second ending.
@@ -162,7 +162,7 @@ logic = eligibility, collision, and damage; output = flash/sound/HUD;
 clock = command processing, cooldown, and update timing. Check whether the
 authoritative gameplay state recorded a hit and health change. A client may
 predict the flash without the authority accepting the shot. In a single-player
-case, inspect the hit result and damage rule before concluding the artwork is
+case, inspect the hit result and damage logic before concluding the artwork is
 wrong. There is no single required diagnosis: reward a testable hypothesis.
 
 ## 7. Optional 25-Minute Route

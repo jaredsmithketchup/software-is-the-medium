@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="8" y="8" width="196" height="134" rx="12" fill="#312E81"/>
   <text x="106" y="40" font-size="22" font-weight="800" fill="#C7D2FE" text-anchor="middle">CODE</text>
-  <text x="106" y="64" font-size="13" fill="#E5E7EB" text-anchor="middle">the rules</text>
+  <text x="106" y="64" font-size="13" fill="#E5E7EB" text-anchor="middle">the logic</text>
   <text x="106" y="88" font-size="12" fill="#A5B4FC" text-anchor="middle">functions, scripts</text>
   <text x="106" y="108" font-size="12" fill="#A5B4FC" text-anchor="middle">Blueprints, QuakeC</text>
   <rect x="216" y="8" width="196" height="134" rx="12" fill="#0C4A6E"/>

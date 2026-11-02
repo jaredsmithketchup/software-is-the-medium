@@ -75,7 +75,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 **Say**
 
 - On your first day in an unfamiliar engine, do not try to memorize every panel. Find one object and ask five questions.
-- Where is its state? Which rule changes it? What triggers that rule? What result reaches the player? When does the work run?
+- Where is its state? Which logic changes it? What triggers that logic? What result reaches the player? When does the work run?
 - Product knowledge still matters. This map tells you where to start learning it.
 
 **Show / ask**
@@ -88,13 +88,13 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Next**
 
-- First, separate the rule from the values it operates on.
+- First, separate the logic from the values it operates on.
 
 ## S5 - Anatomy of software
 
 **Say**
 
-- We will take one button press apart: rules and values, input and output, feedback, and time. Then we will put the five labels on it.
+- We will take one button press apart: logic and values, input and output, feedback, and time. Then we will put the five labels on it.
 - If a word is unfamiliar, attach it to the example. You do not need to memorize the terminology on first hearing.
 
 **Next**
@@ -105,13 +105,13 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- The rule says: if jump is requested and the player is grounded, set upward velocity. The configured jump speed is a value the designer can tune.
+- The logic says: if jump is requested and the player is grounded, set upward velocity. The configured jump speed is a value the designer can tune.
 - Current velocity and grounded status are live state. They describe this player now, not the default for every player.
-- Changing jump speed can make a higher jump. Allowing a second jump in mid-air changes the rule. Knowing which change you want saves a lot of random editing.
+- Changing jump speed can make a higher jump. Allowing a second jump in mid-air changes the logic. Knowing which change you want saves a lot of random editing.
 
 **Show / ask**
 
-- Ask: is ammunition 30 a rule or state? State. Is "do not fire with zero ammunition" a rule? Yes.
+- Ask: is ammunition 30 logic or state? State. Is "do not fire with zero ammunition" logic? Yes.
 
 **If asked**
 
@@ -142,7 +142,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- Most games and apps are **data-driven**: values and rules live in files that code reads, bound together by a **config or asset layer**.
+- Most games and apps are **data-driven**: values and logic live in files that code reads, bound together by a **config or asset layer**.
 - A JavaScript or Python application reads JSON or YAML at run time. Change a value and the program behaves differently; the code that reads the file stays the same.
 - In Unreal, Blueprints span that spectrum. A **Blueprint graph** is node logic that actually runs. A **Data-Only Blueprint** is just a container of properties that other code reads.
 - The binding only works where the reading code already understands the file. "Data-driven" always means code, data, and a declared connection between them.
@@ -167,7 +167,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Show / ask**
 
-- Point left to right. Ask which box should decide whether the weapon has ammunition. The rules in the process, consulting state, not the muzzle-flash artwork.
+- Point left to right. Ask which box should decide whether the weapon has ammunition. The logic in the process, consulting state, not the muzzle-flash artwork.
 
 **Next**
 
@@ -214,13 +214,13 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- State remembers: ammunition, health, position. Logic changes those facts according to rules. Input requests changes. Output presents results. Clock means when the work runs.
-- The arrows matter more than the boxes. Rules read existing state and write new state. Output reads a representation of the result. Timing affects the entire journey.
+- State remembers: ammunition, health, position. Logic changes those facts. Input requests changes. Output presents results. Clock means when the work runs.
+- The arrows matter more than the boxes. Logic reads existing state and writes new state. Output reads a representation of the result. Timing affects the entire journey.
 - Keep this map. When someone says "the engine is broken," ask which boundary failed and what evidence they have.
 
 **Show / ask**
 
-- Point to state and ask "29 rounds: where?" Then logic: "the rule that spent one round: where?" Allow a pause; this is the comprehension check to protect.
+- Point to state and ask "29 rounds: where?" Then logic: "the logic that spent one round: where?" Allow a pause; this is the comprehension check to protect.
 
 **If asked**
 
@@ -235,7 +235,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 **Say**
 
 - A game engine is reusable software for building and running interactive worlds. It commonly provides simulation support, rendering, audio, input, asset handling, and authoring tools.
-- Your game adds the particular rules and content: what a weapon does, how a level looks, what winning means.
+- Your game adds the particular logic and content: what a weapon does, how a level looks, what winning means.
 - The editor is the workshop. The runtime is the machinery running the shipped experience. Engines differ in where that boundary sits; some games use custom or minimal tools.
 
 **If asked**
@@ -251,13 +251,13 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- Input turns a device event into a gameplay command. Logic tests the rules. The world model stores the changed facts. Rendering, audio, and UI present them. The scheduler determines when those jobs happen.
-- For our weapon: Fire comes in, the rule spends one round, state becomes 29, and the player sees and hears the shot.
+- Input turns a device event into a gameplay command. Logic applies the checks. The world model stores the changed facts. Rendering, audio, and UI present them. The scheduler determines when those jobs happen.
+- For our weapon: Fire comes in, the logic spends one round, state becomes 29, and the player sees and hears the shot.
 - In a real engine each part crosses several modules and threads. The point is to locate responsibility, not force the source tree into five folders.
 
 **Show / ask**
 
-- "The ammunition display says 30 but the weapon has 29. Which boundary would you inspect?" Compare authoritative state with what the HUD reads. Do not immediately rewrite the firing rule.
+- "The ammunition display says 30 but the weapon has 29. Which boundary would you inspect?" Compare authoritative state with what the HUD reads. Do not immediately rewrite the firing logic.
 
 **Next**
 
@@ -286,7 +286,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Think of a scoreboard and the scorekeeper. The display reports a score; it does not necessarily decide which goal counts.
 - Similarly, a headless server can track positions, hits, and health without drawing any pixels. The renderer makes a picture from state prepared for presentation.
-- A flash is evidence that an effect appeared. It is not proof that the authoritative damage rule accepted a hit.
+- A flash is evidence that an effect appeared. It is not proof that the authoritative damage logic accepted a hit.
 
 **If asked**
 
@@ -364,8 +364,8 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- The player experiences one weapon. The team creates a network of agreements: how it should feel, what assets it uses, which rules it obeys, and when feedback appears.
-- A beautiful mesh cannot decide who was hit. A correct damage rule cannot by itself communicate satisfying impact. Neither contribution replaces the other.
+- The player experiences one weapon. The team creates a network of agreements: how it should feel, what assets it uses, which logic it obeys, and when feedback appears.
+- A beautiful mesh cannot decide who was hit. A correct damage logic cannot by itself communicate satisfying impact. Neither contribution replaces the other.
 
 **Show / ask**
 
@@ -506,14 +506,14 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- An explicit rule can say "ammunition must be at least one." You can inspect it and test the boundary at zero.
+- An explicit logic can say "ammunition must be at least one." You can inspect it and test the boundary at zero.
 - A neural model learns parameters from training. It may produce useful dialogue or code, but fluent output is not proof that the game's constraints were respected.
-- Combine the approaches: an NPC proposes a trade in natural language; explicit inventory and currency rules decide whether the trade can execute.
+- Combine the approaches: an NPC proposes a trade in natural language; explicit inventory and currency logic decide whether the trade can execute.
 
 **If asked**
 
 - This is a contrast, not an exhaustive taxonomy of software. Numerical simulation is not usually called symbolic AI just because it is written in C++. Traditional AI includes more than these two labels.
-- Learned models execute code over data too. Their weights are data. Explicit code can also contain bugs; the distinction does not mean rules are automatically correct or neural models are always random.
+- Learned models execute code over data too. Their weights are data. Explicit code can also contain bugs; the distinction does not mean code is automatically correct or neural models are always random.
 
 **Next**
 
@@ -525,7 +525,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Neural upscaling, such as DLSS Super Resolution, reconstructs higher-resolution images from lower-resolution inputs using motion and previous-frame information.
 - That is a specific job in the output pipeline. It does not establish that a target was hit, that inventory is consistent, or that a saved world can be restored correctly.
-- For generated-world demonstrations, ask separate questions: does an object persist after leaving view, can a designer control a rule, can you replay a failure, and what does it cost to run?
+- For generated-world demonstrations, ask separate questions: does an object persist after leaving view, can a designer control the logic, can you replay a failure, and what does it cost to run?
 
 **If asked**
 
@@ -577,7 +577,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- Find the state. Trace the rules. Follow the input and output. Measure the timing.
+- Find the state. Trace the logic. Follow the input and output. Measure the timing.
 - In your next project, choose one door, jump, or weapon. Draw those five parts and follow one real action through them. If you cannot find a part, that is your next question, not a personal failure.
 - The interface changed. The medium still needs to be understood. Your judgment is how you decide whether the result is right.
 
@@ -593,7 +593,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Say**
 
-- Give me a concrete symptom or something you want to build. We will locate its state, rules, boundaries, and timing, then decide what to inspect.
+- Give me a concrete symptom or something you want to build. We will locate its state, logic, boundaries, and timing, then decide what to inspect.
 - If no one volunteers, return to the flash-without-damage example. What evidence separates a missed hit from a stale health display?
 
 **Q&A ammunition**

@@ -81,12 +81,12 @@ function parseSlides(md) {
   if (current) slides.push(current);
 
   for (const s of slides) {
-    const fields = { goal: '', content: '', visual: '', refs: '' };
+    const fields = { goal: '', subtitle: '', content: '', visual: '', refs: '' };
     let cur = null;
     for (const raw of s.bullets) {
       const line = raw.trim();
       if (!line) continue;
-      const m = line.match(/^-\s+\*\*(Goal|Content|Visual|Refs):\*\*\s*(.*)$/i);
+      const m = line.match(/^-\s+\*\*(Goal|Subtitle|Content|Visual|Refs):\*\*\s*(.*)$/i);
       if (m) {
         cur = m[1].toLowerCase();
         fields[cur] = m[2];
@@ -160,6 +160,9 @@ function slideHtml(s) {
       '<section data-num="' + s.num + '" data-state="act-' + s.act.toLowerCase() + '" data-background-color="#111827">',
       '  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">' + s.actLabel + '</span>' + kicker,
       '    <h2>' + inlineMd(s.title) + '</h2>',
+      s.subtitle
+        ? '    <div class="title-rule" aria-hidden="true"></div>' + '    <h3 class="title-sub">' + inlineMd(s.subtitle) + '</h3>'
+        : '',
       diagram ? '<div class="diagram divider-diagram">' + diagram + '</div>' : '',
       (!diagram && claims) ? '    <ul class="divider-claims">' + claims + '</ul>' : '',
       '  </div></div></div>',

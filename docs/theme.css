@@ -89,6 +89,21 @@
   margin: 0 0 0.15em 0;
 }
 
+.reveal .divider .title-rule {
+  width: 4.5em;
+  height: 0.14em;
+  background: #4B5563;
+  border-radius: 2px;
+  margin: 0.2em 0 0.45em 0;
+}
+
+.reveal .divider h3.title-sub {
+  font-size: 0.98em;
+  font-weight: 400;
+  color: #CBD5E1;
+  margin: 0 0 0.2em 0;
+}
+
 .reveal .divider .kicker {
   font-family: var(--r-heading-font);
   text-transform: uppercase;

@@ -15,10 +15,11 @@ Audience text is the **Content** line. The words to say are in
 
 # ACT A — SOFTWARE
 
-## S1 — Section 1 intro: Software is the Medium — Game Engines are Software *(divider)*
+## S1 — Section 1 intro: Software is the Medium *(divider)*
 
+- **Subtitle:** Game Engines are Software
 - **Goal:** the title is the thesis.
-- **Content:** **Understand the engine, not just the editor** | Follow one button press from rules and data to pixels and sound | Leave with a map for learning any engine and checking AI-generated work
+- **Content:** **Understand the engine, not just the editor** | Follow one button press from code and data to pixels and sound | Leave with a map for learning any engine and checking AI-generated work
 - **Visual:** title.
 - **Refs:** `ch00` intro.
 
@@ -32,7 +33,7 @@ Audience text is the **Content** line. The words to say are in
 ## S3 — You are making software
 
 - **Goal:** name the blind spot.
-- **Content:** **Design** supplies rules and tuning | **Art and audio** supply assets and their constraints | **Engineering** connects them into a running system | Your craft stays distinct; the player experiences the whole system
+- **Content:** **Design** supplies logic and tuning | **Art and audio** supply assets and their constraints | **Engineering** connects them into a running system | Your craft stays distinct; the player experiences the whole system
 - **Visual:** four roles, one medium.
 - **Refs:** `ch00` intro, §7.
 
@@ -46,14 +47,14 @@ Audience text is the **Content** line. The words to say are in
 ## S5 — Section 2 intro: Anatomy of software *(divider)*
 
 - **Goal:** open the anatomy.
-- **Content:** Start with a button press | Follow the rules, the changing values, and the feedback | Then name the five parts
+- **Content:** Start with a button press | Follow the logic, the changing values, and the feedback | Then name the five parts
 - **Visual:** the sequence.
 - **Refs:** `ch00` §1–4.
 
 ## S6 — Code and data
 
 - **Goal:** the two substances.
-- **Content:** **Code** says what can happen | **Configuration** tunes it; **live state** records what is happening | Changing a jump setting is not the same as changing the jump rule
+- **Content:** **Code** says what can happen | **Configuration** tunes it; **live state** records what is happening | Changing a jump setting is not the same as changing the jump logic
 - **Visual:** two cards.
 - **Refs:** `ch00` §1.
 
@@ -74,7 +75,7 @@ Audience text is the **Content** line. The words to say are in
 ## S9 — Input, process, output
 
 - **Goal:** the shape of every program.
-- **Content:** **Input:** a request to fire | **Process:** check the rules and change the state | **Output:** show and play the result
+- **Content:** **Input:** a request to fire | **Process:** check the logic and change the state | **Output:** show and play the result
 - **Visual:** three boxes.
 - **Refs:** `ch00` §2.
 
@@ -95,7 +96,7 @@ Audience text is the **Content** line. The words to say are in
 ## S12 — State, logic, input, output, clock
 
 - **Goal:** the anatomy, named.
-- **Content:** **State:** remembered facts; **logic:** rules that change them | **Input / output:** what crosses the boundary | **Clock:** when work runs, not necessarily one timer
+- **Content:** **State:** remembered facts; **logic:** the code that changes them | **Input / output:** what crosses the boundary | **Clock:** when work runs, not necessarily one timer
 - **Visual:** five boxes.
 - **Refs:** `ch00` §4.
 
@@ -106,14 +107,14 @@ Audience text is the **Content** line. The words to say are in
 ## S13 — Section 3 intro: Anatomy of a game engine *(divider)*
 
 - **Goal:** the extension.
-- **Content:** An engine provides **reusable systems for running interactive worlds** | Your game supplies specific rules and content | Editors and asset tools help build what the runtime uses
+- **Content:** An engine provides **reusable systems for running interactive worlds** | Your game supplies specific logic and content | Editors and asset tools help build what the runtime uses
 - **Visual:** five parts opening into subsystems.
 - **Refs:** `ch00` §5, `ch01` §2.
 
 ## S14 — Five subsystems
 
 - **Goal:** the engine anatomy, one row each.
-- **Content:** The five questions become a map of engine responsibilities | Follow one shot: **input → rules → changed world → feedback** | These are roles, not five isolated code modules
+- **Content:** The five questions become a map of engine responsibilities | Follow one shot: **input → logic → changed world → feedback** | These are roles, not five isolated code modules
 - **Visual:** five rows.
 - **Refs:** `ch01` §2.
 
@@ -166,14 +167,14 @@ Audience text is the **Content** line. The words to say are in
 ## S21 — Section 5 intro: One weapon, every discipline *(divider)*
 
 - **Goal:** one object that uses the whole anatomy.
-- **Content:** A weapon is not just a mesh | It is a contract between design, assets, rules, timing, and feedback | Trace one shot to find every discipline's contribution
+- **Content:** A weapon is not just a mesh | It is a contract between design, assets, logic, timing, and feedback | Trace one shot to find every discipline's contribution
 - **Visual:** the chain.
 - **Refs:** `ch08` §1.
 
 ## S22 — From authoring to a running game
 
 - **Goal:** the chain, with owners.
-- **Content:** **Build time:** create, import, validate, and package | **Run time:** load, interpret input, apply rules, present results | Handoffs have contracts: names, units, formats, and budgets
+- **Content:** **Build time:** create, import, validate, and package | **Run time:** load, interpret input, apply logic, present results | Handoffs have contracts: names, units, formats, and budgets
 - **Visual:** six steps.
 - **Refs:** `ch08` §1–5.
 
@@ -194,7 +195,7 @@ Audience text is the **Content** line. The words to say are in
 ## S25 — One event, several kinds of feedback
 
 - **Goal:** the output side, named.
-- **Content:** An accepted shot can drive animation, sound, VFX, and the HUD | Their timing shapes how the weapon feels | A missing flash is not proof that the damage rule failed
+- **Content:** An accepted shot can drive animation, sound, VFX, and the HUD | Their timing shapes how the weapon feels | A missing flash is not proof that the damage logic failed
 - **Visual:** state feeding render and audio.
 - **Refs:** `ch08` §7–8.
 
@@ -226,7 +227,7 @@ Audience text is the **Content** line. The words to say are in
 ## S29 — Symbolic and connectionist
 
 - **Goal:** the two minds, in software terms.
-- **Content:** **Explicit rules:** enforce ammunition and cooldown | **Learned models:** predict an answer from training and context | Combine them: generated dialogue can suggest an action; game rules decide whether it is allowed
+- **Content:** **Explicit logic:** enforce ammunition and cooldown | **Learned models:** predict an answer from training and context | Combine them: generated dialogue can suggest an action; game logic decides whether it is allowed
 - **Visual:** two columns.
 - **Refs:** `ch09` §3.
 
@@ -247,14 +248,14 @@ Audience text is the **Content** line. The words to say are in
 ## S32 — Give AI a boundary and a test
 
 - **Goal:** the catch.
-- **Content:** "Trace the fire input to the ammunition update; cite the files" | "Propose one small change; preserve damage and cooldown rules" | "Test empty ammo, cooldown, hit, and miss; report what you actually ran"
+- **Content:** "Trace the fire input to the ammunition update; cite the files" | "Propose one small change; preserve damage and cooldown logic" | "Test empty ammo, cooldown, hit, and miss; report what you actually ran"
 - **Visual:** anatomy under the harness.
 - **Refs:** `ch09` §6, `ch00` §8.
 
 ## S33 — The interface changed. The medium did not.
 
 - **Goal:** the last line.
-- **Content:** **Find the state. Trace the rules. Follow the input and output. Measure the timing.** | Practice on a door, a jump, or a weapon in any engine | Use the same map to question an AI-generated change
+- **Content:** **Find the state. Trace the logic. Follow the input and output. Measure the timing.** | Practice on a door, a jump, or a weapon in any engine | Use the same map to question an AI-generated change
 - **Visual:** the sentence.
 - **Refs:** `ch00` §9, `ch09` §12, `ch10`.
 
