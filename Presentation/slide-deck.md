@@ -220,7 +220,14 @@ Audience text is the **Content** line. The words to say are in
 - **Visual:** state feeding render and audio.
 - **Refs:** `ch08` §7–8.
 
-## S29 — The same chain in Doom 3
+## S29 — Where each element lives: data or code
+
+- **Goal:** make the split concrete.
+- **Content:** **Values** — damage, cooldown, ammo, ranges — live in **data**: tables, config, or assets a designer edits | **Decisions** — eligibility, hit tests, spending the round — live in **code**: scripts, Blueprints, C++ | **Assets** — meshes, sounds, textures — are **data** the code loads | The schema is the seam: it names the fields the data must satisfy
+- **Visual:** the same weapon split into data rows and code rows.
+- **Refs:** `ch08` §2–4, `ch00` §1.3.
+
+## S30 — The same chain in Doom 3
 
 - **Goal:** not an Unreal-only story.
 - **Content:** DOOM 3 combines weapon definitions, assets, scripts, and C++ | File names change; the authoring-to-runtime handoffs remain | Engine code provides capabilities; game content configures and coordinates them
@@ -231,56 +238,56 @@ Audience text is the **Content** line. The words to say are in
 
 # ACT D — THE DIRECTION
 
-## S30 — Section 6 intro: AI inside the same map *(divider)*
+## S31 — Section 6 intro: AI inside the same map *(divider)*
 
 - **Goal:** open the history without leaving the anatomy.
 - **Content:** Separate three questions | Is AI **helping build** the game, **running inside** it, or **generating its output**? | Each role needs different checks
 - **Visual:** two branches.
 - **Refs:** `ch09` §2–3, `ch10`.
 
-## S31 — Feedback turns a guess into an experiment
+## S32 — Feedback turns a guess into an experiment
 
 - **Goal:** history of the loop, one slide.
 - **Content:** **Goal → act → observe → compare → adjust** | A player corrects aim; a developer corrects a bug | AI output becomes useful evidence only after you inspect and test it
 - **Visual:** sense, correct, act.
 - **Refs:** `ch09` §2, `ch00` §3.
 
-## S32 — Symbolic and connectionist
+## S33 — Symbolic and connectionist
 
 - **Goal:** the two minds, in software terms.
 - **Content:** **Explicit logic:** enforce ammunition and cooldown | **Learned models:** predict an answer from training and context | Combine them: generated dialogue can suggest an action; game logic decides whether it is allowed
 - **Visual:** two columns.
 - **Refs:** `ch09` §3.
 
-## S33 — A learned component still has a job
+## S34 — A learned component still has a job
 
 - **Goal:** the direction, concretely.
 - **Content:** **Shipped example:** neural upscaling reconstructs an image | Better-looking pixels do not establish collision, health, or ownership | Judge generated worlds separately on consistency, controllability, and cost
 - **Visual:** symbolic base, neural inserts.
 - **Refs:** `ch10` §3.
 
-## S34 — AI is a new interface
+## S35 — AI is a new interface
 
 - **Goal:** the close of the argument.
 - **Content:** The **model proposes**; the **harness manages tool execution** | Tools read files, edit assets, and run tests within granted permissions | Read the diff and the test result, not just the confident explanation
 - **Visual:** you, harness, software.
 - **Refs:** `ch09` §1, §6.
 
-## S35 — Give AI a boundary and a test
+## S36 — Give AI a boundary and a test
 
 - **Goal:** the catch.
 - **Content:** "Trace the fire input to the ammunition update; cite the files" | "Propose one small change; preserve damage and cooldown logic" | "Test empty ammo, cooldown, hit, and miss; report what you actually ran"
 - **Visual:** anatomy under the harness.
 - **Refs:** `ch09` §6, `ch00` §8.
 
-## S36 — The interface changed. The medium did not.
+## S37 — The interface changed. The medium did not.
 
 - **Goal:** the last line.
 - **Content:** **Find the state. Trace the logic. Follow the input and output. Measure the timing.** | Practice on a door, a jump, or a weapon in any engine | Use the same map to question an AI-generated change
 - **Visual:** the sentence.
 - **Refs:** `ch00` §9, `ch09` §12, `ch10`.
 
-## S37 — Questions
+## S38 — Questions
 
 - **Goal:** use the anatomy to answer.
 - **Content:** A weapon flashes, but the target takes no damage: **where would you look first?** | Separate what you observed from what you inferred | Take the five questions into your next project

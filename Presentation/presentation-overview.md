@@ -1,7 +1,7 @@
 ---
 type: Overview
 title: "Presentation Overview - Software is the Medium: Game Engines are Software"
-description: Delivery guide for the current 37-slide deck: six sections in four acts, 49 minutes including an exercise, plus 10 minutes Q&A, with an optional 25-minute route.
+description: Delivery guide for the current 38-slide deck: six sections in four acts, 50 minutes including an exercise, plus 10 minutes Q&A, with an optional 25-minute route.
 tags: [presentation, overview, game-engines, medium, teaching]
 generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
@@ -10,7 +10,7 @@ generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 
 Use this as the delivery map, not another script. Audience content lives in
 [slide-deck.md](slide-deck.md); presenter prompts and backup answers live in
-[speaker-cards.md](speaker-cards.md). The current source has **37 slides, 37
+[speaker-cards.md](speaker-cards.md). The current source has **38 slides, 38
 cards, six section dividers, and four acts**. Older 64/73-slide plans are history.
 
 ## 1. The Thread
@@ -58,7 +58,7 @@ node scripts/build-deck.mjs
 ```
 
 The build uses Node built-ins; it needs no project dependency installation.
-Expect `slides parsed: 37`, `cards parsed: 37`, `slides without a card: none`,
+Expect `slides parsed: 38`, `cards parsed: 38`, `slides without a card: none`,
 and `dividers: 6`. Use the existing preview/publishing workflow; no additional
 tooling is required. For a local preview, serve `docs/` with an existing HTTP
 server. The examples below assume it uses port 8080.
@@ -69,7 +69,7 @@ server. The examples below assume it uses port 8080.
 3. Advance once and confirm the matching card follows. Test both windows on the
    actual display arrangement; share only the audience window.
 4. Use arrow keys to advance and `Esc` for the slide overview. For a direct
-   jump, the zero-based URL `/#/23` opens S24; `/#/36` opens S37.
+   jump, the zero-based URL `/#/23` opens S24; `/#/37` opens S38.
 5. Rehearse from the local copy. Reveal.js is vendored; Google Fonts are remote,
    so test offline fallback font layout before relying on it.
 
@@ -97,10 +97,10 @@ outcome. Use the factual guardrails in section 8 when explaining it aloud.
 
 ## 5. Section Budget and Slide Map
 
-**Canonical suggested timings:** 49 minutes of delivery, including the exercise,
-then 10 minutes Q&A = **59 minutes total**. [PLAN section 8](../PLAN.md#8-the-derived-outline-at-a-glance)
+**Canonical suggested timings:** 50 minutes of delivery, including the exercise,
+then 10 minutes Q&A = **60 minutes total**. [PLAN section 8](../PLAN.md#8-the-derived-outline-at-a-glance)
 mirrors this table. Timings include transitions; do not add separate divider time.
-Section intros are S1, S5, S15, S21, S24, and S30.
+Section intros are S1, S5, S15, S21, S24, and S31.
 
 | Section | Act / Focus | Slides | Source | Minutes | Elapsed End |
 |---|---|---|---|---|---:|---:|
@@ -108,11 +108,11 @@ Section intros are S1, S5, S15, S21, S24, and S30.
 | 2 | A / Anatomy of software | S5-S14 | ch00 | 12 | 16:00 |
 | 3 | B / Anatomy of a game engine | S15-S20 | ch00-ch02 | 9 | 25:00 |
 | 4 | B / Quake, Doom 3, Unreal 5 | S21-S23 | Engine cases, ch01 | 5 | 30:00 |
-| 5 | C / One weapon, every discipline | S24-S29 | ch08 | 11 | 41:00 |
-| 6 | D / AI, interfaces, and takeaways | S30-S36 | ch09-ch10, ch00 | 8 | 49:00 |
-| Q&A | D / Questions and further reading | S37 | All | 10 | 59:00 |
-| | **Delivery total** | **S1-S36** | | **49** | |
-| | **Including Q&A** | **S1-S37** | | **59** | |
+| 5 | C / One weapon, every discipline | S24-S30 | ch08 | 12 | 42:00 |
+| 6 | D / AI, interfaces, and takeaways | S31-S37 | ch09-ch10, ch00 | 8 | 50:00 |
+| Q&A | D / Questions and further reading | S38 | All | 10 | 60:00 |
+| | **Delivery total** | **S1-S37** | | **50** | |
+| | **Including Q&A** | **S1-S38** | | **60** | |
 
 ### Delivery Beats
 
@@ -131,15 +131,17 @@ Section intros are S1, S5, S15, S21, S24, and S30.
 - **S21-S23:** read one row across the three engines, then one engine down the
   rows. Do not recite every implementation name. The clock row is a contrast,
   not a promise of determinism or a universal engine configuration.
-- **S24-S29:** walk design, files, import/integration, and gameplay into output.
+- **S24-S30:** walk design, files, import/integration, and gameplay into output.
   Name who supplies data and who checks a handoff; ownership varies by team.
-  Reserve three of the eleven minutes for the exercise below at S28, then use
-  S29 to show that the same questions work in Doom 3.
-- **S30-S36:** reconnect feedback, contrast explicit logic with learned weights,
+  After the feedback exercise, name where each element lives — values and
+  assets in data, decisions in code. Reserve three of the eleven minutes for
+  the exercise below at S28, then use S30 to show that the same questions work
+  in Doom 3.
+- **S31-S37:** reconnect feedback, contrast explicit logic with learned weights,
   distinguish existing neural techniques from forecasts, and explain tool-
   enabled AI with permission and verification limits. End with the reusable
-  questions, not a product pitch. Stop after S36; do not add a second ending.
-- **S37:** ask for a concrete symptom or example, map it to a part, and name
+  questions, not a product pitch. Stop after S37; do not add a second ending.
+- **S38:** ask for a concrete symptom or example, map it to a part, and name
   what evidence would resolve it. If unsure, say so and point to a source.
 
 ## 6. Hands-On Exercise
@@ -177,14 +179,14 @@ past omitted slides. Q&A is separate: 25 + 10 = **35 minutes** if retained.
 | 2 | S5-S6, S9-S11, S14; omit S7-S8, S12-S13 | 6 | 08:00 |
 | 3 | S15-S20; one example of world organization | 4 | 12:00 |
 | 4 | S21-S22; omit S23 | 3 | 15:00 |
-| 5 | S24-S29; one-minute individual exercise at S28 | 6 | 21:00 |
-| 6 | S30, S32-S36; omit S31, one sentence on S33 | 4 | 25:00 |
+| 5 | S24-S30; one-minute individual exercise at S28 | 6 | 21:00 |
+| 6 | S31, S33-S37; omit S32, one sentence on S34 | 4 | 25:00 |
 | | **Delivery total** | **25** | |
 
 In the one-minute exercise, allow 30 seconds to choose a check, 20 seconds for
 one answer, and 10 seconds for the presentation-versus-authority debrief.
-If the full talk slips, drop extra analogies, S23 detail, and S31 history first.
-Protect S14/S17 (the map), S22 (comparison), the weapon chain, and S36 (closure).
+If the full talk slips, drop extra analogies, S23 detail, and S32 history first.
+Protect S14/S17 (the map), S22 (comparison), the weapon chain, and S37 (closure).
 
 ## 8. Presenter Guardrails and Rehearsal
 
@@ -212,13 +214,13 @@ Protect S14/S17 (the map), S22 (comparison), the weapon chain, and S36 (closure)
   that whole engines will be replaced. Future architecture and employment
   effects remain uncertain; do not promise replacement or guaranteed job safety.
 
-**Rehearse once with a timer:** reach S15 at 16:00, S24 at 30:00, S30 at
-41:00, and S37 at 49:00. Say the exercise prompt out loud and include the full
+**Rehearse once with a timer:** reach S15 at 16:00, S24 at 30:00, S31 at
+42:00, and S38 at 50:00. Say the exercise prompt out loud and include the full
 student thinking time. Pick one analogy per concept; backup material is for
 questions, not mandatory delivery. Rehearse the first minute and the last minute
 twice, plus the S28 debrief and the jump past optional slides.
 
-**Before the room opens:** build and verify 37/37/6, check diagrams and text at
+**Before the room opens:** build and verify 38/38/6, check diagrams and text at
 the actual projector size, test the popup and timer, test local/offline access,
 and keep a second copy of the notes accessible. No login, install, or live demo
 should be needed during delivery. If a detail is disputed, separate the general
