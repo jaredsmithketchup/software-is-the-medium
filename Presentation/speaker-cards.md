@@ -1,459 +1,566 @@
 ---
 type: Reference
-title: "Speaker Cards — Software is the Medium: Game Engines are Software"
-description: Spoken script for the refactored deck. Read Say. Use Need only if asked. Then say Next.
+title: "Speaker Cards - Software is the Medium: Game Engines are Software"
+description: Read-aloud prompts, diagram walks, concrete examples, checks, technical caveats, and Q&A for the 32-slide student talk.
 tags: [presentation, speaker-cards, game-engines, medium]
 generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
 
-# Speaker Cards — Software is the Medium: Game Engines are Software
+# Speaker Cards - Software is the Medium
 
-Read **Say**. **Need** is only if someone asks, or if you blank. Then **Next**.
+Read **Say**, not every backup answer. **Show / ask** directs attention and checks understanding. **If asked** supplies depth without turning the talk into a technical lecture. **Next** is the transition.
 
-If you fall behind, cut S18 and S26 first. Do not cut the engine anatomy (S12),
-the three engines (S17), the weapon (S20–S24), or the last line (S31).
+45-minute route, including the S23 exercise: S1-S3 3 min; S4-S10 10 min; S11-S15 8 min; S16-S18 5 min; S19-S24 11 min; S25-S31 8 min. S32 adds 10 min Q&A. Reach S11 at 13:00, S19 at 26:00, S25 at 37:00. If behind, skip S6, S18, and S26 rather than speaking faster. Protect S10/S12, the weapon, and the ending. No live demo required.
 
-Lost? Point at a part: state, logic, input, output, clock.
+The numbers for the example weapon are invented teaching values, not a claim about a shipped game. The five parts are questions about responsibilities, not five mandatory modules. Public engine documentation can change; distinguish original releases from ports and settings. The current cards correct several over-broad claims in the older reference chapters.
 
----
-
-## S1 — Software is the Medium — Game Engines are Software
+## S1 - Software is the Medium - Game Engines are Software
 
 **Say**
 
-- Software is the medium. Game engines are software.
-- Say the title, then stop. The rest of the talk is the anatomy of that sentence.
-- First the anatomy of software. Then the same anatomy as an engine. Then one weapon, so every discipline can see their part. Then where this is going.
+- Imagine pressing fire. A number changes, a sound plays, and a flash appears. What connected those things? That is what we are going to make understandable.
+- You do not need to become a programmer today. You need a map: what the engine remembers, what changes it, what goes in and out, and when it happens.
+- We will build that map, follow a weapon through it, then use it to evaluate AI tools without needing to believe their marketing.
+
+**Show / ask**
+
+- Ask for a show of hands: design, art, sound, programming, or still exploring. All are legitimate starting points. Avoid making anyone explain their technical level publicly.
 
 **Next**
 
-- Most of you are already making software. That is the part people miss.
+- Each of those disciplines already contributes to a running software system.
 
-## S2 — You are making software
+## S2 - You are making software
 
 **Say**
 
-- If you design, model, animate, or make sound, you are making software.
-- Your files are data. The engine is code that plays that data back.
-- The properties of software are the properties of your job. If you do not know them, you are working the medium blind.
+- An artist does not just deliver a beautiful image. They deliver an image with dimensions, compression, memory cost, and a material that knows how to use it.
+- A designer's cooldown is a value with units. An audio clip has a duration and a loading cost. Engineering connects these contributions into behavior.
+- Your craft remains your craft. Understanding the medium lets you predict what happens after your handoff.
 
-**Need**
+**If asked**
 
-- A texture, a sound, a damage number, a Blueprint graph. All of it is software. Some of it is data. Some of it is code stored as data.
+- "Must everyone code?" No. Reading a profiler, checking an asset reference, or specifying units is already useful technical literacy. We are learning how to ask better questions, not erasing specialisms.
+- Concrete handoff: a sound exists on disk, but a missing reference means the running weapon never finds it. The file can be excellent and the integration still wrong.
 
 **Next**
 
-- The tool will change. The anatomy will not.
+- The editor will change. These questions travel with you.
 
-## S3 — The anatomy outlasts the tool
+## S3 - The anatomy outlasts the tool
 
 **Say**
 
-- Unreal today. Something else in five years. A custom engine at the next studio.
-- Learn the product manual and you start over. Learn the anatomy and you can read the next engine.
-- That is the whole reason for this talk.
+- On your first day in an unfamiliar engine, do not try to memorize every panel. Find one object and ask five questions.
+- Where is its state? Which rule changes it? What triggers that rule? What result reaches the player? When does the work run?
+- Product knowledge still matters. This map tells you where to start learning it.
+
+**Show / ask**
+
+- Use a door: open or closed is state; a key requirement is logic; interact is input; motion and sound are output; the update and animation schedule are timing.
+
+**If asked**
+
+- This is a useful abstraction, not a proof that every program has exactly five classes. Security, networking, persistence, and tools cross these responsibilities.
 
 **Next**
 
-- Anatomy of software. Five ideas. Stay with me.
+- First, separate the rule from the values it operates on.
 
-## S4 — Anatomy of software
-
-**Pace:** this block is the foundation. Do not rush S10.
+## S4 - Anatomy of software
 
 **Say**
 
-- Code and data. Input, process, output. The loop. Latency. Then five parts that hold all of it.
+- We will take one button press apart: rules and values, input and output, feedback, and time. Then we will put the five labels on it.
+- If a word is unfamiliar, attach it to the example. You do not need to memorize the terminology on first hearing.
 
 **Next**
 
-- Two substances. Nothing else.
+- Press jump. What is the instruction, and what is a number?
 
-## S5 — Code and data
+## S5 - Code and data
 
 **Say**
 
-- Code is the rules. Data is the values.
-- Press jump. The rule is code. How high you are is data.
-- A spreadsheet is the same cut. Formulas are code. Cells are data.
+- The rule says: if jump is requested and the player is grounded, set upward velocity. The configured jump speed is a value the designer can tune.
+- Current velocity and grounded status are live state. They describe this player now, not the default for every player.
+- Changing jump speed can make a higher jump. Allowing a second jump in mid-air changes the rule. Knowing which change you want saves a lot of random editing.
 
-**Need**
+**Show / ask**
 
-- The old name, if a programmer asks: von Neumann. A stored program acting on stored state. You do not need the name.
+- Ask: is ammunition 30 a rule or state? State. Is "do not fire with zero ammunition" a rule? Yes.
+
+**If asked**
+
+- Configuration is also data. The configuration/live-state distinction is about use, not a different physical substance. Code itself is stored as bytes; its role is to supply instructions.
 
 **Next**
 
-- That split is not locked.
+- That is why a file can carry behavior, not just pictures and numbers.
 
-## S6 — Code can be stored as data
+## S6 - Code can be stored as data
 
 **Say**
 
-- A rule can live in a file. A file can change what the game does.
-- Quake compiled QuakeC into progs.dat. The code shipped as data.
-- Doom 3 scripts ship as data. Unreal Blueprints ship in .uasset files.
-- A mod replaces a data file. Nobody recompiles the engine. The game still changes.
-- So you decide what is a rule in the program, and what is a value in a file.
+- A file extension does not tell you whether something can change behavior. A runtime may read a file as instructions.
+- Quake compiles its gameplay language, QuakeC, into progs.dat. Unreal stores Blueprint graphs in assets. Those files need an engine that understands them.
+- Some mods replace data or scripts without rebuilding engine code. Others need native code changes. The boundary is a design choice, not magic.
+
+**If asked**
+
+- A Blueprint is not "just data" in the sense of being behavior-free. A graph can express executable logic. Assets can also contain only content or configuration.
+- Source trail: [Quake program loader and VM structures](https://github.com/id-Software/Quake/blob/master/WinQuake/pr_edict.c). Search for progs.dat and PR_LoadProgs.
 
 **Next**
 
-- Every program, including that file, has a shape.
+- Whatever the file contains, follow what enters the program and what comes out.
 
-## S7 — Input, process, output
+## S7 - Input, process, output
 
 **Say**
 
-- Input crosses in. A key, a file, a packet.
-- Process is code acting on data.
-- Output crosses out. Pixels, audio, a file written to disk.
-- A calculator and an engine are the same three boxes. Scale and speed change. The shape does not.
+- A fire command arrives. Gameplay checks whether firing is allowed, spends ammunition, and checks what was hit. Then the result becomes pixels, sound, and interface updates.
+- Input is a request. It is not a guarantee that the requested action happens. Empty ammunition should reject the request.
+- The same model works for an import tool: source file in, conversion and validation, runtime asset out.
 
-**Need**
+**Show / ask**
 
-- There is no software without IO. Only software whose IO is hidden. If you are lost later: where is the input, where is the output, what is the process?
+- Point left to right. Ask which box should decide whether the weapon has ammunition. The rules in the process, consulting state, not the muzzle-flash artwork.
 
 **Next**
 
-- Games do not run once. They loop.
+- The output changes what the player does next.
 
-## S8 — The loop is cybernetics
+## S8 - The player closes the feedback loop
 
 **Say**
 
-- Output reaches a person. They perceive, decide, and act. That act is the next input.
-- That feedback loop has a name: cybernetics.
-- Keep the word. It is the name of a system that watches its own output and corrects.
-- A game with no player is a simulation. Put a player in it, and they are in the loop.
+- You aim, fire, see a miss, move slightly, and fire again. Your next action depends on the previous result. That is feedback.
+- The software continues updating while you think. The frame loop is inside a larger human feedback loop; your brain is not making a fresh conscious decision every display refresh.
+- Cybernetics studies control and communication through feedback. The useful idea here is correction by observing consequences.
 
-**Need**
+**If asked**
 
-- Sense, think, act is the same three boxes. Do not teach a second theory.
+- Feedback is not automatically beneficial. A delayed or misleading cue can make a player overcorrect. Camera smoothing can look pleasant while making aiming feel less direct.
+- A simulation can run without a human. Human participation is not a universal definition separating every game from every simulation.
 
 **Next**
 
-- The price of the loop is latency.
+- How long does that response take? That is a different question from frame rate.
 
-## S9 — Latency
+## S9 - Frame rate is not response time
 
 **Say**
 
-- Finger, device, OS, simulation, render, display, eye.
-- Those delays add. They do not average.
-- At 60 fps the budget is about 17 milliseconds. At 144 Hz it is tighter.
-- Miss the budget, and the player feels the loop break. That is what lag is.
+- Divide one thousand milliseconds by sixty. You get about 16.7 milliseconds between frames at sixty frames per second.
+- That is not a promise that your click reaches the screen in 16.7 milliseconds. The device must sample it, the simulation must consume it, rendering must run, and the display must present it. Queues can add waiting.
+- Frame rate measures how frequently images arrive. Latency measures how old the response is. A conveyor belt can deliver frequently while carrying old packages.
+
+**Show / ask**
+
+- Trace the chain once. Ask: could a game be smooth but feel sluggish? Yes, because queued work can preserve throughput while increasing response delay.
+
+**If asked**
+
+- 120 fps gives 8.3 ms; 30 fps gives 33.3 ms. These are arithmetic intervals, not measured end-to-end latency. Networked actions may include additional network and server delay. Do not sum CPU and GPU frame timings blindly: work can overlap.
 
 **Next**
 
-- Now the five parts. This is the anatomy. Learn these names.
+- Now give the whole system five labels.
 
-## S10 — State, logic, input, output, clock
+## S10 - State, logic, input, output, clock
 
 **Say**
 
-- State: what is stored.
-- Logic: code over data.
-- Input: what crosses in.
-- Output: what crosses out.
-- Clock: when it runs.
-- Any program fits these boxes. A web form does. An engine does. Point at the box if you get lost for the rest of the day.
+- State remembers: ammunition, health, position. Logic changes those facts according to rules. Input requests changes. Output presents results. Clock means when the work runs.
+- The arrows matter more than the boxes. Rules read existing state and write new state. Output reads a representation of the result. Timing affects the entire journey.
+- Keep this map. When someone says "the engine is broken," ask which boundary failed and what evidence they have.
+
+**Show / ask**
+
+- Point to state and ask "29 rounds: where?" Then logic: "the rule that spent one round: where?" Allow a pause; this is the comprehension check to protect.
+
+**If asked**
+
+- Clock can mean an event loop, simulation tick, task schedule, audio callback, or cooldown. There may be several clocks. These are responsibilities, not isolated physical boxes.
 
 **Next**
 
-- Hold that diagram up to a game engine.
+- An engine packages reusable machinery for these responsibilities.
 
-## S11 — Anatomy of a game engine
+## S11 - Anatomy of a game engine
 
 **Say**
 
-- An engine is not a new kind of software.
-- Same five parts. Each one is now a subsystem. And it has a deadline.
+- A game engine is reusable software for building and running interactive worlds. It commonly provides simulation support, rendering, audio, input, asset handling, and authoring tools.
+- Your game adds the particular rules and content: what a weapon does, how a level looks, what winning means.
+- The editor is the workshop. The runtime is the machinery running the shipped experience. Engines differ in where that boundary sits; some games use custom or minimal tools.
+
+**If asked**
+
+- "Is a renderer an engine?" It may be one component of an engine. A library that draws triangles does not necessarily provide gameplay, physics, asset tools, or a complete runtime. The label has fuzzy edges; ask what responsibilities it supplies.
+- Not every engine is large or 3D. The same questions work for a small 2D framework.
 
 **Next**
 
-- Read the rows.
+- Here are the responsibilities using the same five questions.
 
-## S12 — Five subsystems
+## S12 - Five subsystems
 
 **Say**
 
-- State is the world model. The picture of the world and everything in it.
-- Logic is physics, AI, and gameplay. Code over that data.
-- Input is the input subsystem. A device event becomes a command the game can read.
-- Output is the renderer, the audio mixer, and the UI.
-- The clock is the frame loop.
-- "The engine is slow" means nothing. Name the subsystem.
+- Input turns a device event into a gameplay command. Logic tests the rules. The world model stores the changed facts. Rendering, audio, and UI present them. The scheduler determines when those jobs happen.
+- For our weapon: Fire comes in, the rule spends one round, state becomes 29, and the player sees and hears the shot.
+- In a real engine each part crosses several modules and threads. The point is to locate responsibility, not force the source tree into five folders.
+
+**Show / ask**
+
+- "The ammunition display says 30 but the weapon has 29. Which boundary would you inspect?" Compare authoritative state with what the HUD reads. Do not immediately rewrite the firing rule.
 
 **Next**
 
-- Why the deadline is the whole job.
+- Correct work still has to arrive on time.
 
-## S13 — The frame loop is hard real-time
+## S13 - A frame is a time budget
 
 **Say**
 
-- The frame must finish before the next refresh. That is hard real-time.
-- Ordinary software can be late. A game cannot, or the player feels it.
-- The frame loop and the human loop are the same loop. The display is the metronome. 60 to 144 times a second.
+- At a sixty-frame target we aim to deliver a frame roughly every 16.7 milliseconds. Illustratively, twelve milliseconds of critical-path work fits; twenty-four does not.
+- Games are generally soft real-time: being late hurts responsiveness or smoothness, but a missed frame is not automatically total system failure. Hard real-time systems require deadline guarantees for correctness.
+- Find the bottleneck before optimizing. A faster shader does not fix a main thread waiting for an asset to load.
+
+**If asked**
+
+- CPU and GPU often work on different frames concurrently. Their times are not simply added to predict frame rate. Synchronization, queues, refresh policy, and the critical path matter.
+- In Unreal, start with stat unit for Game, Draw, GPU, and Frame, then a timeline in Unreal Insights. Measure on the target hardware, including slow frames rather than only an average.
 
 **Next**
 
-- One mistake people make about that output row.
+- The image is one output of that work, not the world itself.
 
-## S14 — The renderer reads state
+## S14 - The renderer reads state
 
 **Say**
 
-- State and logic are the core. They hold the world.
-- Assets, audio, UI, and network are channels. They move data across a boundary.
-- The renderer is a channel. It reads state and draws it. It does not run the simulation.
-- Black screen, world still simulating: the renderer is a reader, not the owner of the facts.
+- Think of a scoreboard and the scorekeeper. The display reports a score; it does not necessarily decide which goal counts.
+- Similarly, a headless server can track positions, hits, and health without drawing any pixels. The renderer makes a picture from state prepared for presentation.
+- A flash is evidence that an effect appeared. It is not proof that the authoritative damage rule accepted a hit.
+
+**If asked**
+
+- Rendering systems do perform computation and can simulate cosmetic particles or other effects. The distinction is authority over gameplay, not "renderers never simulate."
+- Clients may predict an effect before the server confirms the action. Rendering copies can intentionally lag the authoritative world. Authority and freshness are separate questions.
 
 **Next**
 
-- The state slot has a name: the world model. Three ways to store it.
+- How are those world facts organized?
 
-## S15 — The world model is the state slot
+## S15 - Three ways to organize a world
 
 **Say**
 
-- Scene graph: a parent-child transform tree. Attach a sword to a hand. The hand moves the sword.
-- BSP: the level is compiled into rooms, plus a flat list of entities. Quake and Doom 3 live here.
-- ECS: the same kind of fact in one column. A system scans the column.
-- You do not need to pick a winner. You need to know which one your engine uses, because that is the state you feed.
+- A transform tree answers "what moves with what?" Move a hand and the attached weapon follows.
+- A spatial index answers "what is near or potentially visible?" A BSP partitions space; other engines use grids or bounding-volume trees.
+- Components answer "what data and capabilities does this thing have?" An ECS organizes entities by components and runs systems over matching data.
+- These are not competing brands of world model. One engine can use all three for different jobs.
+
+**If asked**
+
+- ECS means entity-component-system. Not every ECS uses the same columnar storage, and not every component-based engine is an ECS. Unreal Actors and Components do not by themselves imply a pure ECS.
+- A spatial index may be derived from world data. If a moving object is not reflected in the index, queries can give wrong answers even when its visible transform looks correct.
 
 **Next**
 
-- Same rows. Three real engines.
+- Let us use the questions on engines that actually shipped.
 
-## S16 — Quake, Doom 3, Unreal 5
+## S16 - Quake, Doom 3, Unreal 5
 
 **Say**
 
-- Do not memorize the brands. Read the row.
-- State, logic, input, output, clock. If you can fill those five, you can read the engine.
+- This is not a nostalgia test. Ignore names you do not recognize; identify the job each name performs.
+- We are comparing the original Quake and DOOM 3 architectures with the configurable Unreal 5 family. Ports, later editions, and project settings can change important details.
 
 **Next**
 
-- Here they are.
+- Read one row across before reading one engine down.
 
-## S17 — The same five rows
+## S17 - The same five rows
 
 **Say**
 
-- Quake. State is a BSP world plus edicts. Logic is QuakeC and the physics step. Input is a usercmd. Output is the renderer and the audio mix. Clock is a variable frame.
-- Doom 3. State is a compiled .proc world plus idEntity objects. Logic is RunFrame and idScript. Input is a usercmd at 60 Hz. Output is the renderer and OpenAL. Clock is a fixed 60 Hz simulation, and render runs as fast as the display.
-- Unreal 5. State is a UWorld of Actors. Logic is actor tick plus Chaos. Input is Enhanced Input. Output is a render thread, the audio mixer, and UMG. Clock is a variable game frame with fixed physics substeps.
-- Thirty years. Same five rows.
+- Start with state. Quake combines compiled world geometry with entities called edicts. DOOM 3 uses compiled render-world data and game objects such as idEntity. Unreal organizes gameplay around a UWorld, Actors, and Components.
+- Those are different names and structures for facts about the world. Next, the logic row names the code that changes those facts.
+- Do not recite the whole table. Pick Quake and walk down: world facts, C and QuakeC behavior, input commands, rendering and audio, host-frame timing. The new engine stops being a wall of unfamiliar words.
 
-**Need**
+**If asked**
 
-- QuakeC lived in progs.dat. Doom 3 data lived in .decl and .def files. Unreal content lives in .uasset files. That is S6 again: code and data, stored as files.
+- Original DOOM 3 has a nominal 60 Hz game/user-command cadence; avoid claiming it has BFG's later render/simulation arrangement. Unreal physics substepping is configurable, not universally fixed by default.
+- Primary sources: [Quake source](https://github.com/id-Software/Quake), [DOOM 3 game state and interface](https://github.com/id-Software/DOOM-3/blob/master/neo/game/Game_local.h), [DOOM 3 user-command timing](https://github.com/id-Software/DOOM-3/blob/master/neo/framework/UsercmdGen.h), [Epic physics substepping](https://dev.epicgames.com/documentation/en-us/unreal-engine/physics-sub-stepping-in-unreal-engine).
 
 **Next**
 
-- What actually changes.
+- The timing row deserves one important distinction.
 
-## S18 — What changes is the fill
+## S18 - Simulation and display can tick differently
 
 **Say**
 
-- The clock is the row people feel. Quake varies the frame. Doom 3 locks simulation at 60 and renders separately. Unreal varies the game thread and locks physics inside it.
-- The world model changes. Threads change. Unreal splits game, render, and RHI.
-- Nobody adds a sixth part.
+- Fixed-step simulation advances by the same amount of simulated time each update. Variable-step simulation uses the measured elapsed interval.
+- A renderer may run at a different cadence, using previous and current states to interpolate a picture. It is a separate scheduling question.
+- If simulation falls behind, the engine needs a policy: catch up, limit catch-up work, or slow simulated time. Unlimited catch-up can create even more lateness.
 
-**Need**
+**If asked**
 
-- If someone asks why Doom 3 can hitch while the sim is fine: the sim owes tics, then it draws once. Render and simulation are different clocks.
+- Fixed step helps repeatability; it does not guarantee identical outcomes. Starting state, inputs, random seeds, execution order, floating-point behavior, and platform differences still matter.
+- Epic's substepping divides a frame interval into smaller bounded steps according to settings. It should not be described as a universal fixed independent Chaos clock. See the source on S17.
 
 **Next**
 
-- One object that uses every row, and every job in the room. A weapon.
+- Enough architecture. Follow one weapon through the whole team.
 
-## S19 — One weapon, every discipline
+## S19 - One weapon, every discipline
 
 **Say**
 
-- This is the slide I will not rush.
-- A weapon is not a mesh. It is design, art, audio, and code, becoming frames and sound.
-- Until gameplay code runs, it is inert data. It cannot fire.
+- The player experiences one weapon. The team creates a network of agreements: how it should feel, what assets it uses, which rules it obeys, and when feedback appears.
+- A beautiful mesh cannot decide who was hit. A correct damage rule cannot by itself communicate satisfying impact. Neither contribution replaces the other.
+
+**Show / ask**
+
+- Invite each discipline to notice one handoff they could validate. Frame this as shared diagnosis, not finding someone to blame.
 
 **Next**
 
-- Four stages, then the loop.
+- Separate making the content from running it.
 
-## S20 — Four stages, then the loop
+## S20 - From authoring to a running game
 
 **Say**
 
-- Designers write what the weapon is. That is a schema.
-- Artists and audio produce the data. Model, rig, textures, sound.
-- Import makes that data an asset the engine can find.
-- Gameplay code plays the data. Animation, sound, particles, damage.
-- The renderer and the audio mixer are the output.
-- The player's button is the input that closes the loop.
-- Design, art, audio, code. One anatomy. If your file is wrong, name the stage, not the person.
+- At build time, people create designs, models, animation, and sound. Import and cooking convert or package them into forms suitable for the target platform.
+- At run time, code loads the required assets, responds to input, updates state, and presents results. Cooking is not something every shot repeats.
+- The contracts connect the stages: a socket name must match, meters and centimeters must agree, and a sound must be loaded before the event expects to play it.
+
+**If asked**
+
+- Build-time work can trade longer preparation for faster runtime loading. An editor asset and its cooked platform representation are not necessarily identical.
+- Ownership differs by studio. A designer may script behavior; a technical artist may maintain import tools. Name the work before assigning the role.
 
 **Next**
 
-- The first two stages do nothing by themselves.
+- A useful contract turns an intention into something we can test.
 
-## S21 — Design and data do nothing yet
+## S21 - Turn intent into a testable contract
 
 **Say**
 
-- Design decides role, feel, and the numbers. Fire rate, damage, recoil. That document is already a schema. Later code will have to agree with it.
-- Then the files. A mesh does not fire. A gunshot does not fire. They sit on disk.
-- The best sound in the room cannot pull the trigger. It is data.
+- "Make it deliberate" is design intent. It needs iteration and judgment. "Damage is 25 health points; cooldown is 0.2 seconds; magazine capacity is 30 rounds" is a testable starting contract.
+- Distinguish capacity from current ammunition. Capacity is configuration; current ammunition changes while you play.
+- Units and valid ranges matter. A negative cooldown or a milliseconds-versus-seconds mistake can break behavior even though the data loads successfully.
+
+**Show / ask**
+
+- Ask what should happen to a target with 100 health after one accepted unarmored hit. 75. State assumptions: no armor, critical multiplier, or other modifier in this teaching example.
+
+**If asked**
+
+- A design document informs a schema; it is not automatically a formal schema. Define names, types, units, constraints, and the meaning of values. Numeric tests do not prove that the weapon feels good; playtesting checks that goal.
 
 **Next**
 
-- Then someone imports it, and someone writes the code that plays it.
+- Now the player presses fire.
 
-## S22 — Import, then gameplay code
+## S22 - One shot: check, change, announce
 
 **Say**
 
-- Import turns files into assets. In Unreal that is the path into .uasset, then cook.
-- A soft reference loads when needed. A hard reference stays loaded. That choice is what hits the frame.
-- Gameplay code does not invent the gun. It reads the data and orchestrates it.
-- Fire: montage, sound, particles, damage. The finger on the button is the input leg from the start of the talk.
+- First check ammunition and whether the cooldown has expired. If the request is rejected, do not spend ammunition or apply damage. A dry-fire sound is a separate allowed response.
+- On an accepted shot, spend one round and start cooldown. Check the hit result; only a valid hit applies damage. In our simplified example ammunition goes 30 to 29 and a hit changes health from 100 to 75.
+- Announce the shot so presentation systems can respond. This is a teaching sequence, not a claim that every engine uses this exact event API.
+
+**If asked**
+
+- Soft references identify assets without necessarily loading them. Code or an asset manager must request loading. Hard references create loading and lifetime dependencies; they do not mean an asset is immortal. Preload critical weapon feedback instead of blocking on first use.
+- Source: [Epic asynchronous asset loading](https://dev.epicgames.com/documentation/en-us/unreal-engine/asynchronous-asset-loading-in-unreal-engine).
+- In multiplayer, the authority validates the action; a client may predict feedback for responsiveness. Do not trust a client-provided damage result without validation.
 
 **Next**
 
-- What the player actually gets. Frames and audio.
+- One accepted action can have several visible and audible consequences.
 
-## S23 — Frames and audio
+## S23 - One event, several kinds of feedback
 
 **Say**
 
-- The simulation publishes state. It does not draw.
-- The renderer reads that state and draws the mesh, the materials, the animation.
-- The audio mixer reads the event and plays the sound.
-- VFX spawn from the same event.
-- All of that is output, on the clock. If the frame misses 17 ms, the player feels the weapon late. That is latency, not "the art is wrong."
+- The shot can trigger animation, flash, sound, recoil, and the HUD update. These systems may run on different schedules; synchronizing their cues shapes perceived impact.
+- Now use the map: a weapon flashes, but the target takes no damage. What would you inspect before changing anything?
+
+**Show / ask: three-minute exercise**
+
+- 30 seconds alone: label input, state, logic, output, and clock for this symptom.
+- 60 seconds in pairs: choose the first boundary to inspect and what evidence would support your guess.
+- 60 seconds: hear one or two answers. Ask "What observation would prove your hypothesis wrong?"
+- 30 seconds debrief: presentation happened, but we do not yet know that a hit was accepted. Inspect the hit result and authoritative health before blaming the artwork.
+
+**Answer key / if asked**
+
+- Valid hypotheses include a collision-mask mismatch, an invulnerable target, a rejected server shot, or stale HUD state. Distinguish target health from the displayed health bar.
+- If health changed but the HUD did not, inspect the state-to-UI path. If no hit was recorded, inspect the collision query and eligibility. There is no single diagnosis without evidence.
 
 **Next**
 
-- This is not an Unreal story.
+- The same handoffs existed well before today's editors.
 
-## S24 — The same chain in Doom 3
+## S24 - The same chain in Doom 3
 
 **Say**
 
-- 2004. Same four stages.
-- Design. Then .def and .decl data. Then a placed entity. Then idScript that plays them back.
-- The script only plays what the earlier stages produced.
-- Engines change. The chain does not. Any weapon, any year.
+- In DOOM 3, weapon definitions connect names and settings to assets and script behavior. C++ weapon code and the script system coordinate the running weapon.
+- Meshes and animations, materials, and sound declarations feed their respective systems. It is not one mysterious "weapon file."
+- We can ask the same questions: was the definition found, was the script state correct, did the projectile or hit logic run, and did output receive the result?
+
+**If asked**
+
+- Concrete formats include .def definitions, .script behavior, .md5mesh models, .md5anim animation, .mtr materials, and .sndshd sound declarations. "Declaration" names a system; do not invent a universal .decl extension.
+- Source trail: [idWeapon implementation](https://github.com/id-Software/DOOM-3/blob/master/neo/game/Weapon.cpp), [declaration manager](https://github.com/id-Software/DOOM-3/blob/master/neo/framework/DeclManager.cpp). The source release does not grant unrestricted rights to proprietary game assets.
 
 **Next**
 
-- Last block. Where this is going. The anatomy stays. The interface changes.
+- Now apply this same map to AI, without changing the standard of evidence.
 
-## S25 — Two kinds of software
+## S25 - AI inside the same map
 
 **Say**
 
-- The loop has a history. Software that tries to be intelligent split into two kinds.
-- I am not pitching a product. I am naming the split, then the interface on top of it.
+- "AI in games" can mean a tool helping a developer write code, a model making decisions during play, or a model reconstructing images. Those are different responsibilities with different risks.
+- Ask where it sits, what it reads, what it may change, how long it takes, and how failure is detected.
+- You do not have to adopt a tool to understand or evaluate it.
+
+**If asked**
+
+- Traditional game AI includes authored behavior trees, search, and navigation. "AI" does not automatically mean an LLM or a neural network.
 
 **Next**
 
-- The loop's older name.
+- The useful bridge is feedback: propose, observe, and correct.
 
-## S26 — Cybernetics is the older loop
+## S26 - Feedback turns a guess into an experiment
 
 **Say**
 
-- Norbert Wiener named cybernetics from the steersman. You watch the result, and you correct.
-- A thermostat. A player. A frame loop.
-- You already know this. S8 was this idea. History did not invent a second loop.
+- A player observes a miss and adjusts aim. A developer observes a failed test and adjusts a change. The pattern is goal, action, observation, comparison, correction.
+- AI can propose the action, but it does not remove the need for a trustworthy observation. Asking the same model whether its answer looks correct is weaker than running the relevant test.
+- Measure the actual goal. Faster code generation does not prove faster delivery of a working game.
 
-**Need**
+**If asked**
 
-- 1948, Cybernetics. Say the year only if asked.
+- Wiener popularized cybernetics in his 1948 book about control and communication in animals and machines. Keep the history optional; the practical point is feedback and error correction, not a claim that all loops are equivalent.
 
 **Next**
 
-- The split inside AI. Two ways to write software.
+- Some behavior is written explicitly. Some is learned from examples.
 
-## S27 — Symbolic and connectionist
+## S27 - Symbolic and connectionist
 
 **Say**
 
-- Symbolic software is rules over symbols. A script. A Blueprint. A state machine. C++. If this, then that.
-- Connectionist software is learned weights. A neural net. An LLM. Neural rendering. The behavior is in the weights, not in a rule you can read.
-- Your game logic is symbolic. The new pieces moving into the pipeline are connectionist.
-- "It hallucinated" and "just add a rule" are the two kinds bumping into each other. Name which one you are talking to.
+- An explicit rule can say "ammunition must be at least one." You can inspect it and test the boundary at zero.
+- A neural model learns parameters from training. It may produce useful dialogue or code, but fluent output is not proof that the game's constraints were respected.
+- Combine the approaches: an NPC proposes a trade in natural language; explicit inventory and currency rules decide whether the trade can execute.
 
-**Need**
+**If asked**
 
-- 1943, McCulloch and Pitts, the artificial neuron. 1956, the Dartmouth workshop, symbolic AI. Connectionism is the older idea. It waited on computers. Say the dates only if asked.
+- This is a contrast, not an exhaustive taxonomy of software. Numerical simulation is not usually called symbolic AI just because it is written in C++. Traditional AI includes more than these two labels.
+- Learned models execute code over data too. Their weights are data. Explicit code can also contain bugs; the distinction does not mean rules are automatically correct or neural models are always random.
 
 **Next**
 
-- What an engine looks like when both are in the box.
+- Here is a concrete learned component already used in games.
 
-## S28 — The hybrid engine
+## S28 - A learned component still has a job
 
 **Say**
 
-- The engine we just mapped stays. It is symbolic scaffolding. State, logic, input, output, clock.
-- Neural subsystems replace pieces one at a time. Not a rewrite. Neural rendering already ships.
-- A learned renderer is still output. It still reads state. It still does not run the simulation.
-- The anatomy tells you where a new piece is allowed to sit.
+- Neural upscaling, such as DLSS Super Resolution, reconstructs higher-resolution images from lower-resolution inputs using motion and previous-frame information.
+- That is a specific job in the output pipeline. It does not establish that a target was hit, that inventory is consistent, or that a saved world can be restored correctly.
+- For generated-world demonstrations, ask separate questions: does an object persist after leaving view, can a designer control a rule, can you replay a failure, and what does it cost to run?
+
+**If asked**
+
+- Super resolution and frame generation are different techniques. More generated display frames do not mean the gameplay simulation performed more updates.
+- Source: [NVIDIA DLSS technology descriptions](https://developer.nvidia.com/rtx/dlss). Use this for the mechanism, not as independent evidence of every performance claim. Whether whole engines will be replaced remains a forecast, not established by upscaling.
 
 **Next**
 
-- And there is a new way to talk to that anatomy.
+- AI can also sit outside the game, helping us work on its files.
 
-## S29 — AI is a new interface
+## S29 - AI is a new interface
 
 **Say**
 
-- This is not a demo, and it is not a pitch.
-- A model alone is a chat box. A harness on your machine turns words into actions on the files.
-- One direction: the software explains itself.
-- The other direction: you say what to change, and it edits the software.
-- The harness is the interface. It is also the only piece that touches your machine. Power and risk are the same door.
+- The model proposes an action. A surrounding application, often called a harness, supplies context, manages permissions, and invokes tools. Tool results feed the next step.
+- A tool can read a file, modify it, or run a test. Those actions can be useful or damaging depending on access and validation.
+- Keep the distinction: a confident message says what the model believes. A diff shows what changed. A test result shows what was actually checked.
 
-**Need**
+**If asked**
 
-- Four pieces, if asked: backend runs the model, model is the weights, harness is on your machine, knowledge is your files. Do not tour products.
+- The harness can run locally, remotely, or across both. Do not assume "on my machine" means "no data leaves my machine." Check provider, tool, and storage policies before giving access to private files.
+- Start read-only, scope permissions, exclude secrets, use version control, and require approval for destructive or publishing actions. Repository content can contain hostile instructions; reading a file should not grant it authority.
 
 **Next**
 
-- The catch. This is the point of the whole talk.
+- Knowing the anatomy lets you make a useful, bounded request.
 
-## S30 — You still need the anatomy
+## S30 - Give AI a boundary and a test
 
 **Say**
 
-- You cannot aim that interface if you do not know the anatomy.
-- You cannot ask for a tour of the renderer if you do not know the renderer reads state and does not run the simulation.
-- You cannot ask why the weapon is late if you cannot tell input latency from a missed frame from a bad asset reference.
-- The interface is new. The medium is not.
+- Instead of "fix my weapon," ask it to trace the fire command to the ammunition update and cite the relevant files. Inspect before editing.
+- Then request one small change with explicit invariants: preserve damage, cooldown, and the authority boundary. Review the diff.
+- Test ordinary behavior and the boundaries: empty ammunition, cooldown not expired, a hit, and a miss. Ask what it actually ran, and what remains untested.
+
+**Concrete acceptance checks**
+
+- Ammo zero: no accepted shot, no damage, no negative ammunition; dry-fire feedback may be allowed.
+- Cooldown active: reject the extra request without spending another round.
+- Valid hit: spend one round and apply exactly 25 damage under our stated assumptions.
+- Valid miss: spend one round, start cooldown, but do not change target health.
+- A passing unit test does not prove multiplayer correctness, good feel, or acceptable performance. Add those checks when the change touches them.
 
 **Next**
 
-- One line. Then I stop.
+- This is the durable skill, whether the next tool uses AI or not.
 
-## S31 — The interface changed. The medium did not.
+## S31 - The interface changed. The medium did not.
 
 **Say**
 
-- The interface changed.
-- The medium did not.
-- Software is still code and data. Input, process, output. State, logic, input, output, clock.
-- A game engine is still that anatomy, made large, and hard real-time.
-- Stop. Do not add a second ending.
+- Find the state. Trace the rules. Follow the input and output. Measure the timing.
+- In your next project, choose one door, jump, or weapon. Draw those five parts and follow one real action through them. If you cannot find a part, that is your next question, not a personal failure.
+- The interface changed. The medium still needs to be understood. Your judgment is how you decide whether the result is right.
+
+**Delivery**
+
+- Pause after the final sentence. Do not promise guaranteed employment, inevitable replacement, or that mastering one tool future-proofs a career. This is a transferable learning method, not a prediction.
 
 **Next**
 
-- Questions.
+- Let us use the map on your questions.
 
-## S32 — Questions
+## S32 - Questions
 
 **Say**
 
-- If I stall, I am going to do what I told you to do. Which part is it? State, logic, input, output, or clock. Who feeds that part?
-- The reference is the long version. Read it once. After that, use it per task. An engine question goes to the five rows. A weapon question goes to the four stages.
+- Give me a concrete symptom or something you want to build. We will locate its state, rules, boundaries, and timing, then decide what to inspect.
+- If no one volunteers, return to the flash-without-damage example. What evidence separates a missed hit from a stale health display?
+
+**Q&A ammunition**
+
+- "Which engine should I learn?" Choose a small achievable project and an engine with accessible tools, documentation, and support for your platform. Complete the loop from authoring to a playable build. Learn one well, then map the next using the same questions.
+- "Does a game need an engine?" It needs software that fulfills the required responsibilities, whether supplied by a general engine, a framework, libraries, or custom code. There is no requirement to buy a branded product.
+- "Can AI build the whole game?" It can automate portions with widely varying reliability. Scope, integration, validation, performance, licensing, and player experience still need to be established. A demo is not proof of maintainable production software.
+- "Will it take our jobs?" Tasks and staffing may change; no one can responsibly guarantee your personal outcome. Strengthen portable abilities: diagnose systems, communicate constraints, judge quality, test work, and finish projects. AI use is not a prerequisite for understanding this map.
+- "Why did generated code compile but fail?" Compilation checks some syntax and type rules, not whether the behavior matches the design, synchronizes correctly, or meets a time budget. Ask for the failing scenario and a regression test.
+- "What should a non-programmer do tomorrow?" Trace one of your own assets from source file through import and reference to its visible or audible result. Record one format constraint, one loading constraint, and one timing constraint.
+- "Where should I read next?" Start with the repository's reference for the relevant question, then check version-specific primary documentation. For engine behavior, prefer source and measured traces over confident summaries, including these notes.
+- If unsure: "I can locate the responsibility, but I would need to inspect that engine version or measure that behavior before claiming an answer." This models the skill you are teaching.

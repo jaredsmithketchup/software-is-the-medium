@@ -50,7 +50,7 @@ function blocksMd(md) {
 
 function contentBullets(content) {
   return content
-    .split(/(?:\. |; )/)
+    .split(content.includes(' | ') ? / \| / : /(?:\. |; )/)
     .map((s) => s.trim().replace(/\.$/, ''))
     .filter(Boolean);
 }
@@ -176,7 +176,7 @@ function slideHtml(s) {
     '    <span class="chip">' + s.actLabel + '</span>',
     '    <h2>' + inlineMd(s.title) + '</h2>',
     hasDiag
-      ? '    <div class="diagram-row">' + (claims ? '<ul class="content">' + claims + '</ul>' : '') + '<div class="diagram">' + diagram + '</div></div>'
+      ? '    <div class="diagram-row"><div class="diagram">' + diagram + '</div>' + (claims ? '<ul class="content">' + claims + '</ul>' : '') + '</div>'
       : (claims ? '    <ul class="content">' + claims + '</ul>' : ''),
     '  </div>',
     refsText ? '<p class="refs">' + inlineMd(refsText) + '</p>' : '',

@@ -1,7 +1,7 @@
 ---
 type: Plan
 title: "Software is the Medium — Presentation Package Plan"
-description: Plan for deriving a presentation overview of the Software is the Medium reference, then producing the slide-deck description and per-slide speaker cards that follow from it. Revised 2026-11-02: expanded 73-slide draft, applied the §12 content-cut audit, and shipped the trimmed 64-slide deck (S1–S64, ~77 min + Q&A) as a reveal.js site on GitHub Pages (docs/). This repo is the source of truth.
+description: Presentation planning history with the current 32-slide delivery budget in section 8. Current slides and notes live in Presentation; the existing reveal.js publishing workflow is unchanged.
 tags: [presentation, plan, game-engines, medium, overview, slide-deck, speaker-cards]
 generated: { by: kilocode/deepseek-v4-flash, at: 2026-11-02T04:33:42Z }
 ---
@@ -145,29 +145,24 @@ the derivation can be re-run or trimmed:
 ## 8. The derived outline at a glance
 
 Full section detail lives in [`presentation-overview.md`](Presentation/presentation-overview.md).
-The 15 sections (incl. Q&A) of the trimmed deck, at their live sizes:
+Current suggested budget, mirrored from overview section 5. The older expansion,
+delivery records, and cut audit elsewhere in this plan are historical, not the
+current slide map. This revision is local until the normal publishing workflow runs.
 
 | # | Section | Slides | Source | Min |
 |---|---|---|---|---|
-| 1 | Opening: the medium | S1–S3 | `ch00` intro, §8, §9 | 4 |
-| 2 | Two substances: data & code | S4–S7 | `ch00` §1 | 6 |
-| 3 | The universal shape: IO & boundaries | S8–S11 | `ch00` §2 | 5 |
-| 4 | The loop: cybernetics & latency | S12–S16 | `ch00` §3 | 6 |
-| 5 | The five-part skeleton | S17–S19 | `ch00` §4 · `ch01` §1 | 4 |
-| 6 | Engines: the skeleton scaled up | S20–S25 | `ch00` §5 · `ch01` §2–3 | 7 |
-| 7 | The clock & the four axes | S26–S29 | `ch01` §4–5 | 6 |
-| 8 | World models | S30–S38 | `ch02` | 9 |
-| 9 | Hardware & performance *(trimmed)* | S39–S40 | `ch03` | 3 |
-| 10 | Concurrency & state *(trimmed)* | S41–S43 | `ch04` | 4 |
-| 11 | Schemas · spatial indexes · the OS *(trimmed)* | S44–S49 | `ch05`–`ch07` | 6 |
-| 12 | The discipline map & the weapon | S50–S55 | `ch00` §7 · `ch08` | 8 |
-| 13 | AI & the medium | S56–S59 | `ch09` | 5 |
-| 14 | The coming times & closing | S60–S63 | `ch10` · `ch00` §9 | 4 |
-| 15 | Q&A & further reading | S64 | all | 15 |
-| | **Talk total** | | | **≈77 min** (64 slides) |
+| 1 | Software is the medium | S1-S3 | ch00 | 3 |
+| 2 | Anatomy of software | S4-S10 | ch00 | 10 |
+| 3 | Anatomy of a game engine | S11-S15 | ch00-ch02 | 8 |
+| 4 | Quake, Doom 3, Unreal 5 | S16-S18 | Engine cases, ch01 | 5 |
+| 5 | One weapon, every discipline | S19-S24 | ch08 | 11 |
+| 6 | AI, interfaces, and takeaways | S25-S31 | ch09-ch10, ch00 | 8 |
+| Q&A | Questions and further reading | S32 | All | 10 |
+| | **Delivery total** | **S1-S31** | | **45** |
+| | **Including Q&A** | **S1-S32** | | **55** |
 
-These are the live numbers (source of truth: overview §5). Cutdown floor for a
-tighter slot: see overview §6.
+The 45-minute budget includes the three-minute S23 exercise. For a 25-minute
+route, see overview section 7; Q&A remains additional.
 
 ## 9. Production timeline
 
@@ -213,7 +208,7 @@ Remaining open item:
 - Record delivery — date, room, and how it went — in this plan (or README)
   after the talk is given; the repo is the record, not the vault log.
 
-## 12. Content-cut audit — applied 2026-11-02 (final deck: 64 slides)
+## 12. Historical content-cut audit — 64-slide predecessor
 
 The expanded deck went too deep. These flags trimmed volume while keeping the
 **spine intact**: medium → substances → IO → loop → skeleton → engine → world

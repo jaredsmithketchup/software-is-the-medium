@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s13-title s13-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s13-title">Illustrative frame budget</title><desc id="s13-desc">A 12 millisecond critical path fits a 16.7 millisecond target interval. A 24 millisecond critical path exceeds it. These are teaching values, not a benchmark or summed CPU and GPU timings.</desc>
+  <g font-size="22" fill="#CBD5E1"><text x="15" y="75">Frame A</text><text x="15" y="148">Frame B</text><text x="175" y="207">0 ms</text><text x="578" y="207">16.7 ms</text><text x="790" y="207">25 ms</text></g>
+  <path d="M600 28 V175" stroke="#FBBF24" stroke-width="3" stroke-dasharray="7 5"/>
+  <rect x="180" y="45" width="302" height="46" rx="6" fill="#064E3B" stroke="#6EE7B7"/><rect x="180" y="118" width="604" height="46" rx="6" fill="#7F1D1D" stroke="#FCA5A5"/>
+  <g font-size="22" fill="#F9FAFB"><text x="195" y="76">12 ms: within target</text><text x="195" y="149">24 ms: late delivery</text></g>
+  <text x="600" y="22" text-anchor="middle" font-size="20" fill="#FBBF24">60 fps target interval</text>
+  <text x="450" y="231" text-anchor="middle" font-size="18" fill="#94A3B8">Illustrative critical-path work, not CPU time + GPU time</text>
+</svg>

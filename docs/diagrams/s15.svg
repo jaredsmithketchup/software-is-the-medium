@@ -1,17 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-size="12" font-weight="700" fill="#E5E7EB" text-anchor="middle">
-    <rect x="8" y="28" width="160" height="100" rx="10" fill="#1F2937" stroke="#6366F1"/>
-    <text x="88" y="52" fill="#A5B4FC">SCENE GRAPH</text>
-    <text x="88" y="76" font-size="11" font-weight="400">parent / child</text>
-    <text x="88" y="96" font-size="11" font-weight="400">transforms</text>
-    <rect x="180" y="28" width="160" height="100" rx="10" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="260" y="52" fill="#7DD3FC">BSP + ENTITIES</text>
-    <text x="260" y="76" font-size="11" font-weight="400">compiled rooms</text>
-    <text x="260" y="96" font-size="11" font-weight="400">flat entity list</text>
-    <rect x="352" y="28" width="160" height="100" rx="10" fill="#1F2937" stroke="#34D399"/>
-    <text x="432" y="52" fill="#6EE7B7">ECS</text>
-    <text x="432" y="76" font-size="11" font-weight="400">columns of data</text>
-    <text x="432" y="96" font-size="11" font-weight="400">systems scan them</text>
-  </g>
-  <text x="260" y="18" font-size="11" font-weight="700" fill="#94A3B8" text-anchor="middle">STATE — three ways to store a world</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="s15-title s15-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s15-title">Relationships, location, and components</title><desc id="s15-desc">A parent hand connects to a weapon. A partitioned space locates nearby objects. An entity table groups position and health data. These structures answer different questions and may coexist.</desc>
+  <g fill="#1F2937" stroke="#475569"><rect x="5" y="5" width="280" height="230" rx="12"/><rect x="310" y="5" width="280" height="230" rx="12"/><rect x="615" y="5" width="280" height="230" rx="12"/></g>
+  <g text-anchor="middle" font-size="23" font-weight="700"><text x="145" y="36" fill="#A5B4FC">RELATIONSHIPS</text><text x="450" y="36" fill="#7DD3FC">LOCATION</text><text x="755" y="36" fill="#6EE7B7">COMPONENTS</text></g>
+  <path d="M145 97 V127 H200" fill="none" stroke="#A5B4FC" stroke-width="3"/><rect x="70" y="58" width="150" height="40" rx="6" fill="#312E81"/><rect x="115" y="129" width="150" height="40" rx="6" fill="#312E81"/>
+  <g fill="#F9FAFB" text-anchor="middle" font-size="22"><text x="145" y="86">Hand</text><text x="190" y="157">Weapon</text></g>
+  <path d="M335 60 H565 V174 H335 Z M450 60 V174 M450 120 H565" fill="none" stroke="#7DD3FC" stroke-width="2"/><circle cx="375" cy="90" r="9" fill="#7DD3FC"/><circle cx="412" cy="143" r="9" fill="#7DD3FC"/><circle cx="514" cy="145" r="9" fill="#FBBF24"/>
+  <g fill="#CBD5E1" font-size="19"><text x="635" y="85">Entity</text><text x="710" y="85">Pos.</text><text x="795" y="85">Health</text><text x="650" y="124">A</text><text x="710" y="124">x, y</text><text x="810" y="124">100</text><text x="650" y="163">B</text><text x="710" y="163">x, y</text><text x="810" y="163">75</text></g>
+  <path d="M630 94 H880 M700 60 V179 M785 60 V179" stroke="#6EE7B7" fill="none"/>
+  <g fill="#CBD5E1" text-anchor="middle" font-size="20"><text x="145" y="210">What moves together?</text><text x="450" y="210">What is nearby?</text><text x="755" y="210">What facts are stored?</text></g>
 </svg>

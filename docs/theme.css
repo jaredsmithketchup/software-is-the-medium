@@ -26,10 +26,10 @@
 }
 
 /* Act state accent colors */
-body.act-a .reveal h2 { color: #A5B4FC; }
-body.act-b .reveal h2 { color: #7DD3FC; }
-body.act-c .reveal h2 { color: #6EE7B7; }
-body.act-d .reveal h2 { color: #D8B4FE; }
+.reveal section[data-state="act-a"] h2 { color: #A5B4FC; }
+.reveal section[data-state="act-b"] h2 { color: #7DD3FC; }
+.reveal section[data-state="act-c"] h2 { color: #6EE7B7; }
+.reveal section[data-state="act-d"] h2 { color: #D8B4FE; }
 
 /* Corner act chip */
 .reveal .chip {
@@ -115,23 +115,24 @@ body.act-d .reveal h2 { color: #D8B4FE; }
 /* Diagram slot */
 .reveal section.has-diagram .diagram-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.4em;
+  gap: 0.3em;
   width: 100%;
 }
 
 .reveal section.has-diagram .diagram-row ul.content {
-  flex: 1 1 0;
-  min-width: 240px;
+  flex: 0 0 auto;
+  min-width: 0;
   margin: 0;
-  width: auto;
+  width: 96%;
 }
 
 .reveal section.has-diagram .diagram-row .diagram {
-  flex: 0 0 46%;
-  width: 46%;
-  max-width: 46%;
+  flex: 0 0 auto;
+  width: 96%;
+  max-width: 96%;
 }
 
 .reveal .diagram svg {
@@ -162,7 +163,7 @@ body.act-d .reveal h2 { color: #D8B4FE; }
 .reveal .slides section .main {
   height: 100%;
   box-sizing: border-box;
-  padding: 0.2em 0;
+  padding: 0.2em 0.3em;
   display: flex;
   flex-direction: column;
 }
@@ -178,7 +179,19 @@ body.act-d .reveal h2 { color: #D8B4FE; }
 }
 
 .reveal section.has-diagram h2 {
-  font-size: 1.45em;
+  font-size: 1em;
+}
+
+.reveal section.has-diagram ul.content li {
+  font-size: 0.46em;
+  line-height: 1.3;
+  margin-bottom: 0.18em;
+}
+
+.reveal section[data-num="15"] ul.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
 }
 
 /* Citation footer — last element of .main, pinned to the slide bottom in flow */

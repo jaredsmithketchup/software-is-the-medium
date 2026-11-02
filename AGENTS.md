@@ -15,7 +15,7 @@ content.
 | Path | Contents |
 |---|---|
 | `Reference/` | 11 chapters (`00`–`10`) + `Reference/Engines/` (10 engine case studies) + `Reference/index.md` |
-| `Presentation/` | `presentation-overview.md` (structure + budget), `slide-deck.md` (S1–S64), `speaker-cards.md` (one card per slide, S1–S64), `index.md` |
+| `Presentation/` | `presentation-overview.md` (structure + budget), `slide-deck.md` (S1–S32), `speaker-cards.md` (one card per slide, S1–S32), `index.md` |
 | `PLAN.md` | the presentation plan; §8 mirrors the live section budget; §12 is the applied content-cut audit |
 | `docs/` | the published deck site (reveal.js). GitHub Pages builds from `main` → `/docs`. Live at https://jaredsmithketchup.github.io/software-is-the-medium/ |
 | `docs/index.html` | **generated** — never hand-edit; regenerate with the script below |
@@ -27,17 +27,18 @@ content.
 
 1. Slides live in Markdown only. Edit `Presentation/slide-deck.md` (what the
    audience sees) and `Presentation/speaker-cards.md` (the same slide's speaker
-   card, shown in presenter view). Keep slide numbering S1–S64 and keep the two
+   card, shown in presenter view). Keep slide numbering S1–S32 and keep the two
    files in 1:1 step.
 2. Regenerate: `node scripts/build-deck.mjs`. Expect the printed counts to be
-   `slides parsed: 64`, `cards parsed: 64`, `slides without a card: none` and
-   `dividers: 12`. Commit the changed `docs/index.html` with the edit.
+   `slides parsed: 32`, `cards parsed: 32`, `slides without a card: none` and
+   `dividers: 6`. Commit the changed `docs/index.html` with the edit when requested.
 3. Push `main`; GitHub Pages redeploys automatically (a few minutes). Verify at
    the site URL before reporting done.
 
 **Diagrams:** to add one to slide N, create `docs/diagrams/sN.svg` and
-regenerate — it is inlined automatically (content slides get a two-column
-layout; divider slides get it under the title). Match the palette in
+regenerate — it is inlined automatically (content slides show the diagram above
+the concise claims; divider slides get it under the title). Separate audience
+claims with ` | ` in the Content field. Match the palette in
 `docs/theme.css`. `<text>` in SVGs uses `Montserrat, Lato, Segoe UI, sans-serif`.
 
 The deck is reveal.js 5.1 (vendored under `docs/vendor/reveal/`). Presenter

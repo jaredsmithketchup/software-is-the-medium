@@ -18,14 +18,16 @@
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — SOFTWARE</span><p class="kicker">Section 1</p>
     <h2>Software is the Medium — Game Engines are Software</h2>
 
-    <ul class="divider-claims"><li>Software is the medium</li><li>Game engines are software</li><li>This talk is the anatomy of that medium, then the anatomy of an engine</li></ul>
+    <ul class="divider-claims"><li><strong>Understand the engine, not just the editor</strong></li><li>Follow one button press from rules and data to pixels and sound</li><li>Leave with a map for learning any engine and checking AI-generated work</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S1</h5><p><strong>Say</strong></p>
-<ul><li>Software is the medium. Game engines are software.</li><li>Say the title, then stop. The rest of the talk is the anatomy of that sentence.</li><li>First the anatomy of software. Then the same anatomy as an engine. Then one weapon, so every discipline can see their part. Then where this is going.</li></ul>
+<ul><li>Imagine pressing fire. A number changes, a sound plays, and a flash appears. What connected those things? That is what we are going to make understandable.</li><li>You do not need to become a programmer today. You need a map: what the engine remembers, what changes it, what goes in and out, and when it happens.</li><li>We will build that map, follow a weapon through it, then use it to evaluate AI tools without needing to believe their marketing.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Ask for a show of hands: design, art, sound, programming, or still exploring. All are legitimate starting points. Avoid making anyone explain their technical level publicly.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Most of you are already making software. That is the part people miss.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the title is the thesis.</li><li><strong>Content:</strong> Software is the medium. Game engines are software. This talk is the anatomy of that medium, then the anatomy of an engine.</li><li><strong>Visual:</strong> title.</li><li><strong>Refs:</strong> <code>ch00</code> intro.</li></ul></div>
+<ul><li>Each of those disciplines already contributes to a running software system.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the title is the thesis.</li><li><strong>Content:</strong> <strong>Understand the engine, not just the editor</strong> | Follow one button press from rules and data to pixels and sound | Leave with a map for learning any engine and checking AI-generated work</li><li><strong>Visual:</strong> title.</li><li><strong>Refs:</strong> <code>ch00</code> intro.</li></ul></div>
   </aside>
 </section>
 
@@ -33,18 +35,18 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>You are making software</h2>
-    <ul class="content"><li>Design, art, and audio are software work</li><li>The files you make are data</li><li>The engine is code that plays that data back</li><li>If you do not know the properties of software, you are working the medium blind</li></ul>
+    <ul class="content"><li><strong>Design</strong> supplies rules and tuning</li><li><strong>Art and audio</strong> supply assets and their constraints</li><li><strong>Engineering</strong> connects them into a running system</li><li>Your craft stays distinct; the player experiences the whole system</li></ul>
   </div>
 <p class="refs"><code>ch00</code> intro, §7.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S2</h5><p><strong>Say</strong></p>
-<ul><li>If you design, model, animate, or make sound, you are making software.</li><li>Your files are data. The engine is code that plays that data back.</li><li>The properties of software are the properties of your job. If you do not know them, you are working the medium blind.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>A texture, a sound, a damage number, a Blueprint graph. All of it is software. Some of it is data. Some of it is code stored as data.</li></ul>
+<ul><li>An artist does not just deliver a beautiful image. They deliver an image with dimensions, compression, memory cost, and a material that knows how to use it.</li><li>A designer's cooldown is a value with units. An audio clip has a duration and a loading cost. Engineering connects these contributions into behavior.</li><li>Your craft remains your craft. Understanding the medium lets you predict what happens after your handoff.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>"Must everyone code?" No. Reading a profiler, checking an asset reference, or specifying units is already useful technical literacy. We are learning how to ask better questions, not erasing specialisms.</li><li>Concrete handoff: a sound exists on disk, but a missing reference means the running weapon never finds it. The file can be excellent and the integration still wrong.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The tool will change. The anatomy will not.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the blind spot.</li><li><strong>Content:</strong> Design, art, and audio are software work. The files you make are data. The engine is code that plays that data back. If you do not know the properties of software, you are working the medium blind.</li><li><strong>Visual:</strong> four roles, one medium.</li><li><strong>Refs:</strong> <code>ch00</code> intro, §7.</li></ul></div>
+<ul><li>The editor will change. These questions travel with you.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the blind spot.</li><li><strong>Content:</strong> <strong>Design</strong> supplies rules and tuning | <strong>Art and audio</strong> supply assets and their constraints | <strong>Engineering</strong> connects them into a running system | Your craft stays distinct; the player experiences the whole system</li><li><strong>Visual:</strong> four roles, one medium.</li><li><strong>Refs:</strong> <code>ch00</code> intro, §7.</li></ul></div>
   </aside>
 </section>
 
@@ -52,16 +54,20 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>The anatomy outlasts the tool</h2>
-    <ul class="content"><li>Unreal, a custom engine, the next tool</li><li>The names change</li><li>The anatomy does not</li><li>Learn the anatomy once</li></ul>
+    <ul class="content"><li>What does it <strong>remember</strong>? What <strong>changes</strong> it?</li><li>What comes <strong>in</strong>? What goes <strong>out</strong>?</li><li><strong>When</strong> does the work happen?</li><li>These five questions travel between engines, tools, and AI systems</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §8.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S3</h5><p><strong>Say</strong></p>
-<ul><li>Unreal today. Something else in five years. A custom engine at the next studio.</li><li>Learn the product manual and you start over. Learn the anatomy and you can read the next engine.</li><li>That is the whole reason for this talk.</li></ul>
+<ul><li>On your first day in an unfamiliar engine, do not try to memorize every panel. Find one object and ask five questions.</li><li>Where is its state? Which rule changes it? What triggers that rule? What result reaches the player? When does the work run?</li><li>Product knowledge still matters. This map tells you where to start learning it.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Use a door: open or closed is state; a key requirement is logic; interact is input; motion and sound are output; the update and animation schedule are timing.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>This is a useful abstraction, not a proof that every program has exactly five classes. Security, networking, persistence, and tools cross these responsibilities.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Anatomy of software. Five ideas. Stay with me.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why the anatomy, not the product.</li><li><strong>Content:</strong> Unreal, a custom engine, the next tool. The names change. The anatomy does not. Learn the anatomy once.</li><li><strong>Visual:</strong> tool names fading, five parts staying.</li><li><strong>Refs:</strong> <code>ch00</code> §8.</li></ul></div>
+<ul><li>First, separate the rule from the values it operates on.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why the anatomy, not the product.</li><li><strong>Content:</strong> What does it <strong>remember</strong>? What <strong>changes</strong> it? | What comes <strong>in</strong>? What goes <strong>out</strong>? | <strong>When</strong> does the work happen? | These five questions travel between engines, tools, and AI systems</li><li><strong>Visual:</strong> tool names fading, five parts staying.</li><li><strong>Refs:</strong> <code>ch00</code> §8.</li></ul></div>
   </aside>
 </section>
 
@@ -69,15 +75,14 @@
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — SOFTWARE</span><p class="kicker">Section 2</p>
     <h2>Anatomy of software</h2>
 
-    <ul class="divider-claims"><li>Five ideas</li><li>Code and data</li><li>Input, process, output</li><li>The loop</li><li>Latency</li><li>Then the five parts that hold all of it</li></ul>
+    <ul class="divider-claims"><li>Start with a button press</li><li>Follow the rules, the changing values, and the feedback</li><li>Then name the five parts</li></ul>
   </div></div></div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S4</h5><p><strong>Pace:</strong> this block is the foundation. Do not rush S10.</p>
-<p><strong>Say</strong></p>
-<ul><li>Code and data. Input, process, output. The loop. Latency. Then five parts that hold all of it.</li></ul>
+<div class="cards"><h5>Speaker card — S4</h5><p><strong>Say</strong></p>
+<ul><li>We will take one button press apart: rules and values, input and output, feedback, and time. Then we will put the five labels on it.</li><li>If a word is unfamiliar, attach it to the example. You do not need to memorize the terminology on first hearing.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Two substances. Nothing else.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> open the anatomy.</li><li><strong>Content:</strong> Five ideas. Code and data. Input, process, output. The loop. Latency. Then the five parts that hold all of it.</li><li><strong>Visual:</strong> the sequence.</li><li><strong>Refs:</strong> <code>ch00</code> §1–4.</li></ul></div>
+<ul><li>Press jump. What is the instruction, and what is a number?</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> open the anatomy.</li><li><strong>Content:</strong> Start with a button press | Follow the rules, the changing values, and the feedback | Then name the five parts</li><li><strong>Visual:</strong> the sequence.</li><li><strong>Refs:</strong> <code>ch00</code> §1–4.</li></ul></div>
   </aside>
 </section>
 
@@ -85,7 +90,7 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>Code and data</h2>
-    <div class="diagram-row"><ul class="content"><li>Code is the rules</li><li>Data is the values those rules act on</li><li>Press jump: the rule is code, the height is data</li><li>There is no third substance</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="8" y="8" width="196" height="134" rx="12" fill="#312E81"/>
   <text x="106" y="40" font-size="22" font-weight="800" fill="#C7D2FE" text-anchor="middle">CODE</text>
   <text x="106" y="64" font-size="13" fill="#E5E7EB" text-anchor="middle">the rules</text>
@@ -96,18 +101,20 @@
   <text x="314" y="64" font-size="13" fill="#E5E7EB" text-anchor="middle">the values</text>
   <text x="314" y="88" font-size="12" fill="#7DD3FC" text-anchor="middle">numbers, files, assets</text>
   <text x="314" y="108" font-size="12" fill="#7DD3FC" text-anchor="middle">meshes, sounds, maps</text>
-</svg></div></div>
+</svg></div><ul class="content"><li><strong>Code</strong> says what can happen</li><li><strong>Configuration</strong> tunes it; <strong>live state</strong> records what is happening</li><li>Changing a jump setting is not the same as changing the jump rule</li></ul></div>
   </div>
 <p class="refs"><code>ch00</code> §1.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S5</h5><p><strong>Say</strong></p>
-<ul><li>Code is the rules. Data is the values.</li><li>Press jump. The rule is code. How high you are is data.</li><li>A spreadsheet is the same cut. Formulas are code. Cells are data.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>The old name, if a programmer asks: von Neumann. A stored program acting on stored state. You do not need the name.</li></ul>
+<ul><li>The rule says: if jump is requested and the player is grounded, set upward velocity. The configured jump speed is a value the designer can tune.</li><li>Current velocity and grounded status are live state. They describe this player now, not the default for every player.</li><li>Changing jump speed can make a higher jump. Allowing a second jump in mid-air changes the rule. Knowing which change you want saves a lot of random editing.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Ask: is ammunition 30 a rule or state? State. Is "do not fire with zero ammunition" a rule? Yes.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Configuration is also data. The configuration/live-state distinction is about use, not a different physical substance. Code itself is stored as bytes; its role is to supply instructions.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>That split is not locked.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the two substances.</li><li><strong>Content:</strong> Code is the rules. Data is the values those rules act on. Press jump: the rule is code, the height is data. There is no third substance.</li><li><strong>Visual:</strong> two cards.</li><li><strong>Refs:</strong> <code>ch00</code> §1.</li></ul></div>
+<ul><li>That is why a file can carry behavior, not just pictures and numbers.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the two substances.</li><li><strong>Content:</strong> <strong>Code</strong> says what can happen | <strong>Configuration</strong> tunes it; <strong>live state</strong> records what is happening | Changing a jump setting is not the same as changing the jump rule</li><li><strong>Visual:</strong> two cards.</li><li><strong>Refs:</strong> <code>ch00</code> §1.</li></ul></div>
   </aside>
 </section>
 
@@ -115,16 +122,18 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>Code can be stored as data</h2>
-    <ul class="content"><li>Code can ship as a data file</li><li>QuakeC ships in progs.dat</li><li>Doom 3 scripts ship as data</li><li>Unreal Blueprints ship in .uasset files</li><li>A mod changes behavior by replacing data, not by recompiling the engine</li></ul>
+    <ul class="content"><li>A file can contain a picture, a number, <strong>or instructions</strong></li><li>Quake's <code>progs.dat</code> contains compiled QuakeC; Blueprints are stored in Unreal assets</li><li>A runtime must interpret or execute those instructions</li><li>Some mods change behavior without rebuilding the engine</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §1.1–1.3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S6</h5><p><strong>Say</strong></p>
-<ul><li>A rule can live in a file. A file can change what the game does.</li><li>Quake compiled QuakeC into progs.dat. The code shipped as data.</li><li>Doom 3 scripts ship as data. Unreal Blueprints ship in .uasset files.</li><li>A mod replaces a data file. Nobody recompiles the engine. The game still changes.</li><li>So you decide what is a rule in the program, and what is a value in a file.</li></ul>
+<ul><li>A file extension does not tell you whether something can change behavior. A runtime may read a file as instructions.</li><li>Quake compiles its gameplay language, QuakeC, into progs.dat. Unreal stores Blueprint graphs in assets. Those files need an engine that understands them.</li><li>Some mods replace data or scripts without rebuilding engine code. Others need native code changes. The boundary is a design choice, not magic.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>A Blueprint is not "just data" in the sense of being behavior-free. A graph can express executable logic. Assets can also contain only content or configuration.</li><li>Source trail: <a href="https://github.com/id-Software/Quake/blob/master/WinQuake/pr_edict.c" target="_blank" rel="noopener">Quake program loader and VM structures</a>. Search for progs.dat and PR_LoadProgs.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Every program, including that file, has a shape.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the boundary is a decision.</li><li><strong>Content:</strong> Code can ship as a data file. QuakeC ships in progs.dat. Doom 3 scripts ship as data. Unreal Blueprints ship in .uasset files. A mod changes behavior by replacing data, not by recompiling the engine.</li><li><strong>Visual:</strong> code file and data file, arrow both ways.</li><li><strong>Refs:</strong> <code>ch00</code> §1.1–1.3.</li></ul></div>
+<ul><li>Whatever the file contains, follow what enters the program and what comes out.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the boundary is a decision.</li><li><strong>Content:</strong> A file can contain a picture, a number, <strong>or instructions</strong> | Quake's <code>progs.dat</code> contains compiled QuakeC; Blueprints are stored in Unreal assets | A runtime must interpret or execute those instructions | Some mods change behavior without rebuilding the engine</li><li><strong>Visual:</strong> code file and data file, arrow both ways.</li><li><strong>Refs:</strong> <code>ch00</code> §1.1–1.3.</li></ul></div>
   </aside>
 </section>
 
@@ -132,7 +141,7 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>Input, process, output</h2>
-    <div class="diagram-row"><ul class="content"><li>Input crosses in</li><li>Process is code acting on data</li><li>Output crosses out</li><li>A calculator and a game engine are the same three boxes</li><li>They differ in scale and speed</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="8" y="28" width="120" height="64" rx="10" fill="#075985"/>
   <text x="68" y="54" font-size="14" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
   <text x="68" y="74" font-size="11" fill="#E0F2FE" text-anchor="middle">keys, files</text>
@@ -146,26 +155,26 @@
   <rect x="340" y="28" width="112" height="64" rx="10" fill="#064E3B"/>
   <text x="396" y="54" font-size="14" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
   <text x="396" y="74" font-size="11" fill="#A7F3D0" text-anchor="middle">pixels, audio</text>
-</svg></div></div>
+</svg></div><ul class="content"><li><strong>Input:</strong> a request to fire</li><li><strong>Process:</strong> check the rules and change the state</li><li><strong>Output:</strong> show and play the result</li></ul></div>
   </div>
 <p class="refs"><code>ch00</code> §2.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S7</h5><p><strong>Say</strong></p>
-<ul><li>Input crosses in. A key, a file, a packet.</li><li>Process is code acting on data.</li><li>Output crosses out. Pixels, audio, a file written to disk.</li><li>A calculator and an engine are the same three boxes. Scale and speed change. The shape does not.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>There is no software without IO. Only software whose IO is hidden. If you are lost later: where is the input, where is the output, what is the process?</li></ul>
+<ul><li>A fire command arrives. Gameplay checks whether firing is allowed, spends ammunition, and checks what was hit. Then the result becomes pixels, sound, and interface updates.</li><li>Input is a request. It is not a guarantee that the requested action happens. Empty ammunition should reject the request.</li><li>The same model works for an import tool: source file in, conversion and validation, runtime asset out.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Point left to right. Ask which box should decide whether the weapon has ammunition. The rules in the process, consulting state, not the muzzle-flash artwork.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Games do not run once. They loop.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the shape of every program.</li><li><strong>Content:</strong> Input crosses in. Process is code acting on data. Output crosses out. A calculator and a game engine are the same three boxes. They differ in scale and speed.</li><li><strong>Visual:</strong> three boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
+<ul><li>The output changes what the player does next.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the shape of every program.</li><li><strong>Content:</strong> <strong>Input:</strong> a request to fire | <strong>Process:</strong> check the rules and change the state | <strong>Output:</strong> show and play the result</li><li><strong>Visual:</strong> three boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §2.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="8" data-state="act-a" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
-    <h2>The loop is cybernetics</h2>
-    <div class="diagram-row"><ul class="content"><li>Output reaches a person</li><li>They perceive, decide, and act</li><li>That act is the next input</li><li>That feedback loop is cybernetics</li><li>A game with no player is a simulation</li><li>With a player, they are in the loop</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 168" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+    <h2>The player closes the feedback loop</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 168" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="16" y="8" width="112" height="44" rx="8" fill="#075985"/>
   <text x="72" y="35" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
   <line x1="132" y1="30" x2="152" y2="30" stroke="#9CA3AF" stroke-width="2"/>
@@ -181,35 +190,49 @@
   <rect x="118" y="78" width="224" height="40" rx="8" fill="#064E3B" stroke="#34D399"/>
   <text x="230" y="96" font-size="12" font-weight="700" fill="#D1FAE5" text-anchor="middle">player: perceive, decide, act</text>
   <text x="230" y="142" font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle">cybernetics: output returns as the next input</text>
-</svg></div></div>
+</svg></div><ul class="content"><li>You see a miss, adjust your aim, and try again</li><li>The engine keeps updating between your decisions</li><li><strong>Feedback</strong> connects the player's goal to the software's response</li></ul></div>
   </div>
 <p class="refs"><code>ch00</code> §3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S8</h5><p><strong>Say</strong></p>
-<ul><li>Output reaches a person. They perceive, decide, and act. That act is the next input.</li><li>That feedback loop has a name: cybernetics.</li><li>Keep the word. It is the name of a system that watches its own output and corrects.</li><li>A game with no player is a simulation. Put a player in it, and they are in the loop.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>Sense, think, act is the same three boxes. Do not teach a second theory.</li></ul>
+<ul><li>You aim, fire, see a miss, move slightly, and fire again. Your next action depends on the previous result. That is feedback.</li><li>The software continues updating while you think. The frame loop is inside a larger human feedback loop; your brain is not making a fresh conscious decision every display refresh.</li><li>Cybernetics studies control and communication through feedback. The useful idea here is correction by observing consequences.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Feedback is not automatically beneficial. A delayed or misleading cue can make a player overcorrect. Camera smoothing can look pleasant while making aiming feel less direct.</li><li>A simulation can run without a human. Human participation is not a universal definition separating every game from every simulation.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The price of the loop is latency.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the loop.</li><li><strong>Content:</strong> Output reaches a person. They perceive, decide, and act. That act is the next input. That feedback loop is cybernetics. A game with no player is a simulation. With a player, they are in the loop.</li><li><strong>Visual:</strong> input, process, output, return path.</li><li><strong>Refs:</strong> <code>ch00</code> §3.</li></ul></div>
+<ul><li>How long does that response take? That is a different question from frame rate.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the loop.</li><li><strong>Content:</strong> You see a miss, adjust your aim, and try again | The engine keeps updating between your decisions | <strong>Feedback</strong> connects the player's goal to the software's response</li><li><strong>Visual:</strong> input, process, output, return path.</li><li><strong>Refs:</strong> <code>ch00</code> §3.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="9" data-state="act-a">
+<section data-num="9" data-state="act-a" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
-    <h2>Latency</h2>
-    <ul class="content"><li>Latency is the chain: finger, device, OS, simulation, render, display, eye</li><li>Delays add</li><li>At 60 fps the budget is about 17 ms</li><li>Miss it, and the player feels the loop break</li></ul>
+    <h2>Frame rate is not response time</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s9-title s9-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s9-title">Response latency and frame cadence are different measurements</title><desc id="s9-desc">A click travels through device sampling, simulation, rendering and queues, then the display. The entire path is latency. Display frames at 60 fps are 16.7 milliseconds apart.</desc>
+  <defs><marker id="s9-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#94A3B8"/></marker></defs>
+  <path d="M30 94 H865" stroke="#94A3B8" stroke-width="3" marker-end="url(#s9-arrow)"/>
+  <g fill="#1F2937" stroke="#818CF8" stroke-width="2"><rect x="10" y="50" width="165" height="88" rx="10"/><rect x="225" y="50" width="180" height="88" rx="10"/><rect x="455" y="50" width="200" height="88" rx="10"/><rect x="705" y="50" width="180" height="88" rx="10"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="22"><text x="92" y="85">Device + OS</text><text x="315" y="85">Simulation</text><text x="555" y="85">CPU / GPU</text><text x="795" y="85">Display</text></g>
+  <g text-anchor="middle" fill="#CBD5E1" font-size="19"><text x="92" y="116">sample input</text><text x="315" y="116">consume request</text><text x="555" y="116">render + queue</text><text x="795" y="116">present pixels</text></g>
+  <path d="M10 155 V175 H885 V155" fill="none" stroke="#C084FC" stroke-width="2"/>
+  <text x="450" y="205" text-anchor="middle" font-size="23" fill="#D8B4FE">Input-to-display latency: the whole journey</text>
+  <text x="450" y="27" text-anchor="middle" font-size="21" fill="#A5B4FC">60 fps describes the spacing of frames, not the length of this path</text>
+</svg></div><ul class="content"><li><strong>60 fps = one frame every 16.7 ms</strong></li><li>Input-to-display latency spans several stages and may span several frames</li><li>Smooth output can still respond late</li></ul></div>
   </div>
 <p class="refs"><code>ch00</code> §3.3–3.4.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S9</h5><p><strong>Say</strong></p>
-<ul><li>Finger, device, OS, simulation, render, display, eye.</li><li>Those delays add. They do not average.</li><li>At 60 fps the budget is about 17 milliseconds. At 144 Hz it is tighter.</li><li>Miss the budget, and the player feels the loop break. That is what lag is.</li></ul>
+<ul><li>Divide one thousand milliseconds by sixty. You get about 16.7 milliseconds between frames at sixty frames per second.</li><li>That is not a promise that your click reaches the screen in 16.7 milliseconds. The device must sample it, the simulation must consume it, rendering must run, and the display must present it. Queues can add waiting.</li><li>Frame rate measures how frequently images arrive. Latency measures how old the response is. A conveyor belt can deliver frequently while carrying old packages.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Trace the chain once. Ask: could a game be smooth but feel sluggish? Yes, because queued work can preserve throughput while increasing response delay.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>120 fps gives 8.3 ms; 30 fps gives 33.3 ms. These are arithmetic intervals, not measured end-to-end latency. Networked actions may include additional network and server delay. Do not sum CPU and GPU frame timings blindly: work can overlap.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Now the five parts. This is the anatomy. Learn these names.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the cost of the loop.</li><li><strong>Content:</strong> Latency is the chain: finger, device, OS, simulation, render, display, eye. Delays add. At 60 fps the budget is about 17 ms. Miss it, and the player feels the loop break.</li><li><strong>Visual:</strong> the chain, one budget.</li><li><strong>Refs:</strong> <code>ch00</code> §3.3–3.4.</li></ul></div>
+<ul><li>Now give the whole system five labels.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the cost of the loop.</li><li><strong>Content:</strong> <strong>60 fps = one frame every 16.7 ms</strong> | Input-to-display latency spans several stages and may span several frames | Smooth output can still respond late</li><li><strong>Visual:</strong> the chain, one budget.</li><li><strong>Refs:</strong> <code>ch00</code> §3.3–3.4.</li></ul></div>
   </aside>
 </section>
 
@@ -217,34 +240,27 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>State, logic, input, output, clock</h2>
-    <div class="diagram-row"><ul class="content"><li>State is what is stored</li><li>Logic is code over data</li><li>Input is what crosses in</li><li>Output is what crosses out</li><li>The clock decides when</li><li>Every program is these five parts</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 100" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-weight="700" text-anchor="middle">
-    <rect x="8" y="8" width="156" height="84" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-    <text x="86" y="42" font-size="15" fill="#F9FAFB">STATE</text>
-    <text x="86" y="64" font-size="11" font-weight="400" fill="#94A3B8">what is stored</text>
-    <rect x="176" y="8" width="156" height="84" rx="10" fill="#1F2937" stroke="#818CF8" stroke-width="2"/>
-    <text x="254" y="42" font-size="15" fill="#F9FAFB">LOGIC</text>
-    <text x="254" y="64" font-size="11" font-weight="400" fill="#94A3B8">code over data</text>
-    <rect x="344" y="8" width="156" height="84" rx="10" fill="#1F2937" stroke="#38BDF8" stroke-width="2"/>
-    <text x="422" y="42" font-size="15" fill="#F9FAFB">INPUT</text>
-    <text x="422" y="64" font-size="11" font-weight="400" fill="#94A3B8">what crosses in</text>
-    <rect x="512" y="8" width="156" height="84" rx="10" fill="#1F2937" stroke="#34D399" stroke-width="2"/>
-    <text x="590" y="42" font-size="15" fill="#F9FAFB">OUTPUT</text>
-    <text x="590" y="64" font-size="11" font-weight="400" fill="#94A3B8">what crosses out</text>
-    <rect x="680" y="8" width="172" height="84" rx="10" fill="#1F2937" stroke="#A78BFA" stroke-width="2"/>
-    <text x="766" y="42" font-size="15" fill="#F9FAFB">CLOCK</text>
-    <text x="766" y="64" font-size="11" font-weight="400" fill="#94A3B8">when it runs</text>
-  </g>
-</svg></div></div>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" role="img" aria-labelledby="s10-title s10-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s10-title">Five responsibilities connected</title><desc id="s10-desc">Input triggers logic. Logic reads and writes state. Output presents state. A clock schedules the work.</desc>
+  <defs><marker id="s10-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8" fill="#94A3B8"/></marker></defs>
+  <g fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#s10-arrow)"><path d="M185 115 H240"/><path d="M420 115 H480" marker-start="url(#s10-arrow)"/><path d="M660 115 H715"/><path d="M450 202 V156"/></g>
+  <g fill="#1F2937" stroke-width="2"><rect x="5" y="65" width="180" height="95" rx="10" stroke="#38BDF8"/><rect x="240" y="65" width="180" height="95" rx="10" stroke="#818CF8"/><rect x="480" y="65" width="180" height="95" rx="10" stroke="#6EE7B7"/><rect x="715" y="65" width="180" height="95" rx="10" stroke="#38BDF8"/><rect x="300" y="202" width="300" height="42" rx="10" stroke="#C084FC"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="24" font-weight="700"><text x="95" y="99">INPUT</text><text x="330" y="99">LOGIC</text><text x="570" y="99">STATE</text><text x="805" y="99">OUTPUT</text><text x="450" y="231" font-size="21">CLOCK: when it runs</text></g>
+  <g text-anchor="middle" fill="#CBD5E1" font-size="20"><text x="95" y="133">Fire request</text><text x="330" y="133">Check + update</text><text x="570" y="133">Ammo: 30 → 29</text><text x="805" y="133">Flash + sound</text><text x="450" y="37">Rules read facts before changing them</text></g>
+</svg></div><ul class="content"><li><strong>State:</strong> remembered facts; <strong>logic:</strong> rules that change them</li><li><strong>Input / output:</strong> what crosses the boundary</li><li><strong>Clock:</strong> when work runs, not necessarily one timer</li></ul></div>
   </div>
 <p class="refs"><code>ch00</code> §4.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S10</h5><p><strong>Say</strong></p>
-<ul><li>State: what is stored.</li><li>Logic: code over data.</li><li>Input: what crosses in.</li><li>Output: what crosses out.</li><li>Clock: when it runs.</li><li>Any program fits these boxes. A web form does. An engine does. Point at the box if you get lost for the rest of the day.</li></ul>
+<ul><li>State remembers: ammunition, health, position. Logic changes those facts according to rules. Input requests changes. Output presents results. Clock means when the work runs.</li><li>The arrows matter more than the boxes. Rules read existing state and write new state. Output reads a representation of the result. Timing affects the entire journey.</li><li>Keep this map. When someone says "the engine is broken," ask which boundary failed and what evidence they have.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Point to state and ask "29 rounds: where?" Then logic: "the rule that spent one round: where?" Allow a pause; this is the comprehension check to protect.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Clock can mean an event loop, simulation tick, task schedule, audio callback, or cooldown. There may be several clocks. These are responsibilities, not isolated physical boxes.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Hold that diagram up to a game engine.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the anatomy, named.</li><li><strong>Content:</strong> State is what is stored. Logic is code over data. Input is what crosses in. Output is what crosses out. The clock decides when. Every program is these five parts.</li><li><strong>Visual:</strong> five boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §4.</li></ul></div>
+<ul><li>An engine packages reusable machinery for these responsibilities.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the anatomy, named.</li><li><strong>Content:</strong> <strong>State:</strong> remembered facts; <strong>logic:</strong> rules that change them | <strong>Input / output:</strong> what crosses the boundary | <strong>Clock:</strong> when work runs, not necessarily one timer</li><li><strong>Visual:</strong> five boxes.</li><li><strong>Refs:</strong> <code>ch00</code> §4.</li></ul></div>
   </aside>
 </section>
 
@@ -252,14 +268,16 @@
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE ENGINE</span><p class="kicker">Section 3</p>
     <h2>Anatomy of a game engine</h2>
 
-    <ul class="divider-claims"><li>A game engine is not a different kind of software</li><li>It is the same five parts, each one a subsystem, running hard real-time</li></ul>
+    <ul class="divider-claims"><li>An engine provides <strong>reusable systems for running interactive worlds</strong></li><li>Your game supplies specific rules and content</li><li>Editors and asset tools help build what the runtime uses</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S11</h5><p><strong>Say</strong></p>
-<ul><li>An engine is not a new kind of software.</li><li>Same five parts. Each one is now a subsystem. And it has a deadline.</li></ul>
+<ul><li>A game engine is reusable software for building and running interactive worlds. It commonly provides simulation support, rendering, audio, input, asset handling, and authoring tools.</li><li>Your game adds the particular rules and content: what a weapon does, how a level looks, what winning means.</li><li>The editor is the workshop. The runtime is the machinery running the shipped experience. Engines differ in where that boundary sits; some games use custom or minimal tools.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>"Is a renderer an engine?" It may be one component of an engine. A library that draws triangles does not necessarily provide gameplay, physics, asset tools, or a complete runtime. The label has fuzzy edges; ask what responsibilities it supplies.</li><li>Not every engine is large or 3D. The same questions work for a small 2D framework.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Read the rows.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the extension.</li><li><strong>Content:</strong> A game engine is not a different kind of software. It is the same five parts, each one a subsystem, running hard real-time.</li><li><strong>Visual:</strong> five parts opening into subsystems.</li><li><strong>Refs:</strong> <code>ch00</code> §5, <code>ch01</code> §2.</li></ul></div>
+<ul><li>Here are the responsibilities using the same five questions.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the extension.</li><li><strong>Content:</strong> An engine provides <strong>reusable systems for running interactive worlds</strong> | Your game supplies specific rules and content | Editors and asset tools help build what the runtime uses</li><li><strong>Visual:</strong> five parts opening into subsystems.</li><li><strong>Refs:</strong> <code>ch00</code> §5, <code>ch01</code> §2.</li></ul></div>
   </aside>
 </section>
 
@@ -267,101 +285,106 @@
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>Five subsystems</h2>
-    <div class="diagram-row"><ul class="content"><li>State is the world model</li><li>Logic is physics, AI, and gameplay</li><li>Input is the input subsystem, device to command</li><li>Output is the renderer, audio, and UI</li><li>The clock is the frame loop</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-size="13" font-weight="700">
-    <rect x="8" y="8" width="150" height="36" rx="8" fill="#1F2937" stroke="#6366F1"/>
-    <text x="83" y="31" fill="#F9FAFB" text-anchor="middle">STATE</text>
-    <text x="175" y="31" fill="#A5B4FC">world model</text>
-    <rect x="8" y="50" width="150" height="36" rx="8" fill="#1F2937" stroke="#818CF8"/>
-    <text x="83" y="73" fill="#F9FAFB" text-anchor="middle">LOGIC</text>
-    <text x="175" y="73" fill="#C7D2FE">physics, AI, gameplay</text>
-    <rect x="8" y="92" width="150" height="36" rx="8" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="83" y="115" fill="#F9FAFB" text-anchor="middle">INPUT</text>
-    <text x="175" y="115" fill="#7DD3FC">device to command</text>
-    <rect x="8" y="134" width="150" height="36" rx="8" fill="#1F2937" stroke="#34D399"/>
-    <text x="83" y="157" fill="#F9FAFB" text-anchor="middle">OUTPUT</text>
-    <text x="175" y="157" fill="#6EE7B7">renderer, audio, UI</text>
-    <rect x="8" y="176" width="150" height="36" rx="8" fill="#1F2937" stroke="#A78BFA"/>
-    <text x="83" y="199" fill="#F9FAFB" text-anchor="middle">CLOCK</text>
-    <text x="175" y="199" fill="#DDD6FE">frame loop</text>
-  </g>
-</svg></div></div>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="Five engine responsibilities with a concrete weapon example for each" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g fill="#1F2937"><rect x="5" y="5" width="890" height="42" rx="6"/><rect x="5" y="53" width="890" height="42" rx="6"/><rect x="5" y="101" width="890" height="42" rx="6"/><rect x="5" y="149" width="890" height="42" rx="6"/><rect x="5" y="197" width="890" height="42" rx="6"/></g>
+  <g font-size="22" font-weight="700" fill="#7DD3FC"><text x="24" y="34">STATE</text><text x="24" y="82">LOGIC</text><text x="24" y="130">INPUT</text><text x="24" y="178">OUTPUT</text><text x="24" y="226">CLOCK</text></g>
+  <g font-size="22" fill="#F9FAFB"><text x="180" y="34">World model</text><text x="180" y="82">Gameplay + physics</text><text x="180" y="130">Device events to commands</text><text x="180" y="178">Renderer + audio + UI</text><text x="180" y="226">Ticks + scheduling</text></g>
+  <g font-size="21" fill="#CBD5E1"><text x="565" y="34">Ammunition: 30 becomes 29</text><text x="565" y="82">Can fire? What was hit?</text><text x="565" y="130">Button becomes Fire</text><text x="565" y="178">Flash, gunshot, ammo counter</text><text x="565" y="226">Update, cooldown, present</text></g>
+</svg></div><ul class="content"><li>The five questions become a map of engine responsibilities</li><li>Follow one shot: <strong>input → rules → changed world → feedback</strong></li><li>These are roles, not five isolated code modules</li></ul></div>
   </div>
 <p class="refs"><code>ch01</code> §2.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S12</h5><p><strong>Say</strong></p>
-<ul><li>State is the world model. The picture of the world and everything in it.</li><li>Logic is physics, AI, and gameplay. Code over that data.</li><li>Input is the input subsystem. A device event becomes a command the game can read.</li><li>Output is the renderer, the audio mixer, and the UI.</li><li>The clock is the frame loop.</li><li>"The engine is slow" means nothing. Name the subsystem.</li></ul>
+<ul><li>Input turns a device event into a gameplay command. Logic tests the rules. The world model stores the changed facts. Rendering, audio, and UI present them. The scheduler determines when those jobs happen.</li><li>For our weapon: Fire comes in, the rule spends one round, state becomes 29, and the player sees and hears the shot.</li><li>In a real engine each part crosses several modules and threads. The point is to locate responsibility, not force the source tree into five folders.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>"The ammunition display says 30 but the weapon has 29. Which boundary would you inspect?" Compare authoritative state with what the HUD reads. Do not immediately rewrite the firing rule.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Why the deadline is the whole job.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the engine anatomy, one row each.</li><li><strong>Content:</strong> State is the world model. Logic is physics, AI, and gameplay. Input is the input subsystem, device to command. Output is the renderer, audio, and UI. The clock is the frame loop.</li><li><strong>Visual:</strong> five rows.</li><li><strong>Refs:</strong> <code>ch01</code> §2.</li></ul></div>
+<ul><li>Correct work still has to arrive on time.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the engine anatomy, one row each.</li><li><strong>Content:</strong> The five questions become a map of engine responsibilities | Follow one shot: <strong>input → rules → changed world → feedback</strong> | These are roles, not five isolated code modules</li><li><strong>Visual:</strong> five rows.</li><li><strong>Refs:</strong> <code>ch01</code> §2.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="13" data-state="act-b">
+<section data-num="13" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
-    <h2>The frame loop is hard real-time</h2>
-    <ul class="content"><li>The frame must finish before the next refresh</li><li>That is hard real-time</li><li>Miss the deadline and the player feels it</li><li>The frame loop and the human loop are the same loop, at 60 to 144 Hz</li></ul>
+    <h2>A frame is a time budget</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s13-title s13-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s13-title">Illustrative frame budget</title><desc id="s13-desc">A 12 millisecond critical path fits a 16.7 millisecond target interval. A 24 millisecond critical path exceeds it. These are teaching values, not a benchmark or summed CPU and GPU timings.</desc>
+  <g font-size="22" fill="#CBD5E1"><text x="15" y="75">Frame A</text><text x="15" y="148">Frame B</text><text x="175" y="207">0 ms</text><text x="578" y="207">16.7 ms</text><text x="790" y="207">25 ms</text></g>
+  <path d="M600 28 V175" stroke="#FBBF24" stroke-width="3" stroke-dasharray="7 5"/>
+  <rect x="180" y="45" width="302" height="46" rx="6" fill="#064E3B" stroke="#6EE7B7"/><rect x="180" y="118" width="604" height="46" rx="6" fill="#7F1D1D" stroke="#FCA5A5"/>
+  <g font-size="22" fill="#F9FAFB"><text x="195" y="76">12 ms: within target</text><text x="195" y="149">24 ms: late delivery</text></g>
+  <text x="600" y="22" text-anchor="middle" font-size="20" fill="#FBBF24">60 fps target interval</text>
+  <text x="450" y="231" text-anchor="middle" font-size="18" fill="#94A3B8">Illustrative critical-path work, not CPU time + GPU time</text>
+</svg></div><ul class="content"><li>At a 60 fps target, the interval is <strong>16.7 ms</strong></li><li>Late work causes a hitch or lower frame rate: games are usually <strong>soft real-time</strong></li><li>Measure the bottleneck; CPU and GPU work can overlap</li></ul></div>
   </div>
 <p class="refs"><code>ch00</code> §5, <code>ch01</code> §4.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S13</h5><p><strong>Say</strong></p>
-<ul><li>The frame must finish before the next refresh. That is hard real-time.</li><li>Ordinary software can be late. A game cannot, or the player feels it.</li><li>The frame loop and the human loop are the same loop. The display is the metronome. 60 to 144 times a second.</li></ul>
+<ul><li>At a sixty-frame target we aim to deliver a frame roughly every 16.7 milliseconds. Illustratively, twelve milliseconds of critical-path work fits; twenty-four does not.</li><li>Games are generally soft real-time: being late hurts responsiveness or smoothness, but a missed frame is not automatically total system failure. Hard real-time systems require deadline guarantees for correctness.</li><li>Find the bottleneck before optimizing. A faster shader does not fix a main thread waiting for an asset to load.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>CPU and GPU often work on different frames concurrently. Their times are not simply added to predict frame rate. Synchronization, queues, refresh policy, and the critical path matter.</li><li>In Unreal, start with stat unit for Game, Draw, GPU, and Frame, then a timeline in Unreal Insights. Measure on the target hardware, including slow frames rather than only an average.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>One mistake people make about that output row.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the constraint that makes an engine an engine.</li><li><strong>Content:</strong> The frame must finish before the next refresh. That is hard real-time. Miss the deadline and the player feels it. The frame loop and the human loop are the same loop, at 60 to 144 Hz.</li><li><strong>Visual:</strong> frame deadline.</li><li><strong>Refs:</strong> <code>ch00</code> §5, <code>ch01</code> §4.</li></ul></div>
+<ul><li>The image is one output of that work, not the world itself.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> explain performance without confusing soft and hard real-time.</li><li><strong>Content:</strong> At a 60 fps target, the interval is <strong>16.7 ms</strong> | Late work causes a hitch or lower frame rate: games are usually <strong>soft real-time</strong> | Measure the bottleneck; CPU and GPU work can overlap</li><li><strong>Visual:</strong> frame deadline.</li><li><strong>Refs:</strong> <code>ch00</code> §5, <code>ch01</code> §4.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="14" data-state="act-b">
+<section data-num="14" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>The renderer reads state</h2>
-    <ul class="content"><li>State and logic are the core</li><li>Assets, audio, UI, and network are channels</li><li>The renderer is output</li><li>It reads state and draws it</li><li>It does not run the simulation</li></ul>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s14-title s14-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s14-title">The world is not its picture</title><desc id="s14-desc">Authoritative world state with target health 75 feeds a render representation, a HUD display and sound events. A headless server can own facts without displaying them.</desc>
+  <defs><marker id="s14-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#7DD3FC"/></marker></defs>
+  <g stroke="#7DD3FC" stroke-width="2" fill="none" marker-end="url(#s14-arrow)"><path d="M370 107 H440 V40 H540"/><path d="M440 107 H540"/><path d="M440 107 V177 H540"/></g>
+  <rect x="20" y="47" width="350" height="122" rx="12" fill="#1F2937" stroke="#6EE7B7" stroke-width="2"/>
+  <g fill="#1F2937" stroke="#7DD3FC"><rect x="540" y="15" width="340" height="50" rx="8"/><rect x="540" y="82" width="340" height="50" rx="8"/><rect x="540" y="152" width="340" height="50" rx="8"/></g>
+  <g text-anchor="middle" font-size="23" fill="#F9FAFB"><text x="195" y="84">AUTHORITATIVE WORLD</text><text x="195" y="120">Target health: 75</text><text x="710" y="48">Renderer: visible reaction</text><text x="710" y="115">HUD: health bar</text><text x="710" y="185">Audio: impact sound</text></g>
+  <text x="195" y="148" text-anchor="middle" font-size="18" fill="#6EE7B7">Can exist without a screen</text><text x="450" y="229" text-anchor="middle" font-size="20" fill="#CBD5E1">Check the facts and the presentation separately</text>
+</svg></div><ul class="content"><li><strong>The world is not the picture of the world</strong></li><li>A server can track hits and health without drawing a frame</li><li>Rendering may simulate visual effects; that does not make the image the authority on damage</li></ul></div>
   </div>
 <p class="refs"><code>ch01</code> §3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S14</h5><p><strong>Say</strong></p>
-<ul><li>State and logic are the core. They hold the world.</li><li>Assets, audio, UI, and network are channels. They move data across a boundary.</li><li>The renderer is a channel. It reads state and draws it. It does not run the simulation.</li><li>Black screen, world still simulating: the renderer is a reader, not the owner of the facts.</li></ul>
+<ul><li>Think of a scoreboard and the scorekeeper. The display reports a score; it does not necessarily decide which goal counts.</li><li>Similarly, a headless server can track positions, hits, and health without drawing any pixels. The renderer makes a picture from state prepared for presentation.</li><li>A flash is evidence that an effect appeared. It is not proof that the authoritative damage rule accepted a hit.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Rendering systems do perform computation and can simulate cosmetic particles or other effects. The distinction is authority over gameplay, not "renderers never simulate."</li><li>Clients may predict an effect before the server confirms the action. Rendering copies can intentionally lag the authoritative world. Authority and freshness are separate questions.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The state slot has a name: the world model. Three ways to store it.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> core versus channels.</li><li><strong>Content:</strong> State and logic are the core. Assets, audio, UI, and network are channels. The renderer is output. It reads state and draws it. It does not run the simulation.</li><li><strong>Visual:</strong> core in the middle, renderer downstream.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
+<ul><li>How are those world facts organized?</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> core versus channels.</li><li><strong>Content:</strong> <strong>The world is not the picture of the world</strong> | A server can track hits and health without drawing a frame | Rendering may simulate visual effects; that does not make the image the authority on damage</li><li><strong>Visual:</strong> core in the middle, renderer downstream.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="15" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
-    <h2>The world model is the state slot</h2>
-    <div class="diagram-row"><ul class="content"><li>A scene graph stores parent-child transforms</li><li>BSP stores a compiled level plus a flat entity list</li><li>ECS stores columns of data and systems scan them</li><li>Most engines are one of these, or a mix</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-size="12" font-weight="700" fill="#E5E7EB" text-anchor="middle">
-    <rect x="8" y="28" width="160" height="100" rx="10" fill="#1F2937" stroke="#6366F1"/>
-    <text x="88" y="52" fill="#A5B4FC">SCENE GRAPH</text>
-    <text x="88" y="76" font-size="11" font-weight="400">parent / child</text>
-    <text x="88" y="96" font-size="11" font-weight="400">transforms</text>
-    <rect x="180" y="28" width="160" height="100" rx="10" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="260" y="52" fill="#7DD3FC">BSP + ENTITIES</text>
-    <text x="260" y="76" font-size="11" font-weight="400">compiled rooms</text>
-    <text x="260" y="96" font-size="11" font-weight="400">flat entity list</text>
-    <rect x="352" y="28" width="160" height="100" rx="10" fill="#1F2937" stroke="#34D399"/>
-    <text x="432" y="52" fill="#6EE7B7">ECS</text>
-    <text x="432" y="76" font-size="11" font-weight="400">columns of data</text>
-    <text x="432" y="96" font-size="11" font-weight="400">systems scan them</text>
-  </g>
-  <text x="260" y="18" font-size="11" font-weight="700" fill="#94A3B8" text-anchor="middle">STATE — three ways to store a world</text>
-</svg></div></div>
+    <h2>Three ways to organize a world</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="s15-title s15-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s15-title">Relationships, location, and components</title><desc id="s15-desc">A parent hand connects to a weapon. A partitioned space locates nearby objects. An entity table groups position and health data. These structures answer different questions and may coexist.</desc>
+  <g fill="#1F2937" stroke="#475569"><rect x="5" y="5" width="280" height="230" rx="12"/><rect x="310" y="5" width="280" height="230" rx="12"/><rect x="615" y="5" width="280" height="230" rx="12"/></g>
+  <g text-anchor="middle" font-size="23" font-weight="700"><text x="145" y="36" fill="#A5B4FC">RELATIONSHIPS</text><text x="450" y="36" fill="#7DD3FC">LOCATION</text><text x="755" y="36" fill="#6EE7B7">COMPONENTS</text></g>
+  <path d="M145 97 V127 H200" fill="none" stroke="#A5B4FC" stroke-width="3"/><rect x="70" y="58" width="150" height="40" rx="6" fill="#312E81"/><rect x="115" y="129" width="150" height="40" rx="6" fill="#312E81"/>
+  <g fill="#F9FAFB" text-anchor="middle" font-size="22"><text x="145" y="86">Hand</text><text x="190" y="157">Weapon</text></g>
+  <path d="M335 60 H565 V174 H335 Z M450 60 V174 M450 120 H565" fill="none" stroke="#7DD3FC" stroke-width="2"/><circle cx="375" cy="90" r="9" fill="#7DD3FC"/><circle cx="412" cy="143" r="9" fill="#7DD3FC"/><circle cx="514" cy="145" r="9" fill="#FBBF24"/>
+  <g fill="#CBD5E1" font-size="19"><text x="635" y="85">Entity</text><text x="710" y="85">Pos.</text><text x="795" y="85">Health</text><text x="650" y="124">A</text><text x="710" y="124">x, y</text><text x="810" y="124">100</text><text x="650" y="163">B</text><text x="710" y="163">x, y</text><text x="810" y="163">75</text></g>
+  <path d="M630 94 H880 M700 60 V179 M785 60 V179" stroke="#6EE7B7" fill="none"/>
+  <g fill="#CBD5E1" text-anchor="middle" font-size="20"><text x="145" y="210">What moves together?</text><text x="450" y="210">What is nearby?</text><text x="755" y="210">What facts are stored?</text></g>
+</svg></div><ul class="content"><li><strong>Scene graph:</strong> what moves with what?</li><li><strong>Spatial index:</strong> what is near, visible, or colliding?</li><li><strong>Components / ECS:</strong> what data does each thing have?</li><li>These solve different problems and often coexist</li></ul></div>
   </div>
 <p class="refs"><code>ch02</code> §1–6.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S15</h5><p><strong>Say</strong></p>
-<ul><li>Scene graph: a parent-child transform tree. Attach a sword to a hand. The hand moves the sword.</li><li>BSP: the level is compiled into rooms, plus a flat list of entities. Quake and Doom 3 live here.</li><li>ECS: the same kind of fact in one column. A system scans the column.</li><li>You do not need to pick a winner. You need to know which one your engine uses, because that is the state you feed.</li></ul>
+<ul><li>A transform tree answers "what moves with what?" Move a hand and the attached weapon follows.</li><li>A spatial index answers "what is near or potentially visible?" A BSP partitions space; other engines use grids or bounding-volume trees.</li><li>Components answer "what data and capabilities does this thing have?" An ECS organizes entities by components and runs systems over matching data.</li><li>These are not competing brands of world model. One engine can use all three for different jobs.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>ECS means entity-component-system. Not every ECS uses the same columnar storage, and not every component-based engine is an ECS. Unreal Actors and Components do not by themselves imply a pure ECS.</li><li>A spatial index may be derived from world data. If a moving object is not reflected in the index, queries can give wrong answers even when its visible transform looks correct.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Same rows. Three real engines.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> three fills of state, named.</li><li><strong>Content:</strong> A scene graph stores parent-child transforms. BSP stores a compiled level plus a flat entity list. ECS stores columns of data and systems scan them. Most engines are one of these, or a mix.</li><li><strong>Visual:</strong> three state families.</li><li><strong>Refs:</strong> <code>ch02</code> §1–6.</li></ul></div>
+<ul><li>Let us use the questions on engines that actually shipped.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> distinguish relationship, spatial, and component organization.</li><li><strong>Content:</strong> <strong>Scene graph:</strong> what moves with what? | <strong>Spatial index:</strong> what is near, visible, or colliding? | <strong>Components / ECS:</strong> what data does each thing have? | These solve different problems and often coexist</li><li><strong>Visual:</strong> three state families.</li><li><strong>Refs:</strong> <code>ch02</code> §1–6.</li></ul></div>
   </aside>
 </section>
 
@@ -369,14 +392,14 @@
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE ENGINE</span><p class="kicker">Section 4</p>
     <h2>Quake, Doom 3, Unreal 5</h2>
 
-    <ul class="divider-claims"><li>Same five rows</li><li>Read the row, not the brand</li></ul>
+    <ul class="divider-claims"><li>Three real engines, the same questions</li><li>Read the responsibility first; learn its local name second</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S16</h5><p><strong>Say</strong></p>
-<ul><li>Do not memorize the brands. Read the row.</li><li>State, logic, input, output, clock. If you can fill those five, you can read the engine.</li></ul>
+<ul><li>This is not a nostalgia test. Ignore names you do not recognize; identify the job each name performs.</li><li>We are comparing the original Quake and DOOM 3 architectures with the configurable Unreal 5 family. Ports, later editions, and project settings can change important details.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Here they are.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> prove the anatomy on real engines.</li><li><strong>Content:</strong> Same five rows. Read the row, not the brand.</li><li><strong>Visual:</strong> three columns.</li><li><strong>Refs:</strong> <code>Eng/QUAKE</code>, <code>Eng/DOOM3</code>, <code>Eng/UE5</code>.</li></ul></div>
+<ul><li>Read one row across before reading one engine down.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> prove the anatomy on real engines.</li><li><strong>Content:</strong> Three real engines, the same questions | Read the responsibility first; learn its local name second</li><li><strong>Visual:</strong> three columns.</li><li><strong>Refs:</strong> <code>Eng/QUAKE</code>, <code>Eng/DOOM3</code>, <code>Eng/UE5</code>.</li></ul></div>
   </aside>
 </section>
 
@@ -384,82 +407,43 @@
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>The same five rows</h2>
-    <div class="diagram-row"><ul class="content"><li>Quake, Doom 3, and Unreal 5 fill the same slots</li><li>State, logic, input, output, clock</li><li>The names change</li><li>The anatomy does not</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 210" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-size="11" font-weight="700" text-anchor="middle">
-    <text x="70" y="16" fill="#94A3B8"></text>
-    <text x="200" y="16" fill="#7DD3FC">QUAKE</text>
-    <text x="370" y="16" fill="#A5B4FC">DOOM 3</text>
-    <text x="540" y="16" fill="#D8B4FE">UNREAL 5</text>
-    <g fill="#E5E7EB">
-      <text x="70" y="40" fill="#94A3B8">STATE</text>
-      <rect x="120" y="24" width="160" height="22" rx="5" fill="#1F2937" stroke="#38BDF8"/>
-      <text x="200" y="39">BSP + edicts</text>
-      <rect x="290" y="24" width="160" height="22" rx="5" fill="#1F2937" stroke="#6366F1"/>
-      <text x="370" y="39">.proc + idEntity</text>
-      <rect x="460" y="24" width="160" height="22" rx="5" fill="#1F2937" stroke="#C084FC"/>
-      <text x="540" y="39">UWorld / Actors</text>
-      <text x="70" y="72" fill="#94A3B8">LOGIC</text>
-      <rect x="120" y="56" width="160" height="22" rx="5" fill="#1F2937" stroke="#38BDF8"/>
-      <text x="200" y="71">QuakeC + physics</text>
-      <rect x="290" y="56" width="160" height="22" rx="5" fill="#1F2937" stroke="#6366F1"/>
-      <text x="370" y="71">RunFrame + idScript</text>
-      <rect x="460" y="56" width="160" height="22" rx="5" fill="#1F2937" stroke="#C084FC"/>
-      <text x="540" y="71">Tick + Chaos</text>
-      <text x="70" y="104" fill="#94A3B8">INPUT</text>
-      <rect x="120" y="88" width="160" height="22" rx="5" fill="#1F2937" stroke="#38BDF8"/>
-      <text x="200" y="103">usercmd</text>
-      <rect x="290" y="88" width="160" height="22" rx="5" fill="#1F2937" stroke="#6366F1"/>
-      <text x="370" y="103">usercmd, 60 Hz</text>
-      <rect x="460" y="88" width="160" height="22" rx="5" fill="#1F2937" stroke="#C084FC"/>
-      <text x="540" y="103">Enhanced Input</text>
-      <text x="70" y="136" fill="#94A3B8">OUTPUT</text>
-      <rect x="120" y="120" width="160" height="22" rx="5" fill="#1F2937" stroke="#38BDF8"/>
-      <text x="200" y="135">render + audio</text>
-      <rect x="290" y="120" width="160" height="22" rx="5" fill="#1F2937" stroke="#6366F1"/>
-      <text x="370" y="135">render + OpenAL</text>
-      <rect x="460" y="120" width="160" height="22" rx="5" fill="#1F2937" stroke="#C084FC"/>
-      <text x="540" y="135">render thread + audio</text>
-      <text x="70" y="168" fill="#94A3B8">CLOCK</text>
-      <rect x="120" y="152" width="160" height="22" rx="5" fill="#1F2937" stroke="#38BDF8"/>
-      <text x="200" y="167">variable frame</text>
-      <rect x="290" y="152" width="160" height="22" rx="5" fill="#1F2937" stroke="#6366F1"/>
-      <text x="370" y="167">60 Hz sim</text>
-      <rect x="460" y="152" width="160" height="22" rx="5" fill="#1F2937" stroke="#C084FC"/>
-      <text x="540" y="167">variable + Chaos</text>
-    </g>
-  </g>
-  <text x="320" y="198" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">same five rows. different fill.</text>
-</svg></div></div>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" role="img" aria-labelledby="s17-title s17-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s17-title">Five responsibilities across three engines</title><desc id="s17-desc">Original Quake and Doom 3 and configurable Unreal 5 organize state, logic, input, output, and timing differently. The same questions locate each responsibility.</desc>
+  <g fill="#1F2937"><rect x="130" y="38" width="250" height="210" rx="8"/><rect x="390" y="38" width="250" height="210" rx="8"/><rect x="650" y="38" width="245" height="210" rx="8"/></g>
+  <g text-anchor="middle" font-size="22" font-weight="700"><text x="255" y="27" fill="#7DD3FC">QUAKE (original)</text><text x="515" y="27" fill="#A5B4FC">DOOM 3 (original)</text><text x="772" y="27" fill="#D8B4FE">UNREAL 5</text></g>
+  <g fill="#94A3B8" font-size="21"><text x="5" y="70">STATE</text><text x="5" y="110">LOGIC</text><text x="5" y="150">INPUT</text><text x="5" y="190">OUTPUT</text><text x="5" y="230">CLOCK</text></g>
+  <g text-anchor="middle" fill="#E5E7EB" font-size="19"><text x="255" y="70">BSP + edicts</text><text x="515" y="70">.proc + idEntity</text><text x="772" y="70">UWorld / Actors</text><text x="255" y="110">C + QuakeC</text><text x="515" y="110">C++ + idScript</text><text x="772" y="110">C++ / BP / Chaos</text><text x="255" y="150">usercmd</text><text x="515" y="150">usercmd</text><text x="772" y="150">Enhanced Input</text><text x="255" y="190">renderer + audio</text><text x="515" y="190">renderer + audio</text><text x="772" y="190">render / audio / UMG</text><text x="255" y="230">host frames</text><text x="515" y="230">60 Hz game ticks</text><text x="772" y="230">configurable clocks</text></g>
+</svg></div><ul class="content"><li>Start with one row: <strong>where are the world's facts stored?</strong></li><li>Names and implementations differ; the questions remain useful</li></ul></div>
   </div>
 <p class="refs"><code>Eng/QUAKE</code>, <code>Eng/DOOM3</code>, <code>Eng/UE5</code>.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S17</h5><p><strong>Say</strong></p>
-<ul><li>Quake. State is a BSP world plus edicts. Logic is QuakeC and the physics step. Input is a usercmd. Output is the renderer and the audio mix. Clock is a variable frame.</li><li>Doom 3. State is a compiled .proc world plus idEntity objects. Logic is RunFrame and idScript. Input is a usercmd at 60 Hz. Output is the renderer and OpenAL. Clock is a fixed 60 Hz simulation, and render runs as fast as the display.</li><li>Unreal 5. State is a UWorld of Actors. Logic is actor tick plus Chaos. Input is Enhanced Input. Output is a render thread, the audio mixer, and UMG. Clock is a variable game frame with fixed physics substeps.</li><li>Thirty years. Same five rows.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>QuakeC lived in progs.dat. Doom 3 data lived in .decl and .def files. Unreal content lives in .uasset files. That is S6 again: code and data, stored as files.</li></ul>
+<ul><li>Start with state. Quake combines compiled world geometry with entities called edicts. DOOM 3 uses compiled render-world data and game objects such as idEntity. Unreal organizes gameplay around a UWorld, Actors, and Components.</li><li>Those are different names and structures for facts about the world. Next, the logic row names the code that changes those facts.</li><li>Do not recite the whole table. Pick Quake and walk down: world facts, C and QuakeC behavior, input commands, rendering and audio, host-frame timing. The new engine stops being a wall of unfamiliar words.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Original DOOM 3 has a nominal 60 Hz game/user-command cadence; avoid claiming it has BFG's later render/simulation arrangement. Unreal physics substepping is configurable, not universally fixed by default.</li><li>Primary sources: <a href="https://github.com/id-Software/Quake" target="_blank" rel="noopener">Quake source</a>, <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/game/Game_local.h" target="_blank" rel="noopener">DOOM 3 game state and interface</a>, <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/framework/UsercmdGen.h" target="_blank" rel="noopener">DOOM 3 user-command timing</a>, <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/physics-sub-stepping-in-unreal-engine" target="_blank" rel="noopener">Epic physics substepping</a>.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>What actually changes.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the comparison.</li><li><strong>Content:</strong> Quake, Doom 3, and Unreal 5 fill the same slots. State, logic, input, output, clock. The names change. The anatomy does not.</li><li><strong>Visual:</strong> three-column table.</li><li><strong>Refs:</strong> <code>Eng/QUAKE</code>, <code>Eng/DOOM3</code>, <code>Eng/UE5</code>.</li></ul></div>
+<ul><li>The timing row deserves one important distinction.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the comparison.</li><li><strong>Content:</strong> Start with one row: <strong>where are the world's facts stored?</strong> | Names and implementations differ; the questions remain useful</li><li><strong>Visual:</strong> three-column table.</li><li><strong>Refs:</strong> <code>Eng/QUAKE</code>, <code>Eng/DOOM3</code>, <code>Eng/UE5</code>.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="18" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
-    <h2>What changes is the fill</h2>
-    <ul class="content"><li>Quake's clock is variable</li><li>Doom 3 simulates at a fixed 60 Hz and renders as fast as the display</li><li>Unreal's game thread is variable, and Chaos physics uses fixed substeps</li><li>Threads and world models change</li><li>The five parts do not</li></ul>
+    <h2>Simulation and display can tick differently</h2>
+    <ul class="content"><li><strong>Fixed step:</strong> advance by the same simulated interval</li><li><strong>Variable step:</strong> advance by the measured interval</li><li>Rendering can use a different cadence; fixed steps alone do <strong>not</strong> guarantee determinism</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §4–5.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S18</h5><p><strong>Say</strong></p>
-<ul><li>The clock is the row people feel. Quake varies the frame. Doom 3 locks simulation at 60 and renders separately. Unreal varies the game thread and locks physics inside it.</li><li>The world model changes. Threads change. Unreal splits game, render, and RHI.</li><li>Nobody adds a sixth part.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>If someone asks why Doom 3 can hitch while the sim is fine: the sim owes tics, then it draws once. Render and simulation are different clocks.</li></ul>
+<ul><li>Fixed-step simulation advances by the same amount of simulated time each update. Variable-step simulation uses the measured elapsed interval.</li><li>A renderer may run at a different cadence, using previous and current states to interpolate a picture. It is a separate scheduling question.</li><li>If simulation falls behind, the engine needs a policy: catch up, limit catch-up work, or slow simulated time. Unlimited catch-up can create even more lateness.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Fixed step helps repeatability; it does not guarantee identical outcomes. Starting state, inputs, random seeds, execution order, floating-point behavior, and platform differences still matter.</li><li>Epic's substepping divides a frame interval into smaller bounded steps according to settings. It should not be described as a universal fixed independent Chaos clock. See the source on S17.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>One object that uses every row, and every job in the room. A weapon.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the differences, in one place.</li><li><strong>Content:</strong> Quake's clock is variable. Doom 3 simulates at a fixed 60 Hz and renders as fast as the display. Unreal's game thread is variable, and Chaos physics uses fixed substeps. Threads and world models change. The five parts do not.</li><li><strong>Visual:</strong> clock row highlighted.</li><li><strong>Refs:</strong> <code>ch01</code> §4–5.</li></ul></div>
+<ul><li>Enough architecture. Follow one weapon through the whole team.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the differences, in one place.</li><li><strong>Content:</strong> <strong>Fixed step:</strong> advance by the same simulated interval | <strong>Variable step:</strong> advance by the measured interval | Rendering can use a different cadence; fixed steps alone do <strong>not</strong> guarantee determinism</li><li><strong>Visual:</strong> clock row highlighted.</li><li><strong>Refs:</strong> <code>ch01</code> §4–5.</li></ul></div>
   </aside>
 </section>
 
@@ -467,108 +451,118 @@
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">C — THE WEAPON</span><p class="kicker">Section 5</p>
     <h2>One weapon, every discipline</h2>
 
-    <ul class="divider-claims"><li>A weapon is design, art, audio, and code, becoming frames and sound</li><li>Until gameplay code runs, it is inert data</li></ul>
+    <ul class="divider-claims"><li>A weapon is not just a mesh</li><li>It is a contract between design, assets, rules, timing, and feedback</li><li>Trace one shot to find every discipline's contribution</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S19</h5><p><strong>Say</strong></p>
-<ul><li>This is the slide I will not rush.</li><li>A weapon is not a mesh. It is design, art, audio, and code, becoming frames and sound.</li><li>Until gameplay code runs, it is inert data. It cannot fire.</li></ul>
+<ul><li>The player experiences one weapon. The team creates a network of agreements: how it should feel, what assets it uses, which rules it obeys, and when feedback appears.</li><li>A beautiful mesh cannot decide who was hit. A correct damage rule cannot by itself communicate satisfying impact. Neither contribution replaces the other.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Invite each discipline to notice one handoff they could validate. Frame this as shared diagnosis, not finding someone to blame.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Four stages, then the loop.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> one object that uses the whole anatomy.</li><li><strong>Content:</strong> A weapon is design, art, audio, and code, becoming frames and sound. Until gameplay code runs, it is inert data.</li><li><strong>Visual:</strong> the chain.</li><li><strong>Refs:</strong> <code>ch08</code> §1.</li></ul></div>
+<ul><li>Separate making the content from running it.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> one object that uses the whole anatomy.</li><li><strong>Content:</strong> A weapon is not just a mesh | It is a contract between design, assets, rules, timing, and feedback | Trace one shot to find every discipline's contribution</li><li><strong>Visual:</strong> the chain.</li><li><strong>Refs:</strong> <code>ch08</code> §1.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="20" data-state="act-c" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
-    <h2>Four stages, then the loop</h2>
-    <div class="diagram-row"><ul class="content"><li>Designers write the schema</li><li>Artists and audio produce the data</li><li>Import makes that data reachable</li><li>Gameplay code plays it</li><li>The renderer and the audio mixer are the output</li><li>The player's input closes the loop</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 88" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-size="11" font-weight="700" fill="#F9FAFB" text-anchor="middle">
-    <rect x="4" y="16" width="100" height="56" rx="8" fill="#312E81"/>
-    <text x="54" y="38">1 DESIGN</text>
-    <text x="54" y="56" font-size="10" font-weight="400" fill="#C7D2FE">designers</text>
-    <polygon points="108,44 116,38 116,50" fill="#9CA3AF"/>
-    <rect x="120" y="16" width="100" height="56" rx="8" fill="#0C4A6E"/>
-    <text x="170" y="38">2 DATA</text>
-    <text x="170" y="56" font-size="10" font-weight="400" fill="#BAE6FD">art, audio</text>
-    <polygon points="224,44 232,38 232,50" fill="#9CA3AF"/>
-    <rect x="236" y="16" width="110" height="56" rx="8" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="291" y="38">3 IMPORT</text>
-    <text x="291" y="56" font-size="10" font-weight="400" fill="#94A3B8">integration</text>
-    <polygon points="350,44 358,38 358,50" fill="#9CA3AF"/>
-    <rect x="362" y="16" width="110" height="56" rx="8" fill="#312E81"/>
-    <text x="417" y="38">4 CODE</text>
-    <text x="417" y="56" font-size="10" font-weight="400" fill="#C7D2FE">programmers</text>
-    <polygon points="476,44 484,38 484,50" fill="#9CA3AF"/>
-    <rect x="488" y="16" width="110" height="56" rx="8" fill="#064E3B"/>
-    <text x="543" y="38">OUTPUT</text>
-    <text x="543" y="56" font-size="10" font-weight="400" fill="#A7F3D0">frames, audio</text>
-    <polygon points="602,44 610,38 610,50" fill="#34D399"/>
-    <rect x="614" y="16" width="100" height="56" rx="8" fill="#064E3B" stroke="#34D399"/>
-    <text x="664" y="38">PLAYER</text>
-    <text x="664" y="56" font-size="10" font-weight="400" fill="#D1FAE5">closes loop</text>
-  </g>
-</svg></div></div>
+    <h2>From authoring to a running game</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="s20-title s20-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s20-title">Authoring pipeline and runtime loop</title><desc id="s20-desc">Design and assets pass through import and cook into a runtime. The runtime and player form a feedback loop. The authoring stages do not repeat for every shot.</desc>
+  <defs><marker id="s20-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6EE7B7"/></marker></defs>
+  <g stroke="#6EE7B7" stroke-width="2" fill="none" marker-end="url(#s20-arrow)"><path d="M190 97 H235"/><path d="M425 97 H475"/><path d="M665 97 H710"/><path d="M800 142 V194 H570 V150"/></g>
+  <path d="M450 15 V223" stroke="#94A3B8" stroke-dasharray="5 6"/>
+  <g fill="#1F2937" stroke="#6EE7B7"><rect x="5" y="50" width="185" height="93" rx="10"/><rect x="235" y="50" width="190" height="93" rx="10"/><rect x="475" y="50" width="190" height="93" rx="10"/><rect x="710" y="50" width="185" height="93" rx="10"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="22"><text x="98" y="86">Design + assets</text><text x="330" y="86">Import + cook</text><text x="570" y="86">Game + engine</text><text x="802" y="86">Player</text></g>
+  <g text-anchor="middle" fill="#CBD5E1" font-size="19"><text x="98" y="119">intent, files, units</text><text x="330" y="119">validate + package</text><text x="570" y="119">load + run rules</text><text x="802" y="119">see, hear, act</text><text x="220" y="25">BUILD TIME</text><text x="680" y="25">RUN TIME</text><text x="690" y="222">Next input closes the loop</text><text x="220" y="195">Prepare once; use many times</text></g>
+</svg></div><ul class="content"><li><strong>Build time:</strong> create, import, validate, and package</li><li><strong>Run time:</strong> load, interpret input, apply rules, present results</li><li>Handoffs have contracts: names, units, formats, and budgets</li></ul></div>
   </div>
 <p class="refs"><code>ch08</code> §1–5.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S20</h5><p><strong>Say</strong></p>
-<ul><li>Designers write what the weapon is. That is a schema.</li><li>Artists and audio produce the data. Model, rig, textures, sound.</li><li>Import makes that data an asset the engine can find.</li><li>Gameplay code plays the data. Animation, sound, particles, damage.</li><li>The renderer and the audio mixer are the output.</li><li>The player's button is the input that closes the loop.</li><li>Design, art, audio, code. One anatomy. If your file is wrong, name the stage, not the person.</li></ul>
+<ul><li>At build time, people create designs, models, animation, and sound. Import and cooking convert or package them into forms suitable for the target platform.</li><li>At run time, code loads the required assets, responds to input, updates state, and presents results. Cooking is not something every shot repeats.</li><li>The contracts connect the stages: a socket name must match, meters and centimeters must agree, and a sound must be loaded before the event expects to play it.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Build-time work can trade longer preparation for faster runtime loading. An editor asset and its cooked platform representation are not necessarily identical.</li><li>Ownership differs by studio. A designer may script behavior; a technical artist may maintain import tools. Name the work before assigning the role.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The first two stages do nothing by themselves.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the chain, with owners.</li><li><strong>Content:</strong> Designers write the schema. Artists and audio produce the data. Import makes that data reachable. Gameplay code plays it. The renderer and the audio mixer are the output. The player's input closes the loop.</li><li><strong>Visual:</strong> six steps.</li><li><strong>Refs:</strong> <code>ch08</code> §1–5.</li></ul></div>
+<ul><li>A useful contract turns an intention into something we can test.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the chain, with owners.</li><li><strong>Content:</strong> <strong>Build time:</strong> create, import, validate, and package | <strong>Run time:</strong> load, interpret input, apply rules, present results | Handoffs have contracts: names, units, formats, and budgets</li><li><strong>Visual:</strong> six steps.</li><li><strong>Refs:</strong> <code>ch08</code> §1–5.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="21" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
-    <h2>Design and data do nothing yet</h2>
-    <ul class="content"><li>Design decides role, feel, and numbers</li><li>That document is already a schema</li><li>Then model, rig, textures, and sound are files</li><li>Those files cannot fire</li><li>They are data</li></ul>
+    <h2>Turn intent into a testable contract</h2>
+    <ul class="content"><li>Intent: <strong>a deliberate, readable weapon</strong></li><li>Contract: damage, cooldown, ammunition, units, and valid ranges</li><li>Test: one accepted hit removes <strong>25 health points</strong>, not an unspecified "25"</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §2–3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S21</h5><p><strong>Say</strong></p>
-<ul><li>Design decides role, feel, and the numbers. Fire rate, damage, recoil. That document is already a schema. Later code will have to agree with it.</li><li>Then the files. A mesh does not fire. A gunshot does not fire. They sit on disk.</li><li>The best sound in the room cannot pull the trigger. It is data.</li></ul>
+<ul><li>"Make it deliberate" is design intent. It needs iteration and judgment. "Damage is 25 health points; cooldown is 0.2 seconds; magazine capacity is 30 rounds" is a testable starting contract.</li><li>Distinguish capacity from current ammunition. Capacity is configuration; current ammunition changes while you play.</li><li>Units and valid ranges matter. A negative cooldown or a milliseconds-versus-seconds mistake can break behavior even though the data loads successfully.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Ask what should happen to a target with 100 health after one accepted unarmored hit. 75. State assumptions: no armor, critical multiplier, or other modifier in this teaching example.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>A design document informs a schema; it is not automatically a formal schema. Define names, types, units, constraints, and the meaning of values. Numeric tests do not prove that the weapon feels good; playtesting checks that goal.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Then someone imports it, and someone writes the code that plays it.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 1 and 2.</li><li><strong>Content:</strong> Design decides role, feel, and numbers. That document is already a schema. Then model, rig, textures, and sound are files. Those files cannot fire. They are data.</li><li><strong>Visual:</strong> schema, then inert files.</li><li><strong>Refs:</strong> <code>ch08</code> §2–3.</li></ul></div>
+<ul><li>Now the player presses fire.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 1 and 2.</li><li><strong>Content:</strong> Intent: <strong>a deliberate, readable weapon</strong> | Contract: damage, cooldown, ammunition, units, and valid ranges | Test: one accepted hit removes <strong>25 health points</strong>, not an unspecified "25"</li><li><strong>Visual:</strong> schema, then inert files.</li><li><strong>Refs:</strong> <code>ch08</code> §2–3.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="22" data-state="act-c">
+<section data-num="22" data-state="act-c" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
-    <h2>Import, then gameplay code</h2>
-    <ul class="content"><li>Import turns files into assets</li><li>Soft references load on demand</li><li>Hard references stay loaded</li><li>Gameplay code reads the data and plays it: animation, sound, particles, damage</li><li>The button press is the input</li></ul>
+    <h2>One shot: check, change, announce</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="s22-title s22-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s22-title">Fire request with validation and branching</title><desc id="s22-desc">A fire request checks ammunition and cooldown. Rejection leaves state unchanged. Acceptance spends ammunition and emits a shot event. Only a valid hit changes target health.</desc>
+  <defs><marker id="s22-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6EE7B7"/></marker></defs>
+  <g fill="none" stroke="#6EE7B7" stroke-width="2" marker-end="url(#s22-arrow)"><path d="M130 76 H190"/><path d="M440 76 H500"/><path d="M690 76 H730"/><path d="M315 124 V166"/><path d="M595 124 V166"/></g>
+  <g fill="#1F2937" stroke="#6EE7B7"><rect x="5" y="30" width="125" height="94" rx="10"/><rect x="190" y="30" width="250" height="94" rx="10"/><rect x="500" y="30" width="190" height="94" rx="10"/><rect x="730" y="30" width="165" height="94" rx="10"/><rect x="190" y="166" width="250" height="65" rx="10" stroke="#FCA5A5"/><rect x="500" y="166" width="395" height="65" rx="10"/></g>
+  <g text-anchor="middle" font-size="22" fill="#F9FAFB"><text x="68" y="71">FIRE</text><text x="315" y="66">Ammo &gt; 0?</text><text x="315" y="98">Cooldown ready?</text><text x="595" y="66">Ammo: 30 → 29</text><text x="595" y="98">Start cooldown</text><text x="812" y="83">Shot event</text><text x="315" y="193" fill="#FCA5A5">No: reject request</text><text x="697" y="193">Valid hit? Health: 100 → 75</text></g>
+  <g text-anchor="middle" font-size="18" fill="#CBD5E1"><text x="68" y="100">request</text><text x="470" y="58">yes</text><text x="315" y="218">No ammo or health change</text><text x="697" y="219">Miss: no health change</text></g>
+</svg></div><ul class="content"><li>Input is a <strong>request</strong>, not permission</li><li>Check ammunition and cooldown before changing authoritative state</li><li>Assets must be ready; a soft reference is not an automatic loading policy</li></ul></div>
   </div>
 <p class="refs"><code>ch08</code> §4–5.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S22</h5><p><strong>Say</strong></p>
-<ul><li>Import turns files into assets. In Unreal that is the path into .uasset, then cook.</li><li>A soft reference loads when needed. A hard reference stays loaded. That choice is what hits the frame.</li><li>Gameplay code does not invent the gun. It reads the data and orchestrates it.</li><li>Fire: montage, sound, particles, damage. The finger on the button is the input leg from the start of the talk.</li></ul>
+<ul><li>First check ammunition and whether the cooldown has expired. If the request is rejected, do not spend ammunition or apply damage. A dry-fire sound is a separate allowed response.</li><li>On an accepted shot, spend one round and start cooldown. Check the hit result; only a valid hit applies damage. In our simplified example ammunition goes 30 to 29 and a hit changes health from 100 to 75.</li><li>Announce the shot so presentation systems can respond. This is a teaching sequence, not a claim that every engine uses this exact event API.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Soft references identify assets without necessarily loading them. Code or an asset manager must request loading. Hard references create loading and lifetime dependencies; they do not mean an asset is immortal. Preload critical weapon feedback instead of blocking on first use.</li><li>Source: <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/asynchronous-asset-loading-in-unreal-engine" target="_blank" rel="noopener">Epic asynchronous asset loading</a>.</li><li>In multiplayer, the authority validates the action; a client may predict feedback for responsiveness. Do not trust a client-provided damage result without validation.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>What the player actually gets. Frames and audio.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 3 and 4.</li><li><strong>Content:</strong> Import turns files into assets. Soft references load on demand. Hard references stay loaded. Gameplay code reads the data and plays it: animation, sound, particles, damage. The button press is the input.</li><li><strong>Visual:</strong> files become a firing event.</li><li><strong>Refs:</strong> <code>ch08</code> §4–5.</li></ul></div>
+<ul><li>One accepted action can have several visible and audible consequences.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 3 and 4.</li><li><strong>Content:</strong> Input is a <strong>request</strong>, not permission | Check ammunition and cooldown before changing authoritative state | Assets must be ready; a soft reference is not an automatic loading policy</li><li><strong>Visual:</strong> files become a firing event.</li><li><strong>Refs:</strong> <code>ch08</code> §4–5.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="23" data-state="act-c">
+<section data-num="23" data-state="act-c" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
-    <h2>Frames and audio</h2>
-    <ul class="content"><li>The simulation publishes state</li><li>The renderer draws the mesh, materials, and animation</li><li>The audio mixer plays the sound</li><li>VFX spawn from the same event</li><li>None of that is the simulation</li><li>It is output, on the clock</li></ul>
+    <h2>One event, several kinds of feedback</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 225" role="img" aria-labelledby="s23-title s23-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s23-title">Observe a symptom, then test a boundary</title><desc id="s23-desc">The weapon flashes but no damage is shown. If authoritative health changed, inspect HUD or replication. If it did not, inspect the accepted shot, hit query, and damage rule.</desc>
+  <defs><marker id="s23-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6EE7B7"/></marker></defs>
+  <g fill="none" stroke="#6EE7B7" stroke-width="2" marker-end="url(#s23-arrow)"><path d="M435 95 H495 V48 H550"/><path d="M495 95 V145 H550"/></g>
+  <g fill="#1F2937" stroke="#6EE7B7"><rect x="5" y="43" width="430" height="105" rx="10"/><rect x="550" y="13" width="345" height="73" rx="10"/><rect x="550" y="113" width="345" height="73" rx="10"/></g>
+  <g text-anchor="middle" font-size="22" fill="#F9FAFB"><text x="220" y="79">Flash, but no damage shown.</text><text x="220" y="114">Did authoritative health change?</text><text x="722" y="44">YES: inspect the display path</text><text x="722" y="144">NO: inspect gameplay</text></g>
+  <g text-anchor="middle" font-size="19" fill="#CBD5E1"><text x="722" y="71">HUD / replicated copy / timing</text><text x="722" y="172">Accepted shot? Hit? Damage rule?</text><text x="450" y="218">Exercise: choose one check and say what each result would mean</text></g>
+</svg></div><ul class="content"><li>An accepted shot can drive animation, sound, VFX, and the HUD</li><li>Their timing shapes how the weapon feels</li><li>A missing flash is not proof that the damage rule failed</li></ul></div>
   </div>
 <p class="refs"><code>ch08</code> §7–8.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S23</h5><p><strong>Say</strong></p>
-<ul><li>The simulation publishes state. It does not draw.</li><li>The renderer reads that state and draws the mesh, the materials, the animation.</li><li>The audio mixer reads the event and plays the sound.</li><li>VFX spawn from the same event.</li><li>All of that is output, on the clock. If the frame misses 17 ms, the player feels the weapon late. That is latency, not "the art is wrong."</li></ul>
+<ul><li>The shot can trigger animation, flash, sound, recoil, and the HUD update. These systems may run on different schedules; synchronizing their cues shapes perceived impact.</li><li>Now use the map: a weapon flashes, but the target takes no damage. What would you inspect before changing anything?</li></ul>
+<p><strong>Show / ask: three-minute exercise</strong></p>
+<ul><li>30 seconds alone: label input, state, logic, output, and clock for this symptom.</li><li>60 seconds in pairs: choose the first boundary to inspect and what evidence would support your guess.</li><li>60 seconds: hear one or two answers. Ask "What observation would prove your hypothesis wrong?"</li><li>30 seconds debrief: presentation happened, but we do not yet know that a hit was accepted. Inspect the hit result and authoritative health before blaming the artwork.</li></ul>
+<p><strong>Answer key / if asked</strong></p>
+<ul><li>Valid hypotheses include a collision-mask mismatch, an invulnerable target, a rejected server shot, or stale HUD state. Distinguish target health from the displayed health bar.</li><li>If health changed but the HUD did not, inspect the state-to-UI path. If no hit was recorded, inspect the collision query and eligibility. There is no single diagnosis without evidence.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>This is not an Unreal story.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the output side, named.</li><li><strong>Content:</strong> The simulation publishes state. The renderer draws the mesh, materials, and animation. The audio mixer plays the sound. VFX spawn from the same event. None of that is the simulation. It is output, on the clock.</li><li><strong>Visual:</strong> state feeding render and audio.</li><li><strong>Refs:</strong> <code>ch08</code> §7–8.</li></ul></div>
+<ul><li>The same handoffs existed well before today's editors.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the output side, named.</li><li><strong>Content:</strong> An accepted shot can drive animation, sound, VFX, and the HUD | Their timing shapes how the weapon feels | A missing flash is not proof that the damage rule failed</li><li><strong>Visual:</strong> state feeding render and audio.</li><li><strong>Refs:</strong> <code>ch08</code> §7–8.</li></ul></div>
   </aside>
 </section>
 
@@ -576,50 +570,54 @@
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>The same chain in Doom 3</h2>
-    <ul class="content"><li>Doom 3, 2004</li><li>Design, then .def and .decl data, then a placed entity, then idScript that plays them back</li><li>Gameplay code only plays what the earlier stages produced</li><li>The chain is the same</li></ul>
+    <ul class="content"><li>DOOM 3 combines weapon definitions, assets, scripts, and C++</li><li>File names change; the authoring-to-runtime handoffs remain</li><li>Engine code provides capabilities; game content configures and coordinates them</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §9, <code>Eng/DOOM3</code>.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S24</h5><p><strong>Say</strong></p>
-<ul><li>2004. Same four stages.</li><li>Design. Then .def and .decl data. Then a placed entity. Then idScript that plays them back.</li><li>The script only plays what the earlier stages produced.</li><li>Engines change. The chain does not. Any weapon, any year.</li></ul>
+<ul><li>In DOOM 3, weapon definitions connect names and settings to assets and script behavior. C++ weapon code and the script system coordinate the running weapon.</li><li>Meshes and animations, materials, and sound declarations feed their respective systems. It is not one mysterious "weapon file."</li><li>We can ask the same questions: was the definition found, was the script state correct, did the projectile or hit logic run, and did output receive the result?</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Concrete formats include .def definitions, .script behavior, .md5mesh models, .md5anim animation, .mtr materials, and .sndshd sound declarations. "Declaration" names a system; do not invent a universal .decl extension.</li><li>Source trail: <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/game/Weapon.cpp" target="_blank" rel="noopener">idWeapon implementation</a>, <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/framework/DeclManager.cpp" target="_blank" rel="noopener">declaration manager</a>. The source release does not grant unrestricted rights to proprietary game assets.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Last block. Where this is going. The anatomy stays. The interface changes.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> not an Unreal-only story.</li><li><strong>Content:</strong> Doom 3, 2004. Design, then .def and .decl data, then a placed entity, then idScript that plays them back. Gameplay code only plays what the earlier stages produced. The chain is the same.</li><li><strong>Visual:</strong> the four stages, id Tech labels.</li><li><strong>Refs:</strong> <code>ch08</code> §9, <code>Eng/DOOM3</code>.</li></ul></div>
+<ul><li>Now apply this same map to AI, without changing the standard of evidence.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> not an Unreal-only story.</li><li><strong>Content:</strong> DOOM 3 combines weapon definitions, assets, scripts, and C++ | File names change; the authoring-to-runtime handoffs remain | Engine code provides capabilities; game content configures and coordinates them</li><li><strong>Visual:</strong> the four stages, id Tech labels.</li><li><strong>Refs:</strong> <code>ch08</code> §9, <code>Eng/DOOM3</code>.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="25" data-state="act-d" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">D — THE DIRECTION</span><p class="kicker">Section 6</p>
-    <h2>Two kinds of software</h2>
+    <h2>AI inside the same map</h2>
 
-    <ul class="divider-claims"><li>The loop you just learned has a history</li><li>Software split into two ways of making intelligence</li><li>The direction now is both, and a new interface on top</li></ul>
+    <ul class="divider-claims"><li>Separate three questions</li><li>Is AI <strong>helping build</strong> the game, <strong>running inside</strong> it, or <strong>generating its output</strong>?</li><li>Each role needs different checks</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S25</h5><p><strong>Say</strong></p>
-<ul><li>The loop has a history. Software that tries to be intelligent split into two kinds.</li><li>I am not pitching a product. I am naming the split, then the interface on top of it.</li></ul>
+<ul><li>"AI in games" can mean a tool helping a developer write code, a model making decisions during play, or a model reconstructing images. Those are different responsibilities with different risks.</li><li>Ask where it sits, what it reads, what it may change, how long it takes, and how failure is detected.</li><li>You do not have to adopt a tool to understand or evaluate it.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Traditional game AI includes authored behavior trees, search, and navigation. "AI" does not automatically mean an LLM or a neural network.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The loop's older name.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> open the history without leaving the anatomy.</li><li><strong>Content:</strong> The loop you just learned has a history. Software split into two ways of making intelligence. The direction now is both, and a new interface on top.</li><li><strong>Visual:</strong> two branches.</li><li><strong>Refs:</strong> <code>ch09</code> §2–3, <code>ch10</code>.</li></ul></div>
+<ul><li>The useful bridge is feedback: propose, observe, and correct.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> open the history without leaving the anatomy.</li><li><strong>Content:</strong> Separate three questions | Is AI <strong>helping build</strong> the game, <strong>running inside</strong> it, or <strong>generating its output</strong>? | Each role needs different checks</li><li><strong>Visual:</strong> two branches.</li><li><strong>Refs:</strong> <code>ch09</code> §2–3, <code>ch10</code>.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="26" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
-    <h2>Cybernetics is the older loop</h2>
-    <ul class="content"><li>Cybernetics is the study of feedback</li><li>Norbert Wiener named it from the steersman: sense, correct, act</li><li>A thermostat does it</li><li>A player does it faster</li><li>The frame loop is that idea at display rate</li></ul>
+    <h2>Feedback turns a guess into an experiment</h2>
+    <ul class="content"><li><strong>Goal → act → observe → compare → adjust</strong></li><li>A player corrects aim; a developer corrects a bug</li><li>AI output becomes useful evidence only after you inspect and test it</li></ul>
   </div>
 <p class="refs"><code>ch09</code> §2, <code>ch00</code> §3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S26</h5><p><strong>Say</strong></p>
-<ul><li>Norbert Wiener named cybernetics from the steersman. You watch the result, and you correct.</li><li>A thermostat. A player. A frame loop.</li><li>You already know this. S8 was this idea. History did not invent a second loop.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>1948, Cybernetics. Say the year only if asked.</li></ul>
+<ul><li>A player observes a miss and adjusts aim. A developer observes a failed test and adjusts a change. The pattern is goal, action, observation, comparison, correction.</li><li>AI can propose the action, but it does not remove the need for a trustworthy observation. Asking the same model whether its answer looks correct is weaker than running the relevant test.</li><li>Measure the actual goal. Faster code generation does not prove faster delivery of a working game.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Wiener popularized cybernetics in his 1948 book about control and communication in animals and machines. Keep the history optional; the practical point is feedback and error correction, not a claim that all loops are equivalent.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The split inside AI. Two ways to write software.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> history of the loop, one slide.</li><li><strong>Content:</strong> Cybernetics is the study of feedback. Norbert Wiener named it from the steersman: sense, correct, act. A thermostat does it. A player does it faster. The frame loop is that idea at display rate.</li><li><strong>Visual:</strong> sense, correct, act.</li><li><strong>Refs:</strong> <code>ch09</code> §2, <code>ch00</code> §3.</li></ul></div>
+<ul><li>Some behavior is written explicitly. Some is learned from examples.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> history of the loop, one slide.</li><li><strong>Content:</strong> <strong>Goal → act → observe → compare → adjust</strong> | A player corrects aim; a developer corrects a bug | AI output becomes useful evidence only after you inspect and test it</li><li><strong>Visual:</strong> sense, correct, act.</li><li><strong>Refs:</strong> <code>ch09</code> §2, <code>ch00</code> §3.</li></ul></div>
   </aside>
 </section>
 
@@ -627,46 +625,56 @@
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Symbolic and connectionist</h2>
-    <div class="diagram-row"><ul class="content"><li>Symbolic software is rules over symbols</li><li>Scripts, Blueprints, state machines, C++</li><li>Connectionist software is learned weights</li><li>Neural nets, LLMs, neural rendering</li><li>Game logic is symbolic</li><li>The new pieces moving in are connectionist</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="8" y="8" width="224" height="124" rx="10" fill="#312E81"/>
   <text x="120" y="36" font-size="14" font-weight="800" fill="#C7D2FE" text-anchor="middle">SYMBOLIC</text>
   <text x="120" y="60" font-size="12" fill="#E5E7EB" text-anchor="middle">rules over symbols</text>
-  <text x="120" y="82" font-size="11" fill="#A5B4FC" text-anchor="middle">scripts, Blueprints</text>
-  <text x="120" y="100" font-size="11" fill="#A5B4FC" text-anchor="middle">state machines, C++</text>
+  <text x="120" y="82" font-size="11" fill="#A5B4FC" text-anchor="middle">ammo must be at least 1</text>
+  <text x="120" y="100" font-size="11" fill="#A5B4FC" text-anchor="middle">cooldown must be ready</text>
   <rect x="248" y="8" width="224" height="124" rx="10" fill="#3B0764"/>
   <text x="360" y="36" font-size="14" font-weight="800" fill="#E9D5FF" text-anchor="middle">CONNECTIONIST</text>
   <text x="360" y="60" font-size="12" fill="#E5E7EB" text-anchor="middle">learned weights</text>
-  <text x="360" y="82" font-size="11" fill="#D8B4FE" text-anchor="middle">neural nets, LLMs</text>
-  <text x="360" y="100" font-size="11" fill="#D8B4FE" text-anchor="middle">neural rendering</text>
-</svg></div></div>
+  <text x="360" y="82" font-size="11" fill="#D8B4FE" text-anchor="middle">suggest a line of dialogue</text>
+  <text x="360" y="100" font-size="11" fill="#D8B4FE" text-anchor="middle">reconstruct an image</text>
+</svg></div><ul class="content"><li><strong>Explicit rules:</strong> enforce ammunition and cooldown</li><li><strong>Learned models:</strong> predict an answer from training and context</li><li>Combine them: generated dialogue can suggest an action; game rules decide whether it is allowed</li></ul></div>
   </div>
 <p class="refs"><code>ch09</code> §3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S27</h5><p><strong>Say</strong></p>
-<ul><li>Symbolic software is rules over symbols. A script. A Blueprint. A state machine. C++. If this, then that.</li><li>Connectionist software is learned weights. A neural net. An LLM. Neural rendering. The behavior is in the weights, not in a rule you can read.</li><li>Your game logic is symbolic. The new pieces moving into the pipeline are connectionist.</li><li>"It hallucinated" and "just add a rule" are the two kinds bumping into each other. Name which one you are talking to.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>1943, McCulloch and Pitts, the artificial neuron. 1956, the Dartmouth workshop, symbolic AI. Connectionism is the older idea. It waited on computers. Say the dates only if asked.</li></ul>
+<ul><li>An explicit rule can say "ammunition must be at least one." You can inspect it and test the boundary at zero.</li><li>A neural model learns parameters from training. It may produce useful dialogue or code, but fluent output is not proof that the game's constraints were respected.</li><li>Combine the approaches: an NPC proposes a trade in natural language; explicit inventory and currency rules decide whether the trade can execute.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>This is a contrast, not an exhaustive taxonomy of software. Numerical simulation is not usually called symbolic AI just because it is written in C++. Traditional AI includes more than these two labels.</li><li>Learned models execute code over data too. Their weights are data. Explicit code can also contain bugs; the distinction does not mean rules are automatically correct or neural models are always random.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>What an engine looks like when both are in the box.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the two minds, in software terms.</li><li><strong>Content:</strong> Symbolic software is rules over symbols. Scripts, Blueprints, state machines, C++. Connectionist software is learned weights. Neural nets, LLMs, neural rendering. Game logic is symbolic. The new pieces moving in are connectionist.</li><li><strong>Visual:</strong> two columns.</li><li><strong>Refs:</strong> <code>ch09</code> §3.</li></ul></div>
+<ul><li>Here is a concrete learned component already used in games.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the two minds, in software terms.</li><li><strong>Content:</strong> <strong>Explicit rules:</strong> enforce ammunition and cooldown | <strong>Learned models:</strong> predict an answer from training and context | Combine them: generated dialogue can suggest an action; game rules decide whether it is allowed</li><li><strong>Visual:</strong> two columns.</li><li><strong>Refs:</strong> <code>ch09</code> §3.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="28" data-state="act-d">
+<section data-num="28" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
-    <h2>The hybrid engine</h2>
-    <ul class="content"><li>The engine stays symbolic scaffolding</li><li>Neural subsystems replace pieces one at a time</li><li>Neural rendering already ships</li><li>The five parts do not go away</li><li>A learned renderer is still output</li><li>It still reads state</li></ul>
+    <h2>A learned component still has a job</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-labelledby="s28-title s28-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s28-title">Neural upscaling is an output component</title><desc id="s28-desc">A low resolution frame with motion, depth and history feeds a neural reconstruction stage that produces a higher resolution image. Authoritative health and collision remain separate responsibilities.</desc>
+  <defs><marker id="s28-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#D8B4FE"/></marker></defs>
+  <path d="M255 91 H325 M585 91 H645" stroke="#D8B4FE" stroke-width="2" marker-end="url(#s28-arrow)"/>
+  <g fill="#1F2937" stroke="#C084FC" stroke-width="2"><rect x="5" y="30" width="250" height="120" rx="10"/><rect x="325" y="30" width="260" height="120" rx="10"/><rect x="645" y="30" width="250" height="120" rx="10"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="23"><text x="130" y="76">Low-resolution frame</text><text x="455" y="76">Neural reconstruction</text><text x="770" y="76">Higher-resolution</text><text x="770" y="108">image</text></g>
+  <g text-anchor="middle" fill="#CBD5E1" font-size="19"><text x="130" y="108">+ motion, depth, history</text><text x="455" y="108">Example: DLSS SR</text></g>
+  <text x="450" y="192" text-anchor="middle" fill="#D8B4FE" font-size="23">An image-quality technique, not a new source of gameplay truth</text>
+</svg></div><ul class="content"><li><strong>Shipped example:</strong> neural upscaling reconstructs an image</li><li>Better-looking pixels do not establish collision, health, or ownership</li><li>Judge generated worlds separately on consistency, controllability, and cost</li></ul></div>
   </div>
 <p class="refs"><code>ch10</code> §3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S28</h5><p><strong>Say</strong></p>
-<ul><li>The engine we just mapped stays. It is symbolic scaffolding. State, logic, input, output, clock.</li><li>Neural subsystems replace pieces one at a time. Not a rewrite. Neural rendering already ships.</li><li>A learned renderer is still output. It still reads state. It still does not run the simulation.</li><li>The anatomy tells you where a new piece is allowed to sit.</li></ul>
+<ul><li>Neural upscaling, such as DLSS Super Resolution, reconstructs higher-resolution images from lower-resolution inputs using motion and previous-frame information.</li><li>That is a specific job in the output pipeline. It does not establish that a target was hit, that inventory is consistent, or that a saved world can be restored correctly.</li><li>For generated-world demonstrations, ask separate questions: does an object persist after leaving view, can a designer control a rule, can you replay a failure, and what does it cost to run?</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Super resolution and frame generation are different techniques. More generated display frames do not mean the gameplay simulation performed more updates.</li><li>Source: <a href="https://developer.nvidia.com/rtx/dlss" target="_blank" rel="noopener">NVIDIA DLSS technology descriptions</a>. Use this for the mechanism, not as independent evidence of every performance claim. Whether whole engines will be replaced remains a forecast, not established by upscaling.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>And there is a new way to talk to that anatomy.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the direction, concretely.</li><li><strong>Content:</strong> The engine stays symbolic scaffolding. Neural subsystems replace pieces one at a time. Neural rendering already ships. The five parts do not go away. A learned renderer is still output. It still reads state.</li><li><strong>Visual:</strong> symbolic base, neural inserts.</li><li><strong>Refs:</strong> <code>ch10</code> §3.</li></ul></div>
+<ul><li>AI can also sit outside the game, helping us work on its files.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the direction, concretely.</li><li><strong>Content:</strong> <strong>Shipped example:</strong> neural upscaling reconstructs an image | Better-looking pixels do not establish collision, health, or ownership | Judge generated worlds separately on consistency, controllability, and cost</li><li><strong>Visual:</strong> symbolic base, neural inserts.</li><li><strong>Refs:</strong> <code>ch10</code> §3.</li></ul></div>
   </aside>
 </section>
 
@@ -674,48 +682,51 @@
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>AI is a new interface</h2>
-    <div class="diagram-row"><ul class="content"><li>A harness on your machine turns words into actions on the software</li><li>One direction: the software explains itself</li><li>The other: you say what to change, and it edits</li><li>The model is not the interface</li><li>The harness is</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <rect x="8" y="28" width="150" height="54" rx="8" fill="#1F2937" stroke="#6366F1"/>
-  <text x="83" y="52" font-size="12" font-weight="700" fill="#F9FAFB" text-anchor="middle">YOU</text>
-  <text x="83" y="68" font-size="10" fill="#A5B4FC" text-anchor="middle">intent</text>
-  <polygon points="162,55 174,49 174,61" fill="#9CA3AF"/>
-  <rect x="180" y="28" width="160" height="54" rx="8" fill="#3B0764" stroke="#A855F7"/>
-  <text x="260" y="52" font-size="12" font-weight="700" fill="#E9D5FF" text-anchor="middle">HARNESS</text>
-  <text x="260" y="68" font-size="10" fill="#D8B4FE" text-anchor="middle">on your machine</text>
-  <polygon points="344,55 356,49 356,61" fill="#9CA3AF"/>
-  <rect x="362" y="28" width="150" height="54" rx="8" fill="#1F2937" stroke="#34D399"/>
-  <text x="437" y="52" font-size="12" font-weight="700" fill="#F9FAFB" text-anchor="middle">SOFTWARE</text>
-  <text x="437" y="68" font-size="10" fill="#6EE7B7" text-anchor="middle">explain or edit</text>
-  <text x="260" y="18" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">a new interface. same medium.</text>
-</svg></div></div>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 235" role="img" aria-labelledby="s29-title s29-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s29-title">Tool-enabled AI with a permission boundary</title><desc id="s29-desc">A user supplies a goal. A model proposes tool calls. A harness checks permissions and invokes tools. Results return as evidence. Human review checks the diff and tests. Execution can be local or remote.</desc>
+  <defs><marker id="s29-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#D8B4FE"/></marker></defs>
+  <g fill="none" stroke="#D8B4FE" stroke-width="2" marker-end="url(#s29-arrow)"><path d="M140 97 H190"/><path d="M380 97 H430"/><path d="M645 97 H695"/><path d="M790 146 V194 H285 V150"/></g>
+  <g fill="#1F2937" stroke="#C084FC"><rect x="5" y="49" width="135" height="97" rx="10"/><rect x="190" y="49" width="190" height="97" rx="10"/><rect x="430" y="49" width="215" height="97" rx="10"/><rect x="695" y="49" width="200" height="97" rx="10"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="24"><text x="72" y="86">YOU</text><text x="285" y="86">MODEL</text><text x="537" y="86">HARNESS</text><text x="795" y="86">TOOLS</text></g>
+  <g text-anchor="middle" fill="#CBD5E1" font-size="19"><text x="72" y="118">goal + limits</text><text x="285" y="118">proposes an action</text><text x="537" y="118">permissions + calls</text><text x="795" y="118">read / edit / test</text><text x="545" y="224">Results feed the next step; you review the evidence</text><text x="450" y="24">Local or remote: check where data and execution go</text></g>
+</svg></div><ul class="content"><li>The <strong>model proposes</strong>; the <strong>harness manages tool execution</strong></li><li>Tools read files, edit assets, and run tests within granted permissions</li><li>Read the diff and the test result, not just the confident explanation</li></ul></div>
   </div>
 <p class="refs"><code>ch09</code> §1, §6.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S29</h5><p><strong>Say</strong></p>
-<ul><li>This is not a demo, and it is not a pitch.</li><li>A model alone is a chat box. A harness on your machine turns words into actions on the files.</li><li>One direction: the software explains itself.</li><li>The other direction: you say what to change, and it edits the software.</li><li>The harness is the interface. It is also the only piece that touches your machine. Power and risk are the same door.</li></ul>
-<p><strong>Need</strong></p>
-<ul><li>Four pieces, if asked: backend runs the model, model is the weights, harness is on your machine, knowledge is your files. Do not tour products.</li></ul>
+<ul><li>The model proposes an action. A surrounding application, often called a harness, supplies context, manages permissions, and invokes tools. Tool results feed the next step.</li><li>A tool can read a file, modify it, or run a test. Those actions can be useful or damaging depending on access and validation.</li><li>Keep the distinction: a confident message says what the model believes. A diff shows what changed. A test result shows what was actually checked.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>The harness can run locally, remotely, or across both. Do not assume "on my machine" means "no data leaves my machine." Check provider, tool, and storage policies before giving access to private files.</li><li>Start read-only, scope permissions, exclude secrets, use version control, and require approval for destructive or publishing actions. Repository content can contain hostile instructions; reading a file should not grant it authority.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The catch. This is the point of the whole talk.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the close of the argument.</li><li><strong>Content:</strong> A harness on your machine turns words into actions on the software. One direction: the software explains itself. The other: you say what to change, and it edits. The model is not the interface. The harness is.</li><li><strong>Visual:</strong> you, harness, software.</li><li><strong>Refs:</strong> <code>ch09</code> §1, §6.</li></ul></div>
+<ul><li>Knowing the anatomy lets you make a useful, bounded request.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the close of the argument.</li><li><strong>Content:</strong> The <strong>model proposes</strong>; the <strong>harness manages tool execution</strong> | Tools read files, edit assets, and run tests within granted permissions | Read the diff and the test result, not just the confident explanation</li><li><strong>Visual:</strong> you, harness, software.</li><li><strong>Refs:</strong> <code>ch09</code> §1, §6.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="30" data-state="act-d">
+<section data-num="30" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
-    <h2>You still need the anatomy</h2>
-    <ul class="content"><li>You cannot aim the interface if you do not know the anatomy</li><li>You cannot ask about the renderer if you do not know the renderer reads state and does not run the simulation</li><li>The interface is new</li><li>The medium is not</li></ul>
+    <h2>Give AI a boundary and a test</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" role="img" aria-labelledby="s30-title s30-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s30-title">A bounded AI change with acceptance checks</title><desc id="s30-desc">Inspect the current path, make a small diff, run tests, then review evidence. Test empty ammunition, active cooldown, a valid hit, and a valid miss.</desc>
+  <path d="M100 70 H790" stroke="#D8B4FE" stroke-width="3"/>
+  <g fill="#3B0764" stroke="#C084FC" stroke-width="2"><circle cx="110" cy="70" r="36"/><circle cx="335" cy="70" r="36"/><circle cx="560" cy="70" r="36"/><circle cx="785" cy="70" r="36"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="28"><text x="110" y="80">1</text><text x="335" y="80">2</text><text x="560" y="80">3</text><text x="785" y="80">4</text></g>
+  <g text-anchor="middle" fill="#D8B4FE" font-size="23"><text x="110" y="138">Inspect</text><text x="335" y="138">Small diff</text><text x="560" y="138">Run tests</text><text x="785" y="138">Review evidence</text></g>
+  <text x="450" y="185" text-anchor="middle" font-size="22" fill="#CBD5E1">Empty ammo · cooldown active · hit · miss</text>
+</svg></div><ul class="content"><li>"Trace the fire input to the ammunition update; cite the files"</li><li>"Propose one small change; preserve damage and cooldown rules"</li><li>"Test empty ammo, cooldown, hit, and miss; report what you actually ran"</li></ul></div>
   </div>
 <p class="refs"><code>ch09</code> §6, <code>ch00</code> §8.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S30</h5><p><strong>Say</strong></p>
-<ul><li>You cannot aim that interface if you do not know the anatomy.</li><li>You cannot ask for a tour of the renderer if you do not know the renderer reads state and does not run the simulation.</li><li>You cannot ask why the weapon is late if you cannot tell input latency from a missed frame from a bad asset reference.</li><li>The interface is new. The medium is not.</li></ul>
+<ul><li>Instead of "fix my weapon," ask it to trace the fire command to the ammunition update and cite the relevant files. Inspect before editing.</li><li>Then request one small change with explicit invariants: preserve damage, cooldown, and the authority boundary. Review the diff.</li><li>Test ordinary behavior and the boundaries: empty ammunition, cooldown not expired, a hit, and a miss. Ask what it actually ran, and what remains untested.</li></ul>
+<p><strong>Concrete acceptance checks</strong></p>
+<ul><li>Ammo zero: no accepted shot, no damage, no negative ammunition; dry-fire feedback may be allowed.</li><li>Cooldown active: reject the extra request without spending another round.</li><li>Valid hit: spend one round and apply exactly 25 damage under our stated assumptions.</li><li>Valid miss: spend one round, start cooldown, but do not change target health.</li><li>A passing unit test does not prove multiplayer correctness, good feel, or acceptable performance. Add those checks when the change touches them.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>One line. Then I stop.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the catch.</li><li><strong>Content:</strong> You cannot aim the interface if you do not know the anatomy. You cannot ask about the renderer if you do not know the renderer reads state and does not run the simulation. The interface is new. The medium is not.</li><li><strong>Visual:</strong> anatomy under the harness.</li><li><strong>Refs:</strong> <code>ch09</code> §6, <code>ch00</code> §8.</li></ul></div>
+<ul><li>This is the durable skill, whether the next tool uses AI or not.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the catch.</li><li><strong>Content:</strong> "Trace the fire input to the ammunition update; cite the files" | "Propose one small change; preserve damage and cooldown rules" | "Test empty ammo, cooldown, hit, and miss; report what you actually ran"</li><li><strong>Visual:</strong> anatomy under the harness.</li><li><strong>Refs:</strong> <code>ch09</code> §6, <code>ch00</code> §8.</li></ul></div>
   </aside>
 </section>
 
@@ -723,16 +734,18 @@
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>The interface changed. The medium did not.</h2>
-    <ul class="content"><li>The interface changed</li><li>The medium did not</li><li>Software is still code and data, input, process, output, on a clock</li><li>A game engine is still that anatomy, made large and hard real-time</li></ul>
+    <ul class="content"><li><strong>Find the state. Trace the rules. Follow the input and output. Measure the timing.</strong></li><li>Practice on a door, a jump, or a weapon in any engine</li><li>Use the same map to question an AI-generated change</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §9, <code>ch09</code> §12, <code>ch10</code>.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S31</h5><p><strong>Say</strong></p>
-<ul><li>The interface changed.</li><li>The medium did not.</li><li>Software is still code and data. Input, process, output. State, logic, input, output, clock.</li><li>A game engine is still that anatomy, made large, and hard real-time.</li><li>Stop. Do not add a second ending.</li></ul>
+<ul><li>Find the state. Trace the rules. Follow the input and output. Measure the timing.</li><li>In your next project, choose one door, jump, or weapon. Draw those five parts and follow one real action through them. If you cannot find a part, that is your next question, not a personal failure.</li><li>The interface changed. The medium still needs to be understood. Your judgment is how you decide whether the result is right.</li></ul>
+<p><strong>Delivery</strong></p>
+<ul><li>Pause after the final sentence. Do not promise guaranteed employment, inevitable replacement, or that mastering one tool future-proofs a career. This is a transferable learning method, not a prediction.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Questions.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the last line.</li><li><strong>Content:</strong> The interface changed. The medium did not. Software is still code and data, input, process, output, on a clock. A game engine is still that anatomy, made large and hard real-time.</li><li><strong>Visual:</strong> the sentence.</li><li><strong>Refs:</strong> <code>ch00</code> §9, <code>ch09</code> §12, <code>ch10</code>.</li></ul></div>
+<ul><li>Let us use the map on your questions.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the last line.</li><li><strong>Content:</strong> <strong>Find the state. Trace the rules. Follow the input and output. Measure the timing.</strong> | Practice on a door, a jump, or a weapon in any engine | Use the same map to question an AI-generated change</li><li><strong>Visual:</strong> the sentence.</li><li><strong>Refs:</strong> <code>ch00</code> §9, <code>ch09</code> §12, <code>ch10</code>.</li></ul></div>
   </aside>
 </section>
 
@@ -740,14 +753,16 @@
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Questions</h2>
-    <ul class="content"><li>If a question stalls, ask which part it is: state, logic, input, output, or clock</li><li>Then ask who feeds that part</li><li>The reference is the long version of this talk</li></ul>
+    <ul class="content"><li>A weapon flashes, but the target takes no damage: <strong>where would you look first?</strong></li><li>Separate what you observed from what you inferred</li><li>Take the five questions into your next project</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §10.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S32</h5><p><strong>Say</strong></p>
-<ul><li>If I stall, I am going to do what I told you to do. Which part is it? State, logic, input, output, or clock. Who feeds that part?</li><li>The reference is the long version. Read it once. After that, use it per task. An engine question goes to the five rows. A weapon question goes to the four stages.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> use the anatomy to answer.</li><li><strong>Content:</strong> If a question stalls, ask which part it is: state, logic, input, output, or clock. Then ask who feeds that part. The reference is the long version of this talk.</li><li><strong>Visual:</strong> the five parts.</li><li><strong>Refs:</strong> <code>ch00</code> §10.</li></ul></div>
+<ul><li>Give me a concrete symptom or something you want to build. We will locate its state, rules, boundaries, and timing, then decide what to inspect.</li><li>If no one volunteers, return to the flash-without-damage example. What evidence separates a missed hit from a stale health display?</li></ul>
+<p><strong>Q&amp;A ammunition</strong></p>
+<ul><li>"Which engine should I learn?" Choose a small achievable project and an engine with accessible tools, documentation, and support for your platform. Complete the loop from authoring to a playable build. Learn one well, then map the next using the same questions.</li><li>"Does a game need an engine?" It needs software that fulfills the required responsibilities, whether supplied by a general engine, a framework, libraries, or custom code. There is no requirement to buy a branded product.</li><li>"Can AI build the whole game?" It can automate portions with widely varying reliability. Scope, integration, validation, performance, licensing, and player experience still need to be established. A demo is not proof of maintainable production software.</li><li>"Will it take our jobs?" Tasks and staffing may change; no one can responsibly guarantee your personal outcome. Strengthen portable abilities: diagnose systems, communicate constraints, judge quality, test work, and finish projects. AI use is not a prerequisite for understanding this map.</li><li>"Why did generated code compile but fail?" Compilation checks some syntax and type rules, not whether the behavior matches the design, synchronizes correctly, or meets a time budget. Ask for the failing scenario and a regression test.</li><li>"What should a non-programmer do tomorrow?" Trace one of your own assets from source file through import and reference to its visible or audible result. Record one format constraint, one loading constraint, and one timing constraint.</li><li>"Where should I read next?" Start with the repository's reference for the relevant question, then check version-specific primary documentation. For engine behavior, prefer source and measured traces over confident summaries, including these notes.</li><li>If unsure: "I can locate the responsibility, but I would need to inspect that engine version or measure that behavior before claiming an answer." This models the skill you are teaching.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> use the anatomy to answer.</li><li><strong>Content:</strong> A weapon flashes, but the target takes no damage: <strong>where would you look first?</strong> | Separate what you observed from what you inferred | Take the five questions into your next project</li><li><strong>Visual:</strong> the five parts.</li><li><strong>Refs:</strong> <code>ch00</code> §10.</li></ul></div>
   </aside>
 </section>
   </div>
