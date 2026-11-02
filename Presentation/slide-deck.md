@@ -15,14 +15,14 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 
 # ACT A — FOUNDATIONS
 
-## S1 — Section 1 intro: Software is the material *(divider)*
+## S1 — Section 1 intro: Software is the Medium — Game Engines are Software *(divider)*
 
 - **Goal:** show the whole talk in one picture.
-- **Content:** Software is the material. Game engines are that material, built big and fast. Five parts. Four acts.
+- **Content:** Software is the medium. Game engines are software. Five parts. Four acts.
 - **Visual:** data and code chips, five boxes, four-act bar.
 - **Refs:** `ch00` intro, §1, §4, §8.
 
-## S2 — You work in a material
+## S2 — You work in a medium
 
 - **Goal:** make "medium" concrete.
 - **Content:** A painter has to know paint. A musician has to know the instrument. You have to know software. That is what this talk is.
@@ -429,7 +429,7 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 ## S58 — It can explain, and it can change things
 
 - **Goal:** two directions, and the catch.
-- **Content:** One way: software explains itself to you. The other way: you say what you want, and it edits the software. You still have to know the material, or you cannot aim it.
+- **Content:** One way: software explains itself to you. The other way: you say what you want, and it edits the software. You still have to know the medium, or you cannot aim it.
 - **Visual:** you, harness, files, both directions.
 - **Refs:** `ch09` §6, `ch00` §8.1.
 
@@ -443,7 +443,7 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 ## S60 — Section 14 intro: What comes next *(divider)*
 
 - **Goal:** open the close.
-- **Content:** What does the future do to the loop we just built? It changes the tools. It does not change the material.
+- **Content:** What does the future do to the loop we just built? It changes the tools. It does not change the medium.
 - **Visual:** a loop.
 - **Refs:** `ch10`.
 

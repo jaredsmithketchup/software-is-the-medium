@@ -21,14 +21,13 @@ Then name the part: state, logic, input, output, or clock.
 
 ---
 
-## S1 — Software is the material
+## S1 — Software is the Medium — Game Engines are Software
 
 **Pace:** section 1, 4 minutes. This slide is 20 seconds.
 
 **Say**
 
-- Software is the material this industry is made of.
-- Game engines are that material, built big and fast.
+- Software is the medium. Game engines are software.
 - Point at the five boxes. Every program sits on these: state, logic, input, output, clock.
 - Do not define them yet. By the end you will know which box your job feeds.
 
@@ -38,15 +37,15 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- First: what a material even is.
+- First: what a medium even is.
 
-## S2 — You work in a material
+## S2 — You work in a medium
 
 **Say**
 
 - A painter who does not understand paint cannot paint well, no matter the brush.
 - A musician has the instrument. A civil engineer has steel and concrete.
-- Your material is software. The rest of today is the properties of that material.
+- Your medium is software. The rest of today is the properties of that medium.
 
 **Need**
 
@@ -890,7 +889,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - One direction: the software explains itself. "Walk me through the renderer."
 - The other direction: you say what you want changed, and it edits the software.
-- The catch is the point of this whole talk. You still have to know the material, or you cannot aim it.
+- The catch is the point of this whole talk. You still have to know the medium, or you cannot aim it.
 - You cannot ask for a tour of the renderer if you do not know a renderer exists, and that it is not the world.
 
 **Next**
@@ -921,7 +920,7 @@ Then name the part: state, logic, input, output, or clock.
 **Say**
 
 - What does the future do to the loop we just built?
-- It changes the tools. It does not change the material.
+- It changes the tools. It does not change the medium.
 
 **Next**
 
