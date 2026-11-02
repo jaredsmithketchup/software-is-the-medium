@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 225" role="img" aria-labelledby="s23-title s23-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s23-title">Observe a symptom, then test a boundary</title><desc id="s23-desc">The weapon flashes but no damage is shown. If authoritative health changed, inspect HUD or replication. If it did not, inspect the accepted shot, hit query, and damage rule.</desc>
+  <defs><marker id="s23-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6EE7B7"/></marker></defs>
+  <g fill="none" stroke="#6EE7B7" stroke-width="2" marker-end="url(#s23-arrow)"><path d="M435 95 H495 V48 H550"/><path d="M495 95 V145 H550"/></g>
+  <g fill="#1F2937" stroke="#6EE7B7"><rect x="5" y="43" width="430" height="105" rx="10"/><rect x="550" y="13" width="345" height="73" rx="10"/><rect x="550" y="113" width="345" height="73" rx="10"/></g>
+  <g text-anchor="middle" font-size="22" fill="#F9FAFB"><text x="220" y="79">Flash, but no damage shown.</text><text x="220" y="114">Did authoritative health change?</text><text x="722" y="44">YES: inspect the display path</text><text x="722" y="144">NO: inspect gameplay</text></g>
+  <g text-anchor="middle" font-size="19" fill="#CBD5E1"><text x="722" y="71">HUD / replicated copy / timing</text><text x="722" y="172">Accepted shot? Hit? Damage rule?</text><text x="450" y="218">Exercise: choose one check and say what each result would mean</text></g>
+</svg>
