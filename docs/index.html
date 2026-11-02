@@ -15,7 +15,7 @@
 <div class="reveal">
   <div class="slides">
 <section data-num="1" data-state="act-a" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 1</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 1</p>
     <h2>The pattern of software</h2>
 <div class="diagram divider-diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 215" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="24" y="8" width="104" height="32" rx="16" fill="#075985"/>
@@ -60,7 +60,7 @@
   <text x="24" y="168" font-size="10" font-weight="400" fill="#6B7280">the four acts</text>
 </svg></div>
 
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S1</h5><p><strong>Focus:</strong> two claims — data + code, and the five-part skeleton.</p>
 <ul><li>Software is the medium. Game engines ARE software.</li><li>Made of exactly two substances: <strong>data + code</strong>.</li><li>Every program hangs on five parts: <strong>state, logic, input, output, clock</strong>.</li><li>Don't define yet — plant it. Section 5 earns it.</li><li>One line at the corner: foundations outlast tools.</li></ul>
@@ -72,12 +72,13 @@
 </section>
 
 <section data-num="2" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>You work in a medium</h2>
     <ul class="content"><li>every maker works in a material with its own properties: a painter must understand paint and canvas, a musician their instrument, a civil engineer steel and concrete — and a <strong>game developer</strong> must understand software</li><li>The rest of the talk is the properties of that medium</li></ul>
   </div>
 <p class="refs"><code>ch00</code> intro.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S2</h5><p><strong>Focus:</strong> every craft has a material with properties; yours is software.</p>
 <ul><li>Painter → paint + canvas. Musician → the instrument. Civil engineer → steel and concrete.</li><li>Game developer → ??? The box is empty — we fill it in today.</li></ul>
@@ -90,12 +91,13 @@
 </section>
 
 <section data-num="3" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Why this talk now</h2>
     <ul class="content"><li>AI diffusion into every role, old team structures collapsing, a noisy industry — in that noise, anchor to <strong>foundational knowledge, not tool fluency</strong></li><li>Orientation beats completeness</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §8.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S3</h5><p><strong>Focus:</strong> foundations outlast tools.</p>
 <ul><li>The industry is noisy: AI in every role, structures collapsing, new tool every week.</li><li>Anchor to foundational knowledge, not tool fluency.</li><li>This is a map, not a manual.</li></ul>
@@ -108,11 +110,11 @@
 </section>
 
 <section data-num="4" data-state="act-a" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 2</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 2</p>
     <h2>Data and code</h2>
 
     <ul class="divider-claims"><li>"Section 2 · The two substances"</li><li>question chip: "What is software actually made of?"</li><li>index: section = code + data</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S4</h5><p><strong>Focus:</strong> what is software actually made of?</p>
 <ul><li>Straight answer: two things.</li></ul>
@@ -123,7 +125,7 @@
 </section>
 
 <section data-num="5" data-state="act-a" class="has-diagram">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Two substances: code and data</h2>
     <div class="diagram-row"><ul class="content"><li><strong>code</strong> = behavior, the active rules</li><li><strong>data</strong> = state, the passive values</li><li>von Neumann: a stored program (code) over stored state (data)</li><li>Example: "if the player presses jump, apply upward velocity"</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 320" font-family="Montserrat, Lato, Segoe UI, sans-serif">
@@ -151,6 +153,7 @@
 </svg></div></div>
   </div>
 <p class="refs"><code>ch00</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S5</h5><p><strong>Focus:</strong> code behaves; data is acted on.</p>
 <ul><li><strong>Code</strong> = active: rules, functions, "do this, then that."</li><li><strong>Data</strong> = passive: values, state, numbers, text.</li><li>von Neumann: stored program over stored state. Still true.</li></ul>
@@ -163,12 +166,13 @@
 </section>
 
 <section data-num="6" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The boundary is a design instrument</h2>
     <ul class="content"><li>code travels as data (QuakeC → <code>progs.dat</code>, <code>.qvm</code>, idScript, Blueprint <code>.uasset</code>)</li><li>data acts (DOOM WAD maps/sprites/sounds, DOOM 3 <code>.decl</code>, ECS components)</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §1.1–1.3.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S6</h5><p><strong>Focus:</strong> code and data swap by choice.</p>
 <ul><li>Code travels as data: QuakeC → <code>progs.dat</code>; <code>.qvm</code>; idScript; Blueprints <code>.uasset</code>.</li><li>Data acts: DOOM WAD carries behavior; DOOM 3 <code>.decl</code>; ECS components decide what an entity is.</li><li>The line is a decision, not a law.</li></ul>
@@ -181,12 +185,13 @@
 </section>
 
 <section data-num="7" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The career question</h2>
     <ul class="content"><li>"what belongs in code, what in data?" Default: <strong>data</strong> — cheaper to change, inspect, ship</li><li>the layer non-programmers touch safely</li><li>Corollary: <strong>your work is data until code plays it back.</strong></li></ul>
   </div>
 <p class="refs"><code>ch00</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S7</h5><p><strong>Focus:</strong> what belongs in code, what in data?</p>
 <ul><li>Default: <strong>data</strong> — cheaper to change, inspect, ship; safe for non-programmers.</li><li><strong>Your work is data until code plays it back.</strong></li></ul>
@@ -199,11 +204,11 @@
 </section>
 
 <section data-num="8" data-state="act-a" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 3</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 3</p>
     <h2>The universal shape</h2>
 
     <ul class="divider-claims"><li>"Section 3 · IO and boundaries"</li><li>question: "what shape does every program have on the inside?"</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S8</h5><p><strong>Focus:</strong> every program is input → process → output.</p>
 <ul><li>"What shape does every program have on the inside?" — three boxes.</li></ul>
@@ -214,7 +219,7 @@
 </section>
 
 <section data-num="9" data-state="act-a" class="has-diagram">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The universal shape</h2>
     <div class="diagram-row"><ul class="content"><li>input (keys, files, packets) → process (code over data) → output (pixels, sound, writes)</li><li>Differences are only scale, speed, and where the boundaries are drawn</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 210" font-family="Montserrat, Lato, Segoe UI, sans-serif">
@@ -242,6 +247,7 @@
 </svg></div></div>
   </div>
 <p class="refs"><code>ch00</code> §2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S9</h5><p><strong>Focus:</strong> input → process → output, with examples.</p>
 <ul><li>Input: keys, files, packets. Process: code over data. Output: pixels, sound.</li><li>Programs differ in scale, speed, and where boundaries are drawn.</li></ul>
@@ -254,12 +260,13 @@
 </section>
 
 <section data-num="10" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The IO stack is nested</h2>
     <ul class="content"><li>human → application → runtime → operating system → hardware → physical world</li><li>every seam between layers is itself an IO exchange</li><li>A game is a stack of programs, not one</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S10</h5><p><strong>Focus:</strong> every layer is an IO exchange.</p>
 <ul><li>Human → app → runtime → OS → hardware → physical world.</li><li>A game is a stack of programs, not one.</li></ul>
@@ -272,12 +279,13 @@
 </section>
 
 <section data-num="11" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>"No software without IO"</h2>
     <ul class="content"><li><strong>"there is no such thing as software without IO — only software whose IO is hidden."</strong> The boundaries ARE the architecture</li><li>a program's interfaces are its spine</li><li>The escape question: where's the input, where's the output, what's in the middle?</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S11</h5><p><strong>Focus:</strong> the strong claim.</p>
 <ul><li>"No such thing as software without IO — only software whose IO is hidden."</li><li>Boundaries are the architecture.</li><li>Escape question: where's input, where's output, what's in the middle?</li></ul>
@@ -289,11 +297,11 @@
 </section>
 
 <section data-num="12" data-state="act-a" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 4</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 4</p>
     <h2>The loop</h2>
 
     <ul class="divider-claims"><li>"Section 4 · The loop and latency"</li><li>question: "what happens when software doesn't stop — but repeats, forever?"</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S12</h5><p><strong>Focus:</strong> add time.</p>
 <ul><li>Interactive software repeats, forever.</li></ul>
@@ -304,7 +312,7 @@
 </section>
 
 <section data-num="13" data-state="act-a" class="has-diagram">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The human–machine interface loop</h2>
     <div class="diagram-row"><ul class="content"><li>output → the human perceives → decides → acts → that act returns as input → process → output again</li><li>Sense/think/act maps 1:1 onto input/process/output</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" font-family="Montserrat, Lato, Segoe UI, sans-serif">
@@ -332,6 +340,7 @@
 </svg></div></div>
   </div>
 <p class="refs"><code>ch00</code> §3.1–3.2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S13</h5><p><strong>Focus:</strong> the loop, drawn with a person inside.</p>
 <ul><li>Output → human perceives → decides → acts → act returns as input → repeat.</li><li>Sense/think/act ↔ input/process/output.</li></ul>
@@ -343,12 +352,13 @@
 </section>
 
 <section data-num="14" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Cybernetics</h2>
     <ul class="content"><li>cybernetics = watching your own output and correcting</li><li>loops converge or diverge</li><li>A game without a player is a simulation</li><li>with a human it is a goal-seeking loop</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §3.1–3.2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S14</h5><p><strong>Focus:</strong> goal-seeking by feedback.</p>
 <ul><li>Watch your own output, correct, repeat.</li><li>Loops converge or diverge.</li><li>Game without a player = simulation; with a human = goal-seeking loop.</li></ul>
@@ -360,12 +370,13 @@
 </section>
 
 <section data-num="15" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Latency is the loop's vital sign</h2>
     <ul class="content"><li>the latency chain finger → device → OS → simulation → render → display → eye</li><li>hops stack, never average</li><li>At 60 fps one frame = ≈16.7 ms for everything</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §3.3–3.4.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S15</h5><p><strong>Focus:</strong> milliseconds are the job.</p>
 <ul><li>Finger → device → OS → sim → render → display → eye.</li><li>Delays stack, never average.</li><li>60 fps = one 16.7 ms budget for everything.</li></ul>
@@ -377,12 +388,13 @@
 </section>
 
 <section data-num="16" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Two gaits: pipeline and loop</h2>
     <ul class="content"><li><strong>pipeline</strong> = one pass, no feedback (bake, compile, batch)</li><li><strong>loop</strong> = output feeds the next input</li><li>A game engine is a pipeline running inside a hard-real-time loop</li><li>If latency blows the budget, the game feels like a machine that sometimes answers</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §3.3–3.4.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S16</h5><p><strong>Focus:</strong> once-through vs responsive.</p>
 <ul><li>Pipeline: one pass, no feedback — bake, compile, batch.</li><li>Loop: output feeds next input — responds, adapts.</li><li>Game = pipeline inside a hard-real-time loop.</li></ul>
@@ -394,11 +406,11 @@
 </section>
 
 <section data-num="17" data-state="act-a" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 5</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 5</p>
     <h2>The five-part skeleton</h2>
 
     <ul class="divider-claims"><li>"Section 5 · The skeleton"</li><li>question: "every program has five parts — what are they?"</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S17</h5><p><strong>Focus:</strong> the periodic table of programs.</p>
 <ul><li>"Every program has five parts — guess them."</li></ul>
@@ -409,7 +421,7 @@
 </section>
 
 <section data-num="18" data-state="act-a" class="has-diagram">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>State, logic, input, output, clock</h2>
     <div class="diagram-row"><ul class="content"><li>state = what is remembered</li><li>logic = what changes it</li><li>input = what gets in</li><li>output = what comes out</li><li>clock = who decides <em>when</em></li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" font-family="Montserrat, Lato, Segoe UI, sans-serif">
@@ -444,6 +456,7 @@
 </svg></div></div>
   </div>
 <p class="refs"><code>ch00</code> §4, <code>ch01</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S18</h5><p><strong>Focus:</strong> name and define all five.</p>
 <ul><li>State = remembered. Logic = changes it. Input = gets in. Output = goes out. Clock = decides when.</li><li>Any program classifies into these boxes.</li></ul>
@@ -455,12 +468,13 @@
 </section>
 
 <section data-num="19" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The clock is the decision people argue about</h2>
     <ul class="content"><li>event-driven vs polled = "who owns 'when'"</li><li>the web's push/pull war is the same decision</li><li>Habits: <em>find the clock first</em></li><li><em>name the part you're in</em></li></ul>
   </div>
 <p class="refs"><code>ch00</code> §4, <code>ch01</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S19</h5><p><strong>Focus:</strong> event vs polled; two habits.</p>
 <ul><li>Event-driven: "tell me when." Polled: "anything now?" — on a rhythm.</li><li>Push vs pull — the same war, everywhere.</li><li>Habits: find the clock first; name the part you're in.</li></ul>
@@ -472,11 +486,11 @@
 </section>
 
 <section data-num="20" data-state="act-a" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 6</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 6</p>
     <h2>The engine</h2>
 
     <ul class="divider-claims"><li>"Section 6 · Engines are the skeleton scaled up"</li><li>claim: an engine is not a new kind of thing — five slots, each a full subsystem</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S20</h5><p><strong>Focus:</strong> the skeleton, scaled up.</p>
 <ul><li>Engine = same five slots, each blown up into a subsystem.</li></ul>
@@ -487,12 +501,13 @@
 </section>
 
 <section data-num="21" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Every slot becomes a subsystem</h2>
     <ul class="content"><li>state → world model</li><li>logic → physics/AI/gameplay</li><li>input → input subsystem</li><li>output → renderer/audio/UI</li><li>clock → frame loop</li><li>Every part is a program in its own right</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §5.1, <code>ch01</code> §2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S21</h5><p><strong>Focus:</strong> the fill table.</p>
 <ul><li>State → world model. Logic → physics/AI/gameplay. Input → input subsystem. Output → renderer/audio/UI. Clock → frame loop.</li><li>Every part is a program in its own right.</li></ul>
@@ -504,12 +519,13 @@
 </section>
 
 <section data-num="22" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>It is hard real-time</h2>
     <ul class="content"><li>a frame must be presented by the next display refresh or the human loop breaks</li><li>That single constraint explains more engine design than anything else</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §5.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S22</h5><p><strong>Focus:</strong> the frame deadline.</p>
 <ul><li>Output must hit the refresh — missing it is failure, not "late."</li><li>The human inside the loop sets the deadline.</li></ul>
@@ -521,7 +537,7 @@
 </section>
 
 <section data-num="23" data-state="act-a" class="has-diagram">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The frame loop IS the human loop</h2>
     <div class="diagram-row"><ul class="content"><li>device → commands → update → world → render → screen → player perceives → acts → again, at 60–144 Hz</li><li>The human loop and the frame loop are the same loop</li><li>the frame is just the beat</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" font-family="Montserrat, Lato, Segoe UI, sans-serif">
@@ -555,6 +571,7 @@
 </svg></div></div>
   </div>
 <p class="refs"><code>ch00</code> §5.2, <code>ch01</code> §6.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S23</h5><p><strong>Focus:</strong> one loop, 60–144 beats.</p>
 <ul><li>Device → commands → update → world → render → screen → player acts → again.</li><li>The frame is just the beat.</li></ul>
@@ -566,7 +583,7 @@
 </section>
 
 <section data-num="24" data-state="act-a" class="has-diagram">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>DOOM and Unreal: the same machine</h2>
     <div class="diagram-row"><ul class="content"><li>DOOM (1993) <code>D_DoomLoop</code> — fixed 35 Hz tics, <code>TryRunTics</code> catch-up</li><li>UE5 <code>FEngineLoop::Tick</code> — game/render/RHI threads, Chaos substeps</li><li>One has a rasterizer, the other has threads</li><li>both are the same loop</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 340" font-family="Montserrat, Lato, Segoe UI, sans-serif">
@@ -600,6 +617,7 @@
 </svg></div></div>
   </div>
 <p class="refs"><code>ch01</code> §6, <code>Eng/DOOM</code>, <code>Eng/UE5</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S24</h5><p><strong>Focus:</strong> proof by example.</p>
 <ul><li>DOOM 1993: <code>D_DoomLoop</code>, 35 Hz tics, <code>TryRunTics</code> catch-up.</li><li>UE5: <code>FEngineLoop::Tick</code>, game/render/RHI threads, Chaos substeps.</li><li>Same loop, 33 years apart.</li></ul>
@@ -611,12 +629,13 @@
 </section>
 
 <section data-num="25" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The renderer is a downstream consumer</h2>
     <ul class="content"><li>the renderer never lives inside the simulation</li><li>it reads the world's state each frame and draws it</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §3.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S25</h5><p><strong>Focus:</strong> sim first, render after.</p>
 <ul><li>The renderer reads state and draws — it's never inside the simulation.</li></ul>
@@ -628,11 +647,11 @@
 </section>
 
 <section data-num="26" data-state="act-a" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 7</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 7</p>
     <h2>How engines differ</h2>
 
     <ul class="divider-claims"><li>"Section 7 · The clock and the four axes"</li><li>question: "if all engines are the same skeleton, why do they feel so different?"</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S26</h5><p><strong>Focus:</strong> fills, never new parts.</p>
 <ul><li>Same five slots; the stuffing differs.</li></ul>
@@ -643,12 +662,13 @@
 </section>
 
 <section data-num="27" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Two parts are core; the rest are channels</h2>
     <ul class="content"><li>core = state + simulation</li><li>channels = assets in, audio out, UI overlay out, network in/out</li><li>The WAD vs <code>.pk3</code> vs <code>.uasset</code> sameness: one idea, different containers</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §3.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S27</h5><p><strong>Focus:</strong> state + sim are core; channels are lanes.</p>
 <ul><li>Core: state, simulation. Channels: assets in, audio out, UI out, network.</li><li>WAD vs <code>.pk3</code> vs <code>.uasset</code> — one idea, different containers.</li></ul>
@@ -660,12 +680,13 @@
 </section>
 
 <section data-num="28" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The clock's four beats</h2>
     <ul class="content"><li><strong>fixed</strong> — DOOM 35 Hz, Q3A server 20 Hz, DOOM 3 60 Hz (repeatable, must catch up)</li><li><strong>variable</strong> — Quake, Urho3D (smooth, not repeatable)</li><li><strong>hybrid</strong> — redot FTI, UE5 Chaos (fixed physics in a variable frame)</li><li><strong>app-owned</strong> — three.js (the clock moved to the app)</li><li>"Every engine has a loop</li><li>only the beat changes."</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §4.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S28</h5><p><strong>Focus:</strong> fixed, variable, hybrid, app-owned.</p>
 <ul><li>Fixed: DOOM 35 Hz, Q3A 20 Hz, DOOM 3 60 Hz — repeatable, must catch up.</li><li>Variable: Quake, Urho3D — smooth, not repeatable.</li><li>Hybrid: redot FTI, UE5 Chaos — both.</li><li>App-owned: three.js — the clock moved.</li></ul>
@@ -677,12 +698,13 @@
 </section>
 
 <section data-num="29" data-state="act-a">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The four axes of difference</h2>
     <ul class="content"><li>world model, clock cadence, process topology, channel presence</li><li>No engine grows a sixth part</li><li>Habit: <strong>read the row, not the name</strong></li></ul>
   </div>
 <p class="refs"><code>ch01</code> §5.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S29</h5><p><strong>Focus:</strong> world model, clock, topology, channels.</p>
 <ul><li>No engine grows a sixth part.</li><li>Habit: read the row, not the name.</li></ul>
@@ -694,11 +716,11 @@
 </section>
 
 <section data-num="30" data-state="act-b" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">B — THE WORLD AND THE MACHINE</span><p class="kicker">Section 8</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE WORLD AND THE MACHINE</span><p class="kicker">Section 8</p>
     <h2>World models</h2>
 
     <ul class="divider-claims"><li>"Act B · Section 8 · World models"</li><li>question: "how does an engine remember its world — and why does that decide how it feels to work in?"</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S30</h5><p><strong>Focus:</strong> the biggest slot.</p>
 <ul><li>How does an engine remember its world — and why does that decide how it feels to work in?</li><li>Longest stretch — where most of you see your own work in the machine.</li></ul>
@@ -709,12 +731,13 @@
 </section>
 
 <section data-num="31" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Three questions, and the three answers ARE the world model</h2>
     <ul class="content"><li>stored how? related how? traversed how? — three answers, and the world model is just those answers</li><li>Everything else derives from them</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S31</h5><p><strong>Focus:</strong> stored how? related how? traversed how?</p>
 <ul><li>Those three answers = the world model. Predicts the rest of the engine.</li></ul>
@@ -726,7 +749,7 @@
 </section>
 
 <section data-num="32" data-state="act-b" class="has-diagram">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Three families at a glance</h2>
     <div class="diagram-row"><ul class="content"><li>scene graph (three.js, Babylon.js, redot, Urho3D)</li><li>BSP + flat entities (DOOM, Quake, Q3A, DOOM 3)</li><li>ECS / data-oriented (OpenEngine)</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" font-family="Montserrat, Lato, Segoe UI, sans-serif">
@@ -763,6 +786,7 @@
 </svg></div></div>
   </div>
 <p class="refs"><code>ch02</code> §1–4, <code>engines</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S32</h5><p><strong>Focus:</strong> scene graph / BSP+entities / ECS.</p>
 <ul><li>Scene graph: three.js, Babylon, redot, Urho3D.</li><li>BSP + flat entities: DOOM, Quake, Q3A, DOOM 3.</li><li>ECS: OpenEngine.</li></ul>
@@ -773,12 +797,13 @@
 </section>
 
 <section data-num="33" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Scene graphs: a tree for people</h2>
     <ul class="content"><li>objects in a parent→child transform tree</li><li>why artists and designers love it: attach a sword to a hand and the hand moves the sword for free</li><li>Cost: traversing the tree every frame</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §3–4.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S33</h5><p><strong>Focus:</strong> parent→child transforms.</p>
 <ul><li>Children inherit transforms — torch moves with the hand.</li><li>People-shaped: "attach node to node."</li></ul>
@@ -790,12 +815,13 @@
 </section>
 
 <section data-num="34" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>BSP + flat entities: the static-world answer</h2>
     <ul class="content"><li>a compiled static level (binary space partitions = rooms you can cheaply test) plus a flat list of entities placed absolutely</li><li>The fastest way to cull and collide static geometry</li><li>Not suited to fully dynamic worlds</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §5, <code>Eng/DOOM</code>, <code>Eng/Q3A</code>, <code>Eng/DOOM3</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S34</h5><p><strong>Focus:</strong> compiled level + flat list.</p>
 <ul><li>BSP = walls compiled into convex rooms, ultra cheap tests.</li><li>Entities placed absolutely.</li><li>Gold for static worlds; fights fully dynamic ones.</li></ul>
@@ -807,12 +833,13 @@
 </section>
 
 <section data-num="35" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>ECS: data-oriented, machine-shaped</h2>
     <ul class="content"><li>component arrays in tables</li><li>systems run over component sets</li><li>Trades human-shaped thinking for machine-shaped speed — great for tens of thousands of entities</li><li>What an entity <em>is</em> is its data</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §6, <code>Eng/OpenEngine</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S35</h5><p><strong>Focus:</strong> tables and systems.</p>
 <ul><li>Data in columns — all positions together; systems sweep the sets.</li><li>What an entity <em>is</em> is its data.</li><li>Scales to tens of thousands.</li></ul>
@@ -824,12 +851,13 @@
 </section>
 
 <section data-num="36" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>They blend; choice is a product decision</h2>
     <ul class="content"><li>scene graphs for people, BSP for static levels, ECS for mass — production engines blend them</li><li>The family choice is a product decision: it decides what your art/design/audio live in daily</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §7–8.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S36</h5><p><strong>Focus:</strong> pick the shape your team can feed.</p>
 <ul><li>Scene graph for people, BSP for static, ECS for mass.</li><li>The choice is the world your team lives in daily.</li></ul>
@@ -840,12 +868,13 @@
 </section>
 
 <section data-num="37" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>The world model is a state store</h2>
     <ul class="content"><li>Redux: action → reducer → store → view</li><li>engine: input → logic → world → frame loop → renderer → screen</li><li>Differences: engines <strong>pull</strong> every frame, are <strong>spatial</strong>, and <strong>simulate</strong> — you can rewind a store, not a simulation</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §7–8, <code>ch00</code> §6.4.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S37</h5><p><strong>Focus:</strong> Redux, pulled and spatial.</p>
 <ul><li>Redux: action → reducer → store → view. Engine: input → logic → world → render.</li><li>Engines pull, are spatial, and simulate — you can rewind a store, not a simulation.</li></ul>
@@ -857,12 +886,13 @@
 </section>
 
 <section data-num="38" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Draw the HUD last, in screen space</h2>
     <ul class="content"><li>UI is a screen-space overlay drawn on top, not part of the world model (world-space UI and 2D are the carve-outs)</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §7.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S38</h5><p><strong>Focus:</strong> UI overlays the world.</p>
 <ul><li>UI = screen-space pixels on top.</li><li>Exceptions: world-space UI, 2D.</li></ul>
@@ -874,12 +904,13 @@
 </section>
 
 <section data-num="39" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Two machines in one box</h2>
     <ul class="content"><li>CPU = a few deep lanes (a generalist, branchy, one step at a time)</li><li>GPU = thousands of wide lanes (an army, one recipe on enormous data)</li><li>SIMD: one instruction, many thin legs</li><li><strong>A frame is bound by one of four things — CPU, GPU, IO, or memory.</strong></li></ul>
   </div>
 <p class="refs"><code>ch03</code> §1, §7.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S39</h5><p><strong>Focus:</strong> scholar vs army — and the four ways a frame gets bound.</p>
 <ul><li>CPU: few deep lanes, any program, one step at a time, branchy.</li><li>GPU: thousands of wide lanes, one recipe, enormous data.</li><li>SIMD: one instruction, many thin legs.</li><li>One line to keep: every frame is bound by one of four things — CPU, GPU, IO, or memory. The bottleneck is invisible on purpose.</li></ul>
@@ -892,12 +923,13 @@
 </section>
 
 <section data-num="40" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Stat unit and Unreal Insights</h2>
     <ul class="content"><li>UE5 <code>stat unit</code> prints the bound question as rows — Frame vs Game vs Draw — and Unreal Insights shows the timeline</li><li>Read Game vs GPU and the diagnosis is half written</li><li>Method in one line: measure one variable at a time (the sandhills), or Amdahl — the parallelizable share caps your gain</li></ul>
   </div>
 <p class="refs"><code>ch03</code> §8–10, <code>Eng/UE5</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S40</h5><p><strong>Focus:</strong> the tool, and the method behind it.</p>
 <ul><li><code>stat unit</code>: Frame vs Game vs Draw rows. Unreal Insights: the timeline.</li><li>Read Game vs GPU and the diagnosis is half written.</li><li>Method in one line: measure one variable at a time (sandhills), or Amdahl — only the parallel share can benefit.</li></ul>
@@ -910,12 +942,13 @@
 </section>
 
 <section data-num="41" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Control flow: who waits, who decides the order?</h2>
     <ul class="content"><li><strong>who waits?</strong> (blocking stands still</li><li>event loops handle the next thing)</li><li><strong>who decides the order?</strong> (preemptive — the OS chooses</li><li>or cooperative — coroutines/task graphs choose)</li><li>Async I/O keeps going during slow reads</li><li>One line: coordination gets pricier every rung — one thread → event loop → threads → fibers → processes → the network</li></ul>
   </div>
 <p class="refs"><code>ch04</code> §1–7.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S41</h5><p><strong>Focus:</strong> who waits? who decides the order?</p>
 <ul><li>Blocking stands still; event loops handle the next thing.</li><li>Preemptive (OS decides) vs cooperative (coroutines decide).</li><li>Async I/O: start, keep going, collect later.</li><li>The ladder in one line: one thread → event loop → threads → fibers → processes → the network. Every rung costs coordination.</li></ul>
@@ -928,12 +961,13 @@
 </section>
 
 <section data-num="42" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>State: whose memory, whose copy is the truth?</h2>
     <ul class="content"><li>whose memory? (shared whiteboard vs mailboxes)</li><li>whose copy is authoritative, and how long may a copy be wrong? Replication = intentional copies</li><li><strong>staleness buys parallelism</strong></li><li>on the network one node gets the authority</li></ul>
   </div>
 <p class="refs"><code>ch04</code> §8–13, §19–21.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S42</h5><p><strong>Focus:</strong> memory, truth, staleness.</p>
 <ul><li>Whose memory: shared whiteboard vs mailboxes.</li><li>Whose copy is truth; how long may a copy be wrong?</li><li>Replication = intentional copies; staleness buys parallelism.</li></ul>
@@ -945,12 +979,13 @@
 </section>
 
 <section data-num="43" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>UE5 names them</h2>
     <ul class="content"><li>game / render / RHI threads, latent actions (coroutines), the task graph, replication + RPCs</li><li>The question: <em>who runs, who waits, who decides the order, whose copy is the truth?</em></li></ul>
   </div>
 <p class="refs"><code>ch04</code> §9, §14–18, <code>Eng/UE5</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S43</h5><p><strong>Focus:</strong> names, then one question.</p>
 <ul><li>Game/render/RHI threads; latent actions; task graph; replication + RPCs.</li><li>The question: who runs, who waits, who decides, whose copy is truth?</li></ul>
@@ -962,11 +997,11 @@
 </section>
 
 <section data-num="44" data-state="act-b" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">B — THE WORLD AND THE MACHINE</span><p class="kicker">Section 11</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE WORLD AND THE MACHINE</span><p class="kicker">Section 11</p>
     <h2>Three seams of the machine</h2>
 
     <ul class="divider-claims"><li>"Section 11 · Schemas, spatial indexes, the OS"</li><li>question: "what do every discipline's handoffs have in common?" — three chips: CONTRACT · MAP · LEDGER</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S44</h5><p><strong>Focus:</strong> contract, map, ledger.</p>
 <ul><li>Schemas, spatial indexes, the OS — three short takes, one slide each.</li></ul>
@@ -977,12 +1012,13 @@
 </section>
 
 <section data-num="45" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>11a · A schema is a three-part contract</h2>
     <ul class="content"><li>fields and types (what exists), order and layout (where and how), rules (what the values mean together)</li><li>Nothing means anything until writer and reader agree on all three</li><li>One line: the reader breaks, the file was fine — "the contract was violated, not the file."</li></ul>
   </div>
 <p class="refs"><code>ch05</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S45</h5><p><strong>Focus:</strong> fields, layout, rules.</p>
 <ul><li>What exists, where and how, what it means together.</li><li>Nothing means anything until writer and reader agree.</li></ul>
@@ -994,12 +1030,13 @@
 </section>
 
 <section data-num="46" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>11a · Three worlds of format</h2>
     <ul class="content"><li><strong>authoring</strong> — for people, says everything, loads slowly (<code>.fbx</code>, <code>.gltf</code>, <code>.wav</code>)</li><li><strong>runtime</strong> — for speed (<code>.uasset</code>, cooked)</li><li><strong>wire</strong> — for bandwidth and change (packets, snapshots, replication)</li><li>One line: schema evolution keeps old and new talking</li><li>determinism is the contract byte-for-byte — a desync is a broken contract</li></ul>
   </div>
 <p class="refs"><code>ch05</code> §7–9.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S46</h5><p><strong>Focus:</strong> authoring, runtime, wire — and what they must keep.</p>
 <ul><li>Authoring: for people, loads slow — <code>.fbx</code>, <code>.gltf</code>, <code>.wav</code>.</li><li>Runtime: for speed — <code>.uasset</code>, cooked.</li><li>Wire: for travel, survives change — packets, snapshots.</li><li>One line: evolution keeps old and new talking; a desync is a broken contract.</li></ul>
@@ -1012,12 +1049,13 @@
 </section>
 
 <section data-num="47" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>11b · The map, not the warehouse</h2>
     <ul class="content"><li>"what is near door B?" — open every crate (naive) vs read the map (spatial index)</li><li>It is a <strong>cache of where things are</strong>, refit or rebuilt as things move</li><li>an index that lies is worse than none</li><li>Shapes in one line: a grid or a tree of boxes (octree/BVH) or BSP rooms — one structure per world model</li><li>The same map serves drawing and collision</li></ul>
   </div>
 <p class="refs"><code>ch06</code> §1–2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S47</h5><p><strong>Focus:</strong> "what is here?" without touching everything.</p>
 <ul><li>A cache of where things are; refit or rebuild as things move.</li><li>An index that lies is worse than none.</li><li>Shapes in one line: a grid or a tree of boxes (octree/BVH) or BSP rooms — one structure per world model. The same map serves drawing and collision.</li></ul>
@@ -1030,12 +1068,13 @@
 </section>
 
 <section data-num="48" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>11c · The OS: no direct touches</h2>
     <ul class="content"><li>the OS is the landlord: allocation and isolation</li><li>your game is a <strong>process</strong> in a walled arena of virtual memory</li><li>system calls are the only doors to the kernel</li><li>Day job: the OS schedules, issues tickets (handles), and fronts the GPU as a second venue</li></ul>
   </div>
 <p class="refs"><code>ch07</code> §1–8.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S48</h5><p><strong>Focus:</strong> the landlord, and its day job.</p>
 <ul><li>Your game is a process in a walled arena.</li><li>System calls are the only doors to the kernel.</li><li>Day job one line: the OS schedules, issues tickets (handles), and fronts the GPU as a second venue.</li></ul>
@@ -1048,12 +1087,13 @@
 </section>
 
 <section data-num="49" data-state="act-b">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>11c · The observatory</h2>
     <ul class="content"><li>the OS keeps a ledger on every process and ships the tools (Task Manager, <code>stat unit</code>, Event Viewer) that read it — and the tools show only what the kernel shows</li><li>The walk: name it, watch it, read the ledger — then ask: game bug or OS constraint?</li></ul>
   </div>
 <p class="refs"><code>ch07</code> §9–10.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S49</h5><p><strong>Focus:</strong> read the ledger, don't guess.</p>
 <ul><li>Tools show only what the kernel knows.</li><li>The walk: name it, watch it, read the ledger — then game bug or OS constraint?</li></ul>
@@ -1065,7 +1105,7 @@
 </section>
 
 <section data-num="50" data-state="act-c" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">C — PEOPLE AND THE CHAIN</span><p class="kicker">Section 12</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">C — PEOPLE AND THE CHAIN</span><p class="kicker">Section 12</p>
     <h2>The discipline map</h2>
 <div class="diagram divider-diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 170" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <text x="440" y="22" font-size="17" font-weight="700" fill="#6EE7B7" text-anchor="middle">where do YOU sit in this machine?</text>
@@ -1086,7 +1126,7 @@
   </g>
 </svg></div>
 
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S50</h5><p><strong>Focus:</strong> from machine to people.</p>
 <ul><li>"Where do YOU sit in this machine — and what does your role feed?"</li></ul>
@@ -1097,12 +1137,13 @@
 </section>
 
 <section data-num="51" data-state="act-c">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
     <h2>Owners and feeders</h2>
     <ul class="content"><li>every subsystem has <strong>owners</strong> (build and maintain — usually engineers) and <strong>feeders</strong> (fill it — usually everyone else)</li><li>No one owns the whole machine</li><li>the clock has no feeder — everyone obeys it</li><li>Boundary disagreements decode team conflict</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §7, <code>ch01</code> §2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S51</h5><p><strong>Focus:</strong> owners build; feeders fill.</p>
 <ul><li>No one owns the whole machine.</li><li>The clock has no feeder: everyone obeys it.</li><li>Boundary disagreements = subsystem conflicts; name the slot.</li></ul>
@@ -1114,12 +1155,13 @@
 </section>
 
 <section data-num="52" data-state="act-c">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
     <h2>The weapon: one rifle, four stages</h2>
     <ul class="content"><li>design → data production → engine integration → gameplay code</li><li>Everything before the last stage is inert data</li><li>stage 4 plays it back</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S52</h5><p><strong>Focus:</strong> design → data → integration → gameplay code.</p>
 <ul><li>Everything before the last stage is inert; stage 4 plays it back.</li></ul>
@@ -1130,12 +1172,13 @@
 </section>
 
 <section data-num="53" data-state="act-c">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
     <h2>Stages 1–2: design and data</h2>
     <ul class="content"><li>stage 1 design decides what the weapon <em>is</em> (role, feel, spec — the doc is already a schema)</li><li>Stage 2 produces the inert data: model, skeleton, textures, audio</li><li><strong>Nothing does anything yet.</strong></li></ul>
   </div>
 <p class="refs"><code>ch08</code> §2–3.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S53</h5><p><strong>Focus:</strong> nothing does anything yet.</p>
 <ul><li>Design: role, feel, spec — the doc is already a schema.</li><li>Data: model, skeleton, textures, audio — inert.</li></ul>
@@ -1147,12 +1190,13 @@
 </section>
 
 <section data-num="54" data-state="act-c">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
     <h2>Stages 3–4: integration and playback</h2>
     <ul class="content"><li>stage 3 import turns files into typed, reachable assets (soft vs hard references decide what loads when)</li><li>Stage 4 gameplay code reads the recipe and orchestrates — fire → animation, sound, particles, damage — and the player's finger is the input leg</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §4–5.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S54</h5><p><strong>Focus:</strong> import turns files into assets; code plays them.</p>
 <ul><li>Soft vs hard refs: streams as needed vs baked in.</li><li>Stage 4 orchestrates: button → montage, sound, particles, damage.</li><li>The player's finger is the input leg.</li></ul>
@@ -1164,12 +1208,13 @@
 </section>
 
 <section data-num="55" data-state="act-c">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
     <h2>Re-traced in DOOM 3: the skeleton is the constant</h2>
     <ul class="content"><li>the same chain in DOOM 3: design → data → <code>.entity</code> → the idScript VM</li><li>The takeaway: <strong>stage 4 only plays back what stages 1–3 produced</strong></li><li>the skeleton is the constant, the engines are the variables</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §6, <code>Eng/DOOM3</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S55</h5><p><strong>Focus:</strong> the skeleton is the constant.</p>
 <ul><li>Design → data → <code>.entity</code> → idScript VM. Same chain, 2004.</li><li>Stage 4 only plays back what stages 1–3 produced.</li></ul>
@@ -1181,7 +1226,7 @@
 </section>
 
 <section data-num="56" data-state="act-d" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">D — THE INTERFACE AND THE FUTURE</span><p class="kicker">Section 13</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">D — THE INTERFACE AND THE FUTURE</span><p class="kicker">Section 13</p>
     <h2>AI and the medium</h2>
 <div class="diagram divider-diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 160" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <text x="350" y="24" font-size="16" font-weight="700" fill="#D8B4FE" text-anchor="middle">what does "talking to software" actually consist of?</text>
@@ -1198,7 +1243,7 @@
   </g>
 </svg></div>
 
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S56</h5><p><strong>Focus:</strong> new interface, same medium; neutral.</p>
 <ul><li>"Some of you are skeptical of AI — fair. This isn't a pitch."</li></ul>
@@ -1209,12 +1254,13 @@
 </section>
 
 <section data-num="57" data-state="act-d">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>An agent is four things</h2>
     <ul class="content"><li><strong>backend</strong> (inference service, cloud or local) · <strong>model</strong> (the trained brain) · <strong>harness</strong> (the frontend on YOUR machine — the only piece that touches it) · <strong>knowledge</strong> (your context: files, docs, notes)</li><li>A model alone is a chat box</li><li>a harness turns words into actions</li></ul>
   </div>
 <p class="refs"><code>ch09</code> §1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S57</h5><p><strong>Focus:</strong> backend, model, harness, knowledge.</p>
 <ul><li>Backend: inference service. Model: the brain. Harness: on YOUR machine — the only one that touches it. Knowledge: your context.</li></ul>
@@ -1226,12 +1272,13 @@
 </section>
 
 <section data-num="58" data-state="act-d">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>Explain and modify</h2>
     <ul class="content"><li><strong>explain</strong> — software → understanding ("walk me through the renderer")</li><li><strong>modify</strong> — intent → software ("change the goal")</li><li>The catch, and the payoff of this whole talk: <strong>you still must know the medium to aim it.</strong></li></ul>
   </div>
 <p class="refs"><code>ch09</code> §6, <code>ch00</code> §8.1.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S58</h5><p><strong>Focus:</strong> understands you, and edits software.</p>
 <ul><li>Explain: software → understanding.</li><li>Modify: intent → software.</li><li>The catch: you still must know the medium to aim it.</li></ul>
@@ -1243,12 +1290,13 @@
 </section>
 
 <section data-num="59" data-state="act-d">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>Where the tools live <em>(optional — one breath)</em></h2>
     <ul class="content"><li>harnesses (Kilo, opencode, pi, Hermes), local (LM Studio), services (OpenRouter), hubs (Hugging Face)</li><li>standards (AGENTS.md, dotfolders, skills, MCP)</li><li>knowledge (RAG, vector DBs, OKF/Obsidian)</li><li>sandboxes/permissions as the trust boundary</li></ul>
   </div>
 <p class="refs"><code>ch09</code> §7–11.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S59</h5><p><strong>Focus:</strong> doors exist; no urging.</p>
 <ul><li>Harnesses: Kilo, opencode, pi, Hermes. Local: LM Studio. Services: OpenRouter. Hubs: Hugging Face.</li><li>Standards: AGENTS.md, dotfolders, skills, MCP.</li><li>Trust: sandboxes and permissions — know the door you open.</li></ul>
@@ -1260,11 +1308,11 @@
 </section>
 
 <section data-num="60" data-state="act-d" data-background-color="#111827">
-  <div class="main"><div class="divider"><span class="chip">D — THE INTERFACE AND THE FUTURE</span><p class="kicker">Section 14</p>
+  <div class="main"><div class="slide-body"><div class="divider"><span class="chip">D — THE INTERFACE AND THE FUTURE</span><p class="kicker">Section 14</p>
     <h2>The coming times</h2>
 
     <ul class="divider-claims"><li>"Section 14 · The coming times"</li><li>question: "what does the future do to the loop we just built?"</li></ul>
-  </div></div>
+  </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S60</h5><p><strong>Focus:</strong> the future and the loop.</p>
 <ul><li>"What does the future do to the loop we just built?"</li></ul>
@@ -1275,12 +1323,13 @@
 </section>
 
 <section data-num="61" data-state="act-d">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>The fear, and the cybernetic answer</h2>
     <ul class="content"><li>the fear is real (AI pressure on ~40% of jobs)</li><li>the measured answer is <strong>replacing some and complementing others</strong> — the loop changes scale, not membership</li><li>Symbiosis, not replacement</li></ul>
   </div>
 <p class="refs"><code>ch10</code> §1–2.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S61</h5><p><strong>Focus:</strong> scale changes, membership doesn't.</p>
 <ul><li>Fear is real: ~40% of jobs exposed.</li><li>Answer: replacing some AND complementing others — both words matter.</li><li>Symbiosis, not replacement.</li></ul>
@@ -1292,12 +1341,13 @@
 </section>
 
 <section data-num="62" data-state="act-d">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>The hybrid engine and the metaverse as a verb</h2>
     <ul class="content"><li>today's engine stays as symbolic scaffolding</li><li>subsystems hand to neural networks one at a time (neural rendering already ships)</li><li>shared real-time worlds are the medium where agents learn from us</li></ul>
   </div>
 <p class="refs"><code>ch10</code> §3–4.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S62</h5><p><strong>Focus:</strong> scaffolding + neural inserts.</p>
 <ul><li>Engine stays as symbolic scaffolding; neural subsystems move in one at a time.</li><li>Neural rendering already ships.</li><li>Shared real-time worlds: where agents learn about us.</li></ul>
@@ -1309,12 +1359,13 @@
 </section>
 
 <section data-num="63" data-state="act-d">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>Closing: "The interface changed, the medium didn't."</h2>
     <ul class="content"><li>ten rules, one medium — foundations outlast tools</li><li>the interface changed, the medium didn't</li><li>The map holds for every engine, era, and job</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §9, <code>ch10</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S63</h5><p><strong>Focus:</strong> the final line.</p>
 <ul><li>Ten rules, one medium — foundations outlast tools.</li><li><strong>The interface changed. The medium didn't.</strong></li></ul>
@@ -1326,12 +1377,13 @@
 </section>
 
 <section data-num="64" data-state="act-d">
-  <div class="main">
+  <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
     <h2>Q&amp;A and further reading</h2>
     <ul class="content"><li>Q&amp;A reflex: find the loop, the clock, the latency — ask what data and code are doing inside it</li><li>Read the reference once top to bottom, then per task</li><li>Further reading: id-Software GitHub (DOOM/Quake/Q3A/DOOM 3), three.js &amp; Babylon.js, Godot, Unreal docs, cybernetics</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §10, <code>engines</code>.</p>
+  </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S64</h5><p><strong>Focus:</strong> hand them the shelf.</p>
 <ul><li>Q&amp;A reflex: find the loop, the clock, the latency; ask what data and code are doing inside it.</li><li>Read once top to bottom; then per task — tool → your slot; engine → its world model; confusion → the weapon chain.</li><li>Further reading: id-Software GitHub, three.js &amp; Babylon.js, Godot, Unreal docs, cybernetics.</li></ul>

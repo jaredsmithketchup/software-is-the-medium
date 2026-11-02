@@ -35,15 +35,15 @@ body.act-d .reveal h2 { color: #D8B4FE; }
 .reveal .chip {
   display: inline-block;
   font-family: var(--r-heading-font);
-  font-size: 0.44em;
+  font-size: 0.4em;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #9CA3AF;
   border: 1px solid #374151;
   border-radius: 999px;
-  padding: 0.22em 0.8em;
-  margin-bottom: 0.45em;
+  padding: 0.2em 0.7em;
+  margin-bottom: 0.35em;
 }
 
 .reveal ul.content {
@@ -55,9 +55,9 @@ body.act-d .reveal h2 { color: #D8B4FE; }
 }
 
 .reveal ul.content li {
-  font-size: 0.58em;
-  line-height: 1.45;
-  margin: 0 0 0.4em 0;
+  font-size: 0.53em;
+  line-height: 1.4;
+  margin: 0 0 0.24em 0;
   padding-left: 1.1em;
   position: relative;
 }
@@ -138,7 +138,7 @@ body.act-d .reveal h2 { color: #D8B4FE; }
   display: block;
   width: 100%;
   height: auto;
-  max-height: 320px;
+  max-height: 250px;
 }
 
 .reveal .divider .diagram {
@@ -151,18 +151,25 @@ body.act-d .reveal h2 { color: #D8B4FE; }
   max-height: 200px;
 }
 
-/* Slides fill the 960×540 box; .main centers the content; refs pin to the slide bottom */
+/* Slides fill the 960×540 box; .slide-body centers the content; .refs is a
+   normal-flow bottom row (never overlaps content) */
 .reveal .slides section {
   height: 100%;
   box-sizing: border-box;
-  position: relative;
   overflow: hidden;
 }
 
 .reveal .slides section .main {
   height: 100%;
   box-sizing: border-box;
-  padding: 0.3em 0;
+  padding: 0.2em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.reveal .slides section .slide-body {
+  flex: 1 1 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,16 +177,19 @@ body.act-d .reveal h2 { color: #D8B4FE; }
   width: 100%;
 }
 
-/* Citation footer — pinned to the bottom edge of the 540px slide */
+.reveal section.has-diagram h2 {
+  font-size: 1.45em;
+}
+
+/* Citation footer — last element of .main, pinned to the slide bottom in flow */
 .reveal .refs {
-  position: absolute;
-  bottom: 0.55em;
-  left: 0;
+  flex: 0 0 auto;
   width: 100%;
   text-align: center;
-  font-size: 0.4em;
+  font-size: 0.37em;
   letter-spacing: 0.05em;
   color: #6B7280;
+  padding-top: 0.3em;
 }
 
 .reveal .refs code,
