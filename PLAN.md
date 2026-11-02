@@ -1,7 +1,7 @@
 ---
 type: Plan
 title: "Software is the Medium — Presentation Package Plan"
-description: Plan for deriving a presentation overview of the Software is the Medium reference, then producing the slide-deck description and per-slide speaker cards that follow from it. Revised 2026-11-02 with the expanded 73-slide format and a content-cut audit.
+description: Plan for deriving a presentation overview of the Software is the Medium reference, then producing the slide-deck description and per-slide speaker cards that follow from it. Revised 2026-11-02: expanded 73-slide draft, applied the §12 content-cut audit, and shipped the trimmed 64-slide deck (S1–S64, ~77 min + Q&A) as a reveal.js site on GitHub Pages (docs/). This repo is the source of truth.
 tags: [presentation, plan, game-engines, medium, overview, slide-deck, speaker-cards]
 generated: { by: kilocode/deepseek-v4-flash, at: 2026-11-02T04:33:42Z }
 ---
@@ -74,17 +74,16 @@ By the end, an audience member should be able to answer:
 
 ## 5. Deliverables
 
-Produced in order; each is an input to the next. All three documents in this
-package are in the Presentation folder
-(`Presentation/Software is the Medium - Game Engines are Software`); this plan
-lives in `Plans/` per the vault naming convention.
+Produced in order; each is an input to the next. The three package documents
+live in `Presentation/`; this plan is `PLAN.md` at the repo root (mirrored to the
+vault's `Plans/` per the vault naming convention).
 
 | # | Deliverable | Purpose | Status |
 |---|---|---|---|
-| 1 | **Presentation overview** — [`presentation-overview.md`](Presentation/presentation-overview.md) | Structures how the reference is summarized and presented: 14 sections, ~88 min talk, standalone synopses, cutdown plans | **done** — revised 2026-11-02 |
-| 2 | **Slide deck description** — [`slide-deck.md`](Presentation/slide-deck.md) | 73 slides (S1–S73): every section opens with an intro slide, then one-or-two-idea content slides, self-explanatory, with citations | **done** — revised 2026-11-02 |
-| 3 | **Speaker cards** — [`speaker-cards.md`](Presentation/speaker-cards.md) | One verbose-but-direct card per slide: focus line, short bullets, analogies/examples, transition | **done** — revised 2026-11-02 |
-| 4 | **Built deck** (`.deckcraft` / `.pptx`) | Built once at the old 26-slide size (`D:\documents\software-is-the-medium-presentation\`) — **stale** against the 73-slide description; rebuild pending on the trimmed outline | **stale — rebuild after §12 trim** |
+| 1 | **Presentation overview** — [`presentation-overview.md`](Presentation/presentation-overview.md) | Structures how the reference is summarized and presented: 15 sections, ~77 min talk + Q&A, standalone synopses, cutdown plans | **done** — trimmed 2026-11-02 |
+| 2 | **Slide deck description** — [`slide-deck.md`](Presentation/slide-deck.md) | 64 slides (S1–S64): every section opens with an intro slide, then one-or-two-idea content slides, self-explanatory, with citations; machine block consolidated per §12 | **done** — trimmed 2026-11-02 |
+| 3 | **Speaker cards** — [`speaker-cards.md`](Presentation/speaker-cards.md) | One card per slide (S1–S64): focus line, short bullets, analogies/examples, transition | **done** — trimmed 2026-11-02 |
+| 4 | **Published deck** (reveal.js site) | 64-slide web deck generated from `slide-deck.md` + `speaker-cards.md` by `scripts/build-deck.mjs` into `docs/`, published on GitHub Pages; speaker cards become the presenter view (press `S`) | **done** — published 2026-11-02 |
 
 ## 6. Source material
 
@@ -127,14 +126,14 @@ the derivation can be re-run or trimmed:
    idea was crammed onto a shared slide. **Expansion decision (2026-11-02):**
    ~88 min of talk, 73 slides, one-or-two ideas per slide, and **every section
    opens with its own intro slide** so content can breathe and each slide
-   explains itself. Result: too much material — see the **content-cut audit in
-   §12**, which trims the machine block and a handful of foldable slides while
+   explains itself. Result: too much material — the **content-cut audit in
+   §12** trimmed the machine block and a handful of foldable slides while
    holding the core spine intact.
-4. **Write the section outline.** 14 sections in 4 acts, each mapped to chapters
-   and timed (overview §5). Section synopses are standalone: a paragraph plus
-   high-level bullets readable without the reference.
-5. **Derive the slide list.** 73 slides (S1–S73), each with a single takeaway
-   (intro slides are signposts), recorded in `slide-deck.md`.
+4. **Write the section outline.** 15 sections in 4 acts (Q&A included), each
+   mapped to chapters and timed (overview §5). Section synopses are standalone:
+   a paragraph plus high-level bullets readable without the reference.
+5. **Derive the slide list.** 64 slides (S1–S64) after the §12 trim, each with
+   a single takeaway (intro slides are signposts), recorded in `slide-deck.md`.
 6. **Write speaker cards.** One card per slide: focus line, short direct
    bullets, then several analogies/examples to pick from, and a transition.
    Recorded in `speaker-cards.md`.
@@ -146,11 +145,11 @@ the derivation can be re-run or trimmed:
 ## 8. The derived outline at a glance
 
 Full section detail lives in [`presentation-overview.md`](Presentation/presentation-overview.md).
-The 14 sections + Q&A, with slide ranges from the expanded deck:
+The 15 sections (incl. Q&A) of the trimmed deck, at their live sizes:
 
 | # | Section | Slides | Source | Min |
 |---|---|---|---|---|
-| 1 | Opening: the medium | S1–S3 | `ch00` intro, §8 | 4 |
+| 1 | Opening: the medium | S1–S3 | `ch00` intro, §8, §9 | 4 |
 | 2 | Two substances: data & code | S4–S7 | `ch00` §1 | 6 |
 | 3 | The universal shape: IO & boundaries | S8–S11 | `ch00` §2 | 5 |
 | 4 | The loop: cybernetics & latency | S12–S16 | `ch00` §3 | 6 |
@@ -158,27 +157,26 @@ The 14 sections + Q&A, with slide ranges from the expanded deck:
 | 6 | Engines: the skeleton scaled up | S20–S25 | `ch00` §5 · `ch01` §2–3 | 7 |
 | 7 | The clock & the four axes | S26–S29 | `ch01` §4–5 | 6 |
 | 8 | World models | S30–S38 | `ch02` | 9 |
-| 9 | Hardware & performance | S39–S43 | `ch03` | 6 |
-| 10 | Concurrency & state | S44–S48 | `ch04` | 6 |
-| 11 | Schemas · spatial indexes · the OS | S49–S58 | `ch05`–`ch07` | 12 |
-| 12 | The discipline map & the weapon | S59–S64 | `ch00` §7 · `ch08` | 8 |
-| 13 | AI & the medium | S65–S68 | `ch09` | 5 |
-| 14 | The coming times & closing | S69–S72 | `ch10` · `ch00` §9 | 4 |
-| 15 | Q&A | S73 | all | 15 |
-| | **Talk total** | | | **≈88 min** (73 slides) |
+| 9 | Hardware & performance *(trimmed)* | S39–S40 | `ch03` | 3 |
+| 10 | Concurrency & state *(trimmed)* | S41–S43 | `ch04` | 4 |
+| 11 | Schemas · spatial indexes · the OS *(trimmed)* | S44–S49 | `ch05`–`ch07` | 6 |
+| 12 | The discipline map & the weapon | S50–S55 | `ch00` §7 · `ch08` | 8 |
+| 13 | AI & the medium | S56–S59 | `ch09` | 5 |
+| 14 | The coming times & closing | S60–S63 | `ch10` · `ch00` §9 | 4 |
+| 15 | Q&A & further reading | S64 | all | 15 |
+| | **Talk total** | | | **≈77 min** (64 slides) |
 
-**After the §12 trim:** aim ~55 slides / ~70 min talk + Q&A, keeping every
-intro slide and the core spine.
+These are the live numbers (source of truth: overview §5). Cutdown floor for a
+tighter slot: see overview §6.
 
 ## 9. Production timeline
 
 | When | Milestone |
 |---|---|
-| **2026-11-02** | Documents derived and expanded: overview (revised), 73-slide deck description, speaker cards. 26-slide deck was built for the *previous* outline and is now stale. |
-| **Next** | Apply the §12 trim to `slide-deck.md` and `speaker-cards.md` (cut the flagged slides, fold the merged ones). |
-| After trim | Rebuild the deck per the trimmed `slide-deck.md` (DeckCraft, Slate theme, Montserrat/Lato — carry over the primer deck's styling), reusing chapter Mermaid diagrams. |
-| Day 3–4 | Polish pass; fit/overflow audit; typography audit (see primer plan §8 field notes). |
-| Day 5 | Dry-run with speaker cards; trim to slot; prepare Q&A. |
+| **2026-11-02** | Documents derived, expanded, and **trimmed**: overview (revised), 64-slide deck description (S1–S64), speaker cards (S1–S64). |
+| **2026-11-02** | Deck site built and published: reveal.js web deck generated into `docs/`, live on GitHub Pages (audience slides + speaker view via `S`). |
+| **Next** | Polish pass on the live deck: fit/overflow check at 960×540, typography audit; rehearse with the cards to trim to slot. |
+| Before talk | Dry-run with speaker cards; trim to slot; prepare Q&A. |
 
 ## 10. Notes on delivery style
 
@@ -194,33 +192,37 @@ intro slide and the core spine.
 
 ## 11. Decisions (resolved 2026-11-02)
 
-1. **Slot length — 3 hours available; the presentation was expanded to ~88 min
-   of talk + Q&A** because compressing ideas onto shared slides made them
-   unreadable. The section budgets in the overview sum to ≈88 min; Q&A flexes
-   into the remaining window. With the §12 trim, the talk lands around ~70 min
-   + Q&A — expanded pacing, less material.
+1. **Slot length — 3 hours available; the talk is ~77 min + Q&A on 64 slides**
+   (trimmed from the ~88 min / 73-slide expansion). Q&A flexes into the
+   remaining window. The section budgets in the overview sum to ≈77 min.
 2. **Depth — keep it shallow.** The audience has mixed technical background and
    limited deep interest, so everything stays at orientation level. The machine
    block (§9–§11, `ch03`–`ch07`) is where depth creeps in — the §12 audit is
-   the countermeasure. Hold the line for the weapon chain (§12 / S59–S64) and
-   the closing (S70–S72), the parts people actually relate to.
+   the applied countermeasure (S39–S49, one idea each). Hold the line for the
+   weapon chain (§12 / S50–S55) and the closing (S60–S63), the parts people
+   actually relate to.
 3. **AI — no live demo, no tools pitch.** Students are largely opposed to AI
    use, so §13 is presented factually and neutrally: what "talking to software"
-   is, and the "know the medium to aim it" catch. S68 (tools landscape) stays
+   is, and the "know the medium to aim it" catch. S59 (tools landscape) stays
    optional/brief — do not spend real time on it.
-4. **Content volume — too much material; cut to the core spine.** See §12 for
-   the flagged cuts. Standing rule: cut material, not pacing — keep the intro
-   slides and the expanded one-or-two-idea-per-slide shape.
+4. **Content volume — cut material, not pacing.** Applied via §12. The final
+   deck keeps every intro slide and the one-or-two-idea-per-slide shape.
 
 Remaining open item:
 
-- Record delivery in the vault log when the talk is given.
+- Record delivery — date, room, and how it went — in this plan (or README)
+  after the talk is given; the repo is the record, not the vault log.
 
-## 12. Content-cut audit — what to cut, and why the core survives
+## 12. Content-cut audit — applied 2026-11-02 (final deck: 64 slides)
 
-The expanded deck went too deep. These flags trim volume while keeping the
+The expanded deck went too deep. These flags trimmed volume while keeping the
 **spine intact**: medium → substances → IO → loop → skeleton → engine → world
-models → discipline map/weapon → AI → closing. Nothing below touches the spine.
+models → discipline map/weapon → AI → closing. The trim was applied on
+2026-11-02; the deck is now 64 slides (S1–S64, ≈77 min + Q&A). Slide numbers
+in the tables below refer to the **pre-trim 73-slide draft** — after the trim
+the deck was renumbered, so the tables are a decision record, not a 1:1 map to
+the final slides. Authoritative ranges live in `slide-deck.md` and overview §5.
+Nothing below touches the spine.
 
 ### The primary trim zone — the machine block (S39–S58)
 
@@ -249,8 +251,8 @@ which the plan (decision 2) forbids going deep on. It is the biggest cut target.
 | S57 (OS day job) | scheduler/handles/GPU venue | **cut** | one line on S56 ("the OS schedules, issues tickets, and fronts the GPU too") |
 | S58 (OS observatory) | ledger + 5-move diagnosis — **core idea** | **keep** | trim the walk to "name it, watch it, read the ledger" |
 
-Net: machine block goes from **20 slides / 24 min** to **9 slides / ≈13 min**,
-losing almost nothing the audience can use.
+Net in the final deck: the machine block lands at **11 slides / ≈13 min**
+across §9–§11 (S39–S49), losing almost nothing the audience can use.
 
 ### Secondary trim — foldable one-idea slides
 
@@ -262,15 +264,18 @@ losing almost nothing the audience can use.
 | S22 (hard real-time) | the frame deadline | **keep (short)** | merge the "deadline" line into S23 if time tightens further |
 | S68 (tools landscape) | AI doors | **export to appendix** | don't show unless asked; notes keep it |
 
-### Never cut — the spine
+### Never cut — the spine (final numbering)
 
-S1–S2 (medium), S4–S7 (substances), S8–S9 + S11 (shape + claim), S12–S15 (loop
-and latency), S17–S19 (skeleton), S20–S24 (engine + frame loop + DOOM/UE5),
-S26–S29 (clock + axes), S30–S38 (world models), S59–S64 (discipline map +
-weapon), S65–S67 (AI four pieces + explain/modify), S69–S73 (closing + Q&A).
+S1–S3 (opening: the medium), S4–S7 (substances), S8–S11 (shape + claim),
+S12–S16 (loop and latency), S17–S19 (skeleton), S20–S25 (engine + frame loop +
+DOOM/UE5), S26–S29 (clock + axes), S30–S38 (world models), S39–S49 (machine
+core one-liners), S50–S55 (discipline map + weapon), S56–S58 (AI: four pieces +
+explain/modify), S60–S64 (closing + Q&A). Flanking optional slides (S59 tools
+landscape, and the S3/S10/S16-style foldables from the tables above) go before
+the spine does.
 
-**Target after trim: ~55 slides / ~70 min talk**, cutdown floor ~45 min
-(overview §6 still applies).
+**Final after trim: 64 slides / ≈77 min talk + 15 min Q&A** (S1–S64).
+Cutdown floor ~45 min (overview §6 still applies).
 
 ## 13. Origin of the expansion
 
@@ -280,3 +285,20 @@ thesis, the overview synopses, and the slide descriptions each needed to explain
 themselves standing alone. The response was to expand — more slides, section
 intro slides, standalone content — and then the content audit in §12 to remove
 the depth that expansion accidentally let in.
+
+## 14. Publication and source of truth
+
+- **This repo is the source of truth.** The `D:\agents_workspace\.vault`
+  mirror is derivative; when they disagree, the repo wins. Do not import vault
+  copies over repo files.
+- **Live deck:** https://jaredsmithketchup.github.io/software-is-the-medium/
+  (public repo, GitHub Pages from `main` → `/docs`). Audience view is the
+  slides; press `S` for the speaker view (current slide + that slide's speaker
+  card + next-slide preview + timer) — move it to the presenter's screen.
+- **Regeneration:** after editing `Presentation/slide-deck.md` or
+  `Presentation/speaker-cards.md`, run `node scripts/build-deck.mjs` and commit
+  the changed `docs/index.html`. Pages redeploys automatically.
+- **Numbers discipline:** section budgets/timings quote overview §5 and the
+  slide docs; PLAN.md §8 mirrors them. When you change timing, change the
+  overview first, then regenerate this table.
+- See `AGENTS.md` for full repo conventions.
