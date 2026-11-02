@@ -9,7 +9,7 @@ generated: { by: kilocode/deepseek-v4-flash, at: 2026-11-02T04:44:02Z }
 # Slide Deck — Software is the Medium: Game Engines are Software
 
 Slide-level descriptions for the presentation planned in
-[the presentation plan](../../Plans/2026-11-02_software-is-the-medium-presentation-plan.md)
+[the presentation plan](../PLAN.md)
 and structured in [`presentation-overview.md`](presentation-overview.md).
 
 ## How this deck is organized

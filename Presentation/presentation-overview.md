@@ -9,7 +9,7 @@ generated: { by: kilocode/deepseek-v4-flash, at: 2026-11-02T04:00:27Z }
 # Presentation Overview — Software is the Medium: Game Engines are Software
 
 This document structures **how the reference is presented and summarized.** It is
-deliverable #1 of the [presentation plan](../../Plans/2026-11-02_software-is-the-medium-presentation-plan.md).
+deliverable #1 of the [presentation plan](../PLAN.md).
 It assumes the audience knows nothing
 about engines; it moves top to bottom through the reference's own reading order.
 
@@ -87,7 +87,7 @@ is the input, where is the output, what is in the middle?*
 
 The reference has 11 chapters; the talk has 14 sections in four acts. The
 derivation (how `ch00`–`ch10` became these sections) is documented in
-[the presentation plan, §7](../../Plans/2026-11-02_software-is-the-medium-presentation-plan.md).
+[the presentation plan, §7](../PLAN.md).
 
 | Act | Talk sections | Reference chapters |
 |---|---|---|
@@ -100,20 +100,20 @@ derivation (how `ch00`–`ch10` became these sections) is documented in
 
 Relative to this folder (`Presentation/Software is the Medium - Game Engines are Software/`):
 
-- `ch00` = [`00-software-is-the-medium.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/00-software-is-the-medium.md)
-- `ch01` = [`01-common-structure.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/01-common-structure.md)
-- `ch02` = [`02-world-models.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/02-world-models.md)
-- `ch03` = [`03-hardware-and-performance.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/03-hardware-and-performance.md)
-- `ch04` = [`04-concurrency-and-state.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/04-concurrency-and-state.md)
-- `ch05` = [`05-schemas-and-formats.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/05-schemas-and-formats.md)
-- `ch06` = [`06-spatial-indexes.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/06-spatial-indexes.md)
-- `ch07` = [`07-operating-systems.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/07-operating-systems.md)
-- `ch08` = [`08-the-weapon-example.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/08-the-weapon-example.md)
-- `ch09` = [`09-ai-and-the-medium.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/09-ai-and-the-medium.md)
-- `ch10` = [`10-the-coming-times.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/10-the-coming-times.md)
+- `ch00` = [`00-software-is-the-medium.md`](../Reference/00-software-is-the-medium.md)
+- `ch01` = [`01-common-structure.md`](../Reference/01-common-structure.md)
+- `ch02` = [`02-world-models.md`](../Reference/02-world-models.md)
+- `ch03` = [`03-hardware-and-performance.md`](../Reference/03-hardware-and-performance.md)
+- `ch04` = [`04-concurrency-and-state.md`](../Reference/04-concurrency-and-state.md)
+- `ch05` = [`05-schemas-and-formats.md`](../Reference/05-schemas-and-formats.md)
+- `ch06` = [`06-spatial-indexes.md`](../Reference/06-spatial-indexes.md)
+- `ch07` = [`07-operating-systems.md`](../Reference/07-operating-systems.md)
+- `ch08` = [`08-the-weapon-example.md`](../Reference/08-the-weapon-example.md)
+- `ch09` = [`09-ai-and-the-medium.md`](../Reference/09-ai-and-the-medium.md)
+- `ch10` = [`10-the-coming-times.md`](../Reference/10-the-coming-times.md)
 - `Eng/DOOM`, `Eng/Quake`, `Eng/Q3A`, `Eng/DOOM3`, `Eng/UE5`, `Eng/threejs`,
   `Eng/Babylon`, `Eng/redot`, `Eng/Urho3D`, `Eng/OpenEngine` =
-  [`Engines/index.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/Engines/index.md)
+  [`Engines/index.md`](../Reference/Engines/index.md)
 
 ## 5. Section-by-section plan
 
