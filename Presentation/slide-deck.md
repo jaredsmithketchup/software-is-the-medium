@@ -57,11 +57,11 @@ Audience text is the **Content** line. The words to say are in
 - **Visual:** code file and data file, arrow both ways.
 - **Refs:** `ch00` §1.1–1.3.
 
-## S7 — Declarations glue data to code
+## S7 — Data-driven: config binds data to code
 
-- **Goal:** name the layer that binds data to code.
-- **Content:** Most engines keep an **intermediate layer** that glues data to code | JavaScript and Python apps read **JSON or YAML** to tune behavior without recompiling | Unreal **Blueprints** come in two kinds: **graphs** that run as logic, **property containers** that code reads | Glue edits change behavior only if the reading code already understands the file
-- **Visual:** code, glue, data in a row.
+- **Goal:** name the data-driven pattern that binds data to code.
+- **Content:** Most engines are **data-driven** — a **config or asset layer** declares how data and code connect | JavaScript and Python apps read **JSON or YAML** files to tune behavior without recompiling | Unreal **Blueprints** range from **node graphs** that run as logic to **Data-Only Blueprints** that store properties for other code | A config edit changes behavior only if the reading code already understands the file
+- **Visual:** code, config, data in a row.
 - **Refs:** `ch00` §1.1–1.3, `ch05` §6.
 
 ## S8 — Input, process, output

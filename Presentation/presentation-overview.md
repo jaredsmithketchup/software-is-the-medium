@@ -119,10 +119,10 @@ Section intros are S1, S4, S12, S17, S20, and S26.
 - **S1-S3:** make every discipline welcome. Ask what file or decision they
   contribute to a game. Connect it to software without implying everyone must
   become a programmer. Transition: "What is this medium made of?"
-- **S4-S11:** jump rule versus jump height; code stored in files; the glue
-  layer; input-process-output; feedback; latency; then the five parts. At S11,
-  ask where ammo belongs and where the rule that spends it belongs. Protect
-  this comprehension check.
+- **S4-S11:** jump rule versus jump height; code stored in files; data-driven
+  config layers; input-process-output; feedback; latency; then the five parts.
+  At S11, ask where ammo belongs and where the rule that spends it belongs.
+  Protect this comprehension check.
 - **S12-S16:** map the five parts to engine responsibilities. Explain timing
   budgets and state versus presentation. Use a sword attached to a hand for a
   scene graph; describe BSP and ECS as different organizing tools, often mixed.

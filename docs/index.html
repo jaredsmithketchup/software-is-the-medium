@@ -132,7 +132,7 @@
 <p><strong>If asked</strong></p>
 <ul><li>A Blueprint is not "just data" in the sense of being behavior-free. A graph can express executable logic. Assets can also contain only content or configuration.</li><li>Source trail: <a href="https://github.com/id-Software/Quake/blob/master/WinQuake/pr_edict.c" target="_blank" rel="noopener">Quake program loader and VM structures</a>. Search for progs.dat and PR_LoadProgs.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>That stored behavior rarely runs alone — it meets a glue layer first.</li></ul></div>
+<ul><li>That stored behavior rarely runs alone — it meets a config layer first.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the boundary is a decision.</li><li><strong>Content:</strong> A file can contain a picture, a number, <strong>or instructions</strong> | Quake's <code>progs.dat</code> contains compiled QuakeC; Blueprints are stored in Unreal assets | A runtime must interpret or execute those instructions | Some mods change behavior without rebuilding the engine</li><li><strong>Visual:</strong> code file and data file, arrow both ways.</li><li><strong>Refs:</strong> <code>ch00</code> §1.1–1.3.</li></ul></div>
   </aside>
 </section>
@@ -140,7 +140,7 @@
 <section data-num="7" data-state="act-a" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
-    <h2>Declarations glue data to code</h2>
+    <h2>Data-driven: config binds data to code</h2>
     <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <rect x="8" y="28" width="120" height="64" rx="10" fill="#312E81"/>
   <text x="68" y="54" font-size="14" font-weight="700" fill="#C7D2FE" text-anchor="middle">CODE</text>
@@ -148,25 +148,25 @@
   <line x1="132" y1="60" x2="154" y2="60" stroke="#9CA3AF" stroke-width="2"/>
   <polygon points="154,54 166,60 154,66" fill="#9CA3AF"/>
   <rect x="174" y="28" width="120" height="64" rx="10" fill="#075985"/>
-  <text x="234" y="54" font-size="14" font-weight="700" fill="#BAE6FD" text-anchor="middle">GLUE</text>
+  <text x="234" y="54" font-size="14" font-weight="700" fill="#BAE6FD" text-anchor="middle">CONFIG</text>
   <text x="234" y="74" font-size="11" fill="#E0F2FE" text-anchor="middle">declarations</text>
   <line x1="298" y1="60" x2="320" y2="60" stroke="#9CA3AF" stroke-width="2"/>
   <polygon points="320,54 332,60 320,66" fill="#9CA3AF"/>
   <rect x="340" y="28" width="112" height="64" rx="10" fill="#0C4A6E"/>
   <text x="396" y="54" font-size="14" font-weight="700" fill="#BAE6FD" text-anchor="middle">DATA</text>
   <text x="396" y="74" font-size="11" fill="#E0F2FE" text-anchor="middle">values</text>
-</svg></div><ul class="content"><li>Most engines keep an <strong>intermediate layer</strong> that glues data to code</li><li>JavaScript and Python apps read <strong>JSON or YAML</strong> to tune behavior without recompiling</li><li>Unreal <strong>Blueprints</strong> come in two kinds: <strong>graphs</strong> that run as logic, <strong>property containers</strong> that code reads</li><li>Glue edits change behavior only if the reading code already understands the file</li></ul></div>
+</svg></div><ul class="content"><li>Most engines are <strong>data-driven</strong> — a <strong>config or asset layer</strong> declares how data and code connect</li><li>JavaScript and Python apps read <strong>JSON or YAML</strong> files to tune behavior without recompiling</li><li>Unreal <strong>Blueprints</strong> range from <strong>node graphs</strong> that run as logic to <strong>Data-Only Blueprints</strong> that store properties for other code</li><li>A config edit changes behavior only if the reading code already understands the file</li></ul></div>
   </div>
 <p class="refs"><code>ch00</code> §1.1–1.3, <code>ch05</code> §6.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S7</h5><p><strong>Say</strong></p>
-<ul><li>Between hard-coded rules and raw assets, most engines keep a middle layer: files that declare how data and code join.</li><li>A JavaScript or Python application reads JSON or YAML at run time. Change a value and the program behaves differently; the code that reads the file stays the same.</li><li>Unreal has two kinds of Blueprints. A graph Blueprint is node logic that actually runs. A property Blueprint is a container of values that other code reads.</li><li>The glue only works where the reading code already understands the file. Editing the glue changes behavior; editing the reader changes what is possible.</li></ul>
+<ul><li>Most games and apps are <strong>data-driven</strong>: values and rules live in files that code reads, bound together by a <strong>config or asset layer</strong>.</li><li>A JavaScript or Python application reads JSON or YAML at run time. Change a value and the program behaves differently; the code that reads the file stays the same.</li><li>In Unreal, Blueprints span that spectrum. A <strong>Blueprint graph</strong> is node logic that actually runs. A <strong>Data-Only Blueprint</strong> is just a container of properties that other code reads.</li><li>The binding only works where the reading code already understands the file. "Data-driven" always means code, data, and a declared connection between them.</li></ul>
 <p><strong>If asked</strong></p>
-<ul><li>This is the career-long question from ch00 §1.3: what belongs in code, and what in data? A Blueprint graph is stored as <code>.uasset</code> data but executes as logic; a simple property Blueprint is closer to configuration.</li><li>JSON and YAML are examples of a wider family — INI, TOML, DataTables, engine settings files. The relationship matters more than the format: a file the code reads to shape behavior.</li></ul>
+<ul><li>This is the career-long question from ch00 §1.3: what belongs in code, and what in data? Unreal's own docs call the property-only case <strong>Data-Only Blueprints</strong> and recommend them for data inheritance; a graph Blueprint is stored as <code>.uasset</code> data but executes as logic.</li><li>"Data-driven," "declarative configuration," and "the config layer" are the common names for the pattern. JSON and YAML are examples of a wider family — INI, TOML, DataTables, engine settings files. The relationship matters more than the format: a file the code reads to shape behavior.</li><li>Epic's <strong>Data Assets</strong> are related but separate: <code>UDataAsset</code> instances that hold data without being Blueprints at all.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Whatever the file contains, follow what enters the program and what comes out.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the layer that binds data to code.</li><li><strong>Content:</strong> Most engines keep an <strong>intermediate layer</strong> that glues data to code | JavaScript and Python apps read <strong>JSON or YAML</strong> to tune behavior without recompiling | Unreal <strong>Blueprints</strong> come in two kinds: <strong>graphs</strong> that run as logic, <strong>property containers</strong> that code reads | Glue edits change behavior only if the reading code already understands the file</li><li><strong>Visual:</strong> code, glue, data in a row.</li><li><strong>Refs:</strong> <code>ch00</code> §1.1–1.3, <code>ch05</code> §6.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the data-driven pattern that binds data to code.</li><li><strong>Content:</strong> Most engines are <strong>data-driven</strong> — a <strong>config or asset layer</strong> declares how data and code connect | JavaScript and Python apps read <strong>JSON or YAML</strong> files to tune behavior without recompiling | Unreal <strong>Blueprints</strong> range from <strong>node graphs</strong> that run as logic to <strong>Data-Only Blueprints</strong> that store properties for other code | A config edit changes behavior only if the reading code already understands the file</li><li><strong>Visual:</strong> code, config, data in a row.</li><li><strong>Refs:</strong> <code>ch00</code> §1.1–1.3, <code>ch05</code> §6.</li></ul></div>
   </aside>
 </section>
 

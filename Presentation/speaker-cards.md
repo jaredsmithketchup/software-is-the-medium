@@ -113,21 +113,22 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Next**
 
-- That stored behavior rarely runs alone — it meets a glue layer first.
+- That stored behavior rarely runs alone — it meets a config layer first.
 
-## S7 - Declarations glue data to code
+## S7 - Data-driven: config binds data to code
 
 **Say**
 
-- Between hard-coded rules and raw assets, most engines keep a middle layer: files that declare how data and code join.
+- Most games and apps are **data-driven**: values and rules live in files that code reads, bound together by a **config or asset layer**.
 - A JavaScript or Python application reads JSON or YAML at run time. Change a value and the program behaves differently; the code that reads the file stays the same.
-- Unreal has two kinds of Blueprints. A graph Blueprint is node logic that actually runs. A property Blueprint is a container of values that other code reads.
-- The glue only works where the reading code already understands the file. Editing the glue changes behavior; editing the reader changes what is possible.
+- In Unreal, Blueprints span that spectrum. A **Blueprint graph** is node logic that actually runs. A **Data-Only Blueprint** is just a container of properties that other code reads.
+- The binding only works where the reading code already understands the file. "Data-driven" always means code, data, and a declared connection between them.
 
 **If asked**
 
-- This is the career-long question from ch00 §1.3: what belongs in code, and what in data? A Blueprint graph is stored as `.uasset` data but executes as logic; a simple property Blueprint is closer to configuration.
-- JSON and YAML are examples of a wider family — INI, TOML, DataTables, engine settings files. The relationship matters more than the format: a file the code reads to shape behavior.
+- This is the career-long question from ch00 §1.3: what belongs in code, and what in data? Unreal's own docs call the property-only case **Data-Only Blueprints** and recommend them for data inheritance; a graph Blueprint is stored as `.uasset` data but executes as logic.
+- "Data-driven," "declarative configuration," and "the config layer" are the common names for the pattern. JSON and YAML are examples of a wider family — INI, TOML, DataTables, engine settings files. The relationship matters more than the format: a file the code reads to shape behavior.
+- Epic's **Data Assets** are related but separate: `UDataAsset` instances that hold data without being Blueprints at all.
 
 **Next**
 
