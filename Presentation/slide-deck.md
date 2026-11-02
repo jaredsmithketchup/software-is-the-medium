@@ -199,7 +199,7 @@ Audience text is the **Content** line. The words to say are in
 - **Visual:** state feeding render and audio.
 - **Refs:** `ch08` §7–8.
 
-## S26 — The same chain in Doom 3
+## S26 — The same chain in Doom 3
 
 - **Goal:** not an Unreal-only story.
 - **Content:** DOOM 3 combines weapon definitions, assets, scripts, and C++ | File names change; the authoring-to-runtime handoffs remain | Engine code provides capabilities; game content configures and coordinates them

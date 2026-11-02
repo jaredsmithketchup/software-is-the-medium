@@ -487,7 +487,7 @@
     <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" role="img" aria-labelledby="s17-title s17-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <title id="s17-title">Five responsibilities across three engines</title><desc id="s17-desc">Original Quake and Doom 3 and configurable Unreal 5 organize state, logic, input, output, and timing differently. The same questions locate each responsibility.</desc>
   <g fill="#1F2937"><rect x="130" y="38" width="250" height="210" rx="8"/><rect x="390" y="38" width="250" height="210" rx="8"/><rect x="650" y="38" width="245" height="210" rx="8"/></g>
-  <g text-anchor="middle" font-size="22" font-weight="700"><text x="255" y="27" fill="#7DD3FC">QUAKE (original)</text><text x="515" y="27" fill="#A5B4FC">DOOM 3 (original)</text><text x="772" y="27" fill="#D8B4FE">UNREAL 5</text></g>
+  <g text-anchor="middle" font-size="22" font-weight="700"><text x="255" y="27" fill="#7DD3FC">QUAKE (original)</text><text x="515" y="27" fill="#A5B4FC">DOOM 3 (original)</text><text x="772" y="27" fill="#D8B4FE">UNREAL 5</text></g>
   <g fill="#94A3B8" font-size="21"><text x="5" y="70">STATE</text><text x="5" y="110">LOGIC</text><text x="5" y="150">INPUT</text><text x="5" y="190">OUTPUT</text><text x="5" y="230">CLOCK</text></g>
   <g text-anchor="middle" fill="#E5E7EB" font-size="19"><text x="255" y="70">BSP + edicts</text><text x="515" y="70">.proc + idEntity</text><text x="772" y="70">UWorld / Actors</text><text x="255" y="110">C + QuakeC</text><text x="515" y="110">C++ + idScript</text><text x="772" y="110">C++ / BP / Chaos</text><text x="255" y="150">usercmd</text><text x="515" y="150">usercmd</text><text x="772" y="150">Enhanced Input</text><text x="255" y="190">renderer + audio</text><text x="515" y="190">renderer + audio</text><text x="772" y="190">render / audio / UMG</text><text x="255" y="230">host frames</text><text x="515" y="230">60 Hz game ticks</text><text x="772" y="230">configurable clocks</text></g>
 </svg></div><ul class="content"><li>Start with one row: <strong>where are the world's facts stored?</strong></li><li>Names and implementations differ; the questions remain useful</li></ul></div>
@@ -647,7 +647,7 @@
 <section data-num="26" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
-    <h2>The same chain in Doom 3</h2>
+    <h2>The same chain in Doom 3</h2>
     <ul class="content"><li>DOOM 3 combines weapon definitions, assets, scripts, and C++</li><li>File names change; the authoring-to-runtime handoffs remain</li><li>Engine code provides capabilities; game content configures and coordinates them</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §9, <code>Eng/DOOM3</code>.</p>
