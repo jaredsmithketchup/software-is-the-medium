@@ -87,8 +87,7 @@
 .reveal .divider,
 .reveal .divider h2,
 .reveal .divider h3.title-sub,
-.reveal .divider .kicker,
-.reveal .divider ul.divider-claims {
+.reveal .divider .kicker {
   text-align: center;
 }
 
@@ -126,6 +125,7 @@
   padding: 0;
   margin: 0.6em auto 0;
   width: 84%;
+  text-align: left;
 }
 
 .reveal ul.divider-claims li {
