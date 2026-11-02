@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-labelledby="s13-title s13-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s13-title">A contract binds producer and consumer</title><desc id="s13-desc">The producer's output must match what the consumer expects, field by field: names, units, formats and budgets, with versioning when either side changes.</desc>
+  <defs><marker id="s13-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#9CA3AF"/></marker></defs>
+  <rect x="20" y="90" width="150" height="64" rx="10" fill="#075985"/>
+  <text x="95" y="120" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">PRODUCER</text>
+  <text x="95" y="140" font-size="10" fill="#E0F2FE" text-anchor="middle">gameplay writes state</text>
+  <rect x="290" y="30" width="180" height="180" rx="12" fill="#1F2937" stroke="#818CF8"/>
+  <text x="380" y="60" font-size="13" font-weight="700" fill="#A5B4FC" text-anchor="middle">THE CONTRACT</text>
+  <g font-size="12.5" fill="#CBD5E1">
+    <text x="315" y="92">names and units</text>
+    <text x="315" y="122">formats and order</text>
+    <text x="315" y="152">budgets and limits</text>
+    <text x="315" y="182">version and validation</text>
+  </g>
+  <rect x="590" y="90" width="150" height="64" rx="10" fill="#0C4A6E"/>
+  <text x="665" y="120" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">CONSUMER</text>
+  <text x="665" y="140" font-size="10" fill="#E0F2FE" text-anchor="middle">rendering reads state</text>
+  <g fill="none" stroke="#9CA3AF" stroke-width="2" marker-end="url(#s13-arrow)"><path d="M170 122 H288"/><path d="M470 122 H588"/></g>
+</svg>

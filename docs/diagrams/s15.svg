@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="Five engine responsibilities with a concrete weapon example for each" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g fill="#1F2937"><rect x="5" y="5" width="890" height="42" rx="6"/><rect x="5" y="53" width="890" height="42" rx="6"/><rect x="5" y="101" width="890" height="42" rx="6"/><rect x="5" y="149" width="890" height="42" rx="6"/><rect x="5" y="197" width="890" height="42" rx="6"/></g>
-  <g font-size="22" font-weight="700" fill="#7DD3FC"><text x="24" y="34">STATE</text><text x="24" y="82">LOGIC</text><text x="24" y="130">INPUT</text><text x="24" y="178">OUTPUT</text><text x="24" y="226">CLOCK</text></g>
-  <g font-size="22" fill="#F9FAFB"><text x="180" y="34">World model</text><text x="180" y="82">Gameplay + physics</text><text x="180" y="130">Device events to commands</text><text x="180" y="178">Renderer + audio + UI</text><text x="180" y="226">Ticks + scheduling</text></g>
-  <g font-size="21" fill="#CBD5E1"><text x="565" y="34">Ammunition: 30 becomes 29</text><text x="565" y="82">Can fire? What was hit?</text><text x="565" y="130">Button becomes Fire</text><text x="565" y="178">Flash, gunshot, ammo counter</text><text x="565" y="226">Update, cooldown, present</text></g>
-</svg>

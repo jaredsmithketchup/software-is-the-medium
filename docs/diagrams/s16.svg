@@ -1,9 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s13-title s13-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <title id="s13-title">Illustrative frame budget</title><desc id="s13-desc">A 12 millisecond critical path fits a 16.7 millisecond target interval. A 24 millisecond critical path exceeds it. These are teaching values, not a benchmark or summed CPU and GPU timings.</desc>
-  <g font-size="22" fill="#CBD5E1"><text x="15" y="75">Frame A</text><text x="15" y="148">Frame B</text><text x="175" y="207">0 ms</text><text x="578" y="207">16.7 ms</text><text x="790" y="207">25 ms</text></g>
-  <path d="M600 28 V175" stroke="#FBBF24" stroke-width="3" stroke-dasharray="7 5"/>
-  <rect x="180" y="45" width="302" height="46" rx="6" fill="#064E3B" stroke="#6EE7B7"/><rect x="180" y="118" width="604" height="46" rx="6" fill="#7F1D1D" stroke="#FCA5A5"/>
-  <g font-size="22" fill="#F9FAFB"><text x="195" y="76">12 ms: within target</text><text x="195" y="149">24 ms: late delivery</text></g>
-  <text x="600" y="22" text-anchor="middle" font-size="20" fill="#FBBF24">60 fps target interval</text>
-  <text x="450" y="231" text-anchor="middle" font-size="18" fill="#94A3B8">Illustrative critical-path work, not CPU time + GPU time</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="s14-title s14-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s14-title">The frame loop is the human loop</title><desc id="s14-desc">The player acts through input, update changes world state, render and sound present it, the player perceives at the screen and acts again. The frame loop clock beats every step.</desc>
+  <defs><marker id="s14-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#9CA3AF"/></marker></defs>
+  <g fill="none" stroke="#9CA3AF" stroke-width="2" marker-end="url(#s14-arrow)">
+    <path d="M115 58 H140"/><path d="M250 58 H275"/><path d="M385 58 H410"/><path d="M540 58 H565"/>
+    <path d="M475 86 V180"/><path d="M620 86 V180"/>
+    <path d="M620 236 V300 H60 V86"/><path d="M475 236 V336 H100 V86"/>
+  </g>
+  <g fill="none" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#s14-arrow)">
+    <path d="M140 150 V120 H330 V86"/><path d="M170 165 H600 V86"/>
+  </g>
+  <g fill="#1F2937"><rect x="15" y="30" width="100" height="56" rx="10"/><rect x="140" y="30" width="110" height="56" rx="10"/><rect x="275" y="30" width="110" height="56" rx="10"/><rect x="410" y="30" width="130" height="56" rx="10"/><rect x="565" y="30" width="110" height="56" rx="10"/><rect x="410" y="180" width="130" height="56" rx="10"/><rect x="565" y="180" width="110" height="56" rx="10"/><rect x="20" y="150" width="150" height="44" rx="10" fill="#111827" stroke="#374151"/></g>
+  <g text-anchor="middle" font-size="12.5" font-weight="700">
+    <text x="65" y="56" fill="#E2E8F0">PLAYER</text><text x="195" y="56" fill="#BAE6FD">INPUT</text><text x="330" y="56" fill="#E0F2FE">UPDATE</text><text x="475" y="56" fill="#BAE6FD">WORLD STATE</text><text x="620" y="56" fill="#BAE6FD">RENDER</text>
+    <text x="475" y="206" fill="#BAE6FD">SOUND</text><text x="620" y="206" fill="#E5E7EB">SCREEN</text><text x="95" y="174" fill="#94A3B8">FRAME LOOP</text>
+  </g>
+  <g text-anchor="middle" font-size="9.5">
+    <text x="65" y="74" fill="#CBD5E1">perceives, acts</text><text x="195" y="74" fill="#E0F2FE">devices → commands</text><text x="330" y="74" fill="#F0F9FF">physics · AI · gameplay</text><text x="475" y="74" fill="#E0F2FE">the world model</text><text x="620" y="74" fill="#E0F2FE">cull → sort → draw</text>
+    <text x="475" y="224" fill="#E0F2FE">mix → speakers</text><text x="620" y="224" fill="#9CA3AF">60–144 Hz</text><text x="95" y="190" fill="#6B7280">beats each step</text>
+  </g>
+  <g text-anchor="middle" font-size="11" fill="#6B7280"><text x="380" y="292">perceives</text><text x="298" y="328">hears</text></g>
+  <g text-anchor="middle" font-size="11" fill="#94A3B8"><text x="235" y="112">beats every tick</text><text x="410" y="157">beats every frame</text></g>
 </svg>

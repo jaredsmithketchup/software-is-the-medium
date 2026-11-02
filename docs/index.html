@@ -65,7 +65,7 @@
 <p><strong>Show / ask</strong></p>
 <ul><li>Point to each act as you name it. Optionally ask what they most want to understand; you can weave one answer in later.</li></ul>
 <p><strong>If asked</strong></p>
-<ul><li>The four acts are color-coded in the deck — indigo A, sky B, green C, purple D — visible on each divider.</li><li>Timings: a 47-minute route with 10 minutes of Q&amp;A at the end.</li></ul>
+<ul><li>The four acts are color-coded in the deck — indigo A, sky B, green C, purple D — visible on each divider.</li><li>Timings: a 49-minute route with 10 minutes of Q&amp;A at the end.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Each of those disciplines already contributes to a running software system.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> preview the whole talk.</li><li><strong>Content:</strong> <strong>Act A — Software:</strong> what it is, and what it is made of | <strong>Act B — Engines:</strong> the anatomy of an engine, then Quake, Doom 3, and Unreal 5 | <strong>Act C — One weapon:</strong> the same chain across every discipline | <strong>Act D — AI and ahead:</strong> interfaces, tools, then the reusable questions</li><li><strong>Visual:</strong> the six sections as act-colored chips; the map returns on every section divider.</li><li><strong>Refs:</strong> <code>ch00</code> intro.</li></ul></div>
@@ -306,12 +306,91 @@
 <p><strong>If asked</strong></p>
 <ul><li>120 fps gives 8.3 ms; 30 fps gives 33.3 ms. These are arithmetic intervals, not measured end-to-end latency. Networked actions may include additional network and server delay. Do not sum CPU and GPU frame timings blindly: work can overlap.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Now give the whole system five labels.</li></ul></div>
+<ul><li>Before the five labels, one more property of data: what it is allowed to look like.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the cost of the loop.</li><li><strong>Content:</strong> <strong>60 fps = one frame every 16.7 ms</strong> | Input-to-display latency spans several stages and may span several frames | Smooth output can still respond late</li><li><strong>Visual:</strong> the chain, one budget.</li><li><strong>Refs:</strong> <code>ch00</code> §3.3–3.4.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="12" data-state="act-a" class="has-diagram">
+  <div class="main"><div class="slide-body">
+    <span class="chip">A — SOFTWARE</span>
+    <h2>A schema says what the data must look like</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-labelledby="s12-title s12-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s12-title">A schema describes the data</title><desc id="s12-desc">A producer writes a record whose fields and types are declared by a schema; consumers and tools check the record against it, so validity is not an opinion.</desc>
+  <defs><marker id="s12-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#9CA3AF"/></marker></defs>
+  <rect x="20" y="90" width="150" height="64" rx="10" fill="#075985"/>
+  <text x="95" y="120" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">PRODUCER</text>
+  <text x="95" y="140" font-size="10" fill="#E0F2FE" text-anchor="middle">writes a record</text>
+  <rect x="260" y="30" width="240" height="180" rx="12" fill="#1F2937" stroke="#6366F1"/>
+  <text x="380" y="58" font-size="13" font-weight="700" fill="#A5B4FC" text-anchor="middle">A SCHEMA DECLARES</text>
+  <g font-size="12.5" fill="#CBD5E1">
+    <text x="285" y="88">name</text><text x="345" y="88" fill="#818CF8">: string</text>
+    <text x="285" y="118">rounds</text><text x="345" y="118" fill="#818CF8">: integer 0–30</text>
+    <text x="285" y="148">cooldown</text><text x="345" y="148" fill="#818CF8">: seconds</text>
+    <text x="285" y="178">units</text><text x="345" y="178" fill="#818CF8">: meters</text>
+  </g>
+  <text x="380" y="200" font-size="11" fill="#6EE7B7" text-anchor="middle">every read checks these fields</text>
+  <rect x="590" y="90" width="150" height="64" rx="10" fill="#0C4A6E"/>
+  <text x="665" y="120" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">CONSUMER</text>
+  <text x="665" y="140" font-size="10" fill="#E0F2FE" text-anchor="middle">reads the record</text>
+  <g fill="none" stroke="#9CA3AF" stroke-width="2" marker-end="url(#s12-arrow)"><path d="M170 122 H258"/><path d="M500 122 H588"/></g>
+</svg></div><ul class="content"><li>A <strong>schema</strong> describes the shape, meaning, and limits of data</li><li>Names, types, defaults, and allowed ranges become checkable</li><li>Without one, "the file is valid" is only an opinion; with one, any tool can check a handoff</li><li>JSON Schema, typed assets, and data tables all play the same role</li></ul></div>
+  </div>
+<p class="refs"><code>ch05</code> §1, §6.</p>
+  </div>
+  <aside class="notes">
+<div class="cards"><h5>Speaker card — S12</h5><p><strong>Say</strong></p>
+<ul><li>A schema is the description of what data must look like: its fields, their types, and what is allowed.</li><li>With a schema, "this file is valid" stops being an opinion and becomes a check any tool can run consistently.</li><li>JSON Schema, typed engine assets, and data tables are all the same idea in different clothes.</li><li>Think of the weapon files: names, units, and ranges. A schema is what makes them machine-checkable before they ever reach a consumer.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Sketch a small record: name (string), rounds (integer 0–30), cooldown (seconds). Ask which field could break a handoff if a producer filled it wrong.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>Schemas range from implicit convention to formal languages (JSON Schema, Protocol Buffers) to compiled types; the value appears when producer and consumer are separate parties.</li><li>This is the reference's one-idea from ch05 §1: no data ever works without a declared shape-and-meaning contract. JSON, YAML, and binary forms are all covered in ch05 §6.</li></ul>
+<p><strong>Next</strong></p>
+<ul><li>Whoever writes the data and whoever reads it must share that description. That is a contract.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> define the schema idea.</li><li><strong>Content:</strong> A <strong>schema</strong> describes the shape, meaning, and limits of data | Names, types, defaults, and allowed ranges become checkable | Without one, "the file is valid" is only an opinion; with one, any tool can check a handoff | JSON Schema, typed assets, and data tables all play the same role</li><li><strong>Visual:</strong> a data record with named, typed fields.</li><li><strong>Refs:</strong> <code>ch05</code> §1, §6.</li></ul></div>
+  </aside>
+</section>
+
+<section data-num="13" data-state="act-a" class="has-diagram">
+  <div class="main"><div class="slide-body">
+    <span class="chip">A — SOFTWARE</span>
+    <h2>Contracts bind producers and consumers</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-labelledby="s13-title s13-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s13-title">A contract binds producer and consumer</title><desc id="s13-desc">The producer's output must match what the consumer expects, field by field: names, units, formats and budgets, with versioning when either side changes.</desc>
+  <defs><marker id="s13-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#9CA3AF"/></marker></defs>
+  <rect x="20" y="90" width="150" height="64" rx="10" fill="#075985"/>
+  <text x="95" y="120" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">PRODUCER</text>
+  <text x="95" y="140" font-size="10" fill="#E0F2FE" text-anchor="middle">gameplay writes state</text>
+  <rect x="290" y="30" width="180" height="180" rx="12" fill="#1F2937" stroke="#818CF8"/>
+  <text x="380" y="60" font-size="13" font-weight="700" fill="#A5B4FC" text-anchor="middle">THE CONTRACT</text>
+  <g font-size="12.5" fill="#CBD5E1">
+    <text x="315" y="92">names and units</text>
+    <text x="315" y="122">formats and order</text>
+    <text x="315" y="152">budgets and limits</text>
+    <text x="315" y="182">version and validation</text>
+  </g>
+  <rect x="590" y="90" width="150" height="64" rx="10" fill="#0C4A6E"/>
+  <text x="665" y="120" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">CONSUMER</text>
+  <text x="665" y="140" font-size="10" fill="#E0F2FE" text-anchor="middle">rendering reads state</text>
+  <g fill="none" stroke="#9CA3AF" stroke-width="2" marker-end="url(#s13-arrow)"><path d="M170 122 H288"/><path d="M470 122 H588"/></g>
+</svg></div><ul class="content"><li>A <strong>contract</strong> is the interface between whoever writes data and whoever reads it</li><li>The producer's output must match what the consumer expects, field by field</li><li>Contracts spell out <strong>names, units, formats, and budgets</strong>; changes version the contract</li></ul></div>
+  </div>
+<p class="refs"><code>ch05</code> §1–2.</p>
+  </div>
+  <aside class="notes">
+<div class="cards"><h5>Speaker card — S13</h5><p><strong>Say</strong></p>
+<ul><li>A contract is the interface between the side that produces data and the side that consumes it.</li><li>The producer's output has to match what the consumer reads, field by field, across every boundary.</li><li>Contracts carry names, units, formats, and budgets — the handoff checklist you will meet again on the weapon slides.</li><li>When one side changes, the contract versions: that is why new engine versions, save files, and mods can stop working.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Concrete example: gameplay logic writes state; rendering reads it. The contract is the state's shape, not the pixels on screen. Ask: which side can change without the other noticing?</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>A design document informs a schema; it is not automatically a machine-readable contract. The schema is what both sides can execute against.</li><li>Version numbers, validation, and changelogs are the working parts of a living contract. Desyncs and protocol mismatches (ch05 §7) are that contract breaking.</li></ul>
+<p><strong>Next</strong></p>
+<ul><li>Now give the whole system five labels.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the handoff rule.</li><li><strong>Content:</strong> A <strong>contract</strong> is the interface between whoever writes data and whoever reads it | The producer's output must match what the consumer expects, field by field | Contracts spell out <strong>names, units, formats, and budgets</strong>; changes version the contract</li><li><strong>Visual:</strong> producer, contract, consumer.</li><li><strong>Refs:</strong> <code>ch05</code> §1–2.</li></ul></div>
+  </aside>
+</section>
+
+<section data-num="14" data-state="act-a" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>State, logic, input, output, clock</h2>
@@ -327,7 +406,7 @@
 <p class="refs"><code>ch00</code> §4.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S12</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S14</h5><p><strong>Say</strong></p>
 <ul><li>State remembers: ammunition, health, position. Logic changes those facts. Input requests changes. Output presents results. Clock means when the work runs.</li><li>The arrows matter more than the boxes. Logic reads existing state and writes new state. Output reads a representation of the result. Timing affects the entire journey.</li><li>Keep this map. When someone says "the engine is broken," ask which boundary failed and what evidence they have.</li></ul>
 <p><strong>Show / ask</strong></p>
 <ul><li>Point to state and ask "29 rounds: where?" Then logic: "the logic that spent one round: where?" Allow a pause; this is the comprehension check to protect.</li></ul>
@@ -339,7 +418,7 @@
   </aside>
 </section>
 
-<section data-num="13" data-state="act-b" data-background-color="#111827">
+<section data-num="15" data-state="act-b" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE ENGINE</span><p class="kicker">Section 3</p>
     <h2>Anatomy of a game engine</h2>
 
@@ -347,7 +426,7 @@
     <ul class="divider-claims"><li>An engine provides <strong>reusable systems for running interactive worlds</strong></li><li>Your game supplies specific logic and content</li><li>Editors and asset tools help build what the runtime uses</li></ul>
   </div></div></div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S13</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S15</h5><p><strong>Say</strong></p>
 <ul><li>A game engine is reusable software for building and running interactive worlds. It commonly provides simulation support, rendering, audio, input, asset handling, and authoring tools.</li><li>Your game adds the particular logic and content: what a weapon does, how a level looks, what winning means.</li><li>The editor is the workshop. The runtime is the machinery running the shipped experience. Engines differ in where that boundary sits; some games use custom or minimal tools.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>"Is a renderer an engine?" It may be one component of an engine. A library that draws triangles does not necessarily provide gameplay, physics, asset tools, or a complete runtime. The label has fuzzy edges; ask what responsibilities it supplies.</li><li>Not every engine is large or 3D. The same questions work for a small 2D framework.</li></ul>
@@ -357,7 +436,7 @@
   </aside>
 </section>
 
-<section data-num="14" data-state="act-b" class="has-diagram">
+<section data-num="16" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>The frame loop is the human loop</h2>
@@ -388,7 +467,7 @@
 <p class="refs"><code>ch00</code> §5.2.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S14</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S16</h5><p><strong>Say</strong></p>
 <ul><li>This is the sense–think–act loop from section one, now running at game speed.</li><li>Input becomes a command; update changes the world; render and sound carry the result to the display; the player perceives and acts again. The frame loop beats every tick of it.</li><li>The human closes the circuit at the screen. When a game "feels wrong", that loop stuttered.</li><li>Section 5.2 puts it sharply: every latency number and frame-rate target exists to tighten this one circuit.</li></ul>
 <p><strong>Show / ask</strong></p>
 <ul><li>Trace the loop once. Ask: where does the human enter, and where do they exit? Expect: they perceive at the display and act through input, then repeat.</li></ul>
@@ -400,7 +479,7 @@
   </aside>
 </section>
 
-<section data-num="15" data-state="act-b" class="has-diagram">
+<section data-num="17" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>Five subsystems</h2>
@@ -414,7 +493,7 @@
 <p class="refs"><code>ch01</code> §2.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S15</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S17</h5><p><strong>Say</strong></p>
 <ul><li>Input turns a device event into a gameplay command. Logic applies the checks. The world model stores the changed facts. Rendering, audio, and UI present them. The scheduler determines when those jobs happen.</li><li>For our weapon: Fire comes in, the logic spends one round, state becomes 29, and the player sees and hears the shot.</li><li>In a real engine each part crosses several modules and threads. The point is to locate responsibility, not force the source tree into five folders.</li></ul>
 <p><strong>Show / ask</strong></p>
 <ul><li>"The ammunition display says 30 but the weapon has 29. Which boundary would you inspect?" Compare authoritative state with what the HUD reads. Do not immediately rewrite the firing logic.</li></ul>
@@ -424,7 +503,7 @@
   </aside>
 </section>
 
-<section data-num="16" data-state="act-b" class="has-diagram">
+<section data-num="18" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>A frame is a time budget</h2>
@@ -441,7 +520,7 @@
 <p class="refs"><code>ch00</code> §5, <code>ch01</code> §4.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S16</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S18</h5><p><strong>Say</strong></p>
 <ul><li>At a sixty-frame target we aim to deliver a frame roughly every 16.7 milliseconds. Illustratively, twelve milliseconds of critical-path work fits; twenty-four does not.</li><li>Games are generally soft real-time: being late hurts responsiveness or smoothness, but a missed frame is not automatically total system failure. Hard real-time systems require deadline guarantees for correctness.</li><li>Find the bottleneck before optimizing. A faster shader does not fix a main thread waiting for an asset to load.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>CPU and GPU often work on different frames concurrently. Their times are not simply added to predict frame rate. Synchronization, queues, refresh policy, and the critical path matter.</li><li>In Unreal, start with stat unit for Game, Draw, GPU, and Frame, then a timeline in Unreal Insights. Measure on the target hardware, including slow frames rather than only an average.</li></ul>
@@ -451,7 +530,7 @@
   </aside>
 </section>
 
-<section data-num="17" data-state="act-b" class="has-diagram">
+<section data-num="19" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>The renderer reads state</h2>
@@ -468,7 +547,7 @@
 <p class="refs"><code>ch01</code> §3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S17</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S19</h5><p><strong>Say</strong></p>
 <ul><li>Think of a scoreboard and the scorekeeper. The display reports a score; it does not necessarily decide which goal counts.</li><li>Similarly, a headless server can track positions, hits, and health without drawing any pixels. The renderer makes a picture from state prepared for presentation.</li><li>A flash is evidence that an effect appeared. It is not proof that the authoritative damage logic accepted a hit.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Rendering systems do perform computation and can simulate cosmetic particles or other effects. The distinction is authority over gameplay, not "renderers never simulate."</li><li>Clients may predict an effect before the server confirms the action. Rendering copies can intentionally lag the authoritative world. Authority and freshness are separate questions.</li></ul>
@@ -478,7 +557,7 @@
   </aside>
 </section>
 
-<section data-num="18" data-state="act-b" class="has-diagram">
+<section data-num="20" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>Three ways to organize a world</h2>
@@ -497,7 +576,7 @@
 <p class="refs"><code>ch02</code> §1–6.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S18</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S20</h5><p><strong>Say</strong></p>
 <ul><li>A transform tree answers "what moves with what?" Move a hand and the attached weapon follows.</li><li>A spatial index answers "what is near or potentially visible?" A BSP partitions space; other engines use grids or bounding-volume trees.</li><li>Components answer "what data and capabilities does this thing have?" An ECS organizes entities by components and runs systems over matching data.</li><li>These are not competing brands of world model. One engine can use all three for different jobs.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>ECS means entity-component-system. Not every ECS uses the same columnar storage, and not every component-based engine is an ECS. Unreal Actors and Components do not by themselves imply a pure ECS.</li><li>A spatial index may be derived from world data. If a moving object is not reflected in the index, queries can give wrong answers even when its visible transform looks correct.</li></ul>
@@ -507,7 +586,7 @@
   </aside>
 </section>
 
-<section data-num="19" data-state="act-b" data-background-color="#111827">
+<section data-num="21" data-state="act-b" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE ENGINE</span><p class="kicker">Section 4</p>
     <h2>Quake, Doom 3, Unreal 5</h2>
 
@@ -515,7 +594,7 @@
     <ul class="divider-claims"><li>Three real engines, the same questions</li><li>Read the responsibility first; learn its local name second</li></ul>
   </div></div></div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S19</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S21</h5><p><strong>Say</strong></p>
 <ul><li>This is not a nostalgia test. Ignore names you do not recognize; identify the job each name performs.</li><li>We are comparing the original Quake and DOOM 3 architectures with the configurable Unreal 5 family. Ports, later editions, and project settings can change important details.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Read one row across before reading one engine down.</li></ul></div>
@@ -523,7 +602,7 @@
   </aside>
 </section>
 
-<section data-num="20" data-state="act-b" class="has-diagram">
+<section data-num="22" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>The same five rows</h2>
@@ -538,7 +617,7 @@
 <p class="refs"><code>Eng/QUAKE</code>, <code>Eng/DOOM3</code>, <code>Eng/UE5</code>.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S20</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S22</h5><p><strong>Say</strong></p>
 <ul><li>Start with state. Quake combines compiled world geometry with entities called edicts. DOOM 3 uses compiled render-world data and game objects such as idEntity. Unreal organizes gameplay around a UWorld, Actors, and Components.</li><li>Those are different names and structures for facts about the world. Next, the logic row names the code that changes those facts.</li><li>Do not recite the whole table. Pick Quake and walk down: world facts, C and QuakeC behavior, input commands, rendering and audio, host-frame timing. The new engine stops being a wall of unfamiliar words.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Original DOOM 3 has a nominal 60 Hz game/user-command cadence; avoid claiming it has BFG's later render/simulation arrangement. Unreal physics substepping is configurable, not universally fixed by default.</li><li>Primary sources: <a href="https://github.com/id-Software/Quake" target="_blank" rel="noopener">Quake source</a>, <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/game/Game_local.h" target="_blank" rel="noopener">DOOM 3 game state and interface</a>, <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/framework/UsercmdGen.h" target="_blank" rel="noopener">DOOM 3 user-command timing</a>, <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/physics-sub-stepping-in-unreal-engine" target="_blank" rel="noopener">Epic physics substepping</a>.</li></ul>
@@ -548,7 +627,7 @@
   </aside>
 </section>
 
-<section data-num="21" data-state="act-b">
+<section data-num="23" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>Simulation and display can tick differently</h2>
@@ -557,7 +636,7 @@
 <p class="refs"><code>ch01</code> §4–5.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S21</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S23</h5><p><strong>Say</strong></p>
 <ul><li>Fixed-step simulation advances by the same amount of simulated time each update. Variable-step simulation uses the measured elapsed interval.</li><li>A renderer may run at a different cadence, using previous and current states to interpolate a picture. It is a separate scheduling question.</li><li>If simulation falls behind, the engine needs a policy: catch up, limit catch-up work, or slow simulated time. Unlimited catch-up can create even more lateness.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Fixed step helps repeatability; it does not guarantee identical outcomes. Starting state, inputs, random seeds, execution order, floating-point behavior, and platform differences still matter.</li><li>Epic's substepping divides a frame interval into smaller bounded steps according to settings. It should not be described as a universal fixed independent Chaos clock. See the source on S17.</li></ul>
@@ -567,7 +646,7 @@
   </aside>
 </section>
 
-<section data-num="22" data-state="act-c" data-background-color="#111827">
+<section data-num="24" data-state="act-c" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">C — THE WEAPON</span><p class="kicker">Section 5</p>
     <h2>One weapon, every discipline</h2>
 
@@ -575,7 +654,7 @@
     <ul class="divider-claims"><li>A weapon is not just a mesh</li><li>It is a contract between design, assets, logic, timing, and feedback</li><li>Trace one shot to find every discipline's contribution</li></ul>
   </div></div></div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S22</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S24</h5><p><strong>Say</strong></p>
 <ul><li>The player experiences one weapon. The team creates a network of agreements: how it should feel, what assets it uses, which logic it obeys, and when feedback appears.</li><li>A beautiful mesh cannot decide who was hit. A correct damage logic cannot by itself communicate satisfying impact. Neither contribution replaces the other.</li></ul>
 <p><strong>Show / ask</strong></p>
 <ul><li>Invite each discipline to notice one handoff they could validate. Frame this as shared diagnosis, not finding someone to blame.</li></ul>
@@ -585,7 +664,7 @@
   </aside>
 </section>
 
-<section data-num="23" data-state="act-c" class="has-diagram">
+<section data-num="25" data-state="act-c" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>From authoring to a running game</h2>
@@ -602,7 +681,7 @@
 <p class="refs"><code>ch08</code> §1–5.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S23</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S25</h5><p><strong>Say</strong></p>
 <ul><li>At build time, people create designs, models, animation, and sound. Import and cooking convert or package them into forms suitable for the target platform.</li><li>At run time, code loads the required assets, responds to input, updates state, and presents results. Cooking is not something every shot repeats.</li><li>The contracts connect the stages: a socket name must match, meters and centimeters must agree, and a sound must be loaded before the event expects to play it.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Build-time work can trade longer preparation for faster runtime loading. An editor asset and its cooked platform representation are not necessarily identical.</li><li>Ownership differs by studio. A designer may script behavior; a technical artist may maintain import tools. Name the work before assigning the role.</li></ul>
@@ -612,7 +691,7 @@
   </aside>
 </section>
 
-<section data-num="24" data-state="act-c">
+<section data-num="26" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>Turn intent into a testable contract</h2>
@@ -621,7 +700,7 @@
 <p class="refs"><code>ch08</code> §2–3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S24</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S26</h5><p><strong>Say</strong></p>
 <ul><li>"Make it deliberate" is design intent. It needs iteration and judgment. "Damage is 25 health points; cooldown is 0.2 seconds; magazine capacity is 30 rounds" is a testable starting contract.</li><li>Distinguish capacity from current ammunition. Capacity is configuration; current ammunition changes while you play.</li><li>Units and valid ranges matter. A negative cooldown or a milliseconds-versus-seconds mistake can break behavior even though the data loads successfully.</li></ul>
 <p><strong>Show / ask</strong></p>
 <ul><li>Ask what should happen to a target with 100 health after one accepted unarmored hit. 75. State assumptions: no armor, critical multiplier, or other modifier in this teaching example.</li></ul>
@@ -633,7 +712,7 @@
   </aside>
 </section>
 
-<section data-num="25" data-state="act-c" class="has-diagram">
+<section data-num="27" data-state="act-c" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>One shot: check, change, announce</h2>
@@ -649,7 +728,7 @@
 <p class="refs"><code>ch08</code> §4–5.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S25</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S27</h5><p><strong>Say</strong></p>
 <ul><li>First check ammunition and whether the cooldown has expired. If the request is rejected, do not spend ammunition or apply damage. A dry-fire sound is a separate allowed response.</li><li>On an accepted shot, spend one round and start cooldown. Check the hit result; only a valid hit applies damage. In our simplified example ammunition goes 30 to 29 and a hit changes health from 100 to 75.</li><li>Announce the shot so presentation systems can respond. This is a teaching sequence, not a claim that every engine uses this exact event API.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Soft references identify assets without necessarily loading them. Code or an asset manager must request loading. Hard references create loading and lifetime dependencies; they do not mean an asset is immortal. Preload critical weapon feedback instead of blocking on first use.</li><li>Source: <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/asynchronous-asset-loading-in-unreal-engine" target="_blank" rel="noopener">Epic asynchronous asset loading</a>.</li><li>In multiplayer, the authority validates the action; a client may predict feedback for responsiveness. Do not trust a client-provided damage result without validation.</li></ul>
@@ -659,7 +738,7 @@
   </aside>
 </section>
 
-<section data-num="26" data-state="act-c" class="has-diagram">
+<section data-num="28" data-state="act-c" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>One event, several kinds of feedback</h2>
@@ -675,7 +754,7 @@
 <p class="refs"><code>ch08</code> §7–8.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S26</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S28</h5><p><strong>Say</strong></p>
 <ul><li>The shot can trigger animation, flash, sound, recoil, and the HUD update. These systems may run on different schedules; synchronizing their cues shapes perceived impact.</li><li>Now use the map: a weapon flashes, but the target takes no damage. What would you inspect before changing anything?</li></ul>
 <p><strong>Show / ask: three-minute exercise</strong></p>
 <ul><li>30 seconds alone: label input, state, logic, output, and clock for this symptom.</li><li>60 seconds in pairs: choose the first boundary to inspect and what evidence would support your guess.</li><li>60 seconds: hear one or two answers. Ask "What observation would prove your hypothesis wrong?"</li><li>30 seconds debrief: presentation happened, but we do not yet know that a hit was accepted. Inspect the hit result and authoritative health before blaming the artwork.</li></ul>
@@ -687,7 +766,7 @@
   </aside>
 </section>
 
-<section data-num="27" data-state="act-c">
+<section data-num="29" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>The same chain in Doom 3</h2>
@@ -696,7 +775,7 @@
 <p class="refs"><code>ch08</code> §9, <code>Eng/DOOM3</code>.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S27</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S29</h5><p><strong>Say</strong></p>
 <ul><li>In DOOM 3, weapon definitions connect names and settings to assets and script behavior. C++ weapon code and the script system coordinate the running weapon.</li><li>Meshes and animations, materials, and sound declarations feed their respective systems. It is not one mysterious "weapon file."</li><li>We can ask the same questions: was the definition found, was the script state correct, did the projectile or hit logic run, and did output receive the result?</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Concrete formats include .def definitions, .script behavior, .md5mesh models, .md5anim animation, .mtr materials, and .sndshd sound declarations. "Declaration" names a system; do not invent a universal .decl extension.</li><li>Source trail: <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/game/Weapon.cpp" target="_blank" rel="noopener">idWeapon implementation</a>, <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/framework/DeclManager.cpp" target="_blank" rel="noopener">declaration manager</a>. The source release does not grant unrestricted rights to proprietary game assets.</li></ul>
@@ -706,7 +785,7 @@
   </aside>
 </section>
 
-<section data-num="28" data-state="act-d" data-background-color="#111827">
+<section data-num="30" data-state="act-d" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">D — THE DIRECTION</span><p class="kicker">Section 6</p>
     <h2>AI inside the same map</h2>
 
@@ -714,7 +793,7 @@
     <ul class="divider-claims"><li>Separate three questions</li><li>Is AI <strong>helping build</strong> the game, <strong>running inside</strong> it, or <strong>generating its output</strong>?</li><li>Each role needs different checks</li></ul>
   </div></div></div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S28</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S30</h5><p><strong>Say</strong></p>
 <ul><li>"AI in games" can mean a tool helping a developer write code, a model making decisions during play, or a model reconstructing images. Those are different responsibilities with different risks.</li><li>Ask where it sits, what it reads, what it may change, how long it takes, and how failure is detected.</li><li>You do not have to adopt a tool to understand or evaluate it.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Traditional game AI includes authored behavior trees, search, and navigation. "AI" does not automatically mean an LLM or a neural network.</li></ul>
@@ -724,7 +803,7 @@
   </aside>
 </section>
 
-<section data-num="29" data-state="act-d">
+<section data-num="31" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Feedback turns a guess into an experiment</h2>
@@ -733,7 +812,7 @@
 <p class="refs"><code>ch09</code> §2, <code>ch00</code> §3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S29</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S31</h5><p><strong>Say</strong></p>
 <ul><li>A player observes a miss and adjusts aim. A developer observes a failed test and adjusts a change. The pattern is goal, action, observation, comparison, correction.</li><li>AI can propose the action, but it does not remove the need for a trustworthy observation. Asking the same model whether its answer looks correct is weaker than running the relevant test.</li><li>Measure the actual goal. Faster code generation does not prove faster delivery of a working game.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Wiener popularized cybernetics in his 1948 book about control and communication in animals and machines. Keep the history optional; the practical point is feedback and error correction, not a claim that all loops are equivalent.</li></ul>
@@ -743,7 +822,7 @@
   </aside>
 </section>
 
-<section data-num="30" data-state="act-d" class="has-diagram">
+<section data-num="32" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Symbolic and connectionist</h2>
@@ -763,7 +842,7 @@
 <p class="refs"><code>ch09</code> §3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S30</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S32</h5><p><strong>Say</strong></p>
 <ul><li>An explicit logic can say "ammunition must be at least one." You can inspect it and test the boundary at zero.</li><li>A neural model learns parameters from training. It may produce useful dialogue or code, but fluent output is not proof that the game's constraints were respected.</li><li>Combine the approaches: an NPC proposes a trade in natural language; explicit inventory and currency logic decide whether the trade can execute.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>This is a contrast, not an exhaustive taxonomy of software. Numerical simulation is not usually called symbolic AI just because it is written in C++. Traditional AI includes more than these two labels.</li><li>Learned models execute code over data too. Their weights are data. Explicit code can also contain bugs; the distinction does not mean code is automatically correct or neural models are always random.</li></ul>
@@ -773,7 +852,7 @@
   </aside>
 </section>
 
-<section data-num="31" data-state="act-d" class="has-diagram">
+<section data-num="33" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>A learned component still has a job</h2>
@@ -790,7 +869,7 @@
 <p class="refs"><code>ch10</code> §3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S31</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S33</h5><p><strong>Say</strong></p>
 <ul><li>Neural upscaling, such as DLSS Super Resolution, reconstructs higher-resolution images from lower-resolution inputs using motion and previous-frame information.</li><li>That is a specific job in the output pipeline. It does not establish that a target was hit, that inventory is consistent, or that a saved world can be restored correctly.</li><li>For generated-world demonstrations, ask separate questions: does an object persist after leaving view, can a designer control the logic, can you replay a failure, and what does it cost to run?</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Super resolution and frame generation are different techniques. More generated display frames do not mean the gameplay simulation performed more updates.</li><li>Source: <a href="https://developer.nvidia.com/rtx/dlss" target="_blank" rel="noopener">NVIDIA DLSS technology descriptions</a>. Use this for the mechanism, not as independent evidence of every performance claim. Whether whole engines will be replaced remains a forecast, not established by upscaling.</li></ul>
@@ -800,7 +879,7 @@
   </aside>
 </section>
 
-<section data-num="32" data-state="act-d" class="has-diagram">
+<section data-num="34" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>AI is a new interface</h2>
@@ -816,7 +895,7 @@
 <p class="refs"><code>ch09</code> §1, §6.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S32</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S34</h5><p><strong>Say</strong></p>
 <ul><li>The model proposes an action. A surrounding application, often called a harness, supplies context, manages permissions, and invokes tools. Tool results feed the next step.</li><li>A tool can read a file, modify it, or run a test. Those actions can be useful or damaging depending on access and validation.</li><li>Keep the distinction: a confident message says what the model believes. A diff shows what changed. A test result shows what was actually checked.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>The harness can run locally, remotely, or across both. Do not assume "on my machine" means "no data leaves my machine." Check provider, tool, and storage policies before giving access to private files.</li><li>Start read-only, scope permissions, exclude secrets, use version control, and require approval for destructive or publishing actions. Repository content can contain hostile instructions; reading a file should not grant it authority.</li></ul>
@@ -826,7 +905,7 @@
   </aside>
 </section>
 
-<section data-num="33" data-state="act-d" class="has-diagram">
+<section data-num="35" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Give AI a boundary and a test</h2>
@@ -842,7 +921,7 @@
 <p class="refs"><code>ch09</code> §6, <code>ch00</code> §8.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S33</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S35</h5><p><strong>Say</strong></p>
 <ul><li>Instead of "fix my weapon," ask it to trace the fire command to the ammunition update and cite the relevant files. Inspect before editing.</li><li>Then request one small change with explicit invariants: preserve damage, cooldown, and the authority boundary. Review the diff.</li><li>Test ordinary behavior and the boundaries: empty ammunition, cooldown not expired, a hit, and a miss. Ask what it actually ran, and what remains untested.</li></ul>
 <p><strong>Concrete acceptance checks</strong></p>
 <ul><li>Ammo zero: no accepted shot, no damage, no negative ammunition; dry-fire feedback may be allowed.</li><li>Cooldown active: reject the extra request without spending another round.</li><li>Valid hit: spend one round and apply exactly 25 damage under our stated assumptions.</li><li>Valid miss: spend one round, start cooldown, but do not change target health.</li><li>A passing unit test does not prove multiplayer correctness, good feel, or acceptable performance. Add those checks when the change touches them.</li></ul>
@@ -852,7 +931,7 @@
   </aside>
 </section>
 
-<section data-num="34" data-state="act-d">
+<section data-num="36" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>The interface changed. The medium did not.</h2>
@@ -861,7 +940,7 @@
 <p class="refs"><code>ch00</code> §9, <code>ch09</code> §12, <code>ch10</code>.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S34</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S36</h5><p><strong>Say</strong></p>
 <ul><li>Find the state. Trace the logic. Follow the input and output. Measure the timing.</li><li>In your next project, choose one door, jump, or weapon. Draw those five parts and follow one real action through them. If you cannot find a part, that is your next question, not a personal failure.</li><li>The interface changed. The medium still needs to be understood. Your judgment is how you decide whether the result is right.</li></ul>
 <p><strong>Delivery</strong></p>
 <ul><li>Pause after the final sentence. Do not promise guaranteed employment, inevitable replacement, or that mastering one tool future-proofs a career. This is a transferable learning method, not a prediction.</li></ul>
@@ -871,7 +950,7 @@
   </aside>
 </section>
 
-<section data-num="35" data-state="act-d">
+<section data-num="37" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Questions</h2>
@@ -880,7 +959,7 @@
 <p class="refs"><code>ch00</code> §10.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S35</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S37</h5><p><strong>Say</strong></p>
 <ul><li>Give me a concrete symptom or something you want to build. We will locate its state, logic, boundaries, and timing, then decide what to inspect.</li><li>If no one volunteers, return to the flash-without-damage example. What evidence separates a missed hit from a stale health display?</li></ul>
 <p><strong>Q&amp;A ammunition</strong></p>
 <ul><li>"Which engine should I learn?" Choose a small achievable project and an engine with accessible tools, documentation, and support for your platform. Complete the loop from authoring to a playable build. Learn one well, then map the next using the same questions.</li><li>"Does a game need an engine?" It needs software that fulfills the required responsibilities, whether supplied by a general engine, a framework, libraries, or custom code. There is no requirement to buy a branded product.</li><li>"Can AI build the whole game?" It can automate portions with widely varying reliability. Scope, integration, validation, performance, licensing, and player experience still need to be established. A demo is not proof of maintainable production software.</li><li>"Will it take our jobs?" Tasks and staffing may change; no one can responsibly guarantee your personal outcome. Strengthen portable abilities: diagnose systems, communicate constraints, judge quality, test work, and finish projects. AI use is not a prerequisite for understanding this map.</li><li>"Why did generated code compile but fail?" Compilation checks some syntax and type rules, not whether the behavior matches the design, synchronizes correctly, or meets a time budget. Ask for the failing scenario and a regression test.</li><li>"What should a non-programmer do tomorrow?" Trace one of your own assets from source file through import and reference to its visible or audible result. Record one format constraint, one loading constraint, and one timing constraint.</li><li>"Where should I read next?" Start with the repository's reference for the relevant question, then check version-specific primary documentation. For engine behavior, prefer source and measured traces over confident summaries, including these notes.</li><li>If unsure: "I can locate the responsibility, but I would need to inspect that engine version or measure that behavior before claiming an answer." This models the skill you are teaching.</li></ul></div>

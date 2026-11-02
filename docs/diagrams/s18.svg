@@ -1,11 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="s15-title s15-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <title id="s15-title">Relationships, location, and components</title><desc id="s15-desc">A parent hand connects to a weapon. A partitioned space locates nearby objects. An entity table groups position and health data. These structures answer different questions and may coexist.</desc>
-  <g fill="#1F2937" stroke="#475569"><rect x="5" y="5" width="280" height="230" rx="12"/><rect x="310" y="5" width="280" height="230" rx="12"/><rect x="615" y="5" width="280" height="230" rx="12"/></g>
-  <g text-anchor="middle" font-size="23" font-weight="700"><text x="145" y="36" fill="#A5B4FC">RELATIONSHIPS</text><text x="450" y="36" fill="#7DD3FC">LOCATION</text><text x="755" y="36" fill="#6EE7B7">COMPONENTS</text></g>
-  <path d="M145 97 V127 H200" fill="none" stroke="#A5B4FC" stroke-width="3"/><rect x="70" y="58" width="150" height="40" rx="6" fill="#312E81"/><rect x="115" y="129" width="150" height="40" rx="6" fill="#312E81"/>
-  <g fill="#F9FAFB" text-anchor="middle" font-size="22"><text x="145" y="86">Hand</text><text x="190" y="157">Weapon</text></g>
-  <path d="M335 60 H565 V174 H335 Z M450 60 V174 M450 120 H565" fill="none" stroke="#7DD3FC" stroke-width="2"/><circle cx="375" cy="90" r="9" fill="#7DD3FC"/><circle cx="412" cy="143" r="9" fill="#7DD3FC"/><circle cx="514" cy="145" r="9" fill="#FBBF24"/>
-  <g fill="#CBD5E1" font-size="19"><text x="635" y="85">Entity</text><text x="710" y="85">Pos.</text><text x="795" y="85">Health</text><text x="650" y="124">A</text><text x="710" y="124">x, y</text><text x="810" y="124">100</text><text x="650" y="163">B</text><text x="710" y="163">x, y</text><text x="810" y="163">75</text></g>
-  <path d="M630 94 H880 M700 60 V179 M785 60 V179" stroke="#6EE7B7" fill="none"/>
-  <g fill="#CBD5E1" text-anchor="middle" font-size="20"><text x="145" y="210">What moves together?</text><text x="450" y="210">What is nearby?</text><text x="755" y="210">What facts are stored?</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s13-title s13-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s13-title">Illustrative frame budget</title><desc id="s13-desc">A 12 millisecond critical path fits a 16.7 millisecond target interval. A 24 millisecond critical path exceeds it. These are teaching values, not a benchmark or summed CPU and GPU timings.</desc>
+  <g font-size="22" fill="#CBD5E1"><text x="15" y="75">Frame A</text><text x="15" y="148">Frame B</text><text x="175" y="207">0 ms</text><text x="578" y="207">16.7 ms</text><text x="790" y="207">25 ms</text></g>
+  <path d="M600 28 V175" stroke="#FBBF24" stroke-width="3" stroke-dasharray="7 5"/>
+  <rect x="180" y="45" width="302" height="46" rx="6" fill="#064E3B" stroke="#6EE7B7"/><rect x="180" y="118" width="604" height="46" rx="6" fill="#7F1D1D" stroke="#FCA5A5"/>
+  <g font-size="22" fill="#F9FAFB"><text x="195" y="76">12 ms: within target</text><text x="195" y="149">24 ms: late delivery</text></g>
+  <text x="600" y="22" text-anchor="middle" font-size="20" fill="#FBBF24">60 fps target interval</text>
+  <text x="450" y="231" text-anchor="middle" font-size="18" fill="#94A3B8">Illustrative critical-path work, not CPU time + GPU time</text>
 </svg>

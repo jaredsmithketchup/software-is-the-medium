@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="s20-title s20-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <title id="s20-title">Authoring pipeline and runtime loop</title><desc id="s20-desc">Design and assets pass through import and cook into a runtime. The runtime and player form a feedback loop. The authoring stages do not repeat for every shot.</desc>
-  <defs><marker id="s20-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6EE7B7"/></marker></defs>
-  <g stroke="#6EE7B7" stroke-width="2" fill="none" marker-end="url(#s20-arrow)"><path d="M190 97 H235"/><path d="M425 97 H475"/><path d="M665 97 H710"/><path d="M800 142 V194 H570 V150"/></g>
-  <path d="M450 15 V223" stroke="#94A3B8" stroke-dasharray="5 6"/>
-  <g fill="#1F2937" stroke="#6EE7B7"><rect x="5" y="50" width="185" height="93" rx="10"/><rect x="235" y="50" width="190" height="93" rx="10"/><rect x="475" y="50" width="190" height="93" rx="10"/><rect x="710" y="50" width="185" height="93" rx="10"/></g>
-  <g text-anchor="middle" fill="#F9FAFB" font-size="22"><text x="98" y="86">Design + assets</text><text x="330" y="86">Import + cook</text><text x="570" y="86">Game + engine</text><text x="802" y="86">Player</text></g>
-  <g text-anchor="middle" fill="#CBD5E1" font-size="19"><text x="98" y="119">intent, files, units</text><text x="330" y="119">validate + package</text><text x="570" y="119">load + run logic</text><text x="802" y="119">see, hear, act</text><text x="220" y="25">BUILD TIME</text><text x="680" y="25">RUN TIME</text><text x="690" y="222">Next input closes the loop</text><text x="220" y="195">Prepare once; use many times</text></g>
-</svg>

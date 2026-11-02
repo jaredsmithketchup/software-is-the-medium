@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" role="img" aria-labelledby="s30-title s30-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <title id="s30-title">A bounded AI change with acceptance checks</title><desc id="s30-desc">Inspect the current path, make a small diff, run tests, then review evidence. Test empty ammunition, active cooldown, a valid hit, and a valid miss.</desc>
-  <path d="M100 70 H790" stroke="#D8B4FE" stroke-width="3"/>
-  <g fill="#3B0764" stroke="#C084FC" stroke-width="2"><circle cx="110" cy="70" r="36"/><circle cx="335" cy="70" r="36"/><circle cx="560" cy="70" r="36"/><circle cx="785" cy="70" r="36"/></g>
-  <g text-anchor="middle" fill="#F9FAFB" font-size="28"><text x="110" y="80">1</text><text x="335" y="80">2</text><text x="560" y="80">3</text><text x="785" y="80">4</text></g>
-  <g text-anchor="middle" fill="#D8B4FE" font-size="23"><text x="110" y="138">Inspect</text><text x="335" y="138">Small diff</text><text x="560" y="138">Run tests</text><text x="785" y="138">Review evidence</text></g>
-  <text x="450" y="185" text-anchor="middle" font-size="22" fill="#CBD5E1">Empty ammo · cooldown active · hit · miss</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-labelledby="s28-title s28-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s28-title">Neural upscaling is an output component</title><desc id="s28-desc">A low resolution frame with motion, depth and history feeds a neural reconstruction stage that produces a higher resolution image. Authoritative health and collision remain separate responsibilities.</desc>
+  <defs><marker id="s28-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#D8B4FE"/></marker></defs>
+  <path d="M255 91 H325 M585 91 H645" stroke="#D8B4FE" stroke-width="2" marker-end="url(#s28-arrow)"/>
+  <g fill="#1F2937" stroke="#C084FC" stroke-width="2"><rect x="5" y="30" width="250" height="120" rx="10"/><rect x="325" y="30" width="260" height="120" rx="10"/><rect x="645" y="30" width="250" height="120" rx="10"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="23"><text x="130" y="76">Low-resolution frame</text><text x="455" y="76">Neural reconstruction</text><text x="770" y="76">Higher-resolution</text><text x="770" y="108">image</text></g>
+  <g text-anchor="middle" fill="#CBD5E1" font-size="19"><text x="130" y="108">+ motion, depth, history</text><text x="455" y="108">Example: DLSS SR</text></g>
+  <text x="450" y="192" text-anchor="middle" fill="#D8B4FE" font-size="23">An image-quality technique, not a new source of gameplay truth</text>
 </svg>
