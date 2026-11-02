@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 168" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <rect x="16" y="8" width="112" height="44" rx="8" fill="#075985"/>
+  <text x="72" y="35" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
+  <line x1="132" y1="30" x2="152" y2="30" stroke="#9CA3AF" stroke-width="2"/>
+  <polygon points="152,24 164,30 152,36" fill="#9CA3AF"/>
+  <rect x="172" y="8" width="116" height="44" rx="8" fill="#312E81"/>
+  <text x="230" y="35" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
+  <line x1="292" y1="30" x2="312" y2="30" stroke="#9CA3AF" stroke-width="2"/>
+  <polygon points="312,24 324,30 312,36" fill="#9CA3AF"/>
+  <rect x="332" y="8" width="112" height="44" rx="8" fill="#064E3B"/>
+  <text x="388" y="35" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
+  <path d="M388 52 V96 H72 V60" fill="none" stroke="#34D399" stroke-width="2"/>
+  <polygon points="66,60 78,60 72,48" fill="#34D399"/>
+  <rect x="118" y="78" width="224" height="40" rx="8" fill="#064E3B" stroke="#34D399"/>
+  <text x="230" y="96" font-size="12" font-weight="700" fill="#D1FAE5" text-anchor="middle">player: perceive, decide, act</text>
+  <text x="230" y="142" font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle">cybernetics: output returns as the next input</text>
+</svg>

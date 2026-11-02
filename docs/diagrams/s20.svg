@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 88" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g font-size="11" font-weight="700" fill="#F9FAFB" text-anchor="middle">
+    <rect x="4" y="16" width="100" height="56" rx="8" fill="#312E81"/>
+    <text x="54" y="38">1 DESIGN</text>
+    <text x="54" y="56" font-size="10" font-weight="400" fill="#C7D2FE">designers</text>
+    <polygon points="108,44 116,38 116,50" fill="#9CA3AF"/>
+    <rect x="120" y="16" width="100" height="56" rx="8" fill="#0C4A6E"/>
+    <text x="170" y="38">2 DATA</text>
+    <text x="170" y="56" font-size="10" font-weight="400" fill="#BAE6FD">art, audio</text>
+    <polygon points="224,44 232,38 232,50" fill="#9CA3AF"/>
+    <rect x="236" y="16" width="110" height="56" rx="8" fill="#1F2937" stroke="#38BDF8"/>
+    <text x="291" y="38">3 IMPORT</text>
+    <text x="291" y="56" font-size="10" font-weight="400" fill="#94A3B8">integration</text>
+    <polygon points="350,44 358,38 358,50" fill="#9CA3AF"/>
+    <rect x="362" y="16" width="110" height="56" rx="8" fill="#312E81"/>
+    <text x="417" y="38">4 CODE</text>
+    <text x="417" y="56" font-size="10" font-weight="400" fill="#C7D2FE">programmers</text>
+    <polygon points="476,44 484,38 484,50" fill="#9CA3AF"/>
+    <rect x="488" y="16" width="110" height="56" rx="8" fill="#064E3B"/>
+    <text x="543" y="38">OUTPUT</text>
+    <text x="543" y="56" font-size="10" font-weight="400" fill="#A7F3D0">frames, audio</text>
+    <polygon points="602,44 610,38 610,50" fill="#34D399"/>
+    <rect x="614" y="16" width="100" height="56" rx="8" fill="#064E3B" stroke="#34D399"/>
+    <text x="664" y="38">PLAYER</text>
+    <text x="664" y="56" font-size="10" font-weight="400" fill="#D1FAE5">closes loop</text>
+  </g>
+</svg>

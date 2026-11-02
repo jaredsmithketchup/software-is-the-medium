@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g font-size="13" font-weight="700">
+    <rect x="8" y="8" width="150" height="36" rx="8" fill="#1F2937" stroke="#6366F1"/>
+    <text x="83" y="31" fill="#F9FAFB" text-anchor="middle">STATE</text>
+    <text x="175" y="31" fill="#A5B4FC">world model</text>
+    <rect x="8" y="50" width="150" height="36" rx="8" fill="#1F2937" stroke="#818CF8"/>
+    <text x="83" y="73" fill="#F9FAFB" text-anchor="middle">LOGIC</text>
+    <text x="175" y="73" fill="#C7D2FE">physics, AI, gameplay</text>
+    <rect x="8" y="92" width="150" height="36" rx="8" fill="#1F2937" stroke="#38BDF8"/>
+    <text x="83" y="115" fill="#F9FAFB" text-anchor="middle">INPUT</text>
+    <text x="175" y="115" fill="#7DD3FC">device to command</text>
+    <rect x="8" y="134" width="150" height="36" rx="8" fill="#1F2937" stroke="#34D399"/>
+    <text x="83" y="157" fill="#F9FAFB" text-anchor="middle">OUTPUT</text>
+    <text x="175" y="157" fill="#6EE7B7">renderer, audio, UI</text>
+    <rect x="8" y="176" width="150" height="36" rx="8" fill="#1F2937" stroke="#A78BFA"/>
+    <text x="83" y="199" fill="#F9FAFB" text-anchor="middle">CLOCK</text>
+    <text x="175" y="199" fill="#DDD6FE">frame loop</text>
+  </g>
+</svg>

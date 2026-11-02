@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <rect x="8" y="28" width="150" height="54" rx="8" fill="#1F2937" stroke="#6366F1"/>
+  <text x="83" y="52" font-size="12" font-weight="700" fill="#F9FAFB" text-anchor="middle">YOU</text>
+  <text x="83" y="68" font-size="10" fill="#A5B4FC" text-anchor="middle">intent</text>
+  <polygon points="162,55 174,49 174,61" fill="#9CA3AF"/>
+  <rect x="180" y="28" width="160" height="54" rx="8" fill="#3B0764" stroke="#A855F7"/>
+  <text x="260" y="52" font-size="12" font-weight="700" fill="#E9D5FF" text-anchor="middle">HARNESS</text>
+  <text x="260" y="68" font-size="10" fill="#D8B4FE" text-anchor="middle">on your machine</text>
+  <polygon points="344,55 356,49 356,61" fill="#9CA3AF"/>
+  <rect x="362" y="28" width="150" height="54" rx="8" fill="#1F2937" stroke="#34D399"/>
+  <text x="437" y="52" font-size="12" font-weight="700" fill="#F9FAFB" text-anchor="middle">SOFTWARE</text>
+  <text x="437" y="68" font-size="10" fill="#6EE7B7" text-anchor="middle">explain or edit</text>
+  <text x="260" y="18" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">a new interface. same medium.</text>
+</svg>

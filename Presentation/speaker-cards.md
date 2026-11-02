@@ -1,986 +1,459 @@
 ---
 type: Reference
 title: "Speaker Cards — Software is the Medium: Game Engines are Software"
-description: Spoken script for S1–S64. Read Say. Use Need only if asked or if you blank. Then say Next and move.
-tags: [presentation, speaker-cards, game-engines, medium, talking-points]
-generated: { by: kilocode, at: 2026-11-02T06:20:00Z }
+description: Spoken script for the refactored deck. Read Say. Use Need only if asked. Then say Next.
+tags: [presentation, speaker-cards, game-engines, medium]
+generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
 
 # Speaker Cards — Software is the Medium: Game Engines are Software
 
-Read **Say** out loud. It is the script. **Need** is the fact you reach for if
-someone asks, or if you blank. **Next** is the handoff. Do not add a third idea.
+Read **Say**. **Need** is only if someone asks, or if you blank. Then **Next**.
 
-If you fall behind: say the first Say line, say Next, and move. Never cut the
-weapon (S50–S55) or the last line (S63). Cut S59 first, then shorten S44–S49.
+If you fall behind, cut S18 and S26 first. Do not cut the engine anatomy (S12),
+the three engines (S17), the weapon (S20–S24), or the last line (S31).
 
-Pace: about 77 minutes of talk, then questions. Section openers are 15 seconds.
-
-Lost in the room? Ask: where is the input, where is the output, what is in the middle?
-Then name the part: state, logic, input, output, or clock.
+Lost? Point at a part: state, logic, input, output, clock.
 
 ---
 
 ## S1 — Software is the Medium — Game Engines are Software
 
-**Pace:** section 1, 4 minutes. This slide is 20 seconds.
-
 **Say**
 
 - Software is the medium. Game engines are software.
-- Point at the five boxes. Every program sits on these: state, logic, input, output, clock.
-- Do not define them yet. By the end you will know which box your job feeds.
-
-**Need**
-
-- Two substances on the chips: data and code. Four acts on the bar. That is the whole map.
+- Say the title, then stop. The rest of the talk is the anatomy of that sentence.
+- First the anatomy of software. Then the same anatomy as an engine. Then one weapon, so every discipline can see their part. Then where this is going.
 
 **Next**
 
-- First: what a medium even is.
+- Most of you are already making software. That is the part people miss.
 
-## S2 — You work in a medium
+## S2 — You are making software
 
 **Say**
 
-- A painter who does not understand paint cannot paint well, no matter the brush.
-- A musician has the instrument. A civil engineer has steel and concrete.
-- Your medium is software. The rest of today is the properties of that medium.
+- If you design, model, animate, or make sound, you are making software.
+- Your files are data. The engine is code that plays that data back.
+- The properties of software are the properties of your job. If you do not know them, you are working the medium blind.
 
 **Need**
 
-- Paint dries, mixes, and fails in specific ways. Software does too. That is all "medium" means.
+- A texture, a sound, a damage number, a Blueprint graph. All of it is software. Some of it is data. Some of it is code stored as data.
 
 **Next**
 
-- Why bother, when the tools keep changing?
+- The tool will change. The anatomy will not.
 
-## S3 — Why this, today
+## S3 — The anatomy outlasts the tool
 
 **Say**
 
-- The industry is noisy. New tool every year. AI in every role. Teams shifting.
-- The tool you learn this year will be replaced. The shape under it will not.
-- This is a map, not a manual. Orientation beats completeness.
-
-**Need**
-
-- If they want the line: foundations outlast tools.
+- Unreal today. Something else in five years. A custom engine at the next studio.
+- Learn the product manual and you start over. Learn the anatomy and you can read the next engine.
+- That is the whole reason for this talk.
 
 **Next**
 
-- Strip it down. Software is two things.
+- Anatomy of software. Five ideas. Stay with me.
 
-## S4 — Code and data
+## S4 — Anatomy of software
 
-**Pace:** section 2, 6 minutes. 15 seconds.
+**Pace:** this block is the foundation. Do not rush S10.
 
 **Say**
 
-- What is software made of?
-- Code and data. I am going to name them, then show you that you already work in one of them.
+- Code and data. Input, process, output. The loop. Latency. Then five parts that hold all of it.
 
 **Next**
 
-- Code, and data.
+- Two substances. Nothing else.
 
 ## S5 — Code and data
 
 **Say**
 
-- Code is the rules. Do this, then that.
-- Data is the values those rules act on. Numbers, text, files, how high you are.
-- Press jump. The rule is code. The upward speed, and your height, are data.
-- There is no third substance.
+- Code is the rules. Data is the values.
+- Press jump. The rule is code. How high you are is data.
+- A spreadsheet is the same cut. Formulas are code. Cells are data.
 
 **Need**
 
-- Spreadsheet: formulas are code, cells are data. Same cut.
 - The old name, if a programmer asks: von Neumann. A stored program acting on stored state. You do not need the name.
 
 **Next**
 
-- But they are not stuck that way.
+- That split is not locked.
 
-## S6 — Code and data can trade places
+## S6 — Code can be stored as data
 
 **Say**
 
-- Last slide split them. Code is the rule. Data is the value. Jump is the rule. Height is the value.
-- That split is not locked. You can save a rule in a file. You can make a file change what the game does.
-- A mod does this. It replaces a data file. Nobody recompiles the engine. The game still changes.
-- So you decide: does this live in the program, or in a file someone can edit?
+- A rule can live in a file. A file can change what the game does.
+- Quake compiled QuakeC into progs.dat. The code shipped as data.
+- Doom 3 scripts ship as data. Unreal Blueprints ship in .uasset files.
+- A mod replaces a data file. Nobody recompiles the engine. The game still changes.
+- So you decide what is a rule in the program, and what is a value in a file.
+
+**Next**
+
+- Every program, including that file, has a shape.
+
+## S7 — Input, process, output
+
+**Say**
+
+- Input crosses in. A key, a file, a packet.
+- Process is code acting on data.
+- Output crosses out. Pixels, audio, a file written to disk.
+- A calculator and an engine are the same three boxes. Scale and speed change. The shape does not.
 
 **Need**
 
-- Code shipped as a data file: QuakeC compiled into progs.dat. Quake III .qvm. DOOM 3 idScript. Unreal Blueprints stored in .uasset.
-- Data that changes behavior: a DOOM WAD holds maps, sprites, sounds, and behavior tables. DOOM 3 .decl files.
+- There is no software without IO. Only software whose IO is hidden. If you are lost later: where is the input, where is the output, what is the process?
 
 **Next**
 
-- That decision is the question you keep.
+- Games do not run once. They loop.
 
-## S7 — The question you keep
+## S8 — The loop is cybernetics
 
 **Say**
 
-- What belongs in code, and what belongs in data?
-- Default answer: data. Cheaper to change, easier to inspect, safer for people who do not write the engine.
-- Your work — art, audio, design — is data until code plays it back.
+- Output reaches a person. They perceive, decide, and act. That act is the next input.
+- That feedback loop has a name: cybernetics.
+- Keep the word. It is the name of a system that watches its own output and corrects.
+- A game with no player is a simulation. Put a player in it, and they are in the loop.
 
 **Need**
 
-- A number in a file can ship in a content patch. A code change waits for a build. That is why the default is data.
+- Sense, think, act is the same three boxes. Do not teach a second theory.
 
 **Next**
 
-- What shape does all of this live in?
+- The price of the loop is latency.
 
-## S8 — Input, process, output
-
-**Pace:** section 3, 5 minutes. 15 seconds.
+## S9 — Latency
 
 **Say**
 
-- Every program is three things: input, process, output.
-- Input comes in. Process is code acting on data. Output goes out.
-
-**Next**
-
-- Same three boxes. No exceptions.
-
-## S9 — Input, process, output
-
-**Say**
-
-- Input: a key, a file, a network packet.
-- Process: code over data.
-- Output: pixels, sound, a file written to disk.
-- A calculator, a save dialog, and a game engine are the same three boxes. They differ in size, speed, and where you draw the boundary.
-
-**Need**
-
-- Save button: the click is input, writing the state is process, the file is output.
-
-**Next**
-
-- And the same shape stacks.
-
-## S10 — The same shape, stacked
-
-**Say**
-
-- You, the game, the runtime, the operating system, the hardware, the physical world.
-- Every seam is the same exchange: input, process, output.
-- A game is not one program. It is a stack of them.
-- One keypress crosses several of those seams before you see a result.
-
-**Next**
-
-- So here is the claim.
-
-## S11 — No software without IO
-
-**Say**
-
-- There is no software without IO. Only software whose IO is hidden.
-- The boundaries are the architecture.
-- When you are lost, ask: where is the input, where is the output, what is in the middle?
-
-**Need**
-
-- "In the middle" means process. Do not rename the three boxes. The question points at them.
-
-**Next**
-
-- So far the shape runs once. Games do not.
-
-## S12 — The loop
-
-**Pace:** section 4, 6 minutes. 15 seconds.
-
-**Say**
-
-- Interactive software does not finish. It loops.
-- That one fact is why games are hard.
-
-**Next**
-
-- Put a person in it.
-
-## S13 — A person is in the loop
-
-**Say**
-
-- Point at the top row. Input, process, output.
-- Point at the return path. The person perceives the output, decides, and acts.
-- That act is the next input.
-- If the game feels responsive or laggy, your body is reading the shape of this loop.
-
-**Need**
-
-- Perceive, decide, act maps onto input, process, output. Same three boxes. Not a second theory.
-
-**Next**
-
-- That steering has a name. Cybernetics.
-
-## S14 — Cybernetics
-
-**Say**
-
-- Cybernetics means you watch the output and correct.
-- Keep the word. It is the name of the loop with a person in it.
-- A game with no player is a simulation. Put a person in the loop, and they are steering.
-- A thermostat does this. A player does it faster, and cares more.
-
-**Next**
-
-- The limit on that loop is time.
-
-## S15 — Latency
-
-**Say**
-
-- Latency is the chain: finger, device, OS, simulation, render, display, eye.
+- Finger, device, OS, simulation, render, display, eye.
 - Those delays add. They do not average.
-- At 60 frames a second, the whole chain shares about 17 milliseconds.
-- That is why milliseconds are the job.
-
-**Need**
-
-- 60 fps is about 16.7 ms. 144 Hz is a tighter budget, which is why it feels like "you" instead of "it."
-- If they ask where the time goes: every hop stacks. A 10 ms hole in a 17 ms budget is a hitch you can see.
+- At 60 fps the budget is about 17 milliseconds. At 144 Hz it is tighter.
+- Miss the budget, and the player feels the loop break. That is what lag is.
 
 **Next**
 
-- Two kinds of software. Do not mix them up.
+- Now the five parts. This is the anatomy. Learn these names.
 
-## S16 — Pipeline and loop
+## S10 — State, logic, input, output, clock
 
 **Say**
 
-- A pipeline runs once and is done. A bake. A compile. A batch export.
-- A loop feeds the output back in as the next input. A game does this.
-- A game engine is a pipeline sitting inside a loop that is not allowed to be late.
-- If the loop misses its time, the machine sometimes answers. That is what lag feels like.
+- State: what is stored.
+- Logic: code over data.
+- Input: what crosses in.
+- Output: what crosses out.
+- Clock: when it runs.
+- Any program fits these boxes. A web form does. An engine does. Point at the box if you get lost for the rest of the day.
 
 **Next**
 
-- Now the five parts. This is the bridge to every engine.
+- Hold that diagram up to a game engine.
 
-## S17 — Five parts
-
-**Pace:** section 5, 4 minutes. 15 seconds.
+## S11 — Anatomy of a game engine
 
 **Say**
 
-- Every program has five parts.
-- If you can name which one you are in, most arguments get smaller.
+- An engine is not a new kind of software.
+- Same five parts. Each one is now a subsystem. And it has a deadline.
+
+**Next**
+
+- Read the rows.
+
+## S12 — Five subsystems
+
+**Say**
+
+- State is the world model. The picture of the world and everything in it.
+- Logic is physics, AI, and gameplay. Code over that data.
+- Input is the input subsystem. A device event becomes a command the game can read.
+- Output is the renderer, the audio mixer, and the UI.
+- The clock is the frame loop.
+- "The engine is slow" means nothing. Name the subsystem.
+
+**Next**
+
+- Why the deadline is the whole job.
+
+## S13 — The frame loop is hard real-time
+
+**Say**
+
+- The frame must finish before the next refresh. That is hard real-time.
+- Ordinary software can be late. A game cannot, or the player feels it.
+- The frame loop and the human loop are the same loop. The display is the metronome. 60 to 144 times a second.
+
+**Next**
+
+- One mistake people make about that output row.
+
+## S14 — The renderer reads state
+
+**Say**
+
+- State and logic are the core. They hold the world.
+- Assets, audio, UI, and network are channels. They move data across a boundary.
+- The renderer is a channel. It reads state and draws it. It does not run the simulation.
+- Black screen, world still simulating: the renderer is a reader, not the owner of the facts.
+
+**Next**
+
+- The state slot has a name: the world model. Three ways to store it.
+
+## S15 — The world model is the state slot
+
+**Say**
+
+- Scene graph: a parent-child transform tree. Attach a sword to a hand. The hand moves the sword.
+- BSP: the level is compiled into rooms, plus a flat list of entities. Quake and Doom 3 live here.
+- ECS: the same kind of fact in one column. A system scans the column.
+- You do not need to pick a winner. You need to know which one your engine uses, because that is the state you feed.
+
+**Next**
+
+- Same rows. Three real engines.
+
+## S16 — Quake, Doom 3, Unreal 5
+
+**Say**
+
+- Do not memorize the brands. Read the row.
+- State, logic, input, output, clock. If you can fill those five, you can read the engine.
 
 **Next**
 
 - Here they are.
 
-## S18 — Five parts. That is a program.
+## S17 — The same five rows
 
 **Say**
 
-- State: what is remembered.
-- Logic: what changes it.
-- Input: what gets in.
-- Output: what comes out.
-- Clock: who decides when.
-- Any program you meet fits these boxes. A web form does. A game does.
+- Quake. State is a BSP world plus edicts. Logic is QuakeC and the physics step. Input is a usercmd. Output is the renderer and the audio mix. Clock is a variable frame.
+- Doom 3. State is a compiled .proc world plus idEntity objects. Logic is RunFrame and idScript. Input is a usercmd at 60 Hz. Output is the renderer and OpenAL. Clock is a fixed 60 Hz simulation, and render runs as fast as the display.
+- Unreal 5. State is a UWorld of Actors. Logic is actor tick plus Chaos. Input is Enhanced Input. Output is a render thread, the audio mixer, and UMG. Clock is a variable game frame with fixed physics substeps.
+- Thirty years. Same five rows.
 
 **Need**
 
-- Web form: the fields are state, validation is logic, submit is input, the response is output, and "who runs when" is the clock.
+- QuakeC lived in progs.dat. Doom 3 data lived in .decl and .def files. Unreal content lives in .uasset files. That is S6 again: code and data, stored as files.
 
 **Next**
 
-- The one people fight about is the clock.
+- What actually changes.
 
-## S19 — Event-driven or polled
-
-**Say**
-
-- One style waits to be told. An event. "Tell me when."
-- The other checks on a rhythm. "Anything now?"
-- Push versus pull is the same fight, on the web and in an engine.
-- Two habits: find the clock first. Then name the part you are in.
-
-**Need**
-
-- The next "this engine feels laggy" argument is usually a clock argument.
-
-**Next**
-
-- Hold those five boxes up to an engine.
-
-## S20 — An engine is the same thing, built big
-
-**Pace:** section 6, 7 minutes. 15 seconds.
+## S18 — What changes is the fill
 
 **Say**
 
-- An engine is not a new kind of thing.
-- Same five parts. Each one is now a subsystem.
-
-**Next**
-
-- Watch the slots get filled.
-
-## S21 — Each part becomes a subsystem
-
-**Say**
-
-- State becomes the world model. That is the picture of the world and everything in it.
-- Logic becomes physics, AI, and gameplay code.
-- Input becomes the input system. Output becomes the renderer, audio, and UI.
-- The clock becomes the frame loop.
-- "The engine is slow" means nothing. Name the subsystem.
-
-**Next**
-
-- And it runs on a deadline.
-
-## S22 — Hard real-time
-
-**Say**
-
-- The frame must finish before the next refresh. Miss it, and the player feels a hitch.
-- Miss it, and it is not "a bit late." The person in the loop feels a break.
-- A stutter in a fight is a missed deadline, in front of the person who set it.
-- That one constraint explains more engine design than any feature list.
-
-**Next**
-
-- The engine's heartbeat and the person's heartbeat are the same loop.
-
-## S23 — The frame loop
-
-**Say**
-
-- Walk the numbers. Device, commands, update, world.
-- Then render, screen, you see it, you act.
-- Then it repeats.
-- The frame is one beat of that loop. Your monitor is the metronome.
-
-**Need**
-
-- 60 to 144 times a second. Do not list the steps twice.
-
-**Next**
-
-- Same loop in 1993 and today.
-
-## S24 — DOOM and Unreal are the same machine
-
-**Say**
-
-- Left: DOOM, 1993. A fixed 35 Hz tick. If the machine falls behind, it catches up.
-- Right: Unreal 5. A tick, split across threads.
-- One draws simply. One threads. Both are the same five parts.
-- 33 years. The skeleton did not change.
-
-**Need**
-
-- DOOM: D_DoomLoop, TryRunTics, TICRATE 35.
-- Unreal: FEngineLoop::Tick. Game thread, render thread, RHI thread. Chaos is the physics substeps.
-- Say the names only if someone asks.
-
-**Next**
-
-- One correction. The renderer is not the simulation.
-
-## S25 — The renderer reads the world
-
-**Say**
-
-- The renderer does not live inside the simulation.
-- It reads the world's state each frame and draws it.
-- Black screen, world still simulating: the renderer is a reader at the end, not the owner of the facts.
-
-**Next**
-
-- Same skeleton. Why do engines feel different?
-
-## S26 — Same skeleton, different choices
-
-**Pace:** section 7, 6 minutes. 15 seconds.
-
-**Say**
-
-- They feel different because the implementation of those parts changes.
+- The clock is the row people feel. Quake varies the frame. Doom 3 locks simulation at 60 and renders separately. Unreal varies the game thread and locks physics inside it.
+- The world model changes. Threads change. Unreal splits game, render, and RHI.
 - Nobody adds a sixth part.
 
-**Next**
-
-- First cut: core, and channels.
-
-## S27 — Core and channels
-
-**Say**
-
-- Core is state and the simulation. That is the game.
-- Channels are assets, audio, UI, and network.
-- A WAD, a pk3, and a uasset are different containers for the same idea.
-- three.js has no built-in audio. That is an empty channel. The app holds it.
-
-**Next**
-
-- The choice people argue about most is the timestep.
-
-## S28 — Fixed, variable, hybrid
-
-**Say**
-
-- Fixed: a metronome. Repeatable. If you fall behind, you must catch up.
-- Variable: a human drummer. Smooth. Not the same twice.
-- Hybrid: fixed physics inside a variable frame. Most modern engines live here.
-- Sometimes the app owns the clock, and the engine does not.
-- Every engine has a loop. Only the beat changes.
-
 **Need**
 
-- Fixed: DOOM 35 Hz, Quake III server about 20 Hz, DOOM 3 60 Hz.
-- Variable: original Quake, Urho3D.
-- Hybrid: redot's frame interpolation, Unreal Chaos.
-- App-owned: three.js. requestAnimationFrame lives in the page, not in a hidden engine clock.
+- If someone asks why Doom 3 can hitch while the sim is fine: the sim owes tics, then it draws once. Render and simulation are different clocks.
 
 **Next**
 
-- Four knobs. That is the whole difference list.
+- One object that uses every row, and every job in the room. A weapon.
 
-## S29 — Four ways engines differ
+## S19 — One weapon, every discipline
 
 **Say**
 
-- How the world is stored.
-- How time is kept.
-- How work is split across threads and processes.
-- World model. Timestep. How work is threaded. Which channels exist.
-- Meet an engine, ask those four. Read the choices, not the brand.
+- This is the slide I will not rush.
+- A weapon is not a mesh. It is design, art, audio, and code, becoming frames and sound.
+- Until gameplay code runs, it is inert data. It cannot fire.
 
 **Next**
 
-- The biggest knob is how the world is remembered. That is the next stretch. It is the long one, and it is where most of you will see your own work.
+- Four stages, then the loop.
 
-## S30 — World models
-
-**Pace:** section 8, 9 minutes. Do not linger on the opener.
+## S20 — Four stages, then the loop
 
 **Say**
 
-- How does the engine remember the world?
-- That choice decides what your Tuesday feels like. Art, design, and audio live inside this choice.
+- Designers write what the weapon is. That is a schema.
+- Artists and audio produce the data. Model, rig, textures, sound.
+- Import makes that data an asset the engine can find.
+- Gameplay code plays the data. Animation, sound, particles, damage.
+- The renderer and the audio mixer are the output.
+- The player's button is the input that closes the loop.
+- Design, art, audio, code. One anatomy. If your file is wrong, name the stage, not the person.
 
 **Next**
 
-- Three questions. The answers are the world model.
+- The first two stages do nothing by themselves.
 
-## S31 — Three questions make the world model
+## S21 — Design and data do nothing yet
 
 **Say**
 
-- How is it stored?
-- How are things related?
-- How do you search it?
-- Those three answers are the world model. The rest of the engine follows from them.
-- "What does my art attach to?" is the relation question. It decides your daily workflow.
+- Design decides role, feel, and the numbers. Fire rate, damage, recoil. That document is already a schema. Later code will have to agree with it.
+- Then the files. A mesh does not fire. A gunshot does not fire. They sit on disk.
+- The best sound in the room cannot pull the trigger. It is data.
 
 **Next**
 
-- Three families. Then we will say they mix.
+- Then someone imports it, and someone writes the code that plays it.
 
-## S32 — Scene graph, BSP, ECS
+## S22 — Import, then gameplay code
 
 **Say**
 
-- Scene graph: three.js, Babylon, redot, Urho3D.
-- BSP plus a flat entity list: DOOM, Quake, Quake III, DOOM 3.
-- Tables, built for the machine. OpenEngine is the example on the shelf.
-- Do not memorize the logos. Memorize the three shapes.
+- Import turns files into assets. In Unreal that is the path into .uasset, then cook.
+- A soft reference loads when needed. A hard reference stays loaded. That choice is what hits the frame.
+- Gameplay code does not invent the gun. It reads the data and orchestrates it.
+- Fire: montage, sound, particles, damage. The finger on the button is the input leg from the start of the talk.
 
 **Next**
 
-- The tree first, because most of you have touched one.
+- What the player actually gets. Frames and audio.
 
-## S33 — Scene graph
-
-**Say**
-
-- A scene graph is a parent-child transform tree. A child inherits the parent's transform.
-- Attach a sword to a hand. Move the hand. The sword comes along. You did not write a second animation.
-- That is why artists and designers like it.
-- The cost: the engine walks that tree every frame.
-
-**Next**
-
-- Now the static-world answer. This is how DOOM fit on a 386.
-
-## S34 — BSP and a flat list
+## S23 — Frames and audio
 
 **Say**
 
-- BSP means the level is pre-cut into rooms. The engine can reject a whole room without looking inside it.
-- Entities are a flat list, placed in the map. They are not hanging off a tree.
-- Fast for a world that does not reshape itself. It fights you if everything moves.
-
-**Need**
-
-- BSP is binary space partition. Say "pre-cut rooms" if the room goes blank. DOOM shipped on a 386 because a room test beats searching the whole world.
-
-**Next**
-
-- The machine-shaped answer.
-
-## S35 — ECS
-
-**Say**
-
-- ECS: entity, component, system.
-- Put every position in one column. A system sweeps that column.
-- A thousand bullets are one list, not a thousand little objects.
-- What a thing is, is the data attached to it. That is the point of this family. It scales. It is harder for a person to read.
-
-**Need**
-
-- The name is ECS: entity, component, system. Entity is the id. Components are the columns. Systems are the sweeps.
-
-**Next**
-
-- These are not rivals.
-
-## S36 — Pick the shape your team can feed
-
-**Say**
-
-- Trees for people. Baked maps for static levels. Tables when you have tens of thousands of things.
-- Shipping engines mix them. A tree for the characters, a spatial structure for the level, tables for the bullets.
-- The choice is a product decision. It is the world your team lives in every day.
-
-**Next**
-
-- Under all three: a state store.
-
-## S37 — The world model is a state store
-
-**Say**
-
-- The world model is a state store. Input updates it. The renderer reads it. The renderer does not own it.
-- If you know Redux: action, store, view. Same shape.
-- Three differences, and then we leave it. A game pulls every frame. The facts are spatial. And you can rewind a store. You cannot rewind a simulation the same way, because the world was stepped forward, not derived.
-
-**Need**
-
-- "Can we rewind the last second of gameplay?" Only if you stored the facts, or can re-simulate from a seed. The picture cannot give them back.
-
-**Next**
-
-- UI is not part of that box.
-
-## S38 — The HUD is not in the world
-
-**Say**
-
-- Draw the world first. Draw the HUD last, in screen pixels.
-- The pause menu is not in the world. Full stop.
-- A health bar stuck to a head, or a fully 2D game, is the exception. Name it as an exception so it does not break the rule.
-
-**Next**
-
-- Under the world is the machine. Two kinds of computer, one deadline. This block is fast. Three minutes.
-
-## S39 — CPU and GPU
-
-**Pace:** section 9, 3 minutes. Do not open a hardware lecture.
-
-**Say**
-
-- The CPU is one careful worker. Few lanes, hard jobs, one step at a time, lots of branching.
-- The GPU is a large crew. One recipe, enormous data.
-- A frame gets stuck on one of four things: CPU, GPU, loading, or memory.
-- Smooth frame rate with hitching loads is the loading one. The FPS counter cannot see it.
-
-**Need**
-
-- SIMD, if asked: one instruction, many thin legs. A detail. Do not teach it.
-- Scholar writing prose versus an army painting a fence. Use it if the room is lost. Otherwise skip the metaphor.
-
-**Next**
-
-- One command prints the question.
-
-## S40 — stat unit
-
-**Say**
-
-- In Unreal, stat unit prints Frame, Game, and Draw.
-- Game high, Draw low: the simulation is the problem. Stop tuning shaders.
-- Unreal Insights is the timeline, if you need the longer view.
-- Change one thing at a time. Adding cores only speeds the part that can run in parallel.
-
-**Need**
-
-- The parallel-share limit is Amdahl's law. Say the plain version. Skip the name unless asked.
-
-**Next**
-
-- When several things run at once, two questions. Four minutes, then we leave the machine.
-
-## S41 — Who waits, and who picks the order?
-
-**Pace:** section 10, 4 minutes.
-
-**Say**
-
-- Who waits? Blocking means the whole thing stands still. A loading screen is blocking. An event loop does the next ready thing while a slow read is in flight.
-- Who picks the order? The operating system can cut you off. Or your code yields on purpose. Coroutines and task graphs are the second kind.
-- Each step up costs more coordination. One thread, then an event loop, then threads, then separate processes, then the network. You pay at every rung.
-
-**Need**
-
-- Async is the kettle boiling while you set the cups. Use it once. Do not build the ladder on the slide.
-
-**Next**
-
-- The other half is whose copy is real.
-
-## S42 — Authority and replication
-
-**Say**
-
-- Shared memory is one whiteboard. Messages are mail. Both are ways to share facts.
-- Copies are useful. They go stale on purpose. That staleness is what buys you parallel work.
-- On a network, one machine is the authority. Your client is wrong by a few milliseconds, by design. That wrongness is how the game stays playable.
-
-**Need**
-
-- Your input is authoritative on your machine until the server says otherwise. Replication is an intentional copy. An RPC is a message, not a shared whiteboard.
-
-**Next**
-
-- Unreal already has names for all of this. One slide, then three quiet seams.
-
-## S43 — Unreal already named this
-
-**Say**
-
-- Game thread, render thread, RHI thread.
-- Latent actions are code that waits without freezing the frame.
-- The task graph orders the work. Replication and RPCs are the network copies.
-- The question, and then we stop: who runs, who waits, who decides the order, whose copy is true?
-- Every "the engine is wonky" complaint is one of those four.
-
-**Next**
-
-- Three seams. Six minutes. Then people.
-
-## S44 — Three quiet seams
-
-**Pace:** section 11, 6 minutes. One idea each. Do not open the chapters.
-
-**Say**
-
-- A contract for what bytes mean.
-- A map of where things are.
-- Schema. Spatial index. The operating system.
-- Then we are done with the machine.
-
-**Next**
-
-- The contract.
-
-## S45 — A schema is a contract
-
-**Say**
-
-- A file is bytes. It means nothing until the writer and the reader agree.
-- Three agreements: what fields exist, how they are laid out, and what the values mean together.
-- If the tool crashes and the file looks fine, the agreement was broken. Not the file.
-
-**Need**
-
-- That agreement is a schema. Say the word once, then use "contract."
-
-**Next**
-
-- Same data, three formats.
-
-## S46 — Authoring, runtime, and wire
-
-**Say**
-
-- Authoring files are for people. fbx, gltf, wav. They say a lot. They load slowly.
-- Runtime files are for speed. Cooked assets. A uasset.
-- Packets are for the wire. Small, and able to change without breaking old clients.
-- A multiplayer desync is two sides that stopped agreeing. Same bug as a reader that does not match the writer.
-
-**Next**
-
-- Second seam. Where things are.
-
-## S47 — A spatial index
-
-**Say**
-
-- What is near this door? You can open every crate. Or you can read the aisle map.
-- The map is a cache of where things are. When things move, you update the map or rebuild it.
-- If the map lies, it is worse than no map. A rocket goes through a wall.
-- The same map serves drawing and collision. One structure, two customers.
-
-**Need**
-
-- Shapes, only if asked: a grid, a tree of boxes, or the pre-cut rooms from the DOOM slide. One shape per world model. Do not list octree and BVH unless an engineer asks.
-
-**Next**
-
-- Third seam. The operating system.
-
-## S48 — The OS and system calls
-
-**Say**
-
-- Your game does not touch the disk. It does not touch the GPU. It asks.
-- The game does not touch the disk or the GPU. It makes a system call.
-- The OS schedules the process, issues handles, and fronts the GPU.
-- A bad save is not you writing the disk. You asked the OS. If the handle was bad, that is a different bug than a bad mesh.
-
-**Need**
-
-- A handle leak is unreleased OS resources. Say that only if someone asks.
-
-**Next**
-
-- And it keeps the books.
-
-## S49 — Read the OS counters
-
-**Say**
-
-- The OS keeps a record of every process. The tools only show what that record knows.
-- Task Manager, stat unit, Event Viewer. Same habit.
-- Name it. Watch it. Read the record. Then ask: game bug, or a limit the OS imposed?
-- Crash plus Task Manager tells you who died. The record tells you who did what.
-
-**Next**
-
-- Machine is done. Now the room. This is the part I will not rush.
-
-## S50 — Where you sit
-
-**Pace:** section 12, 8 minutes. Stay here.
-
-**Say**
-
-- Art, audio, design, code. You do not own the whole machine.
-- You feed a part of it. The next slides are how to find your seat, and how one weapon touches every seat.
-
-**Next**
-
-- Someone builds the box. Someone fills it.
-
-## S51 — Owners and feeders
-
-**Say**
-
-- Owners build and maintain a part. Usually engineering.
-- Feeders fill it. Usually everyone else. Art fills files. Design fills numbers and rules-as-data. Audio fills sound files.
-- Nobody owns the whole machine.
-- The clock has no feeder. Everyone obeys it. You do not negotiate the frame deadline.
-- A lot of "the build is wrong" fights are two people standing on different sides of one box. Name the box, and the fight gets smaller.
-
-**Next**
-
-- One object touches every row. A weapon.
-
-## S52 — One weapon, four stages
-
-**Say**
-
-- Design it.
-- Make the files.
-- Hook the files into the engine.
-- Code plays them back.
-- Until gameplay code runs, the weapon is inert data.
-
-**Next**
-
-- The first two steps. Nothing fires.
-
-## S53 — Design it. Make the files. Nothing fires yet.
-
-**Say**
-
-- Design decides what the weapon is. Role, feel, the numbers. That document is already a schema.
-- Then the files: model, rig, textures, sound.
-- The best gunshot in the world cannot fire the gun. It is a file. It sits there.
-
-**Next**
-
-- Then someone hooks it up, and someone plays it.
-
-## S54 — Import, then gameplay code
-
-**Say**
-
-- Import turns files into assets the engine can find.
-- Some references load when needed. Some are baked in, and come along whether you wanted them or not. That choice is what loads when.
-- Gameplay code reads the recipe. Fire: animation, sound, particles, damage.
-- The finger on the button is the input leg of the loop from the start of the talk. Stage four is the middle. The sound you made in stage two is the output.
-
-**Need**
-
-- Soft reference: load when needed. Hard reference: baked in. Say the plain version first.
+- The simulation publishes state. It does not draw.
+- The renderer reads that state and draws the mesh, the materials, the animation.
+- The audio mixer reads the event and plays the sound.
+- VFX spawn from the same event.
+- All of that is output, on the clock. If the frame misses 17 ms, the player feels the weapon late. That is latency, not "the art is wrong."
 
 **Next**
 
 - This is not an Unreal story.
 
-## S55 — Same chain in DOOM 3
+## S24 — The same chain in Doom 3
 
 **Say**
 
-- 2004. Same four steps.
-- Design. Files. A placed entity. A script that plays them back.
-- The last step only plays what the first three made.
-- Engines change. The chain does not. Any weapon, any boss, any year.
+- 2004. Same four stages.
+- Design. Then .def and .decl data. Then a placed entity. Then idScript that plays them back.
+- The script only plays what the earlier stages produced.
+- Engines change. The chain does not. Any weapon, any year.
+
+**Next**
+
+- Last block. Where this is going. The anatomy stays. The interface changes.
+
+## S25 — Two kinds of software
+
+**Say**
+
+- The loop has a history. Software that tries to be intelligent split into two kinds.
+- I am not pitching a product. I am naming the split, then the interface on top of it.
+
+**Next**
+
+- The loop's older name.
+
+## S26 — Cybernetics is the older loop
+
+**Say**
+
+- Norbert Wiener named cybernetics from the steersman. You watch the result, and you correct.
+- A thermostat. A player. A frame loop.
+- You already know this. S8 was this idea. History did not invent a second loop.
 
 **Need**
 
-- DOOM 3: the placed thing is an .entity. The playback is idScript, running in a little virtual machine. Names only if asked.
+- 1948, Cybernetics. Say the year only if asked.
 
 **Next**
 
-- A new interface showed up. I am not going to pitch it. Five minutes, factual.
+- The split inside AI. Two ways to write software.
 
-## S56 — Talking to software
-
-**Pace:** section 13, 5 minutes. Neutral. No demo.
+## S27 — Symbolic and connectionist
 
 **Say**
 
-- Some of you are skeptical of AI. That is fine. This is not a pitch, and there is no demo.
-- Talking to software is four pieces. Not a magic box.
-
-**Next**
-
-- Here they are.
-
-## S57 — Backend, model, harness, knowledge
-
-**Say**
-
-- A backend runs the model. Cloud or on a machine you own.
-- The model is the trained brain.
-- The harness is the program on your machine. It is the only piece that touches your files. That is the power, and that is the risk. Same door.
-- Knowledge is your files, docs, and notes. Not the model's memory of the internet.
-- A model alone is a chat box. A harness turns words into actions.
-
-**Next**
-
-- It goes both ways. And there is a catch.
-
-## S58 — It can explain, and it can change things
-
-**Say**
-
-- One direction: the software explains itself. "Walk me through the renderer."
-- The other direction: you say what you want changed, and it edits the software.
-- The catch is the point of this whole talk. You still have to know the medium, or you cannot aim it.
-- You cannot ask for a tour of the renderer if you do not know a renderer exists, and that it is not the world.
-
-**Next**
-
-- Where the tools live. One breath, or skip if we are behind.
-
-## S59 — Where the tools live
-
-**Say**
-
-- Skip this slide if you are behind. If you say it, say this and stop.
-- There are harnesses, local runners, services that host models, and hubs that store them.
-- There are written standards for how an agent reads a repo.
-- Permissions are the trust boundary. Know which door you opened.
+- Symbolic software is rules over symbols. A script. A Blueprint. A state machine. C++. If this, then that.
+- Connectionist software is learned weights. A neural net. An LLM. Neural rendering. The behavior is in the weights, not in a rule you can read.
+- Your game logic is symbolic. The new pieces moving into the pipeline are connectionist.
+- "It hallucinated" and "just add a rule" are the two kinds bumping into each other. Name which one you are talking to.
 
 **Need**
 
-- Only if asked: harnesses such as Kilo, opencode, pi, Hermes. Local: LM Studio. Service: OpenRouter. Hub: Hugging Face. Standards: AGENTS.md, skills, MCP. Do not tour them. Do not recommend one.
+- 1943, McCulloch and Pitts, the artificial neuron. 1956, the Dartmouth workshop, symbolic AI. Connectionism is the older idea. It waited on computers. Say the dates only if asked.
 
 **Next**
 
-- Last section. Four minutes. What the future does to the loop.
+- What an engine looks like when both are in the box.
 
-## S60 — What comes next
-
-**Pace:** section 14, 4 minutes, including the close.
+## S28 — The hybrid engine
 
 **Say**
 
-- What does the future do to the loop we just built?
-- It changes the tools. It does not change the medium.
+- The engine we just mapped stays. It is symbolic scaffolding. State, logic, input, output, clock.
+- Neural subsystems replace pieces one at a time. Not a rewrite. Neural rendering already ships.
+- A learned renderer is still output. It still reads state. It still does not run the simulation.
+- The anatomy tells you where a new piece is allowed to sit.
 
 **Next**
 
-- Meet the fear straight.
+- And there is a new way to talk to that anatomy.
 
-## S61 — The fear, and the plain answer
+## S29 — AI is a new interface
 
 **Say**
 
-- The fear is real. Do not wave it off.
-- Some jobs get replaced. Some get help. Both sentences are true. Do not drop either one.
-- The loop gets larger. You do not leave it. A stronger autopilot does not delete the person at the wheel. It moves them.
+- This is not a demo, and it is not a pitch.
+- A model alone is a chat box. A harness on your machine turns words into actions on the files.
+- One direction: the software explains itself.
+- The other direction: you say what to change, and it edits the software.
+- The harness is the interface. It is also the only piece that touches your machine. Power and risk are the same door.
 
 **Need**
 
-- The figure, only if asked: the IMF said AI exposes about 40% of jobs globally, about 60% in advanced economies. Exposed is not the same as replaced. About half of the exposed jobs are complemented. Do not debate the number. Say both words: replaced, and helped.
-- Source if they press: IMF, January 2024, "AI Will Transform the Global Economy."
+- Four pieces, if asked: backend runs the model, model is the weights, harness is on your machine, knowledge is your files. Do not tour products.
 
 **Next**
 
-- What the machine itself looks like. Plain version.
+- The catch. This is the point of the whole talk.
 
-## S62 — The hybrid engine
+## S30 — You still need the anatomy
 
 **Say**
 
-- The engine we just mapped stays. It is the scaffolding.
-- Pieces get handed to learned systems one at a time. Not a waterfall. Keep what works.
-- Neural rendering already ships. That is not a prediction.
-- Shared real-time worlds are where those systems watch people play, and learn from the loop with a human in it.
-
-**Need**
-
-- Do not say "metaverse" unless someone uses the word. If they do: it is a verb, a thing people do together in real time, not a product name.
+- You cannot aim that interface if you do not know the anatomy.
+- You cannot ask for a tour of the renderer if you do not know the renderer reads state and does not run the simulation.
+- You cannot ask why the weapon is late if you cannot tell input latency from a missed frame from a bad asset reference.
+- The interface is new. The medium is not.
 
 **Next**
 
-- One line. Then I sit down.
+- One line. Then I stop.
 
-## S63 — The interface changed. The medium did not.
+## S31 — The interface changed. The medium did not.
 
 **Say**
 
 - The interface changed.
 - The medium did not.
-- Foundations outlast tools. The map still fits the next engine, the next job, and the next year.
+- Software is still code and data. Input, process, output. State, logic, input, output, clock.
+- A game engine is still that anatomy, made large, and hard real-time.
 - Stop. Do not add a second ending.
 
 **Next**
 
 - Questions.
 
-## S64 — Questions, and where to read next
+## S32 — Questions
 
 **Say**
 
-- If a question stalls, I am going to do what I told you to do. Where is the input, where is the output, what is in the middle? Which of the five parts is it?
-- The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this weapon work" question goes to the four stages.
-- Further reading, if they want shelves: id Software's public source for DOOM, Quake, Quake III, and DOOM 3. three.js and Babylon.js. Godot. Unreal's docs.
-
-**Need**
-
-- Do not open a new topic in the answer. Point at a part, then stop.
+- If I stall, I am going to do what I told you to do. Which part is it? State, logic, input, output, or clock. Who feeds that part?
+- The reference is the long version. Read it once. After that, use it per task. An engine question goes to the five rows. A weapon question goes to the four stages.

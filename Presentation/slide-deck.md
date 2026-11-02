@@ -1,476 +1,252 @@
 ---
 type: Reference
 title: "Slide Deck — Software is the Medium: Game Engines are Software"
-description: Plain-language 64-slide deck (S1–S64). One idea per slide. Audience text is short sentences. Speaker script lives in speaker-cards.md.
+description: Refactored deck. Anatomy of software, anatomy of a game engine, the same anatomy in Quake, Doom 3, and Unreal 5, the weapon across every discipline, then cybernetics, symbolic vs connectionist, and AI as a new interface.
 tags: [presentation, slide-deck, game-engines, medium, slides]
-generated: { by: kilocode, at: 2026-11-02T06:20:00Z }
+generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
 
 # Slide Deck — Software is the Medium: Game Engines are Software
 
-Audience text is the **Content** line, split into short sentences. The words to
-say are in [`speaker-cards.md`](speaker-cards.md).
+Audience text is the **Content** line. The words to say are in
+[`speaker-cards.md`](speaker-cards.md).
 
 ---
 
-# ACT A — FOUNDATIONS
+# ACT A — SOFTWARE
 
 ## S1 — Section 1 intro: Software is the Medium — Game Engines are Software *(divider)*
 
-- **Goal:** show the whole talk in one picture.
-- **Content:** Software is the medium. Game engines are software. Five parts. Four acts.
-- **Visual:** data and code chips, five boxes, four-act bar.
-- **Refs:** `ch00` intro, §1, §4, §8.
-
-## S2 — You work in a medium
-
-- **Goal:** make "medium" concrete.
-- **Content:** A painter has to know paint. A musician has to know the instrument. You have to know software. That is what this talk is.
-- **Visual:** four jobs, the last box filling in.
+- **Goal:** the title is the thesis.
+- **Content:** Software is the medium. Game engines are software. This talk is the anatomy of that medium, then the anatomy of an engine.
+- **Visual:** title.
 - **Refs:** `ch00` intro.
 
-## S3 — Why this, today
+## S2 — You are making software
 
-- **Goal:** give them a reason to stay.
-- **Content:** Tools change every year. The shape of software does not. Learn the shape. The tools get easier.
-- **Visual:** noise into one card: foundations.
+- **Goal:** name the blind spot.
+- **Content:** Design, art, and audio are software work. The files you make are data. The engine is code that plays that data back. If you do not know the properties of software, you are working the medium blind.
+- **Visual:** four roles, one medium.
+- **Refs:** `ch00` intro, §7.
+
+## S3 — The anatomy outlasts the tool
+
+- **Goal:** why the anatomy, not the product.
+- **Content:** Unreal, a custom engine, the next tool. The names change. The anatomy does not. Learn the anatomy once.
+- **Visual:** tool names fading, five parts staying.
 - **Refs:** `ch00` §8.
 
-## S4 — Section 2 intro: Code and data *(divider)*
+## S4 — Section 2 intro: Anatomy of software *(divider)*
 
-- **Goal:** name the first cut.
-- **Content:** Software is code and data. Nothing else.
-- **Visual:** code card and data card.
-- **Refs:** `ch00` §1.
+- **Goal:** open the anatomy.
+- **Content:** Five ideas. Code and data. Input, process, output. The loop. Latency. Then the five parts that hold all of it.
+- **Visual:** the sequence.
+- **Refs:** `ch00` §1–4.
 
 ## S5 — Code and data
 
-- **Goal:** the definition they keep.
-- **Content:** Code is the rules. Data is the values those rules act on. Press jump: the rule is code, the height is data.
-- **Visual:** two cards, jump example.
+- **Goal:** the two substances.
+- **Content:** Code is the rules. Data is the values those rules act on. Press jump: the rule is code, the height is data. There is no third substance.
+- **Visual:** two cards.
 - **Refs:** `ch00` §1.
 
-## S6 — Code and data can trade places
+## S6 — Code can be stored as data
 
-- **Goal:** the boundary is a decision, not a law.
-- **Content:** A rule can be saved in a file. A file can change what the game does. A mod swaps that file and does not recompile the engine. You decide which is which.
-- **Visual:** two cards, arrow both ways.
+- **Goal:** the boundary is a decision.
+- **Content:** Code can ship as a data file. QuakeC ships in progs.dat. Doom 3 scripts ship as data. Unreal Blueprints ship in .uasset files. A mod changes behavior by replacing data, not by recompiling the engine.
+- **Visual:** code file and data file, arrow both ways.
 - **Refs:** `ch00` §1.1–1.3.
 
-## S7 — The question you keep
+## S7 — Input, process, output
 
-- **Goal:** one career question.
-- **Content:** What belongs in code, and what belongs in data? Prefer data. Your work is data until code plays it back.
-- **Visual:** one question, two answers, takeaway strip.
-- **Refs:** `ch00` §1.
-
-## S8 — Section 3 intro: Input, process, output *(divider)*
-
-- **Goal:** give every program a shape.
-- **Content:** Every program is input, process, output. Something comes in. Code acts on data. Something goes out.
+- **Goal:** the shape of every program.
+- **Content:** Input crosses in. Process is code acting on data. Output crosses out. A calculator and a game engine are the same three boxes. They differ in scale and speed.
 - **Visual:** three boxes.
 - **Refs:** `ch00` §2.
 
-## S9 — Input, process, output
+## S8 — The loop is cybernetics
 
-- **Goal:** the three boxes, with examples.
-- **Content:** Input: keys, files, packets. Process: code over data. Output: pixels, sound, saved files. Scale and speed change. The shape does not.
-- **Visual:** three boxes and arrows.
-- **Refs:** `ch00` §2.
-
-## S10 — The same shape, stacked
-
-- **Goal:** the shape repeats at every layer.
-- **Content:** You, the game, the operating system, the hardware. Each layer is input, process, output. A game is a stack of programs, not one.
-- **Visual:** six layers, an exchange at every seam.
-- **Refs:** `ch00` §2.
-
-## S11 — No software without IO
-
-- **Goal:** the claim, then the escape question.
-- **Content:** There is no software without IO. Only software whose IO is hidden. When you are lost: where is the input, where is the output, what is in the middle?
-- **Visual:** the sentence, three ghosted boxes.
-- **Refs:** `ch00` §2.
-
-## S12 — Section 4 intro: The loop *(divider)*
-
-- **Goal:** add time.
-- **Content:** Interactive software does not run once. It loops.
-- **Visual:** a loop arrow.
+- **Goal:** name the loop.
+- **Content:** Output reaches a person. They perceive, decide, and act. That act is the next input. That feedback loop is cybernetics. A game with no player is a simulation. With a player, they are in the loop.
+- **Visual:** input, process, output, return path.
 - **Refs:** `ch00` §3.
 
-## S13 — A person is in the loop
+## S9 — Latency
 
-- **Goal:** draw the person.
-- **Content:** Output reaches the person. They perceive, decide, and act. That act returns as the next input. Then process runs again.
-- **Visual:** input, process, output, with the return path.
-- **Refs:** `ch00` §3.1–3.2.
-
-## S14 — Cybernetics
-
-- **Goal:** name the idea, then say it in plain words.
-- **Content:** Cybernetics is watching your own output and correcting. A game with no player is a simulation. Put a person in the loop, and they are steering.
-- **Visual:** look, correct, repeat.
-- **Refs:** `ch00` §3.1–3.2.
-
-## S15 — Latency
-
-- **Goal:** why milliseconds matter.
-- **Content:** Latency is the chain: finger, device, OS, simulation, render, display, eye. Delays add. At 60 fps the whole chain shares about 17 ms.
-- **Visual:** a chain of delays, one budget bar.
+- **Goal:** the cost of the loop.
+- **Content:** Latency is the chain: finger, device, OS, simulation, render, display, eye. Delays add. At 60 fps the budget is about 17 ms. Miss it, and the player feels the loop break.
+- **Visual:** the chain, one budget.
 - **Refs:** `ch00` §3.3–3.4.
 
-## S16 — Pipeline and loop
+## S10 — State, logic, input, output, clock
 
-- **Goal:** two kinds of software.
-- **Content:** A pipeline runs once: a bake, a compile, a batch. A loop feeds output back into the next input. A game is a pipeline inside a loop that cannot be late.
-- **Visual:** a straight arrow beside a loop.
-- **Refs:** `ch00` §3.3–3.4.
-
-## S17 — Section 5 intro: Five parts *(divider)*
-
-- **Goal:** the skeleton.
-- **Content:** Every program has five parts. Name them, and most confusion gets smaller.
+- **Goal:** the anatomy, named.
+- **Content:** State is what is stored. Logic is code over data. Input is what crosses in. Output is what crosses out. The clock decides when. Every program is these five parts.
 - **Visual:** five boxes.
-- **Refs:** `ch00` §4, `ch01` §1.
+- **Refs:** `ch00` §4.
 
-## S18 — Five parts. That is a program.
+---
 
-- **Goal:** define each part in one line.
-- **Content:** State is what is remembered. Logic is what changes it. Input is what gets in. Output is what comes out. The clock decides when.
-- **Visual:** five boxes, one job each.
-- **Refs:** `ch00` §4, `ch01` §1.
+# ACT B — THE ENGINE
 
-## S19 — Event-driven or polled
+## S11 — Section 3 intro: Anatomy of a game engine *(divider)*
 
-- **Goal:** the clock, and two habits.
-- **Content:** Event-driven waits for an event. Polled checks on a timer. Find the clock first. Then name the part you are in.
-- **Visual:** event versus polled, clock highlighted.
-- **Refs:** `ch00` §4, `ch01` §1.
-
-## S20 — Section 6 intro: An engine is the same thing, built big *(divider)*
-
-- **Goal:** the move that makes the talk useful.
-- **Content:** An engine is not a new kind of software. It is the same five parts, each one a subsystem.
-- **Visual:** five boxes, each opening into a list.
+- **Goal:** the extension.
+- **Content:** A game engine is not a different kind of software. It is the same five parts, each one a subsystem, running hard real-time.
+- **Visual:** five parts opening into subsystems.
 - **Refs:** `ch00` §5, `ch01` §2.
 
-## S21 — Each part becomes a subsystem
+## S12 — Five subsystems
 
-- **Goal:** the fill table.
-- **Content:** State becomes the world model. Logic becomes physics, AI, and gameplay. Input becomes the input system. Output becomes the renderer, audio, and UI. The clock becomes the frame loop.
-- **Visual:** five rows, part to subsystem.
-- **Refs:** `ch00` §5.1, `ch01` §2.
+- **Goal:** the engine anatomy, one row each.
+- **Content:** State is the world model. Logic is physics, AI, and gameplay. Input is the input subsystem, device to command. Output is the renderer, audio, and UI. The clock is the frame loop.
+- **Visual:** five rows.
+- **Refs:** `ch01` §2.
 
-## S22 — Hard real-time
+## S13 — The frame loop is hard real-time
 
-- **Goal:** the constraint that rules engines.
-- **Content:** A frame must finish before the next refresh. Miss it, and the player feels it. That hard real-time deadline explains more engine design than any feature list.
-- **Visual:** frame strip, deadline flag.
-- **Refs:** `ch00` §5.
+- **Goal:** the constraint that makes an engine an engine.
+- **Content:** The frame must finish before the next refresh. That is hard real-time. Miss the deadline and the player feels it. The frame loop and the human loop are the same loop, at 60 to 144 Hz.
+- **Visual:** frame deadline.
+- **Refs:** `ch00` §5, `ch01` §4.
 
-## S23 — The frame loop
-
-- **Goal:** one loop, not two.
-- **Content:** Device, commands, update, world, render, display, the player sees it, the player acts. Then it repeats. The frame loop and the human loop are the same loop.
-- **Visual:** eight steps, then it repeats.
-- **Refs:** `ch00` §5.2, `ch01` §6.
-
-## S24 — DOOM and Unreal are the same machine
-
-- **Goal:** prove it with two engines.
-- **Content:** DOOM in 1993 and Unreal today run the same loop. One is simple. One is threaded. The five parts did not change.
-- **Visual:** two columns, same five parts.
-- **Refs:** `ch01` §6, `Eng/DOOM`, `Eng/UE5`.
-
-## S25 — The renderer reads the world
-
-- **Goal:** correct the common mistake.
-- **Content:** The renderer does not live inside the simulation. It reads world state and draws it. A black screen does not mean the simulation stopped.
-- **Visual:** world, then an arrow, then the renderer.
-- **Refs:** `ch01` §3.
-
-## S26 — Section 7 intro: Same skeleton, different choices *(divider)*
-
-- **Goal:** why engines feel different.
-- **Content:** The five parts stay. What changes is how each part is implemented. No engine adds a sixth part.
-- **Visual:** five ghosted boxes, a stamp: fills, never new parts.
-- **Refs:** `ch01` §4–5.
-
-## S27 — Core and channels
+## S14 — The renderer reads state
 
 - **Goal:** core versus channels.
-- **Content:** Core is state and simulation. Channels are assets, audio, UI, and network. A WAD, a pk3, and a uasset are different containers for the same channel.
-- **Visual:** a spine, pipes on the sides.
+- **Content:** State and logic are the core. Assets, audio, UI, and network are channels. The renderer is output. It reads state and draws it. It does not run the simulation.
+- **Visual:** core in the middle, renderer downstream.
 - **Refs:** `ch01` §3.
 
-## S28 — Fixed, variable, hybrid
+## S15 — The world model is the state slot
 
-- **Goal:** the clock's four beats.
-- **Content:** A fixed timestep is repeatable, and must catch up. A variable timestep is smooth, and not repeatable. Hybrid keeps fixed physics inside a variable frame. Sometimes the app owns the clock. The loop stays. The timestep changes.
-- **Visual:** four rows.
-- **Refs:** `ch01` §4.
+- **Goal:** three fills of state, named.
+- **Content:** A scene graph stores parent-child transforms. BSP stores a compiled level plus a flat entity list. ECS stores columns of data and systems scan them. Most engines are one of these, or a mix.
+- **Visual:** three state families.
+- **Refs:** `ch02` §1–6.
 
-## S29 — Four ways engines differ
+## S16 — Section 4 intro: Quake, Doom 3, Unreal 5 *(divider)*
 
-- **Goal:** the whole difference list.
-- **Content:** World model. Timestep. How work is threaded. Which channels exist. No engine grows a sixth part. Read those four, not the brand name.
-- **Visual:** four cards.
-- **Refs:** `ch01` §5.
+- **Goal:** prove the anatomy on real engines.
+- **Content:** Same five rows. Read the row, not the brand.
+- **Visual:** three columns.
+- **Refs:** `Eng/QUAKE`, `Eng/DOOM3`, `Eng/UE5`.
 
----
+## S17 — The same five rows
 
-# ACT B — THE WORLD AND THE MACHINE
+- **Goal:** the comparison.
+- **Content:** Quake, Doom 3, and Unreal 5 fill the same slots. State, logic, input, output, clock. The names change. The anatomy does not.
+- **Visual:** three-column table.
+- **Refs:** `Eng/QUAKE`, `Eng/DOOM3`, `Eng/UE5`.
 
-## S30 — Section 8 intro: World models *(divider)*
+## S18 — What changes is the fill
 
-- **Goal:** open the longest section, on the state slot.
-- **Content:** The world model is how the engine stores the world. That choice decides what your day feels like.
-- **Visual:** the state box, enlarged.
-- **Refs:** `ch02`.
-
-## S31 — Three questions make the world model
-
-- **Goal:** the classification key.
-- **Content:** How is it stored? How are things related? How do you search it? Those three answers are the world model. Everything else follows.
-- **Visual:** three question cards.
-- **Refs:** `ch02` §1.
-
-## S32 — Scene graph, BSP, ECS
-
-- **Goal:** the landscape, before any depth.
-- **Content:** Scene graph. BSP plus a flat entity list. ECS. Most engines are one of these, or a mix.
-- **Visual:** three columns of engine names.
-- **Refs:** `ch02` §1–4, `engines`.
-
-## S33 — Scene graph
-
-- **Goal:** what a scene graph is for.
-- **Content:** A scene graph is a parent-child transform tree. Attach a sword to a hand, and the hand moves the sword. The cost is traversing the tree every frame.
-- **Visual:** a small tree, sword on a hand.
-- **Refs:** `ch02` §3–4.
-
-## S34 — BSP and a flat list
-
-- **Goal:** the id Tech family, in one line.
-- **Content:** BSP pre-cuts the level into rooms, so the engine can reject whole rooms at once. Entities sit in a flat list. Fast for a static world. Weak if everything moves.
-- **Visual:** split rooms beside a flat list.
-- **Refs:** `ch02` §5, `Eng/DOOM`, `Eng/Q3A`, `Eng/DOOM3`.
-
-## S35 — ECS
-
-- **Goal:** ECS without the jargon first.
-- **Content:** Put the same kind of fact in one column. Let a system sweep that column. A thousand bullets are one list, not a thousand objects. What a thing is, is the data on it.
-- **Visual:** a table, a system sweeping rows.
-- **Refs:** `ch02` §6, `Eng/OpenEngine`.
-
-## S36 — Pick the shape your team can feed
-
-- **Goal:** kill the one-true-way idea.
-- **Content:** Scene graphs for people. BSP for static levels. ECS for large counts. Shipping engines mix them. The choice is what your team works in every day.
-- **Visual:** three columns into one card.
-- **Refs:** `ch02` §7–8.
-
-## S37 — The world model is a state store
-
-- **Goal:** the store, and why a game is not a web app.
-- **Content:** The world model is a state store. Input updates it. The renderer reads it. A game samples that store every frame, and it simulates. You can rewind a store. You cannot rewind a simulation the same way.
-- **Visual:** two flows, three differences.
-- **Refs:** `ch02` §7–8, `ch00` §6.4.
-
-## S38 — The HUD is not in the world
-
-- **Goal:** UI is an overlay.
-- **Content:** Draw the world first. Draw the HUD last, in screen space. A health bar stuck to a head is the exception. The pause menu is not in the world.
-- **Visual:** world layer, UI layer on top.
-- **Refs:** `ch02` §7.
-
-## S39 — CPU and GPU
-
-- **Goal:** CPU, GPU, and what a frame can be stuck on.
-- **Content:** The CPU does a few hard jobs, one step at a time. The GPU does one simple job on a huge amount of data. A frame gets stuck on the CPU, the GPU, loading, or memory. The counter often hides which one.
-- **Visual:** one careful worker, one large crew, four chips.
-- **Refs:** `ch03` §1, §7.
-
-## S40 — stat unit
-
-- **Goal:** one tool, one method.
-- **Content:** In Unreal, stat unit prints Frame, Game, and Draw. If Game is high and Draw is low, stop tuning shaders. Change one thing at a time. Only the part that can run in parallel gets faster when you add cores.
-- **Visual:** a fake stat-unit block.
-- **Refs:** `ch03` §8–10, `Eng/UE5`.
-
-## S41 — Who waits, and who picks the order?
-
-- **Goal:** two questions, then stop.
-- **Content:** Blocking means everything stops. An event loop does the next ready thing. The operating system can cut you off, or your code can yield on purpose. Each step up — threads, processes, network — costs more coordination.
-- **Visual:** two questions, a short ladder.
-- **Refs:** `ch04` §1–7.
-
-## S42 — Authority and replication
-
-- **Goal:** memory and truth.
-- **Content:** Shared memory is one copy. Message passing sends copies. Replication keeps those copies on purpose, and they go stale. On a network, one machine is authoritative. A few milliseconds of staleness is how the game stays playable.
-- **Visual:** whiteboard versus mail, a staleness line.
-- **Refs:** `ch04` §8–13, §19–21.
-
-## S43 — Unreal already named this
-
-- **Goal:** hang the questions on one real engine.
-- **Content:** Game thread, render thread, RHI thread. Latent actions wait. The task graph orders work. Replication is the copy on the network. Ask: who runs, who waits, who decides the order, whose copy is true?
-- **Visual:** three threads, the four-part question.
-- **Refs:** `ch04` §9, §14–18, `Eng/UE5`.
-
-## S44 — Section 11 intro: Three quiet seams *(divider)*
-
-- **Goal:** three short ideas, then leave the machine.
-- **Content:** Schema, spatial index, and the operating system. Three seams. Then people.
-- **Visual:** three chips: schema, spatial index, OS.
-- **Refs:** `ch05`–`ch07`.
-
-## S45 — A schema is a contract
-
-- **Goal:** schema in one breath.
-- **Content:** A schema is three agreements: what fields exist, how they are laid out, and what the values mean together. If the reader breaks and the file looks fine, the agreement was broken. Not the file.
-- **Visual:** one card, three parts.
-- **Refs:** `ch05` §1.
-
-## S46 — Authoring, runtime, and wire
-
-- **Goal:** authoring, runtime, wire.
-- **Content:** Authoring files are for people, and they load slowly. Runtime files are cooked for speed. Wire formats are packets. Same data, three formats. A desync means the two sides stopped agreeing on the schema.
-- **Visual:** three vertices.
-- **Refs:** `ch05` §7–9.
-
-## S47 — A spatial index
-
-- **Goal:** why a spatial index exists.
-- **Content:** A spatial index answers what is near a point without testing everything. It is a cache of positions. If it is stale, it is worse than none. The same index serves rendering and collision.
-- **Visual:** warehouse beside a map.
-- **Refs:** `ch06` §1–2.
-
-## S48 — The OS and system calls
-
-- **Goal:** no direct hardware access.
-- **Content:** The game does not touch the disk or the GPU directly. It makes a system call. The OS schedules the process, issues handles, and fronts the GPU.
-- **Visual:** app, kernel, hardware, one door.
-- **Refs:** `ch07` §1–8.
-
-## S49 — Read the OS counters
-
-- **Goal:** the diagnosis habit.
-- **Content:** Task Manager and stat unit show what the kernel recorded. Name the process, watch it, read the counters. Then ask: game bug, or an OS limit?
-- **Visual:** a ledger, two outcomes.
-- **Refs:** `ch07` §9–10.
+- **Goal:** the differences, in one place.
+- **Content:** Quake's clock is variable. Doom 3 simulates at a fixed 60 Hz and renders as fast as the display. Unreal's game thread is variable, and Chaos physics uses fixed substeps. Threads and world models change. The five parts do not.
+- **Visual:** clock row highlighted.
+- **Refs:** `ch01` §4–5.
 
 ---
 
-# ACT C — PEOPLE AND THE CHAIN
+# ACT C — THE WEAPON
 
-## S50 — Section 12 intro: Where you sit *(divider)*
+## S19 — Section 5 intro: One weapon, every discipline *(divider)*
 
-- **Goal:** from the machine to the room.
-- **Content:** Art, audio, design, and code do not own the whole machine. Each one feeds a part of it. This section is where you find your seat.
-- **Visual:** four role cards.
-- **Refs:** `ch00` §7.
-
-## S51 — Owners and feeders
-
-- **Goal:** owners and feeders.
-- **Content:** Owners build and maintain a part. Feeders fill it. Nobody owns the whole machine. The clock has no feeder. Everyone obeys it. A lot of team fights are two people standing on different sides of one box.
-- **Visual:** owner column, feeder column, clock row marked.
-- **Refs:** `ch00` §7, `ch01` §2.
-
-## S52 — One weapon, four stages
-
-- **Goal:** one object that touches every job.
-- **Content:** Design, data, engine integration, gameplay code. Until gameplay code runs, the weapon is inert data.
-- **Visual:** four chevrons.
+- **Goal:** one object that uses the whole anatomy.
+- **Content:** A weapon is design, art, audio, and code, becoming frames and sound. Until gameplay code runs, it is inert data.
+- **Visual:** the chain.
 - **Refs:** `ch08` §1.
 
-## S53 — Design it. Make the files. Nothing fires yet.
+## S20 — Four stages, then the loop
+
+- **Goal:** the chain, with owners.
+- **Content:** Designers write the schema. Artists and audio produce the data. Import makes that data reachable. Gameplay code plays it. The renderer and the audio mixer are the output. The player's input closes the loop.
+- **Visual:** six steps.
+- **Refs:** `ch08` §1–5.
+
+## S21 — Design and data do nothing yet
 
 - **Goal:** stages 1 and 2.
-- **Content:** Design decides what the weapon is. That document is already a schema. Then art and audio produce the data: model, rig, textures, sound. Those files do nothing yet.
-- **Visual:** two cards, the second full of inert files.
+- **Content:** Design decides role, feel, and numbers. That document is already a schema. Then model, rig, textures, and sound are files. Those files cannot fire. They are data.
+- **Visual:** schema, then inert files.
 - **Refs:** `ch08` §2–3.
 
-## S54 — Import, then gameplay code
+## S22 — Import, then gameplay code
 
 - **Goal:** stages 3 and 4.
-- **Content:** Import turns files into assets. Soft references load on demand. Hard references stay loaded. Gameplay code plays the asset: animation, sound, particles, damage. The button press is the input.
-- **Visual:** files become a firing loop.
+- **Content:** Import turns files into assets. Soft references load on demand. Hard references stay loaded. Gameplay code reads the data and plays it: animation, sound, particles, damage. The button press is the input.
+- **Visual:** files become a firing event.
 - **Refs:** `ch08` §4–5.
 
-## S55 — Same chain in DOOM 3
+## S23 — Frames and audio
 
-- **Goal:** this is not an Unreal story.
-- **Content:** DOOM 3 used the same four stages in 2004. Design, data, a placed entity, a script that plays them. Gameplay code only plays what the earlier stages produced. Engines change. The chain does not.
-- **Visual:** the same four steps, id Tech labels.
-- **Refs:** `ch08` §6, `Eng/DOOM3`.
+- **Goal:** the output side, named.
+- **Content:** The simulation publishes state. The renderer draws the mesh, materials, and animation. The audio mixer plays the sound. VFX spawn from the same event. None of that is the simulation. It is output, on the clock.
+- **Visual:** state feeding render and audio.
+- **Refs:** `ch08` §7–8.
+
+## S24 — The same chain in Doom 3
+
+- **Goal:** not an Unreal-only story.
+- **Content:** Doom 3, 2004. Design, then .def and .decl data, then a placed entity, then idScript that plays them back. Gameplay code only plays what the earlier stages produced. The chain is the same.
+- **Visual:** the four stages, id Tech labels.
+- **Refs:** `ch08` §9, `Eng/DOOM3`.
 
 ---
 
-# ACT D — THE INTERFACE AND THE FUTURE
+# ACT D — THE DIRECTION
 
-## S56 — Section 13 intro: Talking to software *(divider)*
+## S25 — Section 6 intro: Two kinds of software *(divider)*
 
-- **Goal:** neutral, not a pitch.
-- **Content:** This is not a pitch. Talking to software is four pieces. Not a magic box.
-- **Visual:** four chips.
-- **Refs:** `ch09`.
+- **Goal:** open the history without leaving the anatomy.
+- **Content:** The loop you just learned has a history. Software split into two ways of making intelligence. The direction now is both, and a new interface on top.
+- **Visual:** two branches.
+- **Refs:** `ch09` §2–3, `ch10`.
 
-## S57 — Backend, model, harness, knowledge
+## S26 — Cybernetics is the older loop
 
-- **Goal:** the four pieces, plainly.
-- **Content:** A backend runs the model. The model is the trained brain. The harness is the program on your machine, and the only piece that touches your files. Knowledge is your files, docs, and notes. A model alone is a chat box. A harness turns words into actions.
-- **Visual:** four cards, harness marked.
-- **Refs:** `ch09` §1.
+- **Goal:** history of the loop, one slide.
+- **Content:** Cybernetics is the study of feedback. Norbert Wiener named it from the steersman: sense, correct, act. A thermostat does it. A player does it faster. The frame loop is that idea at display rate.
+- **Visual:** sense, correct, act.
+- **Refs:** `ch09` §2, `ch00` §3.
 
-## S58 — It can explain, and it can change things
+## S27 — Symbolic and connectionist
 
-- **Goal:** two directions, and the catch.
-- **Content:** One way: software explains itself to you. The other way: you say what you want, and it edits the software. You still have to know the medium, or you cannot aim it.
-- **Visual:** you, harness, files, both directions.
-- **Refs:** `ch09` §6, `ch00` §8.1.
+- **Goal:** the two minds, in software terms.
+- **Content:** Symbolic software is rules over symbols. Scripts, Blueprints, state machines, C++. Connectionist software is learned weights. Neural nets, LLMs, neural rendering. Game logic is symbolic. The new pieces moving in are connectionist.
+- **Visual:** two columns.
+- **Refs:** `ch09` §3.
 
-## S59 — Where the tools live
+## S28 — The hybrid engine
 
-- **Goal:** one breath, or skip.
-- **Content:** Harnesses, local runners, model services, and hubs. Standards for how agents read a repo. Permissions are the trust boundary. Names if asked. Do not tour them.
-- **Visual:** three layers, a lock on the trust line.
-- **Refs:** `ch09` §7–11.
+- **Goal:** the direction, concretely.
+- **Content:** The engine stays symbolic scaffolding. Neural subsystems replace pieces one at a time. Neural rendering already ships. The five parts do not go away. A learned renderer is still output. It still reads state.
+- **Visual:** symbolic base, neural inserts.
+- **Refs:** `ch10` §3.
 
-## S60 — Section 14 intro: What comes next *(divider)*
+## S29 — AI is a new interface
 
-- **Goal:** open the close.
-- **Content:** What does the future do to the loop we just built? It changes the tools. It does not change the medium.
-- **Visual:** a loop.
-- **Refs:** `ch10`.
+- **Goal:** the close of the argument.
+- **Content:** A harness on your machine turns words into actions on the software. One direction: the software explains itself. The other: you say what to change, and it edits. The model is not the interface. The harness is.
+- **Visual:** you, harness, software.
+- **Refs:** `ch09` §1, §6.
 
-## S61 — The fear, and the plain answer
+## S30 — You still need the anatomy
 
-- **Goal:** meet the fear, then answer it.
-- **Content:** The fear is real. Some jobs get replaced. Some get help. Both are true. The loop gets larger. You do not leave it.
-- **Visual:** two panels, one loop across both.
-- **Refs:** `ch10` §1–2.
+- **Goal:** the catch.
+- **Content:** You cannot aim the interface if you do not know the anatomy. You cannot ask about the renderer if you do not know the renderer reads state and does not run the simulation. The interface is new. The medium is not.
+- **Visual:** anatomy under the harness.
+- **Refs:** `ch09` §6, `ch00` §8.
 
-## S62 — The hybrid engine
+## S31 — The interface changed. The medium did not.
 
-- **Goal:** the future machine, in ordinary terms.
-- **Content:** The engine stays as the structure. Subsystems get replaced by learned models, one at a time. Neural rendering already ships. Shared real-time worlds are where those models watch people play.
-- **Visual:** a base bar, a few inserts.
-- **Refs:** `ch10` §3–4.
+- **Goal:** the last line.
+- **Content:** The interface changed. The medium did not. Software is still code and data, input, process, output, on a clock. A game engine is still that anatomy, made large and hard real-time.
+- **Visual:** the sentence.
+- **Refs:** `ch00` §9, `ch09` §12, `ch10`.
 
-## S63 — The interface changed. The medium did not.
+## S32 — Questions
 
-- **Goal:** the last line, once.
-- **Content:** The interface changed. The medium did not. Foundations outlast tools. The map still fits the next engine, the next job, and the next year.
-- **Visual:** one sentence, nothing else.
-- **Refs:** `ch00` §9, `ch10`.
-
-## S64 — Questions, and where to read next
-
-- **Goal:** hand them the shelf, then take questions.
-- **Content:** If a question stalls, ask where the input is, where the output is, and what is in the middle. Then ask which of the five parts it is. The reference is the long version of this talk. Read it once, then use it per task.
-- **Visual:** where to go next.
-- **Refs:** `ch00` §10, `engines`.
+- **Goal:** use the anatomy to answer.
+- **Content:** If a question stalls, ask which part it is: state, logic, input, output, or clock. Then ask who feeds that part. The reference is the long version of this talk.
+- **Visual:** the five parts.
+- **Refs:** `ch00` §10.
