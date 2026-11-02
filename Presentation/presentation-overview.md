@@ -98,22 +98,22 @@ derivation (how `ch00`–`ch10` became these sections) is documented in
 
 ## 4. Source key
 
-Relative to this folder (`Presentations/Software is the Medium - Game Engines are Software/`):
+Relative to this folder (`Presentation/Software is the Medium - Game Engines are Software/`):
 
-- `ch00` = [`00-software-is-the-medium.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/00-software-is-the-medium.md)
-- `ch01` = [`01-common-structure.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/01-common-structure.md)
-- `ch02` = [`02-world-models.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/02-world-models.md)
-- `ch03` = [`03-hardware-and-performance.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/03-hardware-and-performance.md)
-- `ch04` = [`04-concurrency-and-state.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/04-concurrency-and-state.md)
-- `ch05` = [`05-schemas-and-formats.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/05-schemas-and-formats.md)
-- `ch06` = [`06-spatial-indexes.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/06-spatial-indexes.md)
-- `ch07` = [`07-operating-systems.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/07-operating-systems.md)
-- `ch08` = [`08-the-weapon-example.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/08-the-weapon-example.md)
-- `ch09` = [`09-ai-and-the-medium.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/09-ai-and-the-medium.md)
-- `ch10` = [`10-the-coming-times.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/10-the-coming-times.md)
+- `ch00` = [`00-software-is-the-medium.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/00-software-is-the-medium.md)
+- `ch01` = [`01-common-structure.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/01-common-structure.md)
+- `ch02` = [`02-world-models.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/02-world-models.md)
+- `ch03` = [`03-hardware-and-performance.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/03-hardware-and-performance.md)
+- `ch04` = [`04-concurrency-and-state.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/04-concurrency-and-state.md)
+- `ch05` = [`05-schemas-and-formats.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/05-schemas-and-formats.md)
+- `ch06` = [`06-spatial-indexes.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/06-spatial-indexes.md)
+- `ch07` = [`07-operating-systems.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/07-operating-systems.md)
+- `ch08` = [`08-the-weapon-example.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/08-the-weapon-example.md)
+- `ch09` = [`09-ai-and-the-medium.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/09-ai-and-the-medium.md)
+- `ch10` = [`10-the-coming-times.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/10-the-coming-times.md)
 - `Eng/DOOM`, `Eng/Quake`, `Eng/Q3A`, `Eng/DOOM3`, `Eng/UE5`, `Eng/threejs`,
   `Eng/Babylon`, `Eng/redot`, `Eng/Urho3D`, `Eng/OpenEngine` =
-  [`Engines/index.md`](../../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/Engines/index.md)
+  [`Engines/index.md`](../../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/Engines/index.md)
 
 ## 5. Section-by-section plan
 

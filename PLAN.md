@@ -10,7 +10,7 @@ generated: { by: kilocode/deepseek-v4-flash, at: 2026-11-02T04:33:42Z }
 
 Plan for building the presentation material that summarizes and presents the
 reference collection in
-`../References/Software is the Medium - Game Engines are Software/`
+`../Reference/Software is the Medium - Game Engines are Software/`
 (**11 chapters** plus **ten engine case studies**). Modeled on the earlier
 [Game Engine Primer Presentation](2026-10-25_game-engine-primer-presentation.md),
 which this plan extends and supersedes for the current, larger reference.
@@ -75,35 +75,35 @@ By the end, an audience member should be able to answer:
 ## 5. Deliverables
 
 Produced in order; each is an input to the next. All three documents in this
-package are in the Presentations folder
-(`Presentations/Software is the Medium - Game Engines are Software`); this plan
+package are in the Presentation folder
+(`Presentation/Software is the Medium - Game Engines are Software`); this plan
 lives in `Plans/` per the vault naming convention.
 
 | # | Deliverable | Purpose | Status |
 |---|---|---|---|
-| 1 | **Presentation overview** — [`presentation-overview.md`](../Presentations/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/presentation-overview.md) | Structures how the reference is summarized and presented: 14 sections, ~88 min talk, standalone synopses, cutdown plans | **done** — revised 2026-11-02 |
-| 2 | **Slide deck description** — [`slide-deck.md`](../Presentations/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/slide-deck.md) | 73 slides (S1–S73): every section opens with an intro slide, then one-or-two-idea content slides, self-explanatory, with citations | **done** — revised 2026-11-02 |
-| 3 | **Speaker cards** — [`speaker-cards.md`](../Presentations/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/speaker-cards.md) | One verbose-but-direct card per slide: focus line, short bullets, analogies/examples, transition | **done** — revised 2026-11-02 |
+| 1 | **Presentation overview** — [`presentation-overview.md`](../Presentation/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/presentation-overview.md) | Structures how the reference is summarized and presented: 14 sections, ~88 min talk, standalone synopses, cutdown plans | **done** — revised 2026-11-02 |
+| 2 | **Slide deck description** — [`slide-deck.md`](../Presentation/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/slide-deck.md) | 73 slides (S1–S73): every section opens with an intro slide, then one-or-two-idea content slides, self-explanatory, with citations | **done** — revised 2026-11-02 |
+| 3 | **Speaker cards** — [`speaker-cards.md`](../Presentation/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/speaker-cards.md) | One verbose-but-direct card per slide: focus line, short bullets, analogies/examples, transition | **done** — revised 2026-11-02 |
 | 4 | **Built deck** (`.deckcraft` / `.pptx`) | Built once at the old 26-slide size (`D:\documents\software-is-the-medium-presentation\`) — **stale** against the 73-slide description; rebuild pending on the trimmed outline | **stale — rebuild after §12 trim** |
 
 ## 6. Source material
 
-All in `../References/Software is the Medium - Game Engines are Software/`.
+All in `../Reference/Software is the Medium - Game Engines are Software/`.
 
 | Code | Chapter | What it carries | Reading order |
 |---|---|---|---|
-| `ch00` | [00-software-is-the-medium.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/00-software-is-the-medium.md) | The flagship: data + code, IO, loop/cybernetics, five-part skeleton, engine scaled-up, discipline map, career anchoring, ten rules | 1 |
-| `ch01` | [01-common-structure.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/01-common-structure.md) | Cross-engine map: subsystem fills, channels, clock variants, four axes, Mermaid overlays | 2 |
-| `ch02` | [02-world-models.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/02-world-models.md) | Scene graph vs BSP+entities vs ECS; deciding dimensions; state store; UI in screen space | 3 |
-| `ch03` | [03-hardware-and-performance.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/03-hardware-and-performance.md) | CPU vs GPU, SIMD/SIMT, shader pipeline, bound work, profiling, stat unit / Unreal Insights | extended |
-| `ch04` | [04-concurrency-and-state.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/04-concurrency-and-state.md) | Who runs when, whose copy — event loops, threads, coroutines, replication, staleness, UE5 names | extended |
-| `ch05` | [05-schemas-and-formats.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/05-schemas-and-formats.md) | The shape-and-meaning contract: authoring/runtime/wire triangle, evolution, determinism | extended |
-| `ch06` | [06-spatial-indexes.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/06-spatial-indexes.md) | "The map, not the warehouse": grids, octrees, BVH, BSP, culling ladder, broadphase | extended |
-| `ch07` | [07-operating-systems.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/07-operating-systems.md) | The scaffold and observatory: processes, syscalls, scheduler, handles, crashes | extended |
-| `ch08` | [08-the-weapon-example.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/08-the-weapon-example.md) | Synthesis: one rifle through the whole machine, UE5 then DOOM 3 | after extended |
-| `ch09` | [09-ai-and-the-medium.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/09-ai-and-the-medium.md) | Backend/model/harness/knowledge; explain & modify; harness landscape; standards; knowledge layer | after `ch08` |
-| `ch10` | [10-the-coming-times.md](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/10-the-coming-times.md) | Fear vs cybernetic answer; the hybrid engine; the metaverse as a verb | closing |
-| `Eng` | [Engines/](../References/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/Engines/index.md) | Ten case studies: DOOM, Quake, Quake III Arena, DOOM 3, three.js, Babylon.js, redot, Urho3D, OpenEngine, Unreal Engine | touchpoints throughout |
+| `ch00` | [00-software-is-the-medium.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/00-software-is-the-medium.md) | The flagship: data + code, IO, loop/cybernetics, five-part skeleton, engine scaled-up, discipline map, career anchoring, ten rules | 1 |
+| `ch01` | [01-common-structure.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/01-common-structure.md) | Cross-engine map: subsystem fills, channels, clock variants, four axes, Mermaid overlays | 2 |
+| `ch02` | [02-world-models.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/02-world-models.md) | Scene graph vs BSP+entities vs ECS; deciding dimensions; state store; UI in screen space | 3 |
+| `ch03` | [03-hardware-and-performance.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/03-hardware-and-performance.md) | CPU vs GPU, SIMD/SIMT, shader pipeline, bound work, profiling, stat unit / Unreal Insights | extended |
+| `ch04` | [04-concurrency-and-state.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/04-concurrency-and-state.md) | Who runs when, whose copy — event loops, threads, coroutines, replication, staleness, UE5 names | extended |
+| `ch05` | [05-schemas-and-formats.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/05-schemas-and-formats.md) | The shape-and-meaning contract: authoring/runtime/wire triangle, evolution, determinism | extended |
+| `ch06` | [06-spatial-indexes.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/06-spatial-indexes.md) | "The map, not the warehouse": grids, octrees, BVH, BSP, culling ladder, broadphase | extended |
+| `ch07` | [07-operating-systems.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/07-operating-systems.md) | The scaffold and observatory: processes, syscalls, scheduler, handles, crashes | extended |
+| `ch08` | [08-the-weapon-example.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/08-the-weapon-example.md) | Synthesis: one rifle through the whole machine, UE5 then DOOM 3 | after extended |
+| `ch09` | [09-ai-and-the-medium.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/09-ai-and-the-medium.md) | Backend/model/harness/knowledge; explain & modify; harness landscape; standards; knowledge layer | after `ch08` |
+| `ch10` | [10-the-coming-times.md](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/10-the-coming-times.md) | Fear vs cybernetic answer; the hybrid engine; the metaverse as a verb | closing |
+| `Eng` | [Engines/](../Reference/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/Engines/index.md) | Ten case studies: DOOM, Quake, Quake III Arena, DOOM 3, three.js, Babylon.js, redot, Urho3D, OpenEngine, Unreal Engine | touchpoints throughout |
 
 ## 7. Deriving the overview — the method
 
@@ -145,7 +145,7 @@ the derivation can be re-run or trimmed:
 
 ## 8. The derived outline at a glance
 
-Full section detail lives in [`presentation-overview.md`](../Presentations/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/presentation-overview.md).
+Full section detail lives in [`presentation-overview.md`](../Presentation/Software%20is%20the%20Medium%20-%20Game%20Engines%20are%20Software/presentation-overview.md).
 The 14 sections + Q&A, with slide ranges from the expanded deck:
 
 | # | Section | Slides | Source | Min |
