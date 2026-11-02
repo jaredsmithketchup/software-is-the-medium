@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <rect x="8" y="16" width="124" height="66" rx="12" fill="#075985"/>
+  <text x="70" y="53" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
+  <polygon points="136,49 162,37 162,62" fill="#9CA3AF"/>
+  <rect x="168" y="16" width="124" height="66" rx="12" fill="#312E81"/>
+  <text x="230" y="53" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
+  <polygon points="296,49 324,37 324,62" fill="#9CA3AF"/>
+  <rect x="328" y="16" width="124" height="66" rx="12" fill="#064E3B"/>
+  <text x="390" y="53" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
+
+  <polygon points="390,82 382,112 398,112" fill="#34D399"/>
+  <polygon points="70,112 62,82 78,82" fill="#34D399"/>
+
+  <rect x="18" y="118" width="424" height="56" rx="12" fill="#1F2937" stroke="#34D399" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="230" y="141" font-size="13" font-weight="600" fill="#6EE7B7" text-anchor="middle">perceive → decide → act</text>
+  <text x="230" y="161" font-size="11" fill="#9CA3AF" text-anchor="middle">the return belt</text>
+
+  <circle cx="344" cy="196" r="20" fill="#065F46" stroke="#34D399" stroke-width="2"/>
+  <text x="344" y="201" font-size="10" font-weight="700" fill="#D1FAE5" text-anchor="middle">HUMAN</text>
+
+  <text x="230" y="244" font-size="12" fill="#94A3B8" text-anchor="middle">the loop : software + the person inside it</text>
+  <text x="230" y="266" font-size="11" fill="#6B7280" text-anchor="middle">sense / think / act  ↔  input / process / output</text>
+</svg>

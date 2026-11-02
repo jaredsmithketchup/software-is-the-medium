@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 215" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <rect x="24" y="8" width="104" height="32" rx="16" fill="#075985"/>
+  <text x="76" y="30" font-size="15" font-weight="700" fill="#BAE6FD" text-anchor="middle">DATA</text>
+  <rect x="140" y="8" width="104" height="32" rx="16" fill="#312E81"/>
+  <text x="192" y="30" font-size="15" font-weight="700" fill="#C7D2FE" text-anchor="middle">CODE</text>
+  <text x="650" y="26" font-size="13" font-weight="600" fill="#9CA3AF" text-anchor="end">every program : data + code over five parts</text>
+
+  <g font-size="17" font-weight="700" fill="#F9FAFB" text-anchor="middle">
+    <g>
+      <rect x="65" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+      <text x="130" y="90">STATE</text><text x="130" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what is remembered</text>
+    </g>
+    <g>
+      <rect x="215" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+      <text x="280" y="90">LOGIC</text><text x="280" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what changes it</text>
+    </g>
+    <g>
+      <rect x="365" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+      <text x="430" y="90">INPUT</text><text x="430" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what gets in</text>
+    </g>
+    <g>
+      <rect x="515" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+      <text x="580" y="90">OUTPUT</text><text x="580" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what comes out</text>
+    </g>
+    <g>
+      <rect x="665" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+      <text x="730" y="90">CLOCK</text><text x="730" y="112" font-size="10" font-weight="400" fill="#9CA3AF">who decides when</text>
+    </g>
+  </g>
+
+  <g font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <rect x="24" y="176" width="180" height="22" rx="5" fill="#4F46E5"/>
+    <text x="114" y="191">FOUNDATIONS</text>
+    <rect x="208" y="176" width="244" height="22" rx="5" fill="#0284C7"/>
+    <text x="330" y="191">WORLD &amp; MACHINE</text>
+    <rect x="456" y="176" width="280" height="22" rx="5" fill="#059669"/>
+    <text x="596" y="191">PEOPLE &amp; CHAIN</text>
+    <rect x="740" y="176" width="140" height="22" rx="5" fill="#6D28D9"/>
+    <text x="810" y="191">FUTURE</text>
+  </g>
+  <text x="24" y="168" font-size="10" font-weight="400" fill="#6B7280">the four acts</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 110" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g font-size="14" font-weight="700" fill="#E9D5FF" text-anchor="middle">
+    <rect x="8" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="88" y="51">BACKEND</text>
+    <rect x="180" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="260" y="51">MODEL</text>
+    <rect x="352" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="432" y="51">HARNESS</text>
+    <rect x="524" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="604" y="51">KNOWLEDGE</text>
+  </g>
+</svg>

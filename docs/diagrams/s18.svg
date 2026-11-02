@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g font-size="16" font-weight="700" fill="#F9FAFB" text-anchor="middle">
+    <g>
+      <rect x="15" y="20" width="150" height="76" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+      <text x="90" y="55">STATE</text>
+      <text x="90" y="120" font-size="11" font-weight="400" fill="#94A3B8">what is remembered</text>
+    </g>
+    <g>
+      <rect x="187" y="20" width="150" height="76" rx="10" fill="#1F2937" stroke="#818CF8" stroke-width="2"/>
+      <text x="262" y="55">LOGIC</text>
+      <text x="262" y="120" font-size="11" font-weight="400" fill="#94A3B8">what changes it</text>
+    </g>
+    <g>
+      <rect x="359" y="20" width="150" height="76" rx="10" fill="#1F2937" stroke="#38BDF8" stroke-width="2"/>
+      <text x="434" y="55">INPUT</text>
+      <text x="434" y="120" font-size="11" font-weight="400" fill="#94A3B8">what gets in</text>
+    </g>
+    <g>
+      <rect x="531" y="20" width="150" height="76" rx="10" fill="#1F2937" stroke="#34D399" stroke-width="2"/>
+      <text x="606" y="55">OUTPUT</text>
+      <text x="606" y="120" font-size="11" font-weight="400" fill="#94A3B8">what comes out</text>
+    </g>
+    <g>
+      <rect x="703" y="20" width="150" height="76" rx="10" fill="#1F2937" stroke="#6D28D9" stroke-width="2"/>
+      <text x="778" y="55">CLOCK</text>
+      <text x="778" y="120" font-size="11" font-weight="400" fill="#94A3B8">who decides when</text>
+    </g>
+  </g>
+  <text x="440" y="176" font-size="12" font-weight="600" fill="#9CA3AF" text-anchor="middle">name every part, and its one job</text>
+</svg>

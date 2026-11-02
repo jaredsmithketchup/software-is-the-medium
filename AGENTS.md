@@ -19,7 +19,9 @@ content.
 | `PLAN.md` | the presentation plan; §8 mirrors the live section budget; §12 is the applied content-cut audit |
 | `docs/` | the published deck site (reveal.js). GitHub Pages builds from `main` → `/docs`. Live at https://jaredsmithketchup.github.io/software-is-the-medium/ |
 | `docs/index.html` | **generated** — never hand-edit; regenerate with the script below |
-| `scripts/build-deck.mjs` | the generator: `slide-deck.md` + `speaker-cards.md` → `docs/index.html` |
+| `docs/theme.css` | deck theme (Slate dark, fonts, act colors, diagram layout) — edit freely |
+| `docs/diagrams/sNN.svg` | optional per-slide diagram: if `s3.svg` exists it is auto-inlined on slide 3 (titles/notes stay in the md files) |
+| `scripts/build-deck.mjs` | the generator: `slide-deck.md` + `speaker-cards.md` + `docs/diagrams/` → `docs/index.html` |
 
 ## Edit → regenerate → publish
 
@@ -32,6 +34,11 @@ content.
    `dividers: 12`. Commit the changed `docs/index.html` with the edit.
 3. Push `main`; GitHub Pages redeploys automatically (a few minutes). Verify at
    the site URL before reporting done.
+
+**Diagrams:** to add one to slide N, create `docs/diagrams/sN.svg` and
+regenerate — it is inlined automatically (content slides get a two-column
+layout; divider slides get it under the title). Match the palette in
+`docs/theme.css`. `<text>` in SVGs uses `Montserrat, Lato, Segoe UI, sans-serif`.
 
 The deck is reveal.js 5.1 (vendored under `docs/vendor/reveal/`). Presenter
 mode: open the site, press `S` — a second window shows the current slide, its

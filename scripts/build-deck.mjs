@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -134,6 +134,12 @@ function parseCards(md) {
 const slides = parseSlides(readFileSync(deckMd, 'utf8'));
 const cards = parseCards(readFileSync(cardsMd, 'utf8'));
 
+function slideDiagram(num) {
+  const f = join(root, 'docs', 'diagrams', 's' + num + '.svg');
+  if (!existsSync(f)) return '';
+  return readFileSync(f, 'utf8').trim();
+}
+
 function slideHtml(s) {
   const sourceNotes = [
     s.goal ? '- **Goal:** ' + s.goal : '',
@@ -145,14 +151,16 @@ function slideHtml(s) {
     cards.has(s.num) ? '<div class="cards"><h5>Speaker card — S' + s.num + '</h5>' + blocksMd(cards.get(s.num)) + '</div>' : '',
     sourceNotes ? '<div class="decknotes"><h5>Slide source notes</h5>' + blocksMd(sourceNotes) + '</div>' : '',
   ].filter(Boolean).join('\n');
+  const diagram = slideDiagram(s.num);
+  const claims = contentBullets(s.content).map((x) => '<li>' + inlineMd(x) + '</li>').join('');
 
   if (s.isDivider) {
-    const claims = contentBullets(s.content).map((x) => '<li>' + inlineMd(x) + '</li>').join('');
     const kicker = s.section ? '<p class="kicker">Section ' + s.section + '</p>' : '';
     return [
       '<section data-num="' + s.num + '" data-state="act-' + s.act.toLowerCase() + '" data-background-color="#111827">',
       '  <div class="divider"><span class="chip">' + s.actLabel + '</span>' + kicker,
       '    <h2>' + inlineMd(s.title) + '</h2>',
+      diagram ? '<div class="diagram divider-diagram">' + diagram + '</div>' : '',
       claims ? '    <ul class="divider-claims">' + claims + '</ul>' : '',
       '  </div>',
       '  <aside class="notes">\n' + notes + '\n  </aside>',
@@ -160,13 +168,15 @@ function slideHtml(s) {
     ].join('\n');
   }
 
-  const claims = contentBullets(s.content).map((x) => '<li>' + inlineMd(x) + '</li>').join('');
   const refsText = s.refs.replace(/^.*?refs:\s*/i, '');
+  const hasDiag = !!diagram;
   return [
-    '<section data-num="' + s.num + '" data-state="act-' + s.act.toLowerCase() + '">',
+    '<section data-num="' + s.num + '" data-state="act-' + s.act.toLowerCase() + '"' + (hasDiag ? ' class="has-diagram"' : '') + '>',
     '  <span class="chip">' + s.actLabel + '</span>',
     '  <h2>' + inlineMd(s.title) + '</h2>',
-    claims ? '  <ul class="content">' + claims + '</ul>' : '',
+    hasDiag
+      ? '  <div class="diagram-row">' + (claims ? '<ul class="content">' + claims + '</ul>' : '') + '<div class="diagram">' + diagram + '</div></div>'
+      : (claims ? '  <ul class="content">' + claims + '</ul>' : ''),
     refsText ? '<p class="refs">' + inlineMd(refsText) + '</p>' : '',
     '  <aside class="notes">\n' + notes + '\n  </aside>',
     '</section>',

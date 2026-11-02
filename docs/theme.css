@@ -112,6 +112,41 @@ body.act-d .reveal h2 { color: #D8B4FE; }
   margin: 0.35em 0;
 }
 
+/* Diagram slot */
+.reveal section.has-diagram .diagram-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4em;
+  width: 94%;
+  margin: 0.2em auto 0;
+}
+
+.reveal section.has-diagram .diagram-row ul.content {
+  width: 50%;
+  margin: 0;
+}
+
+.reveal section.has-diagram .diagram-row .diagram {
+  width: 46%;
+  flex: 0 0 auto;
+}
+
+.reveal .diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.reveal .divider .diagram {
+  margin: 0.3em auto 0;
+  max-width: 94%;
+}
+
+.reveal .divider .diagram svg {
+  width: 100%;
+}
+
 /* Citation footer */
 .reveal .refs {
   position: absolute;

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 120" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g font-size="16" font-weight="700" fill="#D1FAE5" text-anchor="middle">
+    <circle cx="120" cy="40" r="6" fill="#34D399"/>
+    <rect x="40" y="60" width="160" height="46" rx="23" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="120" y="89">ART</text>
+    <circle cx="310" cy="40" r="6" fill="#34D399"/>
+    <rect x="230" y="60" width="160" height="46" rx="23" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="310" y="89">AUDIO</text>
+    <circle cx="500" cy="40" r="6" fill="#34D399"/>
+    <rect x="420" y="60" width="160" height="46" rx="23" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="500" y="89">DESIGN</text>
+    <circle cx="690" cy="40" r="6" fill="#34D399"/>
+    <rect x="610" y="60" width="160" height="46" rx="23" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="690" y="89">CODE</text>
+  </g>
+</svg>
