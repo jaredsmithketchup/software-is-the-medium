@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: "Speaker Cards - Software is the Medium: Game Engines are Software"
-description: Read-aloud prompts, diagram walks, concrete examples, checks, technical caveats, and Q&A for the 38-slide student talk.
+description: Read-aloud prompts, diagram walks, concrete examples, checks, technical caveats, and Q&A for the 39-slide student talk.
 tags: [presentation, speaker-cards, game-engines, medium]
 generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
@@ -10,7 +10,7 @@ generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 
 Read **Say**, not every backup answer. **Show / ask** directs attention and checks understanding. **If asked** supplies depth without turning the talk into a technical lecture. **Next** is the transition.
 
-50-minute route, including the S28 exercise: S1-S4 4 min; S5-S14 12 min; S15-S20 9 min; S21-S23 5 min; S24-S30 12 min; S31-S37 8 min. S38 adds 10 min Q&A. Reach S15 at 16:00, S24 at 30:00, S31 at 42:00. If behind, skip S8, S23, and S32 rather than speaking faster. Protect S14/S17, the weapon, and the ending. No live demo required.
+51-minute route, including the S28 exercise: S1-S4 4 min; S5-S14 12 min; S15-S20 9 min; S21-S23 5 min; S24-S31 13 min; S32-S38 8 min. S39 adds 10 min Q&A. Reach S15 at 16:00, S24 at 30:00, S32 at 43:00. If behind, skip S8, S23, and S33 rather than speaking faster. Protect S14/S17, the weapon, and the ending. No live demo required.
 
 The numbers for the example weapon are invented teaching values, not a claim about a shipped game. The five parts are questions about responsibilities, not five mandatory modules. Public engine documentation can change; distinguish original releases from ports and settings. The current cards correct several over-broad claims in the older reference chapters.
 
@@ -47,7 +47,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 **If asked**
 
 - The four acts are color-coded in the deck — indigo A, sky B, green C, purple D — visible on each divider.
-- Timings: a 50-minute route with 10 minutes of Q&A at the end.
+- Timings: a 51-minute route with 10 minutes of Q&A at the end.
 
 **Next**
 
@@ -543,9 +543,32 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Next**
 
-- The same handoffs existed well before today's editors.
+- Now read that split in a real engine: what DOOM 3 ships as data and as code.
 
-## S30 - The same chain in Doom 3
+## S30 - A DOOM 3 weapon: from data to code
+
+**Say**
+
+- Take one DOOM 3 weapon and read it left to right, from data to code.
+- The data side is files: a config declares ammo, damage, and fire interval, and the names that bind everything else. The model, materials, and sounds are assets attached by those names.
+- The binding is what makes scattered files one weapon: names in the config point to assets and to script variables. Tuning the weapon is editing that data, not rebuilding the game's code.
+- The code side runs it: idScript executes the fire sequence against entity state, and the C++ `idWeapon` entity provides the engine-side behavior. Same split as the last slide, with DOOM 3's names.
+
+**Show / ask**
+
+- Point left to right. Ask: which of these lives in the shipped `.pk4` data, and which is compiled? Expect: everything but the code — that is the point of the split.
+
+**If asked**
+
+- This is the reference's "code vs data" boundary (Engines/doom-3): engine capabilities are compiled; huge amounts of gameplay travel as plain text and assets.
+- Concrete formats: `.decl`/`.def` declarations, `.script` behavior, `.md5mesh` models, `.md5anim` animation, `.mtr` materials, `.sndshd` sounds. "Declaration" names a system; avoid inventing a universal extension.
+- The script interpreter is a bytecode VM that reads and mutates entity state on the 60 Hz tick — logic in the five-part sense.
+
+**Next**
+
+- The same chain, now as one whole: data, scripts, and C++.
+
+## S31 - The same chain in Doom 3
 
 **Say**
 
@@ -562,7 +585,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Now apply this same map to AI, without changing the standard of evidence.
 
-## S31 - AI inside the same map
+## S32 - AI inside the same map
 
 **Say**
 
@@ -578,7 +601,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The useful bridge is feedback: propose, observe, and correct.
 
-## S32 - Feedback turns a guess into an experiment
+## S33 - Feedback turns a guess into an experiment
 
 **Say**
 
@@ -594,7 +617,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Some behavior is written explicitly. Some is learned from examples.
 
-## S33 - Symbolic and connectionist
+## S34 - Symbolic and connectionist
 
 **Say**
 
@@ -611,7 +634,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Here is a concrete learned component already used in games.
 
-## S34 - A learned component still has a job
+## S35 - A learned component still has a job
 
 **Say**
 
@@ -628,7 +651,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - AI can also sit outside the game, helping us work on its files.
 
-## S35 - AI is a new interface
+## S36 - AI is a new interface
 
 **Say**
 
@@ -645,7 +668,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Knowing the anatomy lets you make a useful, bounded request.
 
-## S36 - Give AI a boundary and a test
+## S37 - Give AI a boundary and a test
 
 **Say**
 
@@ -665,7 +688,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - This is the durable skill, whether the next tool uses AI or not.
 
-## S37 - The interface changed. The medium did not.
+## S38 - The interface changed. The medium did not.
 
 **Say**
 
@@ -681,7 +704,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Let us use the map on your questions.
 
-## S38 - Questions
+## S39 - Questions
 
 **Say**
 

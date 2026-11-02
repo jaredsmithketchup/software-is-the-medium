@@ -16,20 +16,20 @@ interactive, performance-sensitive, and generally soft real-time.
     Arena, DOOM 3, three.js, Babylon.js, Redot, Urho3D, OpenEngine, Unreal
     Engine.
 - `Presentation/` — the presentation package derived from the reference:
-  `presentation-overview.md` (structure and timing), `slide-deck.md` (S1–S38),
+  `presentation-overview.md` (structure and timing), `slide-deck.md` (S1–S39),
   and `speaker-cards.md` (one card per slide).
 - `PLAN.md` — the plan that produced the presentation package, including the
   content-cut audit (what to trim and why the core spine survives).
 
 ## Live deck
 
-The current source is a 38-slide talk, built for the existing GitHub Pages reveal.js site:
+The current source is a 39-slide talk, built for the existing GitHub Pages reveal.js site:
 
 - **Slides:** https://jaredsmithketchup.github.io/software-is-the-medium/
 - **Speaker view:** press `S` (or alt+s) — a second window opens with the
   matching speaker card for the current slide, the next-slide preview, and a
   timer. Put it on your screen; the first window is the one students see.
-- Source of truth: `Presentation/slide-deck.md` (S1–S38) and
+- Source of truth: `Presentation/slide-deck.md` (S1–S39) and
   `Presentation/speaker-cards.md` (one card per slide). Regenerate the site
   after editing them with `node scripts/build-deck.mjs` and commit `docs/`.
 
@@ -37,7 +37,7 @@ The current source is a 38-slide talk, built for the existing GitHub Pages revea
 
 Read `Reference/00-software-is-the-medium.md` first; it is the flagship
 chapter. Then follow the reading order in the chapter table of `PLAN.md`, or
-jump to `Presentation/presentation-overview.md` for the suggested 50-minute talk
+jump to `Presentation/presentation-overview.md` for the suggested 51-minute talk
 plus 10-minute Q&A, or its 25-minute cutdown. The speaker cards include diagram
 walks, backup answers, technical caveats, and a three-minute student exercise.
 Local edits reach the published site only after the normal commit/push workflow.

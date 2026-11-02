@@ -65,7 +65,7 @@
 <p><strong>Show / ask</strong></p>
 <ul><li>Point to each act as you name it. Optionally ask what they most want to understand; you can weave one answer in later.</li></ul>
 <p><strong>If asked</strong></p>
-<ul><li>The four acts are color-coded in the deck — indigo A, sky B, green C, purple D — visible on each divider.</li><li>Timings: a 50-minute route with 10 minutes of Q&amp;A at the end.</li></ul>
+<ul><li>The four acts are color-coded in the deck — indigo A, sky B, green C, purple D — visible on each divider.</li><li>Timings: a 51-minute route with 10 minutes of Q&amp;A at the end.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Each of those disciplines already contributes to a running software system.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> preview the whole talk.</li><li><strong>Content:</strong> <strong>Act A — Software:</strong> what it is, and what it is made of | <strong>Act B — Engines:</strong> the anatomy of an engine, then Quake, Doom 3, and Unreal 5 | <strong>Act C — One weapon:</strong> the same chain across every discipline | <strong>Act D — AI and ahead:</strong> interfaces, tools, then the reusable questions</li><li><strong>Visual:</strong> the six sections as act-colored chips; the map returns on every section divider.</li><li><strong>Refs:</strong> <code>ch00</code> intro.</li></ul></div>
@@ -806,21 +806,71 @@
 <p><strong>If asked</strong></p>
 <ul><li>This is the five-part split made physical: state and content are the data side; logic is the code side; input, output, and clock are the connections.</li><li>It is a spectrum, not a law: some teams push decisions into data-driven tables or visual scripts, others hard-code values. The questions stay the same — who may change it, and who checks the contract first.</li><li>In DOOM 3's terms (next), weapon definitions live in data, scripts in the gameplay VM, and the engine's capabilities in C++ — the same three buckets.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The same handoffs existed well before today's editors.</li></ul></div>
+<ul><li>Now read that split in a real engine: what DOOM 3 ships as data and as code.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> make the split concrete.</li><li><strong>Content:</strong> <strong>Values</strong> — damage, cooldown, ammo, ranges — live in <strong>data</strong>: tables, config, or assets a designer edits | <strong>Decisions</strong> — eligibility, hit tests, spending the round — live in <strong>code</strong>: scripts, Blueprints, C++ | <strong>Assets</strong> — meshes, sounds, textures — are <strong>data</strong> the code loads | The schema is the seam: it names the fields the data must satisfy</li><li><strong>Visual:</strong> the same weapon split into data rows and code rows.</li><li><strong>Refs:</strong> <code>ch08</code> §2–4, <code>ch00</code> §1.3.</li></ul></div>
   </aside>
 </section>
 
-<section data-num="30" data-state="act-c">
+<section data-num="30" data-state="act-c" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
-    <h2>The same chain in Doom 3</h2>
+    <h2>A DOOM 3 weapon: from data to code</h2>
+    <div class="diagram-row"><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img" aria-labelledby="s30-title s30-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s30-title">A DOOM 3 weapon from data to code</title><desc id="s30-desc">Config files and assets live on the data side, bindings attach them by name, and scripts plus C++ run the weapon's behavior.</desc>
+  <defs><marker id="s30-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6EE7B7"/></marker></defs>
+  <rect x="20" y="40" width="240" height="170" rx="12" fill="#1F2937" stroke="#6EE7B7"/>
+  <text x="140" y="70" font-size="14" font-weight="700" fill="#D1FAE5" text-anchor="middle">DATA — FILES</text>
+  <g font-size="12.5" fill="#CBD5E1">
+    <text x="45" y="102">.decl config: ammo, damage,</text>
+    <text x="45" y="124">fire interval, names</text>
+    <text x="45" y="152">.mdl model · .mtr materials</text>
+    <text x="45" y="178">.sndshd · .gui</text>
+  </g>
+  <rect x="300" y="40" width="160" height="170" rx="12" fill="#111827" stroke="#6366F1"/>
+  <text x="380" y="70" font-size="14" font-weight="700" fill="#A5B4FC" text-anchor="middle">BINDING</text>
+  <g font-size="12.5" fill="#CBD5E1">
+    <text x="325" y="102">names link config</text>
+    <text x="325" y="124">to assets and</text>
+    <text x="325" y="146">script variables</text>
+  </g>
+  <rect x="500" y="40" width="240" height="170" rx="12" fill="#1F2937" stroke="#6EE7B7"/>
+  <text x="620" y="70" font-size="14" font-weight="700" fill="#6EE7B7" text-anchor="middle">CODE — BEHAVIOR</text>
+  <g font-size="12.5" fill="#CBD5E1">
+    <text x="525" y="102">idScript runs the fire sequence</text>
+    <text x="525" y="124">reads and mutates entity state</text>
+    <text x="525" y="152">C++ idWeapon entity</text>
+    <text x="525" y="178">engine-side behavior</text>
+  </g>
+  <g fill="none" stroke="#6EE7B7" stroke-width="2" marker-end="url(#s30-arrow)"><path d="M260 125 H298"/><path d="M460 125 H498"/></g>
+  <text x="279" y="112" font-size="10.5" fill="#6EE7B7" text-anchor="middle">by name</text>
+  <text x="479" y="112" font-size="10.5" fill="#6EE7B7" text-anchor="middle">then runs</text>
+</svg></div><ul class="content"><li><strong>Files</strong> — the <code>.decl</code> config names ammo, damage, and fire interval; the model, materials, and sounds are assets</li><li><strong>Binding</strong> — those names attach assets and script variables to the weapon</li><li><strong>Code</strong> — idScript runs the fire sequence, the C++ <code>idWeapon</code> entity provides engine-side behavior</li><li>Tuning is editing data, not rebuilding the game code</li></ul></div>
+  </div>
+<p class="refs"><code>Eng/DOOM3</code>, <code>ch08</code> §9.</p>
+  </div>
+  <aside class="notes">
+<div class="cards"><h5>Speaker card — S30</h5><p><strong>Say</strong></p>
+<ul><li>Take one DOOM 3 weapon and read it left to right, from data to code.</li><li>The data side is files: a config declares ammo, damage, and fire interval, and the names that bind everything else. The model, materials, and sounds are assets attached by those names.</li><li>The binding is what makes scattered files one weapon: names in the config point to assets and to script variables. Tuning the weapon is editing that data, not rebuilding the game's code.</li><li>The code side runs it: idScript executes the fire sequence against entity state, and the C++ <code>idWeapon</code> entity provides the engine-side behavior. Same split as the last slide, with DOOM 3's names.</li></ul>
+<p><strong>Show / ask</strong></p>
+<ul><li>Point left to right. Ask: which of these lives in the shipped <code>.pk4</code> data, and which is compiled? Expect: everything but the code — that is the point of the split.</li></ul>
+<p><strong>If asked</strong></p>
+<ul><li>This is the reference's "code vs data" boundary (Engines/doom-3): engine capabilities are compiled; huge amounts of gameplay travel as plain text and assets.</li><li>Concrete formats: <code>.decl</code>/<code>.def</code> declarations, <code>.script</code> behavior, <code>.md5mesh</code> models, <code>.md5anim</code> animation, <code>.mtr</code> materials, <code>.sndshd</code> sounds. "Declaration" names a system; avoid inventing a universal extension.</li><li>The script interpreter is a bytecode VM that reads and mutates entity state on the 60 Hz tick — logic in the five-part sense.</li></ul>
+<p><strong>Next</strong></p>
+<ul><li>The same chain, now as one whole: data, scripts, and C++.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> read one weapon across the data-to-code seam.</li><li><strong>Content:</strong> <strong>Files</strong> — the <code>.decl</code> config names ammo, damage, and fire interval; the model, materials, and sounds are assets | <strong>Binding</strong> — those names attach assets and script variables to the weapon | <strong>Code</strong> — idScript runs the fire sequence, the C++ <code>idWeapon</code> entity provides engine-side behavior | Tuning is editing data, not rebuilding the game code</li><li><strong>Visual:</strong> data files → binding → code, left to right.</li><li><strong>Refs:</strong> <code>Eng/DOOM3</code>, <code>ch08</code> §9.</li></ul></div>
+  </aside>
+</section>
+
+<section data-num="31" data-state="act-c">
+  <div class="main"><div class="slide-body">
+    <span class="chip">C — THE WEAPON</span>
+    <h2>The same chain in Doom 3</h2>
     <ul class="content"><li>DOOM 3 combines weapon definitions, assets, scripts, and C++</li><li>File names change; the authoring-to-runtime handoffs remain</li><li>Engine code provides capabilities; game content configures and coordinates them</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §9, <code>Eng/DOOM3</code>.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S30</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S31</h5><p><strong>Say</strong></p>
 <ul><li>In DOOM 3, weapon definitions connect names and settings to assets and script behavior. C++ weapon code and the script system coordinate the running weapon.</li><li>Meshes and animations, materials, and sound declarations feed their respective systems. It is not one mysterious "weapon file."</li><li>We can ask the same questions: was the definition found, was the script state correct, did the projectile or hit logic run, and did output receive the result?</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Concrete formats include .def definitions, .script behavior, .md5mesh models, .md5anim animation, .mtr materials, and .sndshd sound declarations. "Declaration" names a system; do not invent a universal .decl extension.</li><li>Source trail: <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/game/Weapon.cpp" target="_blank" rel="noopener">idWeapon implementation</a>, <a href="https://github.com/id-Software/DOOM-3/blob/master/neo/framework/DeclManager.cpp" target="_blank" rel="noopener">declaration manager</a>. The source release does not grant unrestricted rights to proprietary game assets.</li></ul>
@@ -830,7 +880,7 @@
   </aside>
 </section>
 
-<section data-num="31" data-state="act-d" data-background-color="#111827">
+<section data-num="32" data-state="act-d" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">D — THE DIRECTION</span><p class="kicker">Section 6</p>
     <h2>AI inside the same map</h2>
 
@@ -838,7 +888,7 @@
     <ul class="divider-claims"><li>Separate three questions</li><li>Is AI <strong>helping build</strong> the game, <strong>running inside</strong> it, or <strong>generating its output</strong>?</li><li>Each role needs different checks</li></ul>
   </div></div></div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S31</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S32</h5><p><strong>Say</strong></p>
 <ul><li>"AI in games" can mean a tool helping a developer write code, a model making decisions during play, or a model reconstructing images. Those are different responsibilities with different risks.</li><li>Ask where it sits, what it reads, what it may change, how long it takes, and how failure is detected.</li><li>You do not have to adopt a tool to understand or evaluate it.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Traditional game AI includes authored behavior trees, search, and navigation. "AI" does not automatically mean an LLM or a neural network.</li></ul>
@@ -848,7 +898,7 @@
   </aside>
 </section>
 
-<section data-num="32" data-state="act-d">
+<section data-num="33" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Feedback turns a guess into an experiment</h2>
@@ -857,7 +907,7 @@
 <p class="refs"><code>ch09</code> §2, <code>ch00</code> §3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S32</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S33</h5><p><strong>Say</strong></p>
 <ul><li>A player observes a miss and adjusts aim. A developer observes a failed test and adjusts a change. The pattern is goal, action, observation, comparison, correction.</li><li>AI can propose the action, but it does not remove the need for a trustworthy observation. Asking the same model whether its answer looks correct is weaker than running the relevant test.</li><li>Measure the actual goal. Faster code generation does not prove faster delivery of a working game.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Wiener popularized cybernetics in his 1948 book about control and communication in animals and machines. Keep the history optional; the practical point is feedback and error correction, not a claim that all loops are equivalent.</li></ul>
@@ -867,7 +917,7 @@
   </aside>
 </section>
 
-<section data-num="33" data-state="act-d" class="has-diagram">
+<section data-num="34" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Symbolic and connectionist</h2>
@@ -887,7 +937,7 @@
 <p class="refs"><code>ch09</code> §3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S33</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S34</h5><p><strong>Say</strong></p>
 <ul><li>An explicit logic can say "ammunition must be at least one." You can inspect it and test the boundary at zero.</li><li>A neural model learns parameters from training. It may produce useful dialogue or code, but fluent output is not proof that the game's constraints were respected.</li><li>Combine the approaches: an NPC proposes a trade in natural language; explicit inventory and currency logic decide whether the trade can execute.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>This is a contrast, not an exhaustive taxonomy of software. Numerical simulation is not usually called symbolic AI just because it is written in C++. Traditional AI includes more than these two labels.</li><li>Learned models execute code over data too. Their weights are data. Explicit code can also contain bugs; the distinction does not mean code is automatically correct or neural models are always random.</li></ul>
@@ -897,7 +947,7 @@
   </aside>
 </section>
 
-<section data-num="34" data-state="act-d" class="has-diagram">
+<section data-num="35" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>A learned component still has a job</h2>
@@ -914,7 +964,7 @@
 <p class="refs"><code>ch10</code> §3.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S34</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S35</h5><p><strong>Say</strong></p>
 <ul><li>Neural upscaling, such as DLSS Super Resolution, reconstructs higher-resolution images from lower-resolution inputs using motion and previous-frame information.</li><li>That is a specific job in the output pipeline. It does not establish that a target was hit, that inventory is consistent, or that a saved world can be restored correctly.</li><li>For generated-world demonstrations, ask separate questions: does an object persist after leaving view, can a designer control the logic, can you replay a failure, and what does it cost to run?</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>Super resolution and frame generation are different techniques. More generated display frames do not mean the gameplay simulation performed more updates.</li><li>Source: <a href="https://developer.nvidia.com/rtx/dlss" target="_blank" rel="noopener">NVIDIA DLSS technology descriptions</a>. Use this for the mechanism, not as independent evidence of every performance claim. Whether whole engines will be replaced remains a forecast, not established by upscaling.</li></ul>
@@ -924,7 +974,7 @@
   </aside>
 </section>
 
-<section data-num="35" data-state="act-d" class="has-diagram">
+<section data-num="36" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>AI is a new interface</h2>
@@ -940,7 +990,7 @@
 <p class="refs"><code>ch09</code> §1, §6.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S35</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S36</h5><p><strong>Say</strong></p>
 <ul><li>The model proposes an action. A surrounding application, often called a harness, supplies context, manages permissions, and invokes tools. Tool results feed the next step.</li><li>A tool can read a file, modify it, or run a test. Those actions can be useful or damaging depending on access and validation.</li><li>Keep the distinction: a confident message says what the model believes. A diff shows what changed. A test result shows what was actually checked.</li></ul>
 <p><strong>If asked</strong></p>
 <ul><li>The harness can run locally, remotely, or across both. Do not assume "on my machine" means "no data leaves my machine." Check provider, tool, and storage policies before giving access to private files.</li><li>Start read-only, scope permissions, exclude secrets, use version control, and require approval for destructive or publishing actions. Repository content can contain hostile instructions; reading a file should not grant it authority.</li></ul>
@@ -950,7 +1000,7 @@
   </aside>
 </section>
 
-<section data-num="36" data-state="act-d" class="has-diagram">
+<section data-num="37" data-state="act-d" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Give AI a boundary and a test</h2>
@@ -966,7 +1016,7 @@
 <p class="refs"><code>ch09</code> §6, <code>ch00</code> §8.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S36</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S37</h5><p><strong>Say</strong></p>
 <ul><li>Instead of "fix my weapon," ask it to trace the fire command to the ammunition update and cite the relevant files. Inspect before editing.</li><li>Then request one small change with explicit invariants: preserve damage, cooldown, and the authority boundary. Review the diff.</li><li>Test ordinary behavior and the boundaries: empty ammunition, cooldown not expired, a hit, and a miss. Ask what it actually ran, and what remains untested.</li></ul>
 <p><strong>Concrete acceptance checks</strong></p>
 <ul><li>Ammo zero: no accepted shot, no damage, no negative ammunition; dry-fire feedback may be allowed.</li><li>Cooldown active: reject the extra request without spending another round.</li><li>Valid hit: spend one round and apply exactly 25 damage under our stated assumptions.</li><li>Valid miss: spend one round, start cooldown, but do not change target health.</li><li>A passing unit test does not prove multiplayer correctness, good feel, or acceptable performance. Add those checks when the change touches them.</li></ul>
@@ -976,7 +1026,7 @@
   </aside>
 </section>
 
-<section data-num="37" data-state="act-d">
+<section data-num="38" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>The interface changed. The medium did not.</h2>
@@ -985,7 +1035,7 @@
 <p class="refs"><code>ch00</code> §9, <code>ch09</code> §12, <code>ch10</code>.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S37</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S38</h5><p><strong>Say</strong></p>
 <ul><li>Find the state. Trace the logic. Follow the input and output. Measure the timing.</li><li>In your next project, choose one door, jump, or weapon. Draw those five parts and follow one real action through them. If you cannot find a part, that is your next question, not a personal failure.</li><li>The interface changed. The medium still needs to be understood. Your judgment is how you decide whether the result is right.</li></ul>
 <p><strong>Delivery</strong></p>
 <ul><li>Pause after the final sentence. Do not promise guaranteed employment, inevitable replacement, or that mastering one tool future-proofs a career. This is a transferable learning method, not a prediction.</li></ul>
@@ -995,7 +1045,7 @@
   </aside>
 </section>
 
-<section data-num="38" data-state="act-d">
+<section data-num="39" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Questions</h2>
@@ -1004,7 +1054,7 @@
 <p class="refs"><code>ch00</code> §10.</p>
   </div>
   <aside class="notes">
-<div class="cards"><h5>Speaker card — S38</h5><p><strong>Say</strong></p>
+<div class="cards"><h5>Speaker card — S39</h5><p><strong>Say</strong></p>
 <ul><li>Give me a concrete symptom or something you want to build. We will locate its state, logic, boundaries, and timing, then decide what to inspect.</li><li>If no one volunteers, return to the flash-without-damage example. What evidence separates a missed hit from a stale health display?</li></ul>
 <p><strong>Q&amp;A ammunition</strong></p>
 <ul><li>"Which engine should I learn?" Choose a small achievable project and an engine with accessible tools, documentation, and support for your platform. Complete the loop from authoring to a playable build. Learn one well, then map the next using the same questions.</li><li>"Does a game need an engine?" It needs software that fulfills the required responsibilities, whether supplied by a general engine, a framework, libraries, or custom code. There is no requirement to buy a branded product.</li><li>"Can AI build the whole game?" It can automate portions with widely varying reliability. Scope, integration, validation, performance, licensing, and player experience still need to be established. A demo is not proof of maintainable production software.</li><li>"Will it take our jobs?" Tasks and staffing may change; no one can responsibly guarantee your personal outcome. Strengthen portable abilities: diagnose systems, communicate constraints, judge quality, test work, and finish projects. AI use is not a prerequisite for understanding this map.</li><li>"Why did generated code compile but fail?" Compilation checks some syntax and type rules, not whether the behavior matches the design, synchronizes correctly, or meets a time budget. Ask for the failing scenario and a regression test.</li><li>"What should a non-programmer do tomorrow?" Trace one of your own assets from source file through import and reference to its visible or audible result. Record one format constraint, one loading constraint, and one timing constraint.</li><li>"Where should I read next?" Start with the repository's reference for the relevant question, then check version-specific primary documentation. For engine behavior, prefer source and measured traces over confident summaries, including these notes.</li><li>If unsure: "I can locate the responsibility, but I would need to inspect that engine version or measure that behavior before claiming an answer." This models the skill you are teaching.</li></ul></div>
