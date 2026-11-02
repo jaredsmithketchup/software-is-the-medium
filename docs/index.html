@@ -17,53 +17,8 @@
 <section data-num="1" data-state="act-a" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — SOFTWARE</span><p class="kicker">Section 1</p>
     <h2>Software is the Medium — Game Engines are Software</h2>
-<div class="diagram divider-diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 156" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <rect x="8" y="4" width="88" height="26" rx="13" fill="#075985"/>
-  <text x="52" y="22" font-size="12" font-weight="700" fill="#BAE6FD" text-anchor="middle">DATA</text>
-  <rect x="104" y="4" width="88" height="26" rx="13" fill="#312E81"/>
-  <text x="148" y="22" font-size="12" font-weight="700" fill="#C7D2FE" text-anchor="middle">CODE</text>
-  <text x="844" y="22" font-size="12" font-weight="600" fill="#9CA3AF" text-anchor="end">every program is these two, on five parts</text>
 
-  <g font-weight="700" text-anchor="middle">
-    <g>
-      <rect x="8" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-      <text x="86" y="68" font-size="15" fill="#F9FAFB">STATE</text>
-      <text x="86" y="88" font-size="11" font-weight="400" fill="#94A3B8">what is remembered</text>
-    </g>
-    <g>
-      <rect x="176" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#818CF8" stroke-width="2"/>
-      <text x="254" y="68" font-size="15" fill="#F9FAFB">LOGIC</text>
-      <text x="254" y="88" font-size="11" font-weight="400" fill="#94A3B8">what changes it</text>
-    </g>
-    <g>
-      <rect x="344" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#38BDF8" stroke-width="2"/>
-      <text x="422" y="68" font-size="15" fill="#F9FAFB">INPUT</text>
-      <text x="422" y="88" font-size="11" font-weight="400" fill="#94A3B8">what gets in</text>
-    </g>
-    <g>
-      <rect x="512" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#34D399" stroke-width="2"/>
-      <text x="590" y="68" font-size="15" fill="#F9FAFB">OUTPUT</text>
-      <text x="590" y="88" font-size="11" font-weight="400" fill="#94A3B8">what comes out</text>
-    </g>
-    <g>
-      <rect x="680" y="42" width="172" height="64" rx="10" fill="#1F2937" stroke="#A78BFA" stroke-width="2"/>
-      <text x="766" y="68" font-size="15" fill="#F9FAFB">CLOCK</text>
-      <text x="766" y="88" font-size="11" font-weight="400" fill="#94A3B8">who decides when</text>
-    </g>
-  </g>
-
-  <g font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">
-    <rect x="8" y="122" width="190" height="24" rx="6" fill="#4F46E5"/>
-    <text x="103" y="138">1 · FOUNDATIONS</text>
-    <rect x="206" y="122" width="230" height="24" rx="6" fill="#0284C7"/>
-    <text x="321" y="138">2 · WORLD & MACHINE</text>
-    <rect x="444" y="122" width="210" height="24" rx="6" fill="#059669"/>
-    <text x="549" y="138">3 · PEOPLE</text>
-    <rect x="662" y="122" width="190" height="24" rx="6" fill="#6D28D9"/>
-    <text x="757" y="138">4 · WHAT'S NEXT</text>
-  </g>
-</svg></div>
-
+    <ul class="divider-claims"><li>Software is the medium</li><li>Game engines are software</li><li>This talk is the anatomy of that medium, then the anatomy of an engine</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S1</h5><p><strong>Say</strong></p>
@@ -241,35 +196,11 @@
   </aside>
 </section>
 
-<section data-num="9" data-state="act-a" class="has-diagram">
+<section data-num="9" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — SOFTWARE</span>
     <h2>Latency</h2>
-    <div class="diagram-row"><ul class="content"><li>Latency is the chain: finger, device, OS, simulation, render, display, eye</li><li>Delays add</li><li>At 60 fps the budget is about 17 ms</li><li>Miss it, and the player feels the loop break</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 150" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <rect x="8" y="8" width="112" height="72" rx="12" fill="#075985"/>
-  <text x="64" y="36" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
-  <text x="64" y="56" font-size="11" fill="#E0F2FE" text-anchor="middle">keys, files</text>
-  <text x="64" y="70" font-size="11" fill="#E0F2FE" text-anchor="middle">packets</text>
-
-  <line x1="124" y1="44" x2="142" y2="44" stroke="#9CA3AF" stroke-width="2"/>
-  <polygon points="142,38 154,44 142,50" fill="#9CA3AF"/>
-
-  <rect x="164" y="8" width="112" height="72" rx="12" fill="#312E81"/>
-  <text x="220" y="36" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
-  <text x="220" y="58" font-size="11" fill="#E0E7FF" text-anchor="middle">code over</text>
-  <text x="220" y="72" font-size="11" fill="#E0E7FF" text-anchor="middle">data</text>
-
-  <line x1="280" y1="44" x2="298" y2="44" stroke="#9CA3AF" stroke-width="2"/>
-  <polygon points="298,38 310,44 298,50" fill="#9CA3AF"/>
-
-  <rect x="320" y="8" width="112" height="72" rx="12" fill="#064E3B"/>
-  <text x="376" y="36" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
-  <text x="376" y="56" font-size="11" fill="#A7F3D0" text-anchor="middle">pixels, sound</text>
-  <text x="376" y="70" font-size="11" fill="#A7F3D0" text-anchor="middle">saved files</text>
-
-  <text x="220" y="108" font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle">same three boxes, every program</text>
-  <text x="220" y="128" font-size="11" fill="#6B7280" text-anchor="middle">they differ in size, speed, and where you draw the line</text>
-</svg></div></div>
+    <ul class="content"><li>Latency is the chain: finger, device, OS, simulation, render, display, eye</li><li>Delays add</li><li>At 60 fps the budget is about 17 ms</li><li>Miss it, and the player feels the loop break</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §3.3–3.4.</p>
   </div>
@@ -367,35 +298,11 @@
   </aside>
 </section>
 
-<section data-num="13" data-state="act-b" class="has-diagram">
+<section data-num="13" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>The frame loop is hard real-time</h2>
-    <div class="diagram-row"><ul class="content"><li>The frame must finish before the next refresh</li><li>That is hard real-time</li><li>Miss the deadline and the player feels it</li><li>The frame loop and the human loop are the same loop, at 60 to 144 Hz</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 168" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <rect x="16" y="10" width="112" height="48" rx="10" fill="#075985"/>
-  <text x="72" y="39" font-size="12" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
-
-  <line x1="132" y1="34" x2="150" y2="34" stroke="#9CA3AF" stroke-width="2"/>
-  <polygon points="150,28 162,34 150,40" fill="#9CA3AF"/>
-
-  <rect x="174" y="10" width="112" height="48" rx="10" fill="#312E81"/>
-  <text x="230" y="39" font-size="12" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
-
-  <line x1="290" y1="34" x2="308" y2="34" stroke="#9CA3AF" stroke-width="2"/>
-  <polygon points="308,28 320,34 308,40" fill="#9CA3AF"/>
-
-  <rect x="332" y="10" width="112" height="48" rx="10" fill="#064E3B"/>
-  <text x="388" y="39" font-size="12" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
-
-  <path d="M388 58 V92 H72 V66" fill="none" stroke="#34D399" stroke-width="2"/>
-  <polygon points="66,66 78,66 72,54" fill="#34D399"/>
-
-  <rect x="118" y="76" width="224" height="36" rx="10" fill="#064E3B" stroke="#34D399"/>
-  <text x="230" y="98" font-size="12" font-weight="700" fill="#D1FAE5" text-anchor="middle">you see it, decide, act</text>
-
-  <text x="230" y="140" font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle">the picture comes back as the next input</text>
-  <text x="230" y="158" font-size="11" fill="#6B7280" text-anchor="middle">that is the loop</text>
-</svg></div></div>
+    <ul class="content"><li>The frame must finish before the next refresh</li><li>That is hard real-time</li><li>Miss the deadline and the player feels it</li><li>The frame loop and the human loop are the same loop, at 60 to 144 Hz</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §5, <code>ch01</code> §4.</p>
   </div>
@@ -537,39 +444,11 @@
   </aside>
 </section>
 
-<section data-num="18" data-state="act-b" class="has-diagram">
+<section data-num="18" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE ENGINE</span>
     <h2>What changes is the fill</h2>
-    <div class="diagram-row"><ul class="content"><li>Quake's clock is variable</li><li>Doom 3 simulates at a fixed 60 Hz and renders as fast as the display</li><li>Unreal's game thread is variable, and Chaos physics uses fixed substeps</li><li>Threads and world models change</li><li>The five parts do not</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 96" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-weight="700" text-anchor="middle">
-    <g>
-      <rect x="8" y="8" width="156" height="80" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-      <text x="86" y="40" font-size="15" fill="#F9FAFB">STATE</text>
-      <text x="86" y="62" font-size="11" font-weight="400" fill="#94A3B8">what is remembered</text>
-    </g>
-    <g>
-      <rect x="176" y="8" width="156" height="80" rx="10" fill="#1F2937" stroke="#818CF8" stroke-width="2"/>
-      <text x="254" y="40" font-size="15" fill="#F9FAFB">LOGIC</text>
-      <text x="254" y="62" font-size="11" font-weight="400" fill="#94A3B8">what changes it</text>
-    </g>
-    <g>
-      <rect x="344" y="8" width="156" height="80" rx="10" fill="#1F2937" stroke="#38BDF8" stroke-width="2"/>
-      <text x="422" y="40" font-size="15" fill="#F9FAFB">INPUT</text>
-      <text x="422" y="62" font-size="11" font-weight="400" fill="#94A3B8">what gets in</text>
-    </g>
-    <g>
-      <rect x="512" y="8" width="156" height="80" rx="10" fill="#1F2937" stroke="#34D399" stroke-width="2"/>
-      <text x="590" y="40" font-size="15" fill="#F9FAFB">OUTPUT</text>
-      <text x="590" y="62" font-size="11" font-weight="400" fill="#94A3B8">what comes out</text>
-    </g>
-    <g>
-      <rect x="680" y="8" width="172" height="80" rx="10" fill="#1F2937" stroke="#A78BFA" stroke-width="2"/>
-      <text x="766" y="40" font-size="15" fill="#F9FAFB">CLOCK</text>
-      <text x="766" y="62" font-size="11" font-weight="400" fill="#94A3B8">who decides when</text>
-    </g>
-  </g>
-</svg></div></div>
+    <ul class="content"><li>Quake's clock is variable</li><li>Doom 3 simulates at a fixed 60 Hz and renders as fast as the display</li><li>Unreal's game thread is variable, and Chaos physics uses fixed substeps</li><li>Threads and world models change</li><li>The five parts do not</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §4–5.</p>
   </div>
@@ -676,39 +555,11 @@
   </aside>
 </section>
 
-<section data-num="23" data-state="act-c" class="has-diagram">
+<section data-num="23" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>Frames and audio</h2>
-    <div class="diagram-row"><ul class="content"><li>The simulation publishes state</li><li>The renderer draws the mesh, materials, and animation</li><li>The audio mixer plays the sound</li><li>VFX spawn from the same event</li><li>None of that is the simulation</li><li>It is output, on the clock</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 148" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <g font-size="12" font-weight="700" fill="#F9FAFB" text-anchor="middle">
-    <rect x="8" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="82" y="30">1 device</text>
-    <polygon points="160,25 172,19 172,31" fill="#94A3B8"/>
-    <rect x="180" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="254" y="30">2 commands</text>
-    <polygon points="332,25 344,19 344,31" fill="#94A3B8"/>
-    <rect x="352" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#6366F1"/>
-    <text x="426" y="30">3 update</text>
-    <polygon points="504,25 516,19 516,31" fill="#94A3B8"/>
-    <rect x="524" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#6366F1"/>
-    <text x="598" y="30">4 world</text>
-
-    <rect x="8" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
-    <text x="82" y="84">5 render</text>
-    <polygon points="160,79 172,73 172,85" fill="#94A3B8"/>
-    <rect x="180" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
-    <text x="254" y="84">6 screen</text>
-    <polygon points="332,79 344,73 344,85" fill="#94A3B8"/>
-    <rect x="352" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
-    <text x="426" y="84">7 you see it</text>
-    <polygon points="504,79 516,73 516,85" fill="#94A3B8"/>
-    <rect x="524" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
-    <text x="598" y="84">8 you act</text>
-  </g>
-  <text x="340" y="122" font-size="13" font-weight="700" fill="#A5B4FC" text-anchor="middle">then it repeats. The frame is one beat.</text>
-  <text x="340" y="140" font-size="11" fill="#94A3B8" text-anchor="middle">60 to 144 times a second</text>
-</svg></div></div>
+    <ul class="content"><li>The simulation publishes state</li><li>The renderer draws the mesh, materials, and animation</li><li>The audio mixer plays the sound</li><li>VFX spawn from the same event</li><li>None of that is the simulation</li><li>It is output, on the clock</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §7–8.</p>
   </div>
@@ -721,46 +572,11 @@
   </aside>
 </section>
 
-<section data-num="24" data-state="act-c" class="has-diagram">
+<section data-num="24" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — THE WEAPON</span>
     <h2>The same chain in Doom 3</h2>
-    <div class="diagram-row"><ul class="content"><li>Doom 3, 2004</li><li>Design, then .def and .decl data, then a placed entity, then idScript that plays them back</li><li>Gameplay code only plays what the earlier stages produced</li><li>The chain is the same</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 228" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <text x="96" y="18" font-size="13" font-weight="700" fill="#7DD3FC" text-anchor="middle">DOOM · 1993</text>
-  <g font-size="12" font-weight="700" fill="#E5E7EB" text-anchor="middle">
-    <rect x="24" y="28" width="144" height="28" rx="7" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="96" y="47">state</text>
-    <rect x="24" y="60" width="144" height="28" rx="7" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="96" y="79">logic</text>
-    <rect x="24" y="92" width="144" height="28" rx="7" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="96" y="111">input</text>
-    <rect x="24" y="124" width="144" height="28" rx="7" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="96" y="143">output</text>
-    <rect x="24" y="156" width="144" height="28" rx="7" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="96" y="175">clock</text>
-  </g>
-  <text x="96" y="202" font-size="11" fill="#94A3B8" text-anchor="middle">35 Hz · TryRunTics</text>
-
-  <rect x="196" y="88" width="128" height="48" rx="10" fill="#312E81"/>
-  <text x="260" y="108" font-size="13" font-weight="700" fill="#F9FAFB" text-anchor="middle">same</text>
-  <text x="260" y="126" font-size="13" font-weight="700" fill="#A5B4FC" text-anchor="middle">loop</text>
-
-  <text x="424" y="18" font-size="13" font-weight="700" fill="#D8B4FE" text-anchor="middle">UNREAL 5</text>
-  <g font-size="12" font-weight="700" fill="#E5E7EB" text-anchor="middle">
-    <rect x="352" y="28" width="144" height="28" rx="7" fill="#1F2937" stroke="#C084FC"/>
-    <text x="424" y="47">state</text>
-    <rect x="352" y="60" width="144" height="28" rx="7" fill="#1F2937" stroke="#C084FC"/>
-    <text x="424" y="79">logic</text>
-    <rect x="352" y="92" width="144" height="28" rx="7" fill="#1F2937" stroke="#C084FC"/>
-    <text x="424" y="111">input</text>
-    <rect x="352" y="124" width="144" height="28" rx="7" fill="#1F2937" stroke="#C084FC"/>
-    <text x="424" y="143">output</text>
-    <rect x="352" y="156" width="144" height="28" rx="7" fill="#1F2937" stroke="#C084FC"/>
-    <text x="424" y="175">clock</text>
-  </g>
-  <text x="424" y="202" font-size="11" fill="#94A3B8" text-anchor="middle">FEngineLoop::Tick</text>
-  <text x="260" y="222" font-size="11" fill="#9CA3AF" text-anchor="middle">33 years apart. Same five parts.</text>
-</svg></div></div>
+    <ul class="content"><li>Doom 3, 2004</li><li>Design, then .def and .decl data, then a placed entity, then idScript that plays them back</li><li>Gameplay code only plays what the earlier stages produced</li><li>The chain is the same</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §9, <code>Eng/DOOM3</code>.</p>
   </div>
@@ -920,46 +736,11 @@
   </aside>
 </section>
 
-<section data-num="32" data-state="act-d" class="has-diagram">
+<section data-num="32" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE DIRECTION</span>
     <h2>Questions</h2>
-    <div class="diagram-row"><ul class="content"><li>If a question stalls, ask which part it is: state, logic, input, output, or clock</li><li>Then ask who feeds that part</li><li>The reference is the long version of this talk</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 196" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <text x="90" y="20" font-size="12" font-weight="700" fill="#A5B4FC" text-anchor="middle">SCENE GRAPH</text>
-  <text x="90" y="36" font-size="10" fill="#94A3B8" text-anchor="middle">for people</text>
-  <g font-size="11" fill="#E5E7EB" text-anchor="middle">
-    <rect x="16" y="46" width="148" height="24" rx="12" fill="#1F2937" stroke="#6366F1"/>
-    <text x="90" y="62">three.js</text>
-    <rect x="16" y="74" width="148" height="24" rx="12" fill="#1F2937" stroke="#6366F1"/>
-    <text x="90" y="90">Babylon.js</text>
-    <rect x="16" y="102" width="148" height="24" rx="12" fill="#1F2937" stroke="#6366F1"/>
-    <text x="90" y="118">redot</text>
-    <rect x="16" y="130" width="148" height="24" rx="12" fill="#1F2937" stroke="#6366F1"/>
-    <text x="90" y="146">Urho3D</text>
-  </g>
-
-  <text x="260" y="20" font-size="12" font-weight="700" fill="#7DD3FC" text-anchor="middle">BSP + ENTITIES</text>
-  <text x="260" y="36" font-size="10" fill="#94A3B8" text-anchor="middle">plus a flat list</text>
-  <g font-size="11" fill="#E5E7EB" text-anchor="middle">
-    <rect x="186" y="46" width="148" height="24" rx="12" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="260" y="62">DOOM</text>
-    <rect x="186" y="74" width="148" height="24" rx="12" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="260" y="90">Quake</text>
-    <rect x="186" y="102" width="148" height="24" rx="12" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="260" y="118">Quake III</text>
-    <rect x="186" y="130" width="148" height="24" rx="12" fill="#1F2937" stroke="#38BDF8"/>
-    <text x="260" y="146">DOOM 3</text>
-  </g>
-
-  <text x="430" y="20" font-size="12" font-weight="700" fill="#6EE7B7" text-anchor="middle">ECS</text>
-  <text x="430" y="36" font-size="10" fill="#94A3B8" text-anchor="middle">for the machine</text>
-  <g font-size="11" fill="#E5E7EB" text-anchor="middle">
-    <rect x="356" y="46" width="148" height="24" rx="12" fill="#1F2937" stroke="#34D399"/>
-    <text x="430" y="62">OpenEngine</text>
-  </g>
-
-  <text x="260" y="176" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">stored how · related how · searched how</text>
-</svg></div></div>
+    <ul class="content"><li>If a question stalls, ask which part it is: state, logic, input, output, or clock</li><li>Then ask who feeds that part</li><li>The reference is the long version of this talk</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §10.</p>
   </div>
