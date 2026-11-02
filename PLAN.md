@@ -1,7 +1,7 @@
 ---
 type: Plan
 title: "Software is the Medium — Presentation Package Plan"
-description: Presentation planning history with the current 34-slide delivery budget in section 8. Current slides and notes live in Presentation; the existing reveal.js publishing workflow is unchanged.
+description: Presentation planning history with the current 35-slide delivery budget in section 8. Current slides and notes live in Presentation; the existing reveal.js publishing workflow is unchanged.
 tags: [presentation, plan, game-engines, medium, overview, slide-deck, speaker-cards]
 generated: { by: kilocode/deepseek-v4-flash, at: 2026-11-02T04:33:42Z }
 ---
@@ -153,15 +153,15 @@ current slide map. This revision is local until the normal publishing workflow r
 |---|---|---|---|---|
 | 1 | Software is the medium | S1-S4 | ch00 | 4 |
 | 2 | Anatomy of software | S5-S12 | ch00 | 10 |
-| 3 | Anatomy of a game engine | S13-S17 | ch00-ch02 | 8 |
-| 4 | Quake, Doom 3, Unreal 5 | S18-S20 | Engine cases, ch01 | 5 |
-| 5 | One weapon, every discipline | S21-S26 | ch08 | 11 |
-| 6 | AI, interfaces, and takeaways | S27-S33 | ch09-ch10, ch00 | 8 |
-| Q&A | Questions and further reading | S34 | All | 10 |
-| | **Delivery total** | **S1-S33** | | **46** |
-| | **Including Q&A** | **S1-S34** | | **56** |
+| 3 | Anatomy of a game engine | S13-S18 | ch00-ch02 | 9 |
+| 4 | Quake, Doom 3, Unreal 5 | S19-S21 | Engine cases, ch01 | 5 |
+| 5 | One weapon, every discipline | S22-S27 | ch08 | 11 |
+| 6 | AI, interfaces, and takeaways | S28-S34 | ch09-ch10, ch00 | 8 |
+| Q&A | Questions and further reading | S35 | All | 10 |
+| | **Delivery total** | **S1-S34** | | **47** |
+| | **Including Q&A** | **S1-S35** | | **57** |
 
-The 46-minute budget includes the three-minute S25 exercise. For a 25-minute
+The 47-minute budget includes the three-minute S26 exercise. For a 25-minute
 route, see overview section 7; Q&A remains additional.
 
 ## 9. Production timeline

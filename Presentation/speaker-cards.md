@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: "Speaker Cards - Software is the Medium: Game Engines are Software"
-description: Read-aloud prompts, diagram walks, concrete examples, checks, technical caveats, and Q&A for the 34-slide student talk.
+description: Read-aloud prompts, diagram walks, concrete examples, checks, technical caveats, and Q&A for the 35-slide student talk.
 tags: [presentation, speaker-cards, game-engines, medium]
 generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
@@ -10,7 +10,7 @@ generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 
 Read **Say**, not every backup answer. **Show / ask** directs attention and checks understanding. **If asked** supplies depth without turning the talk into a technical lecture. **Next** is the transition.
 
-46-minute route, including the S25 exercise: S1-S4 4 min; S5-S12 10 min; S13-S17 8 min; S18-S20 5 min; S21-S26 11 min; S27-S33 8 min. S34 adds 10 min Q&A. Reach S13 at 14:00, S21 at 27:00, S27 at 38:00. If behind, skip S8, S20, and S28 rather than speaking faster. Protect S12/S14, the weapon, and the ending. No live demo required.
+47-minute route, including the S26 exercise: S1-S4 4 min; S5-S12 10 min; S13-S18 9 min; S19-S21 5 min; S22-S27 11 min; S28-S34 8 min. S35 adds 10 min Q&A. Reach S13 at 14:00, S22 at 28:00, S28 at 39:00. If behind, skip S8, S21, and S29 rather than speaking faster. Protect S12/S15, the weapon, and the ending. No live demo required.
 
 The numbers for the example weapon are invented teaching values, not a claim about a shipped game. The five parts are questions about responsibilities, not five mandatory modules. Public engine documentation can change; distinguish original releases from ports and settings. The current cards correct several over-broad claims in the older reference chapters.
 
@@ -47,7 +47,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 **If asked**
 
 - The four acts are color-coded in the deck — indigo A, sky B, green C, purple D — visible on each divider.
-- Timings: a 46-minute route with 10 minutes of Q&A at the end.
+- Timings: a 47-minute route with 10 minutes of Q&A at the end.
 
 **Next**
 
@@ -245,9 +245,32 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Next**
 
+- Before the responsibilities, watch the loop that binds them to the player.
+
+## S14 - The frame loop is the human loop
+
+**Say**
+
+- This is the sense–think–act loop from section one, now running at game speed.
+- Input becomes a command; update changes the world; render and sound carry the result to the display; the player perceives and acts again. The frame loop beats every tick of it.
+- The human closes the circuit at the screen. When a game "feels wrong", that loop stuttered.
+- Section 5.2 puts it sharply: every latency number and frame-rate target exists to tighten this one circuit.
+
+**Show / ask**
+
+- Trace the loop once. Ask: where does the human enter, and where do they exit? Expect: they perceive at the display and act through input, then repeat.
+
+**If asked**
+
+- This is the §3 human–machine loop at 60–144 Hz instead of second-scale adjustments; the interval is the product spec.
+- A soft real-time miss at the display is visible to the human in the room, which is why engines hard-schedule the inside of the loop.
+- The diagram is the same flow as the mermaid graph in ch00 §5.2: player, input, update, world, render and sound, screen, and the frame loop clock.
+
+**Next**
+
 - Here are the responsibilities using the same five questions.
 
-## S14 - Five subsystems
+## S15 - Five subsystems
 
 **Say**
 
@@ -263,7 +286,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Correct work still has to arrive on time.
 
-## S15 - A frame is a time budget
+## S16 - A frame is a time budget
 
 **Say**
 
@@ -280,7 +303,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The image is one output of that work, not the world itself.
 
-## S16 - The renderer reads state
+## S17 - The renderer reads state
 
 **Say**
 
@@ -297,7 +320,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - How are those world facts organized?
 
-## S17 - Three ways to organize a world
+## S18 - Three ways to organize a world
 
 **Say**
 
@@ -315,7 +338,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Let us use the questions on engines that actually shipped.
 
-## S18 - Quake, Doom 3, Unreal 5
+## S19 - Quake, Doom 3, Unreal 5
 
 **Say**
 
@@ -326,7 +349,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Read one row across before reading one engine down.
 
-## S19 - The same five rows
+## S20 - The same five rows
 
 **Say**
 
@@ -343,7 +366,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The timing row deserves one important distinction.
 
-## S20 - Simulation and display can tick differently
+## S21 - Simulation and display can tick differently
 
 **Say**
 
@@ -360,7 +383,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Enough architecture. Follow one weapon through the whole team.
 
-## S21 - One weapon, every discipline
+## S22 - One weapon, every discipline
 
 **Say**
 
@@ -375,7 +398,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Separate making the content from running it.
 
-## S22 - From authoring to a running game
+## S23 - From authoring to a running game
 
 **Say**
 
@@ -392,7 +415,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - A useful contract turns an intention into something we can test.
 
-## S23 - Turn intent into a testable contract
+## S24 - Turn intent into a testable contract
 
 **Say**
 
@@ -412,7 +435,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Now the player presses fire.
 
-## S24 - One shot: check, change, announce
+## S25 - One shot: check, change, announce
 
 **Say**
 
@@ -430,7 +453,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - One accepted action can have several visible and audible consequences.
 
-## S25 - One event, several kinds of feedback
+## S26 - One event, several kinds of feedback
 
 **Say**
 
@@ -453,7 +476,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The same handoffs existed well before today's editors.
 
-## S26 - The same chain in Doom 3
+## S27 - The same chain in Doom 3
 
 **Say**
 
@@ -470,7 +493,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Now apply this same map to AI, without changing the standard of evidence.
 
-## S27 - AI inside the same map
+## S28 - AI inside the same map
 
 **Say**
 
@@ -486,7 +509,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The useful bridge is feedback: propose, observe, and correct.
 
-## S28 - Feedback turns a guess into an experiment
+## S29 - Feedback turns a guess into an experiment
 
 **Say**
 
@@ -502,7 +525,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Some behavior is written explicitly. Some is learned from examples.
 
-## S29 - Symbolic and connectionist
+## S30 - Symbolic and connectionist
 
 **Say**
 
@@ -519,7 +542,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Here is a concrete learned component already used in games.
 
-## S30 - A learned component still has a job
+## S31 - A learned component still has a job
 
 **Say**
 
@@ -536,7 +559,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - AI can also sit outside the game, helping us work on its files.
 
-## S31 - AI is a new interface
+## S32 - AI is a new interface
 
 **Say**
 
@@ -553,7 +576,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Knowing the anatomy lets you make a useful, bounded request.
 
-## S32 - Give AI a boundary and a test
+## S33 - Give AI a boundary and a test
 
 **Say**
 
@@ -573,7 +596,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - This is the durable skill, whether the next tool uses AI or not.
 
-## S33 - The interface changed. The medium did not.
+## S34 - The interface changed. The medium did not.
 
 **Say**
 
@@ -589,7 +612,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Let us use the map on your questions.
 
-## S34 - Questions
+## S35 - Questions
 
 **Say**
 

@@ -111,49 +111,56 @@ Audience text is the **Content** line. The words to say are in
 - **Visual:** five parts opening into subsystems.
 - **Refs:** `ch00` §5, `ch01` §2.
 
-## S14 — Five subsystems
+## S14 — The frame loop is the human loop
+
+- **Goal:** the §3 loop, at engine speed.
+- **Content:** **Player → input → update → world state → render + sound** | The **frame loop** beats each step on schedule | The human closes the circuit at the display and acts again | **Cybernetics is not a metaphor here; it is the product spec**
+- **Visual:** the loop: player, input, update, world, render + sound, screen.
+- **Refs:** `ch00` §5.2.
+
+## S15 — Five subsystems
 
 - **Goal:** the engine anatomy, one row each.
 - **Content:** The five questions become a map of engine responsibilities | Follow one shot: **input → logic → changed world → feedback** | These are roles, not five isolated code modules
 - **Visual:** five rows.
 - **Refs:** `ch01` §2.
 
-## S15 — A frame is a time budget
+## S16 — A frame is a time budget
 
 - **Goal:** explain performance without confusing soft and hard real-time.
 - **Content:** At a 60 fps target, the interval is **16.7 ms** | Late work causes a hitch or lower frame rate: games are usually **soft real-time** | Measure the bottleneck; CPU and GPU work can overlap
 - **Visual:** frame deadline.
 - **Refs:** `ch00` §5, `ch01` §4.
 
-## S16 — The renderer reads state
+## S17 — The renderer reads state
 
 - **Goal:** core versus channels.
 - **Content:** **The world is not the picture of the world** | A server can track hits and health without drawing a frame | Rendering may simulate visual effects; that does not make the image the authority on damage
 - **Visual:** core in the middle, renderer downstream.
 - **Refs:** `ch01` §3.
 
-## S17 — Three ways to organize a world
+## S18 — Three ways to organize a world
 
 - **Goal:** distinguish relationship, spatial, and component organization.
 - **Content:** **Scene graph:** what moves with what? | **Spatial index:** what is near, visible, or colliding? | **Components / ECS:** what data does each thing have? | These solve different problems and often coexist
 - **Visual:** three state families.
 - **Refs:** `ch02` §1–6.
 
-## S18 — Section 4 intro: Quake, Doom 3, Unreal 5 *(divider)*
+## S19 — Section 4 intro: Quake, Doom 3, Unreal 5 *(divider)*
 
 - **Goal:** prove the anatomy on real engines.
 - **Content:** Three real engines, the same questions | Read the responsibility first; learn its local name second
 - **Visual:** three columns.
 - **Refs:** `Eng/QUAKE`, `Eng/DOOM3`, `Eng/UE5`.
 
-## S19 — The same five rows
+## S20 — The same five rows
 
 - **Goal:** the comparison.
 - **Content:** Start with one row: **where are the world's facts stored?** | Names and implementations differ; the questions remain useful
 - **Visual:** three-column table.
 - **Refs:** `Eng/QUAKE`, `Eng/DOOM3`, `Eng/UE5`.
 
-## S20 — Simulation and display can tick differently
+## S21 — Simulation and display can tick differently
 
 - **Goal:** the differences, in one place.
 - **Content:** **Fixed step:** advance by the same simulated interval | **Variable step:** advance by the measured interval | Rendering can use a different cadence; fixed steps alone do **not** guarantee determinism
@@ -164,42 +171,42 @@ Audience text is the **Content** line. The words to say are in
 
 # ACT C — THE WEAPON
 
-## S21 — Section 5 intro: One weapon, every discipline *(divider)*
+## S22 — Section 5 intro: One weapon, every discipline *(divider)*
 
 - **Goal:** one object that uses the whole anatomy.
 - **Content:** A weapon is not just a mesh | It is a contract between design, assets, logic, timing, and feedback | Trace one shot to find every discipline's contribution
 - **Visual:** the chain.
 - **Refs:** `ch08` §1.
 
-## S22 — From authoring to a running game
+## S23 — From authoring to a running game
 
 - **Goal:** the chain, with owners.
 - **Content:** **Build time:** create, import, validate, and package | **Run time:** load, interpret input, apply logic, present results | Handoffs have contracts: names, units, formats, and budgets
 - **Visual:** six steps.
 - **Refs:** `ch08` §1–5.
 
-## S23 — Turn intent into a testable contract
+## S24 — Turn intent into a testable contract
 
 - **Goal:** stages 1 and 2.
 - **Content:** Intent: **a deliberate, readable weapon** | Contract: damage, cooldown, ammunition, units, and valid ranges | Test: one accepted hit removes **25 health points**, not an unspecified "25"
 - **Visual:** schema, then inert files.
 - **Refs:** `ch08` §2–3.
 
-## S24 — One shot: check, change, announce
+## S25 — One shot: check, change, announce
 
 - **Goal:** stages 3 and 4.
 - **Content:** Input is a **request**, not permission | Check ammunition and cooldown before changing authoritative state | Assets must be ready; a soft reference is not an automatic loading policy
 - **Visual:** files become a firing event.
 - **Refs:** `ch08` §4–5.
 
-## S25 — One event, several kinds of feedback
+## S26 — One event, several kinds of feedback
 
 - **Goal:** the output side, named.
 - **Content:** An accepted shot can drive animation, sound, VFX, and the HUD | Their timing shapes how the weapon feels | A missing flash is not proof that the damage logic failed
 - **Visual:** state feeding render and audio.
 - **Refs:** `ch08` §7–8.
 
-## S26 — The same chain in Doom 3
+## S27 — The same chain in Doom 3
 
 - **Goal:** not an Unreal-only story.
 - **Content:** DOOM 3 combines weapon definitions, assets, scripts, and C++ | File names change; the authoring-to-runtime handoffs remain | Engine code provides capabilities; game content configures and coordinates them
@@ -210,56 +217,56 @@ Audience text is the **Content** line. The words to say are in
 
 # ACT D — THE DIRECTION
 
-## S27 — Section 6 intro: AI inside the same map *(divider)*
+## S28 — Section 6 intro: AI inside the same map *(divider)*
 
 - **Goal:** open the history without leaving the anatomy.
 - **Content:** Separate three questions | Is AI **helping build** the game, **running inside** it, or **generating its output**? | Each role needs different checks
 - **Visual:** two branches.
 - **Refs:** `ch09` §2–3, `ch10`.
 
-## S28 — Feedback turns a guess into an experiment
+## S29 — Feedback turns a guess into an experiment
 
 - **Goal:** history of the loop, one slide.
 - **Content:** **Goal → act → observe → compare → adjust** | A player corrects aim; a developer corrects a bug | AI output becomes useful evidence only after you inspect and test it
 - **Visual:** sense, correct, act.
 - **Refs:** `ch09` §2, `ch00` §3.
 
-## S29 — Symbolic and connectionist
+## S30 — Symbolic and connectionist
 
 - **Goal:** the two minds, in software terms.
 - **Content:** **Explicit logic:** enforce ammunition and cooldown | **Learned models:** predict an answer from training and context | Combine them: generated dialogue can suggest an action; game logic decides whether it is allowed
 - **Visual:** two columns.
 - **Refs:** `ch09` §3.
 
-## S30 — A learned component still has a job
+## S31 — A learned component still has a job
 
 - **Goal:** the direction, concretely.
 - **Content:** **Shipped example:** neural upscaling reconstructs an image | Better-looking pixels do not establish collision, health, or ownership | Judge generated worlds separately on consistency, controllability, and cost
 - **Visual:** symbolic base, neural inserts.
 - **Refs:** `ch10` §3.
 
-## S31 — AI is a new interface
+## S32 — AI is a new interface
 
 - **Goal:** the close of the argument.
 - **Content:** The **model proposes**; the **harness manages tool execution** | Tools read files, edit assets, and run tests within granted permissions | Read the diff and the test result, not just the confident explanation
 - **Visual:** you, harness, software.
 - **Refs:** `ch09` §1, §6.
 
-## S32 — Give AI a boundary and a test
+## S33 — Give AI a boundary and a test
 
 - **Goal:** the catch.
 - **Content:** "Trace the fire input to the ammunition update; cite the files" | "Propose one small change; preserve damage and cooldown logic" | "Test empty ammo, cooldown, hit, and miss; report what you actually ran"
 - **Visual:** anatomy under the harness.
 - **Refs:** `ch09` §6, `ch00` §8.
 
-## S33 — The interface changed. The medium did not.
+## S34 — The interface changed. The medium did not.
 
 - **Goal:** the last line.
 - **Content:** **Find the state. Trace the logic. Follow the input and output. Measure the timing.** | Practice on a door, a jump, or a weapon in any engine | Use the same map to question an AI-generated change
 - **Visual:** the sentence.
 - **Refs:** `ch00` §9, `ch09` §12, `ch10`.
 
-## S34 — Questions
+## S35 — Questions
 
 - **Goal:** use the anatomy to answer.
 - **Content:** A weapon flashes, but the target takes no damage: **where would you look first?** | Separate what you observed from what you inferred | Take the five questions into your next project
