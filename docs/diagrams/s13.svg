@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <rect x="8" y="16" width="124" height="66" rx="12" fill="#075985"/>
-  <text x="70" y="53" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">INPUT</text>
-  <line x1="136" y1="49" x2="154" y2="49" stroke="#9CA3AF" stroke-width="2"/>
-  <polygon points="154,37 168,49 154,61" fill="#9CA3AF"/>
-  <rect x="168" y="16" width="124" height="66" rx="12" fill="#312E81"/>
-  <text x="230" y="53" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">PROCESS</text>
-  <line x1="300" y1="49" x2="318" y2="49" stroke="#9CA3AF" stroke-width="2"/>
-  <polygon points="318,37 332,49 318,61" fill="#9CA3AF"/>
-  <rect x="328" y="16" width="124" height="66" rx="12" fill="#064E3B"/>
-  <text x="390" y="53" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 168" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <rect x="16" y="10" width="112" height="48" rx="10" fill="#075985"/>
+  <text x="72" y="39" font-size="13" font-weight="700" fill="#BAE6FD" text-anchor="middle">IN</text>
 
-  <polygon points="382,94 398,94 390,118" fill="#34D399"/>
-  <polygon points="62,116 78,116 70,88" fill="#34D399"/>
+  <line x1="132" y1="34" x2="150" y2="34" stroke="#9CA3AF" stroke-width="2"/>
+  <polygon points="150,28 162,34 150,40" fill="#9CA3AF"/>
 
-  <rect x="18" y="118" width="424" height="56" rx="12" fill="#1F2937" stroke="#34D399" stroke-width="1.5" stroke-dasharray="6 5"/>
-  <text x="230" y="141" font-size="13" font-weight="600" fill="#6EE7B7" text-anchor="middle">perceive → decide → act</text>
-  <text x="230" y="161" font-size="11" fill="#9CA3AF" text-anchor="middle">the return belt</text>
+  <rect x="174" y="10" width="112" height="48" rx="10" fill="#312E81"/>
+  <text x="230" y="39" font-size="13" font-weight="700" fill="#C7D2FE" text-anchor="middle">MIDDLE</text>
 
-  <circle cx="344" cy="196" r="20" fill="#065F46" stroke="#34D399" stroke-width="2"/>
-  <text x="344" y="201" font-size="10" font-weight="700" fill="#D1FAE5" text-anchor="middle">HUMAN</text>
+  <line x1="290" y1="34" x2="308" y2="34" stroke="#9CA3AF" stroke-width="2"/>
+  <polygon points="308,28 320,34 308,40" fill="#9CA3AF"/>
 
-  <text x="230" y="244" font-size="12" fill="#94A3B8" text-anchor="middle">the loop : software + the person inside it</text>
-  <text x="230" y="266" font-size="11" fill="#6B7280" text-anchor="middle">sense / think / act  ↔  input / process / output</text>
+  <rect x="332" y="10" width="112" height="48" rx="10" fill="#064E3B"/>
+  <text x="388" y="39" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUT</text>
+
+  <path d="M388 58 V92 H72 V66" fill="none" stroke="#34D399" stroke-width="2"/>
+  <polygon points="66,66 78,66 72,54" fill="#34D399"/>
+
+  <rect x="118" y="76" width="224" height="36" rx="10" fill="#064E3B" stroke="#34D399"/>
+  <text x="230" y="98" font-size="12" font-weight="700" fill="#D1FAE5" text-anchor="middle">you see it, decide, act</text>
+
+  <text x="230" y="140" font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle">the picture comes back as the next input</text>
+  <text x="230" y="158" font-size="11" fill="#6B7280" text-anchor="middle">that is the loop</text>
 </svg>

@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <circle cx="230" cy="230" r="150" fill="none" stroke="#374151" stroke-width="2" stroke-dasharray="7 6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 148" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g font-size="12" font-weight="700" fill="#F9FAFB" text-anchor="middle">
+    <rect x="8" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#38BDF8"/>
+    <text x="82" y="30">1 device</text>
+    <polygon points="160,25 172,19 172,31" fill="#94A3B8"/>
+    <rect x="180" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#38BDF8"/>
+    <text x="254" y="30">2 commands</text>
+    <polygon points="332,25 344,19 344,31" fill="#94A3B8"/>
+    <rect x="352" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#6366F1"/>
+    <text x="426" y="30">3 update</text>
+    <polygon points="504,25 516,19 516,31" fill="#94A3B8"/>
+    <rect x="524" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#6366F1"/>
+    <text x="598" y="30">4 world</text>
 
-  <g font-size="12" font-weight="600" fill="#E5E7EB" text-anchor="middle">
-    <g><rect x="180" y="63" width="100" height="34" rx="8" fill="#1F2937" stroke="#38BDF8" stroke-width="1.5"/><text x="230" y="84">DEVICE</text></g>
-    <g><rect x="286" y="107" width="100" height="34" rx="8" fill="#1F2937" stroke="#38BDF8" stroke-width="1.5"/><text x="336" y="128">COMMANDS</text></g>
-    <g><rect x="330" y="213" width="100" height="34" rx="8" fill="#1F2937" stroke="#6366F1" stroke-width="1.5"/><text x="380" y="234">UPDATE</text></g>
-    <g><rect x="286" y="319" width="100" height="34" rx="8" fill="#1F2937" stroke="#6366F1" stroke-width="1.5"/><text x="336" y="340">WORLD</text></g>
-    <g><rect x="180" y="363" width="100" height="34" rx="8" fill="#1F2937" stroke="#34D399" stroke-width="1.5"/><text x="230" y="384">RENDER</text></g>
-    <g><rect x="74" y="319" width="100" height="34" rx="8" fill="#1F2937" stroke="#34D399" stroke-width="1.5"/><text x="124" y="340">SCREEN</text></g>
-    <g><rect x="30" y="213" width="100" height="34" rx="8" fill="#1F2937" stroke="#34D399" stroke-width="1.5"/><text x="80" y="234">PLAYER</text></g>
-    <g><rect x="74" y="107" width="100" height="34" rx="8" fill="#1F2937" stroke="#38BDF8" stroke-width="1.5"/><text x="124" y="128">ACTS</text></g>
+    <rect x="8" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
+    <text x="82" y="84">5 render</text>
+    <polygon points="160,79 172,73 172,85" fill="#94A3B8"/>
+    <rect x="180" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
+    <text x="254" y="84">6 screen</text>
+    <polygon points="332,79 344,73 344,85" fill="#94A3B8"/>
+    <rect x="352" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
+    <text x="426" y="84">7 you see it</text>
+    <polygon points="504,79 516,73 516,85" fill="#94A3B8"/>
+    <rect x="524" y="62" width="148" height="34" rx="8" fill="#1F2937" stroke="#34D399"/>
+    <text x="598" y="84">8 you act</text>
   </g>
-
-  <g fill="#94A3B8" transform="translate(287,91) rotate(22.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-  <g fill="#94A3B8" transform="translate(368,173) rotate(67.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-  <g fill="#94A3B8" transform="translate(368,287) rotate(112.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-  <g fill="#94A3B8" transform="translate(287,369) rotate(157.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-  <g fill="#94A3B8" transform="translate(173,369) rotate(202.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-  <g fill="#94A3B8" transform="translate(92,287) rotate(247.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-  <g fill="#94A3B8" transform="translate(92,173) rotate(292.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-  <g fill="#94A3B8" transform="translate(173,91) rotate(337.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
-
-  <rect x="163" y="176" width="134" height="108" rx="14" fill="#312E81" stroke="#6366F1" stroke-width="2"/>
-  <rect x="163" y="176" width="134" height="6" rx="3" fill="#6366F1"/>
-  <text x="230" y="220" font-size="19" font-weight="800" fill="#F9FAFB" text-anchor="middle">the frame</text>
-  <text x="230" y="244" font-size="19" font-weight="800" fill="#A5B4FC" text-anchor="middle">is the beat</text>
-  <text x="230" y="268" font-size="11" font-weight="400" fill="#94A3B8" text-anchor="middle">60–144 Hz</text>
+  <text x="340" y="122" font-size="13" font-weight="700" fill="#A5B4FC" text-anchor="middle">then it repeats. The frame is one beat.</text>
+  <text x="340" y="140" font-size="11" fill="#94A3B8" text-anchor="middle">60 to 144 times a second</text>
 </svg>

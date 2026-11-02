@@ -123,7 +123,7 @@ function parseCards(md) {
       num = +m[1];
       buf = [];
     } else if (num !== null) {
-      if (line.startsWith('---')) continue;
+      if (line.startsWith('---') || line.startsWith('#')) continue;
       buf.push(raw);
     }
   }

@@ -1,42 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 215" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <rect x="24" y="8" width="104" height="32" rx="16" fill="#075985"/>
-  <text x="76" y="30" font-size="15" font-weight="700" fill="#BAE6FD" text-anchor="middle">DATA</text>
-  <rect x="140" y="8" width="104" height="32" rx="16" fill="#312E81"/>
-  <text x="192" y="30" font-size="15" font-weight="700" fill="#C7D2FE" text-anchor="middle">CODE</text>
-  <text x="650" y="26" font-size="13" font-weight="600" fill="#9CA3AF" text-anchor="end">every program : data + code over five parts</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 156" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <rect x="8" y="4" width="88" height="26" rx="13" fill="#075985"/>
+  <text x="52" y="22" font-size="12" font-weight="700" fill="#BAE6FD" text-anchor="middle">DATA</text>
+  <rect x="104" y="4" width="88" height="26" rx="13" fill="#312E81"/>
+  <text x="148" y="22" font-size="12" font-weight="700" fill="#C7D2FE" text-anchor="middle">CODE</text>
+  <text x="844" y="22" font-size="12" font-weight="600" fill="#9CA3AF" text-anchor="end">every program is these two, on five parts</text>
 
-  <g font-size="17" font-weight="700" fill="#F9FAFB" text-anchor="middle">
+  <g font-weight="700" text-anchor="middle">
     <g>
-      <rect x="65" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-      <text x="130" y="90">STATE</text><text x="130" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what is remembered</text>
+      <rect x="8" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+      <text x="86" y="68" font-size="15" fill="#F9FAFB">STATE</text>
+      <text x="86" y="88" font-size="11" font-weight="400" fill="#94A3B8">what is remembered</text>
     </g>
     <g>
-      <rect x="215" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-      <text x="280" y="90">LOGIC</text><text x="280" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what changes it</text>
+      <rect x="176" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#818CF8" stroke-width="2"/>
+      <text x="254" y="68" font-size="15" fill="#F9FAFB">LOGIC</text>
+      <text x="254" y="88" font-size="11" font-weight="400" fill="#94A3B8">what changes it</text>
     </g>
     <g>
-      <rect x="365" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-      <text x="430" y="90">INPUT</text><text x="430" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what gets in</text>
+      <rect x="344" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#38BDF8" stroke-width="2"/>
+      <text x="422" y="68" font-size="15" fill="#F9FAFB">INPUT</text>
+      <text x="422" y="88" font-size="11" font-weight="400" fill="#94A3B8">what gets in</text>
     </g>
     <g>
-      <rect x="515" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-      <text x="580" y="90">OUTPUT</text><text x="580" y="112" font-size="10" font-weight="400" fill="#9CA3AF">what comes out</text>
+      <rect x="512" y="42" width="156" height="64" rx="10" fill="#1F2937" stroke="#34D399" stroke-width="2"/>
+      <text x="590" y="68" font-size="15" fill="#F9FAFB">OUTPUT</text>
+      <text x="590" y="88" font-size="11" font-weight="400" fill="#94A3B8">what comes out</text>
     </g>
     <g>
-      <rect x="665" y="56" width="130" height="74" rx="10" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
-      <text x="730" y="90">CLOCK</text><text x="730" y="112" font-size="10" font-weight="400" fill="#9CA3AF">who decides when</text>
+      <rect x="680" y="42" width="172" height="64" rx="10" fill="#1F2937" stroke="#A78BFA" stroke-width="2"/>
+      <text x="766" y="68" font-size="15" fill="#F9FAFB">CLOCK</text>
+      <text x="766" y="88" font-size="11" font-weight="400" fill="#94A3B8">who decides when</text>
     </g>
   </g>
 
-  <g font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">
-    <rect x="24" y="176" width="180" height="22" rx="5" fill="#4F46E5"/>
-    <text x="114" y="191">FOUNDATIONS</text>
-    <rect x="208" y="176" width="244" height="22" rx="5" fill="#0284C7"/>
-    <text x="330" y="191">WORLD &amp; MACHINE</text>
-    <rect x="456" y="176" width="280" height="22" rx="5" fill="#059669"/>
-    <text x="596" y="191">PEOPLE &amp; CHAIN</text>
-    <rect x="740" y="176" width="140" height="22" rx="5" fill="#6D28D9"/>
-    <text x="810" y="191">FUTURE</text>
+  <g font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <rect x="8" y="122" width="190" height="24" rx="6" fill="#4F46E5"/>
+    <text x="103" y="138">1 · FOUNDATIONS</text>
+    <rect x="206" y="122" width="230" height="24" rx="6" fill="#0284C7"/>
+    <text x="321" y="138">2 · WORLD & MACHINE</text>
+    <rect x="444" y="122" width="210" height="24" rx="6" fill="#059669"/>
+    <text x="549" y="138">3 · PEOPLE</text>
+    <rect x="662" y="122" width="190" height="24" rx="6" fill="#6D28D9"/>
+    <text x="757" y="138">4 · WHAT'S NEXT</text>
   </g>
-  <text x="24" y="168" font-size="10" font-weight="400" fill="#6B7280">the four acts</text>
 </svg>

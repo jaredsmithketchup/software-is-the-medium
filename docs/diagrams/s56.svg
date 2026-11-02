@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 160" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <text x="350" y="24" font-size="16" font-weight="700" fill="#D8B4FE" text-anchor="middle">what does "talking to software" actually consist of?</text>
-  <text x="350" y="47" font-size="12" font-weight="400" fill="#A78BFA" text-anchor="middle">a stack of four things — not a magic box. Fact, not promotion.</text>
-  <g font-size="14" font-weight="700" fill="#E9D5FF" text-anchor="middle">
-    <rect x="8" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
-    <text x="88" y="51">BACKEND</text>
-    <rect x="180" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
-    <text x="260" y="51">MODEL</text>
-    <rect x="352" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
-    <text x="432" y="51">HARNESS</text>
-    <rect x="524" y="22" width="160" height="46" rx="23" fill="#3B0764" stroke="#A855F7" stroke-width="1.5"/>
-    <text x="604" y="51">KNOWLEDGE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 88" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g font-size="13" font-weight="700" fill="#E9D5FF" text-anchor="middle">
+    <rect x="8" y="16" width="160" height="56" rx="12" fill="#3B0764" stroke="#A855F7"/>
+    <text x="88" y="40">BACKEND</text>
+    <text x="88" y="58" font-size="11" font-weight="400" fill="#D8B4FE">runs the model</text>
+    <rect x="184" y="16" width="160" height="56" rx="12" fill="#3B0764" stroke="#A855F7"/>
+    <text x="264" y="40">MODEL</text>
+    <text x="264" y="58" font-size="11" font-weight="400" fill="#D8B4FE">the trained brain</text>
+    <rect x="360" y="16" width="160" height="56" rx="12" fill="#3B0764" stroke="#A855F7"/>
+    <text x="440" y="40">HARNESS</text>
+    <text x="440" y="58" font-size="11" font-weight="400" fill="#D8B4FE">on your machine</text>
+    <rect x="536" y="16" width="176" height="56" rx="12" fill="#3B0764" stroke="#A855F7"/>
+    <text x="624" y="40">KNOWLEDGE</text>
+    <text x="624" y="58" font-size="11" font-weight="400" fill="#D8B4FE">your files</text>
   </g>
 </svg>
