@@ -8,7 +8,7 @@
   --r-heading-letter-spacing: -0.01em;
   --r-heading-line-height: 1.15;
   --r-heading1-size: 2.5em;
-  --r-heading2-size: 1.85em;
+  --r-heading2-size: 1.7em;
   --r-heading3-size: 1.3em;
   --r-link-color: #818CF8;
   --r-link-color-dark: #6366F1;
@@ -35,15 +35,15 @@ body.act-d .reveal h2 { color: #D8B4FE; }
 .reveal .chip {
   display: inline-block;
   font-family: var(--r-heading-font);
-  font-size: 0.5em;
+  font-size: 0.44em;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #9CA3AF;
   border: 1px solid #374151;
   border-radius: 999px;
-  padding: 0.28em 0.95em;
-  margin-bottom: 0.55em;
+  padding: 0.22em 0.8em;
+  margin-bottom: 0.45em;
 }
 
 .reveal ul.content {
@@ -51,13 +51,13 @@ body.act-d .reveal h2 { color: #D8B4FE; }
   margin: 0 auto;
   padding: 0;
   text-align: left;
-  width: 78%;
+  width: 82%;
 }
 
 .reveal ul.content li {
-  font-size: 0.62em;
-  line-height: 1.5;
-  margin: 0 0 0.45em 0;
+  font-size: 0.58em;
+  line-height: 1.45;
+  margin: 0 0 0.4em 0;
   padding-left: 1.1em;
   position: relative;
 }
@@ -85,30 +85,31 @@ body.act-d .reveal h2 { color: #D8B4FE; }
 
 /* Divider (intro) slides */
 .reveal .divider h2 {
-  font-size: 2.05em;
-  margin: 0 0 0.2em 0;
+  font-size: 1.55em;
+  margin: 0 0 0.15em 0;
 }
 
 .reveal .divider .kicker {
   font-family: var(--r-heading-font);
   text-transform: uppercase;
-  letter-spacing: 0.24em;
-  font-size: 0.6em;
+  letter-spacing: 0.22em;
+  font-size: 0.5em;
   color: #94A3B8;
-  margin: 0 0 1.2em 0;
+  margin: 0 0 0.85em 0;
 }
 
 .reveal ul.divider-claims {
   list-style: none;
   padding: 0;
-  margin: 0.8em auto 0;
-  width: 82%;
+  margin: 0.6em auto 0;
+  width: 84%;
 }
 
 .reveal ul.divider-claims li {
-  font-size: 0.62em;
+  font-size: 0.52em;
+  line-height: 1.4;
   color: #D1D5DB;
-  margin: 0.4em 0;
+  margin: 0.35em 0;
 }
 
 /* Citation footer */
