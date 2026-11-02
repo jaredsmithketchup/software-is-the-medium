@@ -84,6 +84,14 @@
 }
 
 /* Divider (intro) slides */
+.reveal .divider,
+.reveal .divider h2,
+.reveal .divider h3.title-sub,
+.reveal .divider .kicker,
+.reveal .divider ul.divider-claims {
+  text-align: center;
+}
+
 .reveal .divider h2 {
   font-size: 1.55em;
   margin: 0 0 0.15em 0;
@@ -94,7 +102,7 @@
   height: 0.14em;
   background: #4B5563;
   border-radius: 2px;
-  margin: 0.2em 0 0.45em 0;
+  margin: 0.2em auto 0.45em auto;
 }
 
 .reveal .divider h3.title-sub {
