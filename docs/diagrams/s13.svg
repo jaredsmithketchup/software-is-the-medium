@@ -1,9 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s13-title s13-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <title id="s13-title">Illustrative frame budget</title><desc id="s13-desc">A 12 millisecond critical path fits a 16.7 millisecond target interval. A 24 millisecond critical path exceeds it. These are teaching values, not a benchmark or summed CPU and GPU timings.</desc>
-  <g font-size="22" fill="#CBD5E1"><text x="15" y="75">Frame A</text><text x="15" y="148">Frame B</text><text x="175" y="207">0 ms</text><text x="578" y="207">16.7 ms</text><text x="790" y="207">25 ms</text></g>
-  <path d="M600 28 V175" stroke="#FBBF24" stroke-width="3" stroke-dasharray="7 5"/>
-  <rect x="180" y="45" width="302" height="46" rx="6" fill="#064E3B" stroke="#6EE7B7"/><rect x="180" y="118" width="604" height="46" rx="6" fill="#7F1D1D" stroke="#FCA5A5"/>
-  <g font-size="22" fill="#F9FAFB"><text x="195" y="76">12 ms: within target</text><text x="195" y="149">24 ms: late delivery</text></g>
-  <text x="600" y="22" text-anchor="middle" font-size="20" fill="#FBBF24">60 fps target interval</text>
-  <text x="450" y="231" text-anchor="middle" font-size="18" fill="#94A3B8">Illustrative critical-path work, not CPU time + GPU time</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="Five engine responsibilities with a concrete weapon example for each" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <g fill="#1F2937"><rect x="5" y="5" width="890" height="42" rx="6"/><rect x="5" y="53" width="890" height="42" rx="6"/><rect x="5" y="101" width="890" height="42" rx="6"/><rect x="5" y="149" width="890" height="42" rx="6"/><rect x="5" y="197" width="890" height="42" rx="6"/></g>
+  <g font-size="22" font-weight="700" fill="#7DD3FC"><text x="24" y="34">STATE</text><text x="24" y="82">LOGIC</text><text x="24" y="130">INPUT</text><text x="24" y="178">OUTPUT</text><text x="24" y="226">CLOCK</text></g>
+  <g font-size="22" fill="#F9FAFB"><text x="180" y="34">World model</text><text x="180" y="82">Gameplay + physics</text><text x="180" y="130">Device events to commands</text><text x="180" y="178">Renderer + audio + UI</text><text x="180" y="226">Ticks + scheduling</text></g>
+  <g font-size="21" fill="#CBD5E1"><text x="565" y="34">Ammunition: 30 becomes 29</text><text x="565" y="82">Can fire? What was hit?</text><text x="565" y="130">Button becomes Fire</text><text x="565" y="178">Flash, gunshot, ammo counter</text><text x="565" y="226">Update, cooldown, present</text></g>
 </svg>

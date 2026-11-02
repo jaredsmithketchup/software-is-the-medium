@@ -1,7 +1,7 @@
 ---
 type: Plan
 title: "Software is the Medium — Presentation Package Plan"
-description: Presentation planning history with the current 32-slide delivery budget in section 8. Current slides and notes live in Presentation; the existing reveal.js publishing workflow is unchanged.
+description: Presentation planning history with the current 33-slide delivery budget in section 8. Current slides and notes live in Presentation; the existing reveal.js publishing workflow is unchanged.
 tags: [presentation, plan, game-engines, medium, overview, slide-deck, speaker-cards]
 generated: { by: kilocode/deepseek-v4-flash, at: 2026-11-02T04:33:42Z }
 ---
@@ -152,16 +152,16 @@ current slide map. This revision is local until the normal publishing workflow r
 | # | Section | Slides | Source | Min |
 |---|---|---|---|---|
 | 1 | Software is the medium | S1-S3 | ch00 | 3 |
-| 2 | Anatomy of software | S4-S10 | ch00 | 10 |
-| 3 | Anatomy of a game engine | S11-S15 | ch00-ch02 | 8 |
-| 4 | Quake, Doom 3, Unreal 5 | S16-S18 | Engine cases, ch01 | 5 |
-| 5 | One weapon, every discipline | S19-S24 | ch08 | 11 |
-| 6 | AI, interfaces, and takeaways | S25-S31 | ch09-ch10, ch00 | 8 |
-| Q&A | Questions and further reading | S32 | All | 10 |
-| | **Delivery total** | **S1-S31** | | **45** |
-| | **Including Q&A** | **S1-S32** | | **55** |
+| 2 | Anatomy of software | S4-S11 | ch00 | 10 |
+| 3 | Anatomy of a game engine | S12-S16 | ch00-ch02 | 8 |
+| 4 | Quake, Doom 3, Unreal 5 | S17-S19 | Engine cases, ch01 | 5 |
+| 5 | One weapon, every discipline | S20-S25 | ch08 | 11 |
+| 6 | AI, interfaces, and takeaways | S26-S32 | ch09-ch10, ch00 | 8 |
+| Q&A | Questions and further reading | S33 | All | 10 |
+| | **Delivery total** | **S1-S32** | | **45** |
+| | **Including Q&A** | **S1-S33** | | **55** |
 
-The 45-minute budget includes the three-minute S23 exercise. For a 25-minute
+The 45-minute budget includes the three-minute S24 exercise. For a 25-minute
 route, see overview section 7; Q&A remains additional.
 
 ## 9. Production timeline

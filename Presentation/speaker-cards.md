@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: "Speaker Cards - Software is the Medium: Game Engines are Software"
-description: Read-aloud prompts, diagram walks, concrete examples, checks, technical caveats, and Q&A for the 32-slide student talk.
+description: Read-aloud prompts, diagram walks, concrete examples, checks, technical caveats, and Q&A for the 33-slide student talk.
 tags: [presentation, speaker-cards, game-engines, medium]
 generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
@@ -10,7 +10,7 @@ generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 
 Read **Say**, not every backup answer. **Show / ask** directs attention and checks understanding. **If asked** supplies depth without turning the talk into a technical lecture. **Next** is the transition.
 
-45-minute route, including the S23 exercise: S1-S3 3 min; S4-S10 10 min; S11-S15 8 min; S16-S18 5 min; S19-S24 11 min; S25-S31 8 min. S32 adds 10 min Q&A. Reach S11 at 13:00, S19 at 26:00, S25 at 37:00. If behind, skip S6, S18, and S26 rather than speaking faster. Protect S10/S12, the weapon, and the ending. No live demo required.
+45-minute route, including the S24 exercise: S1-S3 3 min; S4-S11 10 min; S12-S16 8 min; S17-S19 5 min; S20-S25 11 min; S26-S32 8 min. S33 adds 10 min Q&A. Reach S12 at 13:00, S20 at 26:00, S26 at 37:00. If behind, skip S7, S19, and S27 rather than speaking faster. Protect S11/S13, the weapon, and the ending. No live demo required.
 
 The numbers for the example weapon are invented teaching values, not a claim about a shipped game. The five parts are questions about responsibilities, not five mandatory modules. Public engine documentation can change; distinguish original releases from ports and settings. The current cards correct several over-broad claims in the older reference chapters.
 
@@ -113,9 +113,27 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 **Next**
 
+- That stored behavior rarely runs alone — it meets a glue layer first.
+
+## S7 - Declarations glue data to code
+
+**Say**
+
+- Between hard-coded rules and raw assets, most engines keep a middle layer: files that declare how data and code join.
+- A JavaScript or Python application reads JSON or YAML at run time. Change a value and the program behaves differently; the code that reads the file stays the same.
+- Unreal has two kinds of Blueprints. A graph Blueprint is node logic that actually runs. A property Blueprint is a container of values that other code reads.
+- The glue only works where the reading code already understands the file. Editing the glue changes behavior; editing the reader changes what is possible.
+
+**If asked**
+
+- This is the career-long question from ch00 §1.3: what belongs in code, and what in data? A Blueprint graph is stored as `.uasset` data but executes as logic; a simple property Blueprint is closer to configuration.
+- JSON and YAML are examples of a wider family — INI, TOML, DataTables, engine settings files. The relationship matters more than the format: a file the code reads to shape behavior.
+
+**Next**
+
 - Whatever the file contains, follow what enters the program and what comes out.
 
-## S7 - Input, process, output
+## S8 - Input, process, output
 
 **Say**
 
@@ -131,7 +149,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The output changes what the player does next.
 
-## S8 - The player closes the feedback loop
+## S9 - The player closes the feedback loop
 
 **Say**
 
@@ -148,7 +166,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - How long does that response take? That is a different question from frame rate.
 
-## S9 - Frame rate is not response time
+## S10 - Frame rate is not response time
 
 **Say**
 
@@ -168,7 +186,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Now give the whole system five labels.
 
-## S10 - State, logic, input, output, clock
+## S11 - State, logic, input, output, clock
 
 **Say**
 
@@ -188,7 +206,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - An engine packages reusable machinery for these responsibilities.
 
-## S11 - Anatomy of a game engine
+## S12 - Anatomy of a game engine
 
 **Say**
 
@@ -205,7 +223,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Here are the responsibilities using the same five questions.
 
-## S12 - Five subsystems
+## S13 - Five subsystems
 
 **Say**
 
@@ -221,7 +239,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Correct work still has to arrive on time.
 
-## S13 - A frame is a time budget
+## S14 - A frame is a time budget
 
 **Say**
 
@@ -238,7 +256,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The image is one output of that work, not the world itself.
 
-## S14 - The renderer reads state
+## S15 - The renderer reads state
 
 **Say**
 
@@ -255,7 +273,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - How are those world facts organized?
 
-## S15 - Three ways to organize a world
+## S16 - Three ways to organize a world
 
 **Say**
 
@@ -273,7 +291,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Let us use the questions on engines that actually shipped.
 
-## S16 - Quake, Doom 3, Unreal 5
+## S17 - Quake, Doom 3, Unreal 5
 
 **Say**
 
@@ -284,7 +302,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Read one row across before reading one engine down.
 
-## S17 - The same five rows
+## S18 - The same five rows
 
 **Say**
 
@@ -301,7 +319,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The timing row deserves one important distinction.
 
-## S18 - Simulation and display can tick differently
+## S19 - Simulation and display can tick differently
 
 **Say**
 
@@ -318,7 +336,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Enough architecture. Follow one weapon through the whole team.
 
-## S19 - One weapon, every discipline
+## S20 - One weapon, every discipline
 
 **Say**
 
@@ -333,7 +351,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Separate making the content from running it.
 
-## S20 - From authoring to a running game
+## S21 - From authoring to a running game
 
 **Say**
 
@@ -350,7 +368,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - A useful contract turns an intention into something we can test.
 
-## S21 - Turn intent into a testable contract
+## S22 - Turn intent into a testable contract
 
 **Say**
 
@@ -370,7 +388,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Now the player presses fire.
 
-## S22 - One shot: check, change, announce
+## S23 - One shot: check, change, announce
 
 **Say**
 
@@ -388,7 +406,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - One accepted action can have several visible and audible consequences.
 
-## S23 - One event, several kinds of feedback
+## S24 - One event, several kinds of feedback
 
 **Say**
 
@@ -411,7 +429,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The same handoffs existed well before today's editors.
 
-## S24 - The same chain in Doom 3
+## S25 - The same chain in Doom 3
 
 **Say**
 
@@ -428,7 +446,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Now apply this same map to AI, without changing the standard of evidence.
 
-## S25 - AI inside the same map
+## S26 - AI inside the same map
 
 **Say**
 
@@ -444,7 +462,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - The useful bridge is feedback: propose, observe, and correct.
 
-## S26 - Feedback turns a guess into an experiment
+## S27 - Feedback turns a guess into an experiment
 
 **Say**
 
@@ -460,7 +478,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Some behavior is written explicitly. Some is learned from examples.
 
-## S27 - Symbolic and connectionist
+## S28 - Symbolic and connectionist
 
 **Say**
 
@@ -477,7 +495,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Here is a concrete learned component already used in games.
 
-## S28 - A learned component still has a job
+## S29 - A learned component still has a job
 
 **Say**
 
@@ -494,7 +512,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - AI can also sit outside the game, helping us work on its files.
 
-## S29 - AI is a new interface
+## S30 - AI is a new interface
 
 **Say**
 
@@ -511,7 +529,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Knowing the anatomy lets you make a useful, bounded request.
 
-## S30 - Give AI a boundary and a test
+## S31 - Give AI a boundary and a test
 
 **Say**
 
@@ -531,7 +549,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - This is the durable skill, whether the next tool uses AI or not.
 
-## S31 - The interface changed. The medium did not.
+## S32 - The interface changed. The medium did not.
 
 **Say**
 
@@ -547,7 +565,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - Let us use the map on your questions.
 
-## S32 - Questions
+## S33 - Questions
 
 **Say**
 

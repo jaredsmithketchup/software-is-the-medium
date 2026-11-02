@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" role="img" aria-labelledby="s10-title s10-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <title id="s10-title">Five responsibilities connected</title><desc id="s10-desc">Input triggers logic. Logic reads and writes state. Output presents state. A clock schedules the work.</desc>
-  <defs><marker id="s10-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8" fill="#94A3B8"/></marker></defs>
-  <g fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#s10-arrow)"><path d="M185 115 H240"/><path d="M420 115 H480" marker-start="url(#s10-arrow)"/><path d="M660 115 H715"/><path d="M450 202 V156"/></g>
-  <g fill="#1F2937" stroke-width="2"><rect x="5" y="65" width="180" height="95" rx="10" stroke="#38BDF8"/><rect x="240" y="65" width="180" height="95" rx="10" stroke="#818CF8"/><rect x="480" y="65" width="180" height="95" rx="10" stroke="#6EE7B7"/><rect x="715" y="65" width="180" height="95" rx="10" stroke="#38BDF8"/><rect x="300" y="202" width="300" height="42" rx="10" stroke="#C084FC"/></g>
-  <g text-anchor="middle" fill="#F9FAFB" font-size="24" font-weight="700"><text x="95" y="99">INPUT</text><text x="330" y="99">LOGIC</text><text x="570" y="99">STATE</text><text x="805" y="99">OUTPUT</text><text x="450" y="231" font-size="21">CLOCK: when it runs</text></g>
-  <g text-anchor="middle" fill="#CBD5E1" font-size="20"><text x="95" y="133">Fire request</text><text x="330" y="133">Check + update</text><text x="570" y="133">Ammo: 30 → 29</text><text x="805" y="133">Flash + sound</text><text x="450" y="37">Rules read facts before changing them</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="s9-title s9-desc" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <title id="s9-title">Response latency and frame cadence are different measurements</title><desc id="s9-desc">A click travels through device sampling, simulation, rendering and queues, then the display. The entire path is latency. Display frames at 60 fps are 16.7 milliseconds apart.</desc>
+  <defs><marker id="s9-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#94A3B8"/></marker></defs>
+  <path d="M30 94 H865" stroke="#94A3B8" stroke-width="3" marker-end="url(#s9-arrow)"/>
+  <g fill="#1F2937" stroke="#818CF8" stroke-width="2"><rect x="10" y="50" width="165" height="88" rx="10"/><rect x="225" y="50" width="180" height="88" rx="10"/><rect x="455" y="50" width="200" height="88" rx="10"/><rect x="705" y="50" width="180" height="88" rx="10"/></g>
+  <g text-anchor="middle" fill="#F9FAFB" font-size="22"><text x="92" y="85">Device + OS</text><text x="315" y="85">Simulation</text><text x="555" y="85">CPU / GPU</text><text x="795" y="85">Display</text></g>
+  <g text-anchor="middle" fill="#CBD5E1" font-size="19"><text x="92" y="116">sample input</text><text x="315" y="116">consume request</text><text x="555" y="116">render + queue</text><text x="795" y="116">present pixels</text></g>
+  <path d="M10 155 V175 H885 V155" fill="none" stroke="#C084FC" stroke-width="2"/>
+  <text x="450" y="205" text-anchor="middle" font-size="23" fill="#D8B4FE">Input-to-display latency: the whole journey</text>
+  <text x="450" y="27" text-anchor="middle" font-size="21" fill="#A5B4FC">60 fps describes the spacing of frames, not the length of this path</text>
 </svg>

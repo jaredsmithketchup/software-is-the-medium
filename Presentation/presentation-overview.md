@@ -1,7 +1,7 @@
 ---
 type: Overview
 title: "Presentation Overview - Software is the Medium: Game Engines are Software"
-description: Delivery guide for the current 32-slide deck: six sections in four acts, 45 minutes including an exercise, plus 10 minutes Q&A, with an optional 25-minute route.
+description: Delivery guide for the current 33-slide deck: six sections in four acts, 45 minutes including an exercise, plus 10 minutes Q&A, with an optional 25-minute route.
 tags: [presentation, overview, game-engines, medium, teaching]
 generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 ---
@@ -10,7 +10,7 @@ generated: { by: kilocode, at: 2026-11-02T07:00:00Z }
 
 Use this as the delivery map, not another script. Audience content lives in
 [slide-deck.md](slide-deck.md); presenter prompts and backup answers live in
-[speaker-cards.md](speaker-cards.md). The current source has **32 slides, 32
+[speaker-cards.md](speaker-cards.md). The current source has **33 slides, 33
 cards, six section dividers, and four acts**. Older 64/73-slide plans are history.
 
 ## 1. The Thread
@@ -58,7 +58,7 @@ node scripts/build-deck.mjs
 ```
 
 The build uses Node built-ins; it needs no project dependency installation.
-Expect `slides parsed: 32`, `cards parsed: 32`, `slides without a card: none`,
+Expect `slides parsed: 33`, `cards parsed: 33`, `slides without a card: none`,
 and `dividers: 6`. Use the existing preview/publishing workflow; no additional
 tooling is required. For a local preview, serve `docs/` with an existing HTTP
 server. The examples below assume it uses port 8080.
@@ -69,7 +69,7 @@ server. The examples below assume it uses port 8080.
 3. Advance once and confirm the matching card follows. Test both windows on the
    actual display arrangement; share only the audience window.
 4. Use arrow keys to advance and `Esc` for the slide overview. For a direct
-   jump, the zero-based URL `/#/18` opens S19; `/#/31` opens S32.
+   jump, the zero-based URL `/#/19` opens S20; `/#/32` opens S33.
 5. Rehearse from the local copy. Reveal.js is vendored; Google Fonts are remote,
    so test offline fallback font layout before relying on it.
 
@@ -100,48 +100,49 @@ outcome. Use the factual guardrails in section 8 when explaining it aloud.
 **Canonical suggested timings:** 45 minutes of delivery, including the exercise,
 then 10 minutes Q&A = **55 minutes total**. [PLAN section 8](../PLAN.md#8-the-derived-outline-at-a-glance)
 mirrors this table. Timings include transitions; do not add separate divider time.
-Section intros are S1, S4, S11, S16, S19, and S25.
+Section intros are S1, S4, S12, S17, S20, and S26.
 
 | Section | Act / Focus | Slides | Source | Minutes | Elapsed End |
 |---|---|---|---|---:|---:|
 | 1 | A / Software is the medium | S1-S3 | ch00 | 3 | 03:00 |
-| 2 | A / Anatomy of software | S4-S10 | ch00 | 10 | 13:00 |
-| 3 | B / Anatomy of a game engine | S11-S15 | ch00-ch02 | 8 | 21:00 |
-| 4 | B / Quake, Doom 3, Unreal 5 | S16-S18 | Engine cases, ch01 | 5 | 26:00 |
-| 5 | C / One weapon, every discipline | S19-S24 | ch08 | 11 | 37:00 |
-| 6 | D / AI, interfaces, and takeaways | S25-S31 | ch09-ch10, ch00 | 8 | 45:00 |
-| Q&A | D / Questions and further reading | S32 | All | 10 | 55:00 |
-| | **Delivery total** | **S1-S31** | | **45** | |
-| | **Including Q&A** | **S1-S32** | | **55** | |
+| 2 | A / Anatomy of software | S4-S11 | ch00 | 10 | 13:00 |
+| 3 | B / Anatomy of a game engine | S12-S16 | ch00-ch02 | 8 | 21:00 |
+| 4 | B / Quake, Doom 3, Unreal 5 | S17-S19 | Engine cases, ch01 | 5 | 26:00 |
+| 5 | C / One weapon, every discipline | S20-S25 | ch08 | 11 | 37:00 |
+| 6 | D / AI, interfaces, and takeaways | S26-S32 | ch09-ch10, ch00 | 8 | 45:00 |
+| Q&A | D / Questions and further reading | S33 | All | 10 | 55:00 |
+| | **Delivery total** | **S1-S32** | | **45** | |
+| | **Including Q&A** | **S1-S33** | | **55** | |
 
 ### Delivery Beats
 
 - **S1-S3:** make every discipline welcome. Ask what file or decision they
   contribute to a game. Connect it to software without implying everyone must
   become a programmer. Transition: "What is this medium made of?"
-- **S4-S10:** jump rule versus jump height; code stored in files; input-process-
-  output; feedback; latency; then the five parts. At S10, ask where ammo belongs
-  and where the rule that spends it belongs. Protect this comprehension check.
-- **S11-S15:** map the five parts to engine responsibilities. Explain timing
+- **S4-S11:** jump rule versus jump height; code stored in files; the glue
+  layer; input-process-output; feedback; latency; then the five parts. At S11,
+  ask where ammo belongs and where the rule that spends it belongs. Protect
+  this comprehension check.
+- **S12-S16:** map the five parts to engine responsibilities. Explain timing
   budgets and state versus presentation. Use a sword attached to a hand for a
   scene graph; describe BSP and ECS as different organizing tools, often mixed.
-- **S16-S18:** read one row across the three engines, then one engine down the
+- **S17-S19:** read one row across the three engines, then one engine down the
   rows. Do not recite every implementation name. The clock row is a contrast,
   not a promise of determinism or a universal engine configuration.
-- **S19-S24:** walk design, files, import/integration, and gameplay into output.
+- **S20-S25:** walk design, files, import/integration, and gameplay into output.
   Name who supplies data and who checks a handoff; ownership varies by team.
-  Reserve three of the eleven minutes for the exercise below at S23, then use
-  S24 to show that the same questions work in Doom 3.
-- **S25-S31:** reconnect feedback, contrast explicit rules with learned weights,
+  Reserve three of the eleven minutes for the exercise below at S24, then use
+  S25 to show that the same questions work in Doom 3.
+- **S26-S32:** reconnect feedback, contrast explicit rules with learned weights,
   distinguish existing neural techniques from forecasts, and explain tool-
   enabled AI with permission and verification limits. End with the reusable
-  questions, not a product pitch. Stop after S31; do not add a second ending.
-- **S32:** ask for a concrete symptom or example, map it to a part, and name
+  questions, not a product pitch. Stop after S32; do not add a second ending.
+- **S33:** ask for a concrete symptom or example, map it to a part, and name
   what evidence would resolve it. If unsure, say so and point to a source.
 
 ## 6. Hands-On Exercise
 
-**At S23, three minutes, no software required.** Students can write on paper or
+**At S24, three minutes, no software required.** Students can write on paper or
 in their own notes, then compare with a neighbor. Solo participation is fine.
 
 > A weapon makes a muzzle flash, but the target takes no damage. Map input,
@@ -171,17 +172,17 @@ past omitted slides. Q&A is separate: 25 + 10 = **35 minutes** if retained.
 | Section | Show | Minutes | Elapsed End |
 |---|---|---:|---:|
 | 1 | S1-S3, brief opening | 2 | 02:00 |
-| 2 | S4-S5, S7-S10; omit S6 | 6 | 08:00 |
-| 3 | S11-S15; one example of world organization | 4 | 12:00 |
-| 4 | S16-S17; omit S18 | 3 | 15:00 |
-| 5 | S19-S24; one-minute individual exercise at S23 | 6 | 21:00 |
-| 6 | S25, S27-S31; omit S26, one sentence on S28 | 4 | 25:00 |
+| 2 | S4-S5, S8-S11; omit S6-S7 | 6 | 08:00 |
+| 3 | S12-S16; one example of world organization | 4 | 12:00 |
+| 4 | S17-S18; omit S19 | 3 | 15:00 |
+| 5 | S20-S25; one-minute individual exercise at S24 | 6 | 21:00 |
+| 6 | S26, S28-S32; omit S27, one sentence on S29 | 4 | 25:00 |
 | | **Delivery total** | **25** | |
 
 In the one-minute exercise, allow 30 seconds to choose a check, 20 seconds for
 one answer, and 10 seconds for the presentation-versus-authority debrief.
-If the full talk slips, drop extra analogies, S18 detail, and S26 history first.
-Protect S10/S12 (the map), S17 (comparison), the weapon chain, and S31 (closure).
+If the full talk slips, drop extra analogies, S19 detail, and S27 history first.
+Protect S11/S13 (the map), S18 (comparison), the weapon chain, and S32 (closure).
 
 ## 8. Presenter Guardrails and Rehearsal
 
@@ -209,13 +210,13 @@ Protect S10/S12 (the map), S17 (comparison), the weapon chain, and S31 (closure)
   that whole engines will be replaced. Future architecture and employment
   effects remain uncertain; do not promise replacement or guaranteed job safety.
 
-**Rehearse once with a timer:** reach S11 at 13:00, S19 at 26:00, S25 at
-37:00, and S32 at 45:00. Say the exercise prompt out loud and include the full
+**Rehearse once with a timer:** reach S12 at 13:00, S20 at 26:00, S26 at
+37:00, and S33 at 45:00. Say the exercise prompt out loud and include the full
 student thinking time. Pick one analogy per concept; backup material is for
 questions, not mandatory delivery. Rehearse the first minute and the last minute
-twice, plus the S23 debrief and the jump past optional slides.
+twice, plus the S24 debrief and the jump past optional slides.
 
-**Before the room opens:** build and verify 32/32/6, check diagrams and text at
+**Before the room opens:** build and verify 33/33/6, check diagrams and text at
 the actual projector size, test the popup and timer, test local/offline access,
 and keep a second copy of the notes accessible. No login, install, or live demo
 should be needed during delivery. If a detail is disputed, separate the general
