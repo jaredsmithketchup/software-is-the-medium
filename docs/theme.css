@@ -1,0 +1,147 @@
+:root {
+  --r-background-color: #111827;
+  --r-main-font: 'Lato', system-ui, -apple-system, sans-serif;
+  --r-heading-font: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --r-main-color: #E5E7EB;
+  --r-heading-color: #F9FAFB;
+  --r-heading-text-transform: none;
+  --r-heading-letter-spacing: -0.01em;
+  --r-heading-line-height: 1.15;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.85em;
+  --r-heading3-size: 1.3em;
+  --r-link-color: #818CF8;
+  --r-link-color-dark: #6366F1;
+  --r-selection-background-color: #6366F1;
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  color: var(--r-main-color);
+}
+
+.reveal h2 {
+  font-weight: 800;
+  margin-bottom: 0.25em;
+}
+
+/* Act state accent colors */
+body.act-a .reveal h2 { color: #A5B4FC; }
+body.act-b .reveal h2 { color: #7DD3FC; }
+body.act-c .reveal h2 { color: #6EE7B7; }
+body.act-d .reveal h2 { color: #D8B4FE; }
+
+/* Corner act chip */
+.reveal .chip {
+  display: inline-block;
+  font-family: var(--r-heading-font);
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  border: 1px solid #374151;
+  border-radius: 999px;
+  padding: 0.28em 0.95em;
+  margin-bottom: 0.55em;
+}
+
+.reveal ul.content {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  width: 78%;
+}
+
+.reveal ul.content li {
+  font-size: 0.62em;
+  line-height: 1.5;
+  margin: 0 0 0.45em 0;
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.reveal ul.content li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 2px;
+  background: #6366F1;
+}
+
+.reveal ul.content li strong { color: #F9FAFB; }
+.reveal ul.content code {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-size: 0.92em;
+  color: #A5B4FC;
+  background: #1F2937;
+  border-radius: 4px;
+  padding: 0.05em 0.35em;
+}
+
+/* Divider (intro) slides */
+.reveal .divider h2 {
+  font-size: 2.05em;
+  margin: 0 0 0.2em 0;
+}
+
+.reveal .divider .kicker {
+  font-family: var(--r-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.6em;
+  color: #94A3B8;
+  margin: 0 0 1.2em 0;
+}
+
+.reveal ul.divider-claims {
+  list-style: none;
+  padding: 0;
+  margin: 0.8em auto 0;
+  width: 82%;
+}
+
+.reveal ul.divider-claims li {
+  font-size: 0.62em;
+  color: #D1D5DB;
+  margin: 0.4em 0;
+}
+
+/* Citation footer */
+.reveal .refs {
+  position: absolute;
+  bottom: 0.9em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.4em;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+}
+
+.reveal .refs code,
+.reveal ul.content li code { background: none; padding: 0; }
+
+/* Speaker view (notes window) typography */
+.speaker-notes h5 {
+  font-family: var(--r-heading-font);
+  color: #818CF8;
+  margin: 0.4em 0 0.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85em;
+}
+
+.speaker-notes .cards,
+.speaker-notes .decknotes {
+  margin-bottom: 0.6em;
+}
+
+/* Print / ?print-pdf handout keeps the slide colors */
+@media print {
+  .reveal .refs { color: #374151; }
+}

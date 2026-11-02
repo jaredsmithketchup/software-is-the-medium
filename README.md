@@ -21,6 +21,18 @@ large, fast, and hard-realtime.
 - `PLAN.md` — the plan that produced the presentation package, including the
   content-cut audit (what to trim and why the core spine survives).
 
+## Live deck
+
+The 64-slide talk is published on GitHub Pages as a reveal.js deck:
+
+- **Slides:** https://jaredsmithketchup.github.io/software-is-the-medium/
+- **Speaker view:** press `S` (or alt+s) — a second window opens with the
+  matching speaker card for the current slide, the next-slide preview, and a
+  timer. Put it on your screen; the first window is the one students see.
+- Source of truth: `Presentation/slide-deck.md` (S1–S64) and
+  `Presentation/speaker-cards.md` (one card per slide). Regenerate the site
+  after editing them with `node scripts/build-deck.mjs` and commit `docs/`.
+
 ## How to start
 
 Read `Reference/00-software-is-the-medium.md` first; it is the flagship
