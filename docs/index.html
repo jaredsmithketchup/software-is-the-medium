@@ -117,17 +117,17 @@
 
 <section data-num="4" data-state="act-a" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 2</p>
-    <h2>Two things</h2>
+    <h2>Code and data</h2>
 
-    <ul class="divider-claims"><li>What is software made of? Two things</li><li>Nothing else</li></ul>
+    <ul class="divider-claims"><li>Software is code and data</li><li>Nothing else</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S4</h5><p><strong>Pace:</strong> section 2, 6 minutes. 15 seconds.</p>
 <p><strong>Say</strong></p>
-<ul><li>What is software made of?</li><li>Two things. I am going to name them, then show you that you already work in one of them.</li></ul>
+<ul><li>What is software made of?</li><li>Code and data. I am going to name them, then show you that you already work in one of them.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Code, and data.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the first cut.</li><li><strong>Content:</strong> What is software made of? Two things. Nothing else.</li><li><strong>Visual:</strong> code card and data card.</li><li><strong>Refs:</strong> <code>ch00</code> §1.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> name the first cut.</li><li><strong>Content:</strong> Software is code and data. Nothing else.</li><li><strong>Visual:</strong> code card and data card.</li><li><strong>Refs:</strong> <code>ch00</code> §1.</li></ul></div>
   </aside>
 </section>
 
@@ -306,17 +306,17 @@
 
 <section data-num="12" data-state="act-a" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 4</p>
-    <h2>It repeats</h2>
+    <h2>The loop</h2>
 
-    <ul class="divider-claims"><li>Software that you play does not run once</li><li>It repeats</li></ul>
+    <ul class="divider-claims"><li>Interactive software does not run once</li><li>It loops</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S12</h5><p><strong>Pace:</strong> section 4, 6 minutes. 15 seconds.</p>
 <p><strong>Say</strong></p>
-<ul><li>Software you play does not finish. It repeats.</li><li>That one fact is why games are hard.</li></ul>
+<ul><li>Interactive software does not finish. It loops.</li><li>That one fact is why games are hard.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Put a person in it.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> add time.</li><li><strong>Content:</strong> Software that you play does not run once. It repeats.</li><li><strong>Visual:</strong> a loop arrow.</li><li><strong>Refs:</strong> <code>ch00</code> §3.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> add time.</li><li><strong>Content:</strong> Interactive software does not run once. It loops.</li><li><strong>Visual:</strong> a loop arrow.</li><li><strong>Refs:</strong> <code>ch00</code> §3.</li></ul></div>
   </aside>
 </section>
 
@@ -383,19 +383,19 @@
 <section data-num="15" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>Time is the limit</h2>
-    <ul class="content"><li>Finger, device, game, picture, screen, eye</li><li>Each step adds time</li><li>At 60 frames a second, everything shares about 17 milliseconds</li></ul>
+    <h2>Latency</h2>
+    <ul class="content"><li>Latency is the chain: finger, device, OS, simulation, render, display, eye</li><li>Delays add</li><li>At 60 fps the whole chain shares about 17 ms</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §3.3–3.4.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S15</h5><p><strong>Say</strong></p>
-<ul><li>Finger, device, operating system, simulation, picture, screen, eye.</li><li>Those delays add. They do not average.</li><li>At 60 frames a second, the whole chain shares about 17 milliseconds.</li><li>That is why milliseconds are the job.</li></ul>
+<ul><li>Latency is the chain: finger, device, OS, simulation, render, display, eye.</li><li>Those delays add. They do not average.</li><li>At 60 frames a second, the whole chain shares about 17 milliseconds.</li><li>That is why milliseconds are the job.</li></ul>
 <p><strong>Need</strong></p>
 <ul><li>60 fps is about 16.7 ms. 144 Hz is a tighter budget, which is why it feels like "you" instead of "it."</li><li>If they ask where the time goes: every hop stacks. A 10 ms hole in a 17 ms budget is a hitch you can see.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Two kinds of software. Do not mix them up.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why milliseconds matter.</li><li><strong>Content:</strong> Finger, device, game, picture, screen, eye. Each step adds time. At 60 frames a second, everything shares about 17 milliseconds.</li><li><strong>Visual:</strong> a chain of delays, one budget bar.</li><li><strong>Refs:</strong> <code>ch00</code> §3.3–3.4.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why milliseconds matter.</li><li><strong>Content:</strong> Latency is the chain: finger, device, OS, simulation, render, display, eye. Delays add. At 60 fps the whole chain shares about 17 ms.</li><li><strong>Visual:</strong> a chain of delays, one budget bar.</li><li><strong>Refs:</strong> <code>ch00</code> §3.3–3.4.</li></ul></div>
   </aside>
 </section>
 
@@ -482,8 +482,8 @@
 <section data-num="19" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>The fight is about when</h2>
-    <ul class="content"><li>One style waits to be told</li><li>The other checks on a rhythm</li><li>Find the clock first</li><li>Then name the part you are in</li></ul>
+    <h2>Event-driven or polled</h2>
+    <ul class="content"><li>Event-driven waits for an event</li><li>Polled checks on a timer</li><li>Find the clock first</li><li>Then name the part you are in</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §4, <code>ch01</code> §1.</p>
   </div>
@@ -494,7 +494,7 @@
 <ul><li>The next "this engine feels laggy" argument is usually a clock argument.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Hold those five boxes up to an engine.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the clock, and two habits.</li><li><strong>Content:</strong> One style waits to be told. The other checks on a rhythm. Find the clock first. Then name the part you are in.</li><li><strong>Visual:</strong> event versus polled, clock highlighted.</li><li><strong>Refs:</strong> <code>ch00</code> §4, <code>ch01</code> §1.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the clock, and two habits.</li><li><strong>Content:</strong> Event-driven waits for an event. Polled checks on a timer. Find the clock first. Then name the part you are in.</li><li><strong>Visual:</strong> event versus polled, clock highlighted.</li><li><strong>Refs:</strong> <code>ch00</code> §4, <code>ch01</code> §1.</li></ul></div>
   </aside>
 </section>
 
@@ -502,57 +502,57 @@
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 6</p>
     <h2>An engine is the same thing, built big</h2>
 
-    <ul class="divider-claims"><li>An engine is not a new kind of thing</li><li>It is the same five parts, each one grown into a department</li></ul>
+    <ul class="divider-claims"><li>An engine is not a new kind of software</li><li>It is the same five parts, each one a subsystem</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S20</h5><p><strong>Pace:</strong> section 6, 7 minutes. 15 seconds.</p>
 <p><strong>Say</strong></p>
-<ul><li>An engine is not a new kind of thing.</li><li>Same five slots. Each one is now a department.</li></ul>
+<ul><li>An engine is not a new kind of thing.</li><li>Same five parts. Each one is now a subsystem.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Watch the slots get filled.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the move that makes the talk useful.</li><li><strong>Content:</strong> An engine is not a new kind of thing. It is the same five parts, each one grown into a department.</li><li><strong>Visual:</strong> five boxes, each opening into a list.</li><li><strong>Refs:</strong> <code>ch00</code> §5, <code>ch01</code> §2.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the move that makes the talk useful.</li><li><strong>Content:</strong> An engine is not a new kind of software. It is the same five parts, each one a subsystem.</li><li><strong>Visual:</strong> five boxes, each opening into a list.</li><li><strong>Refs:</strong> <code>ch00</code> §5, <code>ch01</code> §2.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="21" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>Each part becomes a department</h2>
-    <ul class="content"><li>State becomes the world</li><li>Logic becomes physics, AI, and gameplay</li><li>Input becomes the input system</li><li>Output becomes picture, sound, and UI</li><li>The clock becomes the frame loop</li></ul>
+    <h2>Each part becomes a subsystem</h2>
+    <ul class="content"><li>State becomes the world model</li><li>Logic becomes physics, AI, and gameplay</li><li>Input becomes the input system</li><li>Output becomes the renderer, audio, and UI</li><li>The clock becomes the frame loop</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §5.1, <code>ch01</code> §2.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S21</h5><p><strong>Say</strong></p>
-<ul><li>State becomes the world model. That is the picture of the world and everything in it.</li><li>Logic becomes physics, AI, and gameplay code.</li><li>Input becomes the input system. Output becomes picture, sound, and UI.</li><li>The clock becomes the frame loop.</li><li>"The engine is slow" means nothing. Name the department, and it becomes debuggable.</li></ul>
+<ul><li>State becomes the world model. That is the picture of the world and everything in it.</li><li>Logic becomes physics, AI, and gameplay code.</li><li>Input becomes the input system. Output becomes the renderer, audio, and UI.</li><li>The clock becomes the frame loop.</li><li>"The engine is slow" means nothing. Name the subsystem.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>And it runs on a deadline.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the fill table.</li><li><strong>Content:</strong> State becomes the world. Logic becomes physics, AI, and gameplay. Input becomes the input system. Output becomes picture, sound, and UI. The clock becomes the frame loop.</li><li><strong>Visual:</strong> five rows, part to department.</li><li><strong>Refs:</strong> <code>ch00</code> §5.1, <code>ch01</code> §2.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the fill table.</li><li><strong>Content:</strong> State becomes the world model. Logic becomes physics, AI, and gameplay. Input becomes the input system. Output becomes the renderer, audio, and UI. The clock becomes the frame loop.</li><li><strong>Visual:</strong> five rows, part to subsystem.</li><li><strong>Refs:</strong> <code>ch00</code> §5.1, <code>ch01</code> §2.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="22" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>It has a deadline</h2>
-    <ul class="content"><li>The next picture has to be ready when the screen refreshes</li><li>Miss it, and the person in the loop feels it</li><li>That deadline explains more engine design than any feature list</li></ul>
+    <h2>Hard real-time</h2>
+    <ul class="content"><li>A frame must finish before the next refresh</li><li>Miss it, and the player feels it</li><li>That hard real-time deadline explains more engine design than any feature list</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §5.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S22</h5><p><strong>Say</strong></p>
-<ul><li>The next picture has to be ready when the screen refreshes.</li><li>Miss it, and it is not "a bit late." The person in the loop feels a break.</li><li>A stutter in a fight is a missed deadline, in front of the person who set it.</li><li>That one constraint explains more engine design than any feature list.</li></ul>
+<ul><li>The frame must finish before the next refresh. Miss it, and the player feels a hitch.</li><li>Miss it, and it is not "a bit late." The person in the loop feels a break.</li><li>A stutter in a fight is a missed deadline, in front of the person who set it.</li><li>That one constraint explains more engine design than any feature list.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The engine's heartbeat and the person's heartbeat are the same loop.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the constraint that rules engines.</li><li><strong>Content:</strong> The next picture has to be ready when the screen refreshes. Miss it, and the person in the loop feels it. That deadline explains more engine design than any feature list.</li><li><strong>Visual:</strong> frame strip, deadline flag.</li><li><strong>Refs:</strong> <code>ch00</code> §5.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the constraint that rules engines.</li><li><strong>Content:</strong> A frame must finish before the next refresh. Miss it, and the player feels it. That hard real-time deadline explains more engine design than any feature list.</li><li><strong>Visual:</strong> frame strip, deadline flag.</li><li><strong>Refs:</strong> <code>ch00</code> §5.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="23" data-state="act-a" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>The frame is the person's loop</h2>
-    <div class="diagram-row"><ul class="content"><li>Device, commands, update, world, picture, screen, you see it, you act</li><li>Then it repeats</li><li>The frame is one beat of that loop</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 148" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+    <h2>The frame loop</h2>
+    <div class="diagram-row"><ul class="content"><li>Device, commands, update, world, render, display, the player sees it, the player acts</li><li>Then it repeats</li><li>The frame loop and the human loop are the same loop</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 148" font-family="Montserrat, Lato, Segoe UI, sans-serif">
   <g font-size="12" font-weight="700" fill="#F9FAFB" text-anchor="middle">
     <rect x="8" y="8" width="148" height="34" rx="8" fill="#1F2937" stroke="#38BDF8"/>
     <text x="82" y="30">1 device</text>
@@ -591,7 +591,7 @@
 <ul><li>60 to 144 times a second. Do not list the steps twice.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Same loop in 1993 and today.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> one loop, not two.</li><li><strong>Content:</strong> Device, commands, update, world, picture, screen, you see it, you act. Then it repeats. The frame is one beat of that loop.</li><li><strong>Visual:</strong> eight steps, then it repeats.</li><li><strong>Refs:</strong> <code>ch00</code> §5.2, <code>ch01</code> §6.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> one loop, not two.</li><li><strong>Content:</strong> Device, commands, update, world, render, display, the player sees it, the player acts. Then it repeats. The frame loop and the human loop are the same loop.</li><li><strong>Visual:</strong> eight steps, then it repeats.</li><li><strong>Refs:</strong> <code>ch00</code> §5.2, <code>ch01</code> §6.</li></ul></div>
   </aside>
 </section>
 
@@ -644,7 +644,7 @@
 <p><strong>Need</strong></p>
 <ul><li>DOOM: D_DoomLoop, TryRunTics, TICRATE 35.</li><li>Unreal: FEngineLoop::Tick. Game thread, render thread, RHI thread. Chaos is the physics substeps.</li><li>Say the names only if someone asks.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>One correction before we move on. The picture is not the world.</li></ul></div>
+<ul><li>One correction. The renderer is not the simulation.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> prove it with two engines.</li><li><strong>Content:</strong> DOOM in 1993 and Unreal today run the same loop. One is simple. One is threaded. The five parts did not change.</li><li><strong>Visual:</strong> two columns, same five parts.</li><li><strong>Refs:</strong> <code>ch01</code> §6, <code>Eng/DOOM</code>, <code>Eng/UE5</code>.</li></ul></div>
   </aside>
 </section>
@@ -653,7 +653,7 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>The renderer reads the world</h2>
-    <ul class="content"><li>The renderer does not live inside the simulation</li><li>It reads the world and draws it</li><li>Turn the picture off, and the world can still be running</li></ul>
+    <ul class="content"><li>The renderer does not live inside the simulation</li><li>It reads world state and draws it</li><li>A black screen does not mean the simulation stopped</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §3.</p>
   </div>
@@ -662,23 +662,23 @@
 <ul><li>The renderer does not live inside the simulation.</li><li>It reads the world's state each frame and draws it.</li><li>Black screen, world still simulating: the renderer is a reader at the end, not the owner of the facts.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Same skeleton. Why do engines feel different?</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> correct the common mistake.</li><li><strong>Content:</strong> The renderer does not live inside the simulation. It reads the world and draws it. Turn the picture off, and the world can still be running.</li><li><strong>Visual:</strong> world, then an arrow, then the renderer.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> correct the common mistake.</li><li><strong>Content:</strong> The renderer does not live inside the simulation. It reads world state and draws it. A black screen does not mean the simulation stopped.</li><li><strong>Visual:</strong> world, then an arrow, then the renderer.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="26" data-state="act-a" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">A — FOUNDATIONS</span><p class="kicker">Section 7</p>
-    <h2>Same shape, different fill</h2>
+    <h2>Same skeleton, different choices</h2>
 
-    <ul class="divider-claims"><li>If every engine is the same five parts, why do they feel different? Because the fill changes</li><li>The parts do not</li></ul>
+    <ul class="divider-claims"><li>The five parts stay</li><li>What changes is how each part is implemented</li><li>No engine adds a sixth part</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S26</h5><p><strong>Pace:</strong> section 7, 6 minutes. 15 seconds.</p>
 <p><strong>Say</strong></p>
-<ul><li>They feel different because the fill changes.</li><li>Nobody adds a sixth part.</li></ul>
+<ul><li>They feel different because the implementation of those parts changes.</li><li>Nobody adds a sixth part.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>First cut: core, and channels.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why engines feel different.</li><li><strong>Content:</strong> If every engine is the same five parts, why do they feel different? Because the fill changes. The parts do not.</li><li><strong>Visual:</strong> five ghosted boxes, a stamp: fills, never new parts.</li><li><strong>Refs:</strong> <code>ch01</code> §4–5.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why engines feel different.</li><li><strong>Content:</strong> The five parts stay. What changes is how each part is implemented. No engine adds a sixth part.</li><li><strong>Visual:</strong> five ghosted boxes, a stamp: fills, never new parts.</li><li><strong>Refs:</strong> <code>ch01</code> §4–5.</li></ul></div>
   </aside>
 </section>
 
@@ -686,24 +686,24 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Core and channels</h2>
-    <ul class="content"><li>Core is state and the simulation</li><li>Channels are the pipes: assets in, audio out, UI out, network</li><li>A WAD, a pk3, and a uasset are different containers for the same idea</li></ul>
+    <ul class="content"><li>Core is state and simulation</li><li>Channels are assets, audio, UI, and network</li><li>A WAD, a pk3, and a uasset are different containers for the same channel</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S27</h5><p><strong>Say</strong></p>
-<ul><li>Core is state and the simulation. That is the game.</li><li>Channels are the pipes: assets in, audio out, UI out, network.</li><li>A WAD, a pk3, and a uasset are different containers for the same idea.</li><li>three.js has no built-in audio. That is an empty channel. The app holds it.</li></ul>
+<ul><li>Core is state and the simulation. That is the game.</li><li>Channels are assets, audio, UI, and network.</li><li>A WAD, a pk3, and a uasset are different containers for the same idea.</li><li>three.js has no built-in audio. That is an empty channel. The app holds it.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>The fill people argue about most is the clock.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> core versus channels.</li><li><strong>Content:</strong> Core is state and the simulation. Channels are the pipes: assets in, audio out, UI out, network. A WAD, a pk3, and a uasset are different containers for the same idea.</li><li><strong>Visual:</strong> a spine, pipes on the sides.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
+<ul><li>The choice people argue about most is the timestep.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> core versus channels.</li><li><strong>Content:</strong> Core is state and simulation. Channels are assets, audio, UI, and network. A WAD, a pk3, and a uasset are different containers for the same channel.</li><li><strong>Visual:</strong> a spine, pipes on the sides.</li><li><strong>Refs:</strong> <code>ch01</code> §3.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="28" data-state="act-a">
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
-    <h2>Four ways to keep time</h2>
-    <ul class="content"><li>Fixed steps are repeatable, and must catch up</li><li>Variable steps are smooth, and not repeatable</li><li>Hybrid keeps fixed physics inside a variable frame</li><li>Sometimes the app owns the clock</li><li>The loop stays</li><li>The beat changes</li></ul>
+    <h2>Fixed, variable, hybrid</h2>
+    <ul class="content"><li>A fixed timestep is repeatable, and must catch up</li><li>A variable timestep is smooth, and not repeatable</li><li>Hybrid keeps fixed physics inside a variable frame</li><li>Sometimes the app owns the clock</li><li>The loop stays</li><li>The timestep changes</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §4.</p>
   </div>
@@ -714,7 +714,7 @@
 <ul><li>Fixed: DOOM 35 Hz, Quake III server about 20 Hz, DOOM 3 60 Hz.</li><li>Variable: original Quake, Urho3D.</li><li>Hybrid: redot's frame interpolation, Unreal Chaos.</li><li>App-owned: three.js. requestAnimationFrame lives in the page, not in a hidden engine clock.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Four knobs. That is the whole difference list.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the clock's four beats.</li><li><strong>Content:</strong> Fixed steps are repeatable, and must catch up. Variable steps are smooth, and not repeatable. Hybrid keeps fixed physics inside a variable frame. Sometimes the app owns the clock. The loop stays. The beat changes.</li><li><strong>Visual:</strong> four rows.</li><li><strong>Refs:</strong> <code>ch01</code> §4.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the clock's four beats.</li><li><strong>Content:</strong> A fixed timestep is repeatable, and must catch up. A variable timestep is smooth, and not repeatable. Hybrid keeps fixed physics inside a variable frame. Sometimes the app owns the clock. The loop stays. The timestep changes.</li><li><strong>Visual:</strong> four rows.</li><li><strong>Refs:</strong> <code>ch01</code> §4.</li></ul></div>
   </aside>
 </section>
 
@@ -722,24 +722,24 @@
   <div class="main"><div class="slide-body">
     <span class="chip">A — FOUNDATIONS</span>
     <h2>Four ways engines differ</h2>
-    <ul class="content"><li>How the world is stored</li><li>How time is kept</li><li>How work is split</li><li>Which pipes exist</li><li>No engine grows a sixth part</li><li>Read the fill, not the brand name</li></ul>
+    <ul class="content"><li>World model</li><li>Timestep</li><li>How work is threaded</li><li>Which channels exist</li><li>No engine grows a sixth part</li><li>Read those four, not the brand name</li></ul>
   </div>
 <p class="refs"><code>ch01</code> §5.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S29</h5><p><strong>Say</strong></p>
-<ul><li>How the world is stored.</li><li>How time is kept.</li><li>How work is split across threads and processes.</li><li>Which pipes exist.</li><li>Meet an engine, ask those four, and you can predict how it feels to work in. Read the fill, not the brand.</li></ul>
+<ul><li>How the world is stored.</li><li>How time is kept.</li><li>How work is split across threads and processes.</li><li>World model. Timestep. How work is threaded. Which channels exist.</li><li>Meet an engine, ask those four. Read the choices, not the brand.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The biggest knob is how the world is remembered. That is the next stretch. It is the long one, and it is where most of you will see your own work.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the whole difference list.</li><li><strong>Content:</strong> How the world is stored. How time is kept. How work is split. Which pipes exist. No engine grows a sixth part. Read the fill, not the brand name.</li><li><strong>Visual:</strong> four cards.</li><li><strong>Refs:</strong> <code>ch01</code> §5.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the whole difference list.</li><li><strong>Content:</strong> World model. Timestep. How work is threaded. Which channels exist. No engine grows a sixth part. Read those four, not the brand name.</li><li><strong>Visual:</strong> four cards.</li><li><strong>Refs:</strong> <code>ch01</code> §5.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="30" data-state="act-b" data-background-color="#111827">
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE WORLD AND THE MACHINE</span><p class="kicker">Section 8</p>
-    <h2>How the world is remembered</h2>
+    <h2>World models</h2>
 
-    <ul class="divider-claims"><li>How does the engine remember the world? That choice decides what your day feels like</li></ul>
+    <ul class="divider-claims"><li>The world model is how the engine stores the world</li><li>That choice decides what your day feels like</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S30</h5><p><strong>Pace:</strong> section 8, 9 minutes. Do not linger on the opener.</p>
@@ -747,14 +747,14 @@
 <ul><li>How does the engine remember the world?</li><li>That choice decides what your Tuesday feels like. Art, design, and audio live inside this choice.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Three questions. The answers are the world model.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> open the longest section, on the state slot.</li><li><strong>Content:</strong> How does the engine remember the world? That choice decides what your day feels like.</li><li><strong>Visual:</strong> the state box, enlarged.</li><li><strong>Refs:</strong> <code>ch02</code>.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> open the longest section, on the state slot.</li><li><strong>Content:</strong> The world model is how the engine stores the world. That choice decides what your day feels like.</li><li><strong>Visual:</strong> the state box, enlarged.</li><li><strong>Refs:</strong> <code>ch02</code>.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="31" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Three questions. That is the world.</h2>
+    <h2>Three questions make the world model</h2>
     <ul class="content"><li>How is it stored? How are things related? How do you search it? Those three answers are the world model</li><li>Everything else follows</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §1.</p>
@@ -771,9 +771,9 @@
 <section data-num="32" data-state="act-b" class="has-diagram">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Three ways to remember a world</h2>
-    <div class="diagram-row"><ul class="content"><li>A tree, for people</li><li>A baked map, plus a flat list</li><li>Tables, for the machine</li><li>Most engines you will meet are one of these, or a mix</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 196" font-family="Montserrat, Lato, Segoe UI, sans-serif">
-  <text x="90" y="20" font-size="12" font-weight="700" fill="#A5B4FC" text-anchor="middle">A TREE</text>
+    <h2>Scene graph, BSP, ECS</h2>
+    <div class="diagram-row"><ul class="content"><li>Scene graph</li><li>BSP plus a flat entity list</li><li>ECS</li><li>Most engines are one of these, or a mix</li></ul><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 196" font-family="Montserrat, Lato, Segoe UI, sans-serif">
+  <text x="90" y="20" font-size="12" font-weight="700" fill="#A5B4FC" text-anchor="middle">SCENE GRAPH</text>
   <text x="90" y="36" font-size="10" fill="#94A3B8" text-anchor="middle">for people</text>
   <g font-size="11" fill="#E5E7EB" text-anchor="middle">
     <rect x="16" y="46" width="148" height="24" rx="12" fill="#1F2937" stroke="#6366F1"/>
@@ -786,7 +786,7 @@
     <text x="90" y="146">Urho3D</text>
   </g>
 
-  <text x="260" y="20" font-size="12" font-weight="700" fill="#7DD3FC" text-anchor="middle">A BAKED MAP</text>
+  <text x="260" y="20" font-size="12" font-weight="700" fill="#7DD3FC" text-anchor="middle">BSP + ENTITIES</text>
   <text x="260" y="36" font-size="10" fill="#94A3B8" text-anchor="middle">plus a flat list</text>
   <g font-size="11" fill="#E5E7EB" text-anchor="middle">
     <rect x="186" y="46" width="148" height="24" rx="12" fill="#1F2937" stroke="#38BDF8"/>
@@ -799,7 +799,7 @@
     <text x="260" y="146">DOOM 3</text>
   </g>
 
-  <text x="430" y="20" font-size="12" font-weight="700" fill="#6EE7B7" text-anchor="middle">TABLES</text>
+  <text x="430" y="20" font-size="12" font-weight="700" fill="#6EE7B7" text-anchor="middle">ECS</text>
   <text x="430" y="36" font-size="10" fill="#94A3B8" text-anchor="middle">for the machine</text>
   <g font-size="11" fill="#E5E7EB" text-anchor="middle">
     <rect x="356" y="46" width="148" height="24" rx="12" fill="#1F2937" stroke="#34D399"/>
@@ -813,27 +813,27 @@
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S32</h5><p><strong>Say</strong></p>
-<ul><li>A tree, built for people. three.js, Babylon, redot, Urho3D.</li><li>A baked map, plus a flat list of things placed in it. DOOM, Quake, Quake III, DOOM 3.</li><li>Tables, built for the machine. OpenEngine is the example on the shelf.</li><li>Do not memorize the logos. Memorize the three shapes.</li></ul>
+<ul><li>Scene graph: three.js, Babylon, redot, Urho3D.</li><li>BSP plus a flat entity list: DOOM, Quake, Quake III, DOOM 3.</li><li>Tables, built for the machine. OpenEngine is the example on the shelf.</li><li>Do not memorize the logos. Memorize the three shapes.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The tree first, because most of you have touched one.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the landscape, before any depth.</li><li><strong>Content:</strong> A tree, for people. A baked map, plus a flat list. Tables, for the machine. Most engines you will meet are one of these, or a mix.</li><li><strong>Visual:</strong> three columns of engine names.</li><li><strong>Refs:</strong> <code>ch02</code> §1–4, <code>engines</code>.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the landscape, before any depth.</li><li><strong>Content:</strong> Scene graph. BSP plus a flat entity list. ECS. Most engines are one of these, or a mix.</li><li><strong>Visual:</strong> three columns of engine names.</li><li><strong>Refs:</strong> <code>ch02</code> §1–4, <code>engines</code>.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="33" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>A tree people can use</h2>
-    <ul class="content"><li>Things hang off other things</li><li>Attach a sword to a hand, and the hand moves the sword</li><li>Artists and designers like this</li><li>The cost is walking the tree every frame</li></ul>
+    <h2>Scene graph</h2>
+    <ul class="content"><li>A scene graph is a parent-child transform tree</li><li>Attach a sword to a hand, and the hand moves the sword</li><li>The cost is traversing the tree every frame</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §3–4.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S33</h5><p><strong>Say</strong></p>
-<ul><li>Things hang off other things. A child inherits the parent's move.</li><li>Attach a sword to a hand. Move the hand. The sword comes along. You did not write a second animation.</li><li>That is why artists and designers like it.</li><li>The cost: the engine walks that tree every frame.</li></ul>
+<ul><li>A scene graph is a parent-child transform tree. A child inherits the parent's transform.</li><li>Attach a sword to a hand. Move the hand. The sword comes along. You did not write a second animation.</li><li>That is why artists and designers like it.</li><li>The cost: the engine walks that tree every frame.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Now the static-world answer. This is how DOOM fit on a 386.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> what a scene graph is for.</li><li><strong>Content:</strong> Things hang off other things. Attach a sword to a hand, and the hand moves the sword. Artists and designers like this. The cost is walking the tree every frame.</li><li><strong>Visual:</strong> a small tree, sword on a hand.</li><li><strong>Refs:</strong> <code>ch02</code> §3–4.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> what a scene graph is for.</li><li><strong>Content:</strong> A scene graph is a parent-child transform tree. Attach a sword to a hand, and the hand moves the sword. The cost is traversing the tree every frame.</li><li><strong>Visual:</strong> a small tree, sword on a hand.</li><li><strong>Refs:</strong> <code>ch02</code> §3–4.</li></ul></div>
   </aside>
 </section>
 
@@ -879,7 +879,7 @@
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
     <h2>Pick the shape your team can feed</h2>
-    <ul class="content"><li>Trees for people</li><li>Baked maps for static levels</li><li>Tables for huge counts</li><li>Real games mix them</li><li>The choice is what your team lives in every day</li></ul>
+    <ul class="content"><li>Scene graphs for people</li><li>BSP for static levels</li><li>ECS for large counts</li><li>Shipping engines mix them</li><li>The choice is what your team works in every day</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §7–8.</p>
   </div>
@@ -887,27 +887,27 @@
 <div class="cards"><h5>Speaker card — S36</h5><p><strong>Say</strong></p>
 <ul><li>Trees for people. Baked maps for static levels. Tables when you have tens of thousands of things.</li><li>Shipping engines mix them. A tree for the characters, a spatial structure for the level, tables for the bullets.</li><li>The choice is a product decision. It is the world your team lives in every day.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Under all three: a box of facts.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> kill the one-true-way idea.</li><li><strong>Content:</strong> Trees for people. Baked maps for static levels. Tables for huge counts. Real games mix them. The choice is what your team lives in every day.</li><li><strong>Visual:</strong> three columns into one card.</li><li><strong>Refs:</strong> <code>ch02</code> §7–8.</li></ul></div>
+<ul><li>Under all three: a state store.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> kill the one-true-way idea.</li><li><strong>Content:</strong> Scene graphs for people. BSP for static levels. ECS for large counts. Shipping engines mix them. The choice is what your team works in every day.</li><li><strong>Visual:</strong> three columns into one card.</li><li><strong>Refs:</strong> <code>ch02</code> §7–8.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="37" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>The world is a box of facts</h2>
-    <ul class="content"><li>Input changes the facts</li><li>The picture reads the facts</li><li>A game pulls those facts every frame, and it simulates</li><li>You can rewind a spreadsheet</li><li>You cannot rewind a simulation the same way</li></ul>
+    <h2>The world model is a state store</h2>
+    <ul class="content"><li>The world model is a state store</li><li>Input updates it</li><li>The renderer reads it</li><li>A game samples that store every frame, and it simulates</li><li>You can rewind a store</li><li>You cannot rewind a simulation the same way</li></ul>
   </div>
 <p class="refs"><code>ch02</code> §7–8, <code>ch00</code> §6.4.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S37</h5><p><strong>Say</strong></p>
-<ul><li>Input changes the facts. The picture reads the facts. It does not own them.</li><li>If you know Redux: action, store, view. Same shape.</li><li>Three differences, and then we leave it. A game pulls every frame. The facts are spatial. And you can rewind a store. You cannot rewind a simulation the same way, because the world was stepped forward, not derived.</li></ul>
+<ul><li>The world model is a state store. Input updates it. The renderer reads it. The renderer does not own it.</li><li>If you know Redux: action, store, view. Same shape.</li><li>Three differences, and then we leave it. A game pulls every frame. The facts are spatial. And you can rewind a store. You cannot rewind a simulation the same way, because the world was stepped forward, not derived.</li></ul>
 <p><strong>Need</strong></p>
 <ul><li>"Can we rewind the last second of gameplay?" Only if you stored the facts, or can re-simulate from a seed. The picture cannot give them back.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>UI is not part of that box.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the store, and why a game is not a web app.</li><li><strong>Content:</strong> Input changes the facts. The picture reads the facts. A game pulls those facts every frame, and it simulates. You can rewind a spreadsheet. You cannot rewind a simulation the same way.</li><li><strong>Visual:</strong> two flows, three differences.</li><li><strong>Refs:</strong> <code>ch02</code> §7–8, <code>ch00</code> §6.4.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the store, and why a game is not a web app.</li><li><strong>Content:</strong> The world model is a state store. Input updates it. The renderer reads it. A game samples that store every frame, and it simulates. You can rewind a store. You cannot rewind a simulation the same way.</li><li><strong>Visual:</strong> two flows, three differences.</li><li><strong>Refs:</strong> <code>ch02</code> §7–8, <code>ch00</code> §6.4.</li></ul></div>
   </aside>
 </section>
 
@@ -931,7 +931,7 @@
 <section data-num="39" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Two kinds of computer, one frame</h2>
+    <h2>CPU and GPU</h2>
     <ul class="content"><li>The CPU does a few hard jobs, one step at a time</li><li>The GPU does one simple job on a huge amount of data</li><li>A frame gets stuck on the CPU, the GPU, loading, or memory</li><li>The counter often hides which one</li></ul>
   </div>
 <p class="refs"><code>ch03</code> §1, §7.</p>
@@ -951,7 +951,7 @@
 <section data-num="40" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Read the numbers. Don't guess.</h2>
+    <h2>stat unit</h2>
     <ul class="content"><li>In Unreal, stat unit prints Frame, Game, and Draw</li><li>If Game is high and Draw is low, stop tuning shaders</li><li>Change one thing at a time</li><li>Only the part that can run in parallel gets faster when you add cores</li></ul>
   </div>
 <p class="refs"><code>ch03</code> §8–10, <code>Eng/UE5</code>.</p>
@@ -990,8 +990,8 @@
 <section data-num="42" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Whose copy is the real one?</h2>
-    <ul class="content"><li>Shared memory is one whiteboard</li><li>Messages are mail</li><li>Copies are useful, and they go stale on purpose</li><li>On a network, one machine is the authority</li><li>A little wrong, for a few milliseconds, is how the game stays playable</li></ul>
+    <h2>Authority and replication</h2>
+    <ul class="content"><li>Shared memory is one copy</li><li>Message passing sends copies</li><li>Replication keeps those copies on purpose, and they go stale</li><li>On a network, one machine is authoritative</li><li>A few milliseconds of staleness is how the game stays playable</li></ul>
   </div>
 <p class="refs"><code>ch04</code> §8–13, §19–21.</p>
   </div>
@@ -1002,7 +1002,7 @@
 <ul><li>Your input is authoritative on your machine until the server says otherwise. Replication is an intentional copy. An RPC is a message, not a shared whiteboard.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Unreal already has names for all of this. One slide, then three quiet seams.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> memory and truth.</li><li><strong>Content:</strong> Shared memory is one whiteboard. Messages are mail. Copies are useful, and they go stale on purpose. On a network, one machine is the authority. A little wrong, for a few milliseconds, is how the game stays playable.</li><li><strong>Visual:</strong> whiteboard versus mail, a staleness line.</li><li><strong>Refs:</strong> <code>ch04</code> §8–13, §19–21.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> memory and truth.</li><li><strong>Content:</strong> Shared memory is one copy. Message passing sends copies. Replication keeps those copies on purpose, and they go stale. On a network, one machine is authoritative. A few milliseconds of staleness is how the game stays playable.</li><li><strong>Visual:</strong> whiteboard versus mail, a staleness line.</li><li><strong>Refs:</strong> <code>ch04</code> §8–13, §19–21.</li></ul></div>
   </aside>
 </section>
 
@@ -1027,22 +1027,22 @@
   <div class="main"><div class="slide-body"><div class="divider"><span class="chip">B — THE WORLD AND THE MACHINE</span><p class="kicker">Section 11</p>
     <h2>Three quiet seams</h2>
 
-    <ul class="divider-claims"><li>A contract for what bytes mean</li><li>A map of where things are</li><li>A landlord between you and the hardware</li><li>Three seams</li><li>Then we go to people</li></ul>
+    <ul class="divider-claims"><li>Schema, spatial index, and the operating system</li><li>Three seams</li><li>Then people</li></ul>
   </div></div></div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S44</h5><p><strong>Pace:</strong> section 11, 6 minutes. One idea each. Do not open the chapters.</p>
 <p><strong>Say</strong></p>
-<ul><li>A contract for what bytes mean.</li><li>A map of where things are.</li><li>A landlord between you and the hardware.</li><li>Then we are done with the machine.</li></ul>
+<ul><li>A contract for what bytes mean.</li><li>A map of where things are.</li><li>Schema. Spatial index. The operating system.</li><li>Then we are done with the machine.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The contract.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> three short ideas, then leave the machine.</li><li><strong>Content:</strong> A contract for what bytes mean. A map of where things are. A landlord between you and the hardware. Three seams. Then we go to people.</li><li><strong>Visual:</strong> three chips: contract, map, landlord.</li><li><strong>Refs:</strong> <code>ch05</code>–<code>ch07</code>.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> three short ideas, then leave the machine.</li><li><strong>Content:</strong> Schema, spatial index, and the operating system. Three seams. Then people.</li><li><strong>Visual:</strong> three chips: schema, spatial index, OS.</li><li><strong>Refs:</strong> <code>ch05</code>–<code>ch07</code>.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="45" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>A file means nothing until both sides agree</h2>
+    <h2>A schema is a contract</h2>
     <ul class="content"><li>A schema is three agreements: what fields exist, how they are laid out, and what the values mean together</li><li>If the reader breaks and the file looks fine, the agreement was broken</li><li>Not the file</li></ul>
   </div>
 <p class="refs"><code>ch05</code> §1.</p>
@@ -1053,7 +1053,7 @@
 <p><strong>Need</strong></p>
 <ul><li>That agreement is a schema. Say the word once, then use "contract."</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Same truth, three sets of clothes.</li></ul></div>
+<ul><li>Same data, three formats.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> schema in one breath.</li><li><strong>Content:</strong> A schema is three agreements: what fields exist, how they are laid out, and what the values mean together. If the reader breaks and the file looks fine, the agreement was broken. Not the file.</li><li><strong>Visual:</strong> one card, three parts.</li><li><strong>Refs:</strong> <code>ch05</code> §1.</li></ul></div>
   </aside>
 </section>
@@ -1061,8 +1061,8 @@
 <section data-num="46" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Three clothes for the same truth</h2>
-    <ul class="content"><li>Authoring files are for people, and they load slowly</li><li>Runtime files are for speed</li><li>Network packets are for travel</li><li>Same truth, three clothes</li><li>A multiplayer desync means the two sides stopped agreeing</li></ul>
+    <h2>Authoring, runtime, and wire</h2>
+    <ul class="content"><li>Authoring files are for people, and they load slowly</li><li>Runtime files are cooked for speed</li><li>Wire formats are packets</li><li>Same data, three formats</li><li>A desync means the two sides stopped agreeing on the schema</li></ul>
   </div>
 <p class="refs"><code>ch05</code> §7–9.</p>
   </div>
@@ -1071,15 +1071,15 @@
 <ul><li>Authoring files are for people. fbx, gltf, wav. They say a lot. They load slowly.</li><li>Runtime files are for speed. Cooked assets. A uasset.</li><li>Packets are for the wire. Small, and able to change without breaking old clients.</li><li>A multiplayer desync is two sides that stopped agreeing. Same bug as a reader that does not match the writer.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Second seam. Where things are.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> authoring, runtime, wire.</li><li><strong>Content:</strong> Authoring files are for people, and they load slowly. Runtime files are for speed. Network packets are for travel. Same truth, three clothes. A multiplayer desync means the two sides stopped agreeing.</li><li><strong>Visual:</strong> three vertices.</li><li><strong>Refs:</strong> <code>ch05</code> §7–9.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> authoring, runtime, wire.</li><li><strong>Content:</strong> Authoring files are for people, and they load slowly. Runtime files are cooked for speed. Wire formats are packets. Same data, three formats. A desync means the two sides stopped agreeing on the schema.</li><li><strong>Visual:</strong> three vertices.</li><li><strong>Refs:</strong> <code>ch05</code> §7–9.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="47" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>A map, not a warehouse</h2>
-    <ul class="content"><li>"What is near this door?" You can open every crate</li><li>Or you can read the map</li><li>The map is a cache of where things are</li><li>If the map lies, it is worse than no map</li><li>The same map serves drawing and collision</li></ul>
+    <h2>A spatial index</h2>
+    <ul class="content"><li>A spatial index answers what is near a point without testing everything</li><li>It is a cache of positions</li><li>If it is stale, it is worse than none</li><li>The same index serves rendering and collision</li></ul>
   </div>
 <p class="refs"><code>ch06</code> §1–2.</p>
   </div>
@@ -1089,35 +1089,35 @@
 <p><strong>Need</strong></p>
 <ul><li>Shapes, only if asked: a grid, a tree of boxes, or the pre-cut rooms from the DOOM slide. One shape per world model. Do not list octree and BVH unless an engineer asks.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>Third seam. The landlord.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why a spatial index exists.</li><li><strong>Content:</strong> "What is near this door?" You can open every crate. Or you can read the map. The map is a cache of where things are. If the map lies, it is worse than no map. The same map serves drawing and collision.</li><li><strong>Visual:</strong> warehouse beside a map.</li><li><strong>Refs:</strong> <code>ch06</code> §1–2.</li></ul></div>
+<ul><li>Third seam. The operating system.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> why a spatial index exists.</li><li><strong>Content:</strong> A spatial index answers what is near a point without testing everything. It is a cache of positions. If it is stale, it is worse than none. The same index serves rendering and collision.</li><li><strong>Visual:</strong> warehouse beside a map.</li><li><strong>Refs:</strong> <code>ch06</code> §1–2.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="48" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>The operating system is the landlord</h2>
-    <ul class="content"><li>Your game does not touch the disk or the GPU directly</li><li>It asks</li><li>The operating system schedules, hands out tickets, and fronts the GPU</li><li>Your game is a process in a walled room</li></ul>
+    <h2>The OS and system calls</h2>
+    <ul class="content"><li>The game does not touch the disk or the GPU directly</li><li>It makes a system call</li><li>The OS schedules the process, issues handles, and fronts the GPU</li></ul>
   </div>
 <p class="refs"><code>ch07</code> §1–8.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S48</h5><p><strong>Say</strong></p>
-<ul><li>Your game does not touch the disk. It does not touch the GPU. It asks.</li><li>The operating system is the landlord. It schedules, it hands out tickets, and it fronts the GPU as a second venue.</li><li>Your game is a process, in a walled room of memory.</li><li>A corrupted save is not you touching the disk. You asked, and you got a seat. If the seat was bad, that is a different bug than a bad mesh.</li></ul>
+<ul><li>Your game does not touch the disk. It does not touch the GPU. It asks.</li><li>The game does not touch the disk or the GPU. It makes a system call.</li><li>The OS schedules the process, issues handles, and fronts the GPU.</li><li>A bad save is not you writing the disk. You asked the OS. If the handle was bad, that is a different bug than a bad mesh.</li></ul>
 <p><strong>Need</strong></p>
-<ul><li>The ticket is a handle. A handle leak is a pile of unreturned tickets. Say that only if the room is technical.</li></ul>
+<ul><li>A handle leak is unreleased OS resources. Say that only if someone asks.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>And it keeps the books.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> no direct touches.</li><li><strong>Content:</strong> Your game does not touch the disk or the GPU directly. It asks. The operating system schedules, hands out tickets, and fronts the GPU. Your game is a process in a walled room.</li><li><strong>Visual:</strong> app, kernel, hardware, one door.</li><li><strong>Refs:</strong> <code>ch07</code> §1–8.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> no direct hardware access.</li><li><strong>Content:</strong> The game does not touch the disk or the GPU directly. It makes a system call. The OS schedules the process, issues handles, and fronts the GPU.</li><li><strong>Visual:</strong> app, kernel, hardware, one door.</li><li><strong>Refs:</strong> <code>ch07</code> §1–8.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="49" data-state="act-b">
   <div class="main"><div class="slide-body">
     <span class="chip">B — THE WORLD AND THE MACHINE</span>
-    <h2>Read the record. Don't guess.</h2>
-    <ul class="content"><li>The operating system keeps a record of every process</li><li>Task Manager and stat unit only show what that record knows</li><li>Name it, watch it, read the record</li><li>Then ask: game bug, or a limit the OS imposed?</li></ul>
+    <h2>Read the OS counters</h2>
+    <ul class="content"><li>Task Manager and stat unit show what the kernel recorded</li><li>Name the process, watch it, read the counters</li><li>Then ask: game bug, or an OS limit?</li></ul>
   </div>
 <p class="refs"><code>ch07</code> §9–10.</p>
   </div>
@@ -1126,7 +1126,7 @@
 <ul><li>The OS keeps a record of every process. The tools only show what that record knows.</li><li>Task Manager, stat unit, Event Viewer. Same habit.</li><li>Name it. Watch it. Read the record. Then ask: game bug, or a limit the OS imposed?</li><li>Crash plus Task Manager tells you who died. The record tells you who did what.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Machine is done. Now the room. This is the part I will not rush.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the diagnosis habit.</li><li><strong>Content:</strong> The operating system keeps a record of every process. Task Manager and stat unit only show what that record knows. Name it, watch it, read the record. Then ask: game bug, or a limit the OS imposed?</li><li><strong>Visual:</strong> a ledger, two outcomes.</li><li><strong>Refs:</strong> <code>ch07</code> §9–10.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the diagnosis habit.</li><li><strong>Content:</strong> Task Manager and stat unit show what the kernel recorded. Name the process, watch it, read the counters. Then ask: game bug, or an OS limit?</li><li><strong>Visual:</strong> a ledger, two outcomes.</li><li><strong>Refs:</strong> <code>ch07</code> §9–10.</li></ul></div>
   </aside>
 </section>
 
@@ -1154,7 +1154,7 @@
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S50</h5><p><strong>Pace:</strong> section 12, 8 minutes. Stay here.</p>
 <p><strong>Say</strong></p>
-<ul><li>Art, audio, design, code. You do not own the whole machine.</li><li>You feed a part of it. The next slides are how to find your seat, and how one gun touches every seat.</li></ul>
+<ul><li>Art, audio, design, code. You do not own the whole machine.</li><li>You feed a part of it. The next slides are how to find your seat, and how one weapon touches every seat.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Someone builds the box. Someone fills it.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> from the machine to the room.</li><li><strong>Content:</strong> Art, audio, design, and code do not own the whole machine. Each one feeds a part of it. This section is where you find your seat.</li><li><strong>Visual:</strong> four role cards.</li><li><strong>Refs:</strong> <code>ch00</code> §7.</li></ul></div>
@@ -1164,7 +1164,7 @@
 <section data-num="51" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
-    <h2>Someone builds it. Someone fills it.</h2>
+    <h2>Owners and feeders</h2>
     <ul class="content"><li>Owners build and maintain a part</li><li>Feeders fill it</li><li>Nobody owns the whole machine</li><li>The clock has no feeder</li><li>Everyone obeys it</li><li>A lot of team fights are two people standing on different sides of one box</li></ul>
   </div>
 <p class="refs"><code>ch00</code> §7, <code>ch01</code> §2.</p>
@@ -1173,7 +1173,7 @@
 <div class="cards"><h5>Speaker card — S51</h5><p><strong>Say</strong></p>
 <ul><li>Owners build and maintain a part. Usually engineering.</li><li>Feeders fill it. Usually everyone else. Art fills files. Design fills numbers and rules-as-data. Audio fills sound files.</li><li>Nobody owns the whole machine.</li><li>The clock has no feeder. Everyone obeys it. You do not negotiate the frame deadline.</li><li>A lot of "the build is wrong" fights are two people standing on different sides of one box. Name the box, and the fight gets smaller.</li></ul>
 <p><strong>Next</strong></p>
-<ul><li>One object touches every row. A gun.</li></ul></div>
+<ul><li>One object touches every row. A weapon.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> owners and feeders.</li><li><strong>Content:</strong> Owners build and maintain a part. Feeders fill it. Nobody owns the whole machine. The clock has no feeder. Everyone obeys it. A lot of team fights are two people standing on different sides of one box.</li><li><strong>Visual:</strong> owner column, feeder column, clock row marked.</li><li><strong>Refs:</strong> <code>ch00</code> §7, <code>ch01</code> §2.</li></ul></div>
   </aside>
 </section>
@@ -1181,17 +1181,17 @@
 <section data-num="52" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
-    <h2>One gun, four steps</h2>
-    <ul class="content"><li>Design it</li><li>Make the files</li><li>Hook the files into the engine</li><li>Code plays them back</li><li>Until the last step, the gun does nothing</li></ul>
+    <h2>One weapon, four stages</h2>
+    <ul class="content"><li>Design, data, engine integration, gameplay code</li><li>Until gameplay code runs, the weapon is inert data</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §1.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S52</h5><p><strong>Say</strong></p>
-<ul><li>Design it.</li><li>Make the files.</li><li>Hook the files into the engine.</li><li>Code plays them back.</li><li>Until that last step, the gun does nothing. It is inert data.</li></ul>
+<ul><li>Design it.</li><li>Make the files.</li><li>Hook the files into the engine.</li><li>Code plays them back.</li><li>Until gameplay code runs, the weapon is inert data.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>The first two steps. Nothing fires.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> one object that touches every job.</li><li><strong>Content:</strong> Design it. Make the files. Hook the files into the engine. Code plays them back. Until the last step, the gun does nothing.</li><li><strong>Visual:</strong> four chevrons.</li><li><strong>Refs:</strong> <code>ch08</code> §1.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> one object that touches every job.</li><li><strong>Content:</strong> Design, data, engine integration, gameplay code. Until gameplay code runs, the weapon is inert data.</li><li><strong>Visual:</strong> four chevrons.</li><li><strong>Refs:</strong> <code>ch08</code> §1.</li></ul></div>
   </aside>
 </section>
 
@@ -1199,24 +1199,24 @@
   <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
     <h2>Design it. Make the files. Nothing fires yet.</h2>
-    <ul class="content"><li>Design decides what the gun is</li><li>That document is already a contract</li><li>Then art and audio make files: model, rig, textures, sound</li><li>Those files do not fire</li><li>They sit there</li></ul>
+    <ul class="content"><li>Design decides what the weapon is</li><li>That document is already a schema</li><li>Then art and audio produce the data: model, rig, textures, sound</li><li>Those files do nothing yet</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §2–3.</p>
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S53</h5><p><strong>Say</strong></p>
-<ul><li>Design decides what the gun is. Role, feel, the numbers. That document is already a contract. Writer and reader will have to agree later.</li><li>Then the files: model, rig, textures, sound.</li><li>The best gunshot in the world cannot fire the gun. It is a file. It sits there.</li></ul>
+<ul><li>Design decides what the weapon is. Role, feel, the numbers. That document is already a schema.</li><li>Then the files: model, rig, textures, sound.</li><li>The best gunshot in the world cannot fire the gun. It is a file. It sits there.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>Then someone hooks it up, and someone plays it.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 1 and 2.</li><li><strong>Content:</strong> Design decides what the gun is. That document is already a contract. Then art and audio make files: model, rig, textures, sound. Those files do not fire. They sit there.</li><li><strong>Visual:</strong> two cards, the second full of inert files.</li><li><strong>Refs:</strong> <code>ch08</code> §2–3.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 1 and 2.</li><li><strong>Content:</strong> Design decides what the weapon is. That document is already a schema. Then art and audio produce the data: model, rig, textures, sound. Those files do nothing yet.</li><li><strong>Visual:</strong> two cards, the second full of inert files.</li><li><strong>Refs:</strong> <code>ch08</code> §2–3.</li></ul></div>
   </aside>
 </section>
 
 <section data-num="54" data-state="act-c">
   <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
-    <h2>Hook it up. Then code plays it.</h2>
-    <ul class="content"><li>Import turns files into assets the engine can find</li><li>Some load when needed</li><li>Some are baked in</li><li>Gameplay code reads the recipe and plays it: animation, sound, particles, damage</li><li>The finger on the button is the input</li></ul>
+    <h2>Import, then gameplay code</h2>
+    <ul class="content"><li>Import turns files into assets</li><li>Soft references load on demand</li><li>Hard references stay loaded</li><li>Gameplay code plays the asset: animation, sound, particles, damage</li><li>The button press is the input</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §4–5.</p>
   </div>
@@ -1227,7 +1227,7 @@
 <ul><li>Soft reference: load when needed. Hard reference: baked in. Say the plain version first.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>This is not an Unreal story.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 3 and 4.</li><li><strong>Content:</strong> Import turns files into assets the engine can find. Some load when needed. Some are baked in. Gameplay code reads the recipe and plays it: animation, sound, particles, damage. The finger on the button is the input.</li><li><strong>Visual:</strong> files become a firing loop.</li><li><strong>Refs:</strong> <code>ch08</code> §4–5.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> stages 3 and 4.</li><li><strong>Content:</strong> Import turns files into assets. Soft references load on demand. Hard references stay loaded. Gameplay code plays the asset: animation, sound, particles, damage. The button press is the input.</li><li><strong>Visual:</strong> files become a firing loop.</li><li><strong>Refs:</strong> <code>ch08</code> §4–5.</li></ul></div>
   </aside>
 </section>
 
@@ -1235,7 +1235,7 @@
   <div class="main"><div class="slide-body">
     <span class="chip">C — PEOPLE AND THE CHAIN</span>
     <h2>Same chain in DOOM 3</h2>
-    <ul class="content"><li>DOOM 3 did the same four steps in 2004</li><li>Design, files, a placed entity, a script that plays them</li><li>The last step only plays what the first three made</li><li>Engines change</li><li>The chain does not</li></ul>
+    <ul class="content"><li>DOOM 3 used the same four stages in 2004</li><li>Design, data, a placed entity, a script that plays them</li><li>Gameplay code only plays what the earlier stages produced</li><li>Engines change</li><li>The chain does not</li></ul>
   </div>
 <p class="refs"><code>ch08</code> §6, <code>Eng/DOOM3</code>.</p>
   </div>
@@ -1246,7 +1246,7 @@
 <ul><li>DOOM 3: the placed thing is an .entity. The playback is idScript, running in a little virtual machine. Names only if asked.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>A new interface showed up. I am not going to pitch it. Five minutes, factual.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> this is not an Unreal story.</li><li><strong>Content:</strong> DOOM 3 did the same four steps in 2004. Design, files, a placed entity, a script that plays them. The last step only plays what the first three made. Engines change. The chain does not.</li><li><strong>Visual:</strong> the same four steps, id Tech labels.</li><li><strong>Refs:</strong> <code>ch08</code> §6, <code>Eng/DOOM3</code>.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> this is not an Unreal story.</li><li><strong>Content:</strong> DOOM 3 used the same four stages in 2004. Design, data, a placed entity, a script that plays them. Gameplay code only plays what the earlier stages produced. Engines change. The chain does not.</li><li><strong>Visual:</strong> the same four steps, id Tech labels.</li><li><strong>Refs:</strong> <code>ch08</code> §6, <code>Eng/DOOM3</code>.</li></ul></div>
   </aside>
 </section>
 
@@ -1284,7 +1284,7 @@
 <section data-num="57" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
-    <h2>An agent is four pieces</h2>
+    <h2>Backend, model, harness, knowledge</h2>
     <ul class="content"><li>A backend runs the model</li><li>The model is the trained brain</li><li>The harness is the program on your machine, and the only piece that touches your files</li><li>Knowledge is your files, docs, and notes</li><li>A model alone is a chat box</li><li>A harness turns words into actions</li></ul>
   </div>
 <p class="refs"><code>ch09</code> §1.</p>
@@ -1372,8 +1372,8 @@
 <section data-num="62" data-state="act-d">
   <div class="main"><div class="slide-body">
     <span class="chip">D — THE INTERFACE AND THE FUTURE</span>
-    <h2>The engine stays. Parts get smarter.</h2>
-    <ul class="content"><li>The engine we mapped stays</li><li>Pieces of it get replaced by learned systems, one at a time</li><li>Neural rendering already ships</li><li>Shared real-time worlds are where those systems watch people play</li></ul>
+    <h2>The hybrid engine</h2>
+    <ul class="content"><li>The engine stays as the structure</li><li>Subsystems get replaced by learned models, one at a time</li><li>Neural rendering already ships</li><li>Shared real-time worlds are where those models watch people play</li></ul>
   </div>
 <p class="refs"><code>ch10</code> §3–4.</p>
   </div>
@@ -1384,7 +1384,7 @@
 <ul><li>Do not say "metaverse" unless someone uses the word. If they do: it is a verb, a thing people do together in real time, not a product name.</li></ul>
 <p><strong>Next</strong></p>
 <ul><li>One line. Then I sit down.</li></ul></div>
-<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the future machine, without the slogan.</li><li><strong>Content:</strong> The engine we mapped stays. Pieces of it get replaced by learned systems, one at a time. Neural rendering already ships. Shared real-time worlds are where those systems watch people play.</li><li><strong>Visual:</strong> a base bar, a few inserts.</li><li><strong>Refs:</strong> <code>ch10</code> §3–4.</li></ul></div>
+<div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> the future machine, in ordinary terms.</li><li><strong>Content:</strong> The engine stays as the structure. Subsystems get replaced by learned models, one at a time. Neural rendering already ships. Shared real-time worlds are where those models watch people play.</li><li><strong>Visual:</strong> a base bar, a few inserts.</li><li><strong>Refs:</strong> <code>ch10</code> §3–4.</li></ul></div>
   </aside>
 </section>
 
@@ -1415,7 +1415,7 @@
   </div>
   <aside class="notes">
 <div class="cards"><h5>Speaker card — S64</h5><p><strong>Say</strong></p>
-<ul><li>If a question stalls, I am going to do what I told you to do. Where is the input, where is the output, what is in the middle? Which of the five parts is it?</li><li>The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this gun work" question goes to the four steps.</li><li>Further reading, if they want shelves: id Software's public source for DOOM, Quake, Quake III, and DOOM 3. three.js and Babylon.js. Godot. Unreal's docs.</li></ul>
+<ul><li>If a question stalls, I am going to do what I told you to do. Where is the input, where is the output, what is in the middle? Which of the five parts is it?</li><li>The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this weapon work" question goes to the four stages.</li><li>Further reading, if they want shelves: id Software's public source for DOOM, Quake, Quake III, and DOOM 3. three.js and Babylon.js. Godot. Unreal's docs.</li></ul>
 <p><strong>Need</strong></p>
 <ul><li>Do not open a new topic in the answer. Point at a part, then stop.</li></ul></div>
 <div class="decknotes"><h5>Slide source notes</h5><ul><li><strong>Goal:</strong> hand them the shelf, then take questions.</li><li><strong>Content:</strong> If a question stalls, ask where the input is, where the output is, and what is in the middle. Then ask which of the five parts it is. The reference is the long version of this talk. Read it once, then use it per task.</li><li><strong>Visual:</strong> where to go next.</li><li><strong>Refs:</strong> <code>ch00</code> §10, <code>engines</code>.</li></ul></div>

@@ -12,7 +12,7 @@ Read **Say** out loud. It is the script. **Need** is the fact you reach for if
 someone asks, or if you blank. **Next** is the handoff. Do not add a third idea.
 
 If you fall behind: say the first Say line, say Next, and move. Never cut the
-gun (S50–S55) or the last line (S63). Cut S59 first, then shorten S44–S49.
+weapon (S50–S55) or the last line (S63). Cut S59 first, then shorten S44–S49.
 
 Pace: about 77 minutes of talk, then questions. Section openers are 15 seconds.
 
@@ -71,14 +71,14 @@ Then name the part: state, logic, input, output, or clock.
 
 - Strip it down. Software is two things.
 
-## S4 — Two things
+## S4 — Code and data
 
 **Pace:** section 2, 6 minutes. 15 seconds.
 
 **Say**
 
 - What is software made of?
-- Two things. I am going to name them, then show you that you already work in one of them.
+- Code and data. I am going to name them, then show you that you already work in one of them.
 
 **Next**
 
@@ -195,13 +195,13 @@ Then name the part: state, logic, input, output, or clock.
 
 - So far the shape runs once. Games do not.
 
-## S12 — It repeats
+## S12 — The loop
 
 **Pace:** section 4, 6 minutes. 15 seconds.
 
 **Say**
 
-- Software you play does not finish. It repeats.
+- Interactive software does not finish. It loops.
 - That one fact is why games are hard.
 
 **Next**
@@ -238,11 +238,11 @@ Then name the part: state, logic, input, output, or clock.
 
 - The limit on that loop is time.
 
-## S15 — Time is the limit
+## S15 — Latency
 
 **Say**
 
-- Finger, device, operating system, simulation, picture, screen, eye.
+- Latency is the chain: finger, device, OS, simulation, render, display, eye.
 - Those delays add. They do not average.
 - At 60 frames a second, the whole chain shares about 17 milliseconds.
 - That is why milliseconds are the job.
@@ -301,7 +301,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - The one people fight about is the clock.
 
-## S19 — The fight is about when
+## S19 — Event-driven or polled
 
 **Say**
 
@@ -325,31 +325,31 @@ Then name the part: state, logic, input, output, or clock.
 **Say**
 
 - An engine is not a new kind of thing.
-- Same five slots. Each one is now a department.
+- Same five parts. Each one is now a subsystem.
 
 **Next**
 
 - Watch the slots get filled.
 
-## S21 — Each part becomes a department
+## S21 — Each part becomes a subsystem
 
 **Say**
 
 - State becomes the world model. That is the picture of the world and everything in it.
 - Logic becomes physics, AI, and gameplay code.
-- Input becomes the input system. Output becomes picture, sound, and UI.
+- Input becomes the input system. Output becomes the renderer, audio, and UI.
 - The clock becomes the frame loop.
-- "The engine is slow" means nothing. Name the department, and it becomes debuggable.
+- "The engine is slow" means nothing. Name the subsystem.
 
 **Next**
 
 - And it runs on a deadline.
 
-## S22 — It has a deadline
+## S22 — Hard real-time
 
 **Say**
 
-- The next picture has to be ready when the screen refreshes.
+- The frame must finish before the next refresh. Miss it, and the player feels a hitch.
 - Miss it, and it is not "a bit late." The person in the loop feels a break.
 - A stutter in a fight is a missed deadline, in front of the person who set it.
 - That one constraint explains more engine design than any feature list.
@@ -358,7 +358,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - The engine's heartbeat and the person's heartbeat are the same loop.
 
-## S23 — The frame is the person's loop
+## S23 — The frame loop
 
 **Say**
 
@@ -392,9 +392,9 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- One correction before we move on. The picture is not the world.
+- One correction. The renderer is not the simulation.
 
-## S25 — The picture is not the world
+## S25 — The renderer reads the world
 
 **Say**
 
@@ -406,13 +406,13 @@ Then name the part: state, logic, input, output, or clock.
 
 - Same skeleton. Why do engines feel different?
 
-## S26 — Same shape, different fill
+## S26 — Same skeleton, different choices
 
 **Pace:** section 7, 6 minutes. 15 seconds.
 
 **Say**
 
-- They feel different because the fill changes.
+- They feel different because the implementation of those parts changes.
 - Nobody adds a sixth part.
 
 **Next**
@@ -424,15 +424,15 @@ Then name the part: state, logic, input, output, or clock.
 **Say**
 
 - Core is state and the simulation. That is the game.
-- Channels are the pipes: assets in, audio out, UI out, network.
+- Channels are assets, audio, UI, and network.
 - A WAD, a pk3, and a uasset are different containers for the same idea.
 - three.js has no built-in audio. That is an empty channel. The app holds it.
 
 **Next**
 
-- The fill people argue about most is the clock.
+- The choice people argue about most is the timestep.
 
-## S28 — Four ways to keep time
+## S28 — Fixed, variable, hybrid
 
 **Say**
 
@@ -460,14 +460,14 @@ Then name the part: state, logic, input, output, or clock.
 - How the world is stored.
 - How time is kept.
 - How work is split across threads and processes.
-- Which pipes exist.
-- Meet an engine, ask those four, and you can predict how it feels to work in. Read the fill, not the brand.
+- World model. Timestep. How work is threaded. Which channels exist.
+- Meet an engine, ask those four. Read the choices, not the brand.
 
 **Next**
 
 - The biggest knob is how the world is remembered. That is the next stretch. It is the long one, and it is where most of you will see your own work.
 
-## S30 — How the world is remembered
+## S30 — World models
 
 **Pace:** section 8, 9 minutes. Do not linger on the opener.
 
@@ -480,7 +480,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - Three questions. The answers are the world model.
 
-## S31 — Three questions. That is the world.
+## S31 — Three questions make the world model
 
 **Say**
 
@@ -494,12 +494,12 @@ Then name the part: state, logic, input, output, or clock.
 
 - Three families. Then we will say they mix.
 
-## S32 — Three ways to remember a world
+## S32 — Scene graph, BSP, ECS
 
 **Say**
 
-- A tree, built for people. three.js, Babylon, redot, Urho3D.
-- A baked map, plus a flat list of things placed in it. DOOM, Quake, Quake III, DOOM 3.
+- Scene graph: three.js, Babylon, redot, Urho3D.
+- BSP plus a flat entity list: DOOM, Quake, Quake III, DOOM 3.
 - Tables, built for the machine. OpenEngine is the example on the shelf.
 - Do not memorize the logos. Memorize the three shapes.
 
@@ -507,11 +507,11 @@ Then name the part: state, logic, input, output, or clock.
 
 - The tree first, because most of you have touched one.
 
-## S33 — A tree people can use
+## S33 — Scene graph
 
 **Say**
 
-- Things hang off other things. A child inherits the parent's move.
+- A scene graph is a parent-child transform tree. A child inherits the parent's transform.
 - Attach a sword to a hand. Move the hand. The sword comes along. You did not write a second animation.
 - That is why artists and designers like it.
 - The cost: the engine walks that tree every frame.
@@ -563,13 +563,13 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- Under all three: a box of facts.
+- Under all three: a state store.
 
-## S37 — The world is a box of facts
+## S37 — The world model is a state store
 
 **Say**
 
-- Input changes the facts. The picture reads the facts. It does not own them.
+- The world model is a state store. Input updates it. The renderer reads it. The renderer does not own it.
 - If you know Redux: action, store, view. Same shape.
 - Three differences, and then we leave it. A game pulls every frame. The facts are spatial. And you can rewind a store. You cannot rewind a simulation the same way, because the world was stepped forward, not derived.
 
@@ -593,7 +593,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - Under the world is the machine. Two kinds of computer, one deadline. This block is fast. Three minutes.
 
-## S39 — Two kinds of computer, one frame
+## S39 — CPU and GPU
 
 **Pace:** section 9, 3 minutes. Do not open a hardware lecture.
 
@@ -613,7 +613,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - One command prints the question.
 
-## S40 — Read the numbers. Don't guess.
+## S40 — stat unit
 
 **Say**
 
@@ -648,7 +648,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - The other half is whose copy is real.
 
-## S42 — Whose copy is the real one?
+## S42 — Authority and replication
 
 **Say**
 
@@ -686,14 +686,14 @@ Then name the part: state, logic, input, output, or clock.
 
 - A contract for what bytes mean.
 - A map of where things are.
-- A landlord between you and the hardware.
+- Schema. Spatial index. The operating system.
 - Then we are done with the machine.
 
 **Next**
 
 - The contract.
 
-## S45 — A file means nothing until both sides agree
+## S45 — A schema is a contract
 
 **Say**
 
@@ -707,9 +707,9 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- Same truth, three sets of clothes.
+- Same data, three formats.
 
-## S46 — Three clothes for the same truth
+## S46 — Authoring, runtime, and wire
 
 **Say**
 
@@ -722,7 +722,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - Second seam. Where things are.
 
-## S47 — A map, not a warehouse
+## S47 — A spatial index
 
 **Say**
 
@@ -737,26 +737,26 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- Third seam. The landlord.
+- Third seam. The operating system.
 
-## S48 — The operating system is the landlord
+## S48 — The OS and system calls
 
 **Say**
 
 - Your game does not touch the disk. It does not touch the GPU. It asks.
-- The operating system is the landlord. It schedules, it hands out tickets, and it fronts the GPU as a second venue.
-- Your game is a process, in a walled room of memory.
-- A corrupted save is not you touching the disk. You asked, and you got a seat. If the seat was bad, that is a different bug than a bad mesh.
+- The game does not touch the disk or the GPU. It makes a system call.
+- The OS schedules the process, issues handles, and fronts the GPU.
+- A bad save is not you writing the disk. You asked the OS. If the handle was bad, that is a different bug than a bad mesh.
 
 **Need**
 
-- The ticket is a handle. A handle leak is a pile of unreturned tickets. Say that only if the room is technical.
+- A handle leak is unreleased OS resources. Say that only if someone asks.
 
 **Next**
 
 - And it keeps the books.
 
-## S49 — Read the record. Don't guess.
+## S49 — Read the OS counters
 
 **Say**
 
@@ -776,13 +776,13 @@ Then name the part: state, logic, input, output, or clock.
 **Say**
 
 - Art, audio, design, code. You do not own the whole machine.
-- You feed a part of it. The next slides are how to find your seat, and how one gun touches every seat.
+- You feed a part of it. The next slides are how to find your seat, and how one weapon touches every seat.
 
 **Next**
 
 - Someone builds the box. Someone fills it.
 
-## S51 — Someone builds it. Someone fills it.
+## S51 — Owners and feeders
 
 **Say**
 
@@ -794,9 +794,9 @@ Then name the part: state, logic, input, output, or clock.
 
 **Next**
 
-- One object touches every row. A gun.
+- One object touches every row. A weapon.
 
-## S52 — One gun, four steps
+## S52 — One weapon, four stages
 
 **Say**
 
@@ -804,7 +804,7 @@ Then name the part: state, logic, input, output, or clock.
 - Make the files.
 - Hook the files into the engine.
 - Code plays them back.
-- Until that last step, the gun does nothing. It is inert data.
+- Until gameplay code runs, the weapon is inert data.
 
 **Next**
 
@@ -814,7 +814,7 @@ Then name the part: state, logic, input, output, or clock.
 
 **Say**
 
-- Design decides what the gun is. Role, feel, the numbers. That document is already a contract. Writer and reader will have to agree later.
+- Design decides what the weapon is. Role, feel, the numbers. That document is already a schema.
 - Then the files: model, rig, textures, sound.
 - The best gunshot in the world cannot fire the gun. It is a file. It sits there.
 
@@ -822,7 +822,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - Then someone hooks it up, and someone plays it.
 
-## S54 — Hook it up. Then code plays it.
+## S54 — Import, then gameplay code
 
 **Say**
 
@@ -869,7 +869,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - Here they are.
 
-## S57 — An agent is four pieces
+## S57 — Backend, model, harness, knowledge
 
 **Say**
 
@@ -943,7 +943,7 @@ Then name the part: state, logic, input, output, or clock.
 
 - What the machine itself looks like. Plain version.
 
-## S62 — The engine stays. Parts get smarter.
+## S62 — The hybrid engine
 
 **Say**
 
@@ -978,7 +978,7 @@ Then name the part: state, logic, input, output, or clock.
 **Say**
 
 - If a question stalls, I am going to do what I told you to do. Where is the input, where is the output, what is in the middle? Which of the five parts is it?
-- The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this gun work" question goes to the four steps.
+- The long version of this talk is the reference. Read it once, top to bottom. After that, use it per task. A tool question goes to your slot. An engine question goes to its world model. A "how does this weapon work" question goes to the four stages.
 - Further reading, if they want shelves: id Software's public source for DOOM, Quake, Quake III, and DOOM 3. three.js and Babylon.js. Godot. Unreal's docs.
 
 **Need**

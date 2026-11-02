@@ -36,10 +36,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** noise into one card: foundations.
 - **Refs:** `ch00` §8.
 
-## S4 — Section 2 intro: Two things *(divider)*
+## S4 — Section 2 intro: Code and data *(divider)*
 
 - **Goal:** name the first cut.
-- **Content:** What is software made of? Two things. Nothing else.
+- **Content:** Software is code and data. Nothing else.
 - **Visual:** code card and data card.
 - **Refs:** `ch00` §1.
 
@@ -92,10 +92,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** the sentence, three ghosted boxes.
 - **Refs:** `ch00` §2.
 
-## S12 — Section 4 intro: It repeats *(divider)*
+## S12 — Section 4 intro: The loop *(divider)*
 
 - **Goal:** add time.
-- **Content:** Software that you play does not run once. It repeats.
+- **Content:** Interactive software does not run once. It loops.
 - **Visual:** a loop arrow.
 - **Refs:** `ch00` §3.
 
@@ -113,10 +113,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** look, correct, repeat.
 - **Refs:** `ch00` §3.1–3.2.
 
-## S15 — Time is the limit
+## S15 — Latency
 
 - **Goal:** why milliseconds matter.
-- **Content:** Finger, device, game, picture, screen, eye. Each step adds time. At 60 frames a second, everything shares about 17 milliseconds.
+- **Content:** Latency is the chain: finger, device, OS, simulation, render, display, eye. Delays add. At 60 fps the whole chain shares about 17 ms.
 - **Visual:** a chain of delays, one budget bar.
 - **Refs:** `ch00` §3.3–3.4.
 
@@ -141,38 +141,38 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** five boxes, one job each.
 - **Refs:** `ch00` §4, `ch01` §1.
 
-## S19 — The fight is about when
+## S19 — Event-driven or polled
 
 - **Goal:** the clock, and two habits.
-- **Content:** One style waits to be told. The other checks on a rhythm. Find the clock first. Then name the part you are in.
+- **Content:** Event-driven waits for an event. Polled checks on a timer. Find the clock first. Then name the part you are in.
 - **Visual:** event versus polled, clock highlighted.
 - **Refs:** `ch00` §4, `ch01` §1.
 
 ## S20 — Section 6 intro: An engine is the same thing, built big *(divider)*
 
 - **Goal:** the move that makes the talk useful.
-- **Content:** An engine is not a new kind of thing. It is the same five parts, each one grown into a department.
+- **Content:** An engine is not a new kind of software. It is the same five parts, each one a subsystem.
 - **Visual:** five boxes, each opening into a list.
 - **Refs:** `ch00` §5, `ch01` §2.
 
-## S21 — Each part becomes a department
+## S21 — Each part becomes a subsystem
 
 - **Goal:** the fill table.
-- **Content:** State becomes the world. Logic becomes physics, AI, and gameplay. Input becomes the input system. Output becomes picture, sound, and UI. The clock becomes the frame loop.
-- **Visual:** five rows, part to department.
+- **Content:** State becomes the world model. Logic becomes physics, AI, and gameplay. Input becomes the input system. Output becomes the renderer, audio, and UI. The clock becomes the frame loop.
+- **Visual:** five rows, part to subsystem.
 - **Refs:** `ch00` §5.1, `ch01` §2.
 
-## S22 — It has a deadline
+## S22 — Hard real-time
 
 - **Goal:** the constraint that rules engines.
-- **Content:** The next picture has to be ready when the screen refreshes. Miss it, and the person in the loop feels it. That deadline explains more engine design than any feature list.
+- **Content:** A frame must finish before the next refresh. Miss it, and the player feels it. That hard real-time deadline explains more engine design than any feature list.
 - **Visual:** frame strip, deadline flag.
 - **Refs:** `ch00` §5.
 
-## S23 — The frame is the person's loop
+## S23 — The frame loop
 
 - **Goal:** one loop, not two.
-- **Content:** Device, commands, update, world, picture, screen, you see it, you act. Then it repeats. The frame is one beat of that loop.
+- **Content:** Device, commands, update, world, render, display, the player sees it, the player acts. Then it repeats. The frame loop and the human loop are the same loop.
 - **Visual:** eight steps, then it repeats.
 - **Refs:** `ch00` §5.2, `ch01` §6.
 
@@ -186,35 +186,35 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 ## S25 — The renderer reads the world
 
 - **Goal:** correct the common mistake.
-- **Content:** The renderer does not live inside the simulation. It reads the world and draws it. Turn the picture off, and the world can still be running.
+- **Content:** The renderer does not live inside the simulation. It reads world state and draws it. A black screen does not mean the simulation stopped.
 - **Visual:** world, then an arrow, then the renderer.
 - **Refs:** `ch01` §3.
 
-## S26 — Section 7 intro: Same shape, different fill *(divider)*
+## S26 — Section 7 intro: Same skeleton, different choices *(divider)*
 
 - **Goal:** why engines feel different.
-- **Content:** If every engine is the same five parts, why do they feel different? Because the fill changes. The parts do not.
+- **Content:** The five parts stay. What changes is how each part is implemented. No engine adds a sixth part.
 - **Visual:** five ghosted boxes, a stamp: fills, never new parts.
 - **Refs:** `ch01` §4–5.
 
 ## S27 — Core and channels
 
 - **Goal:** core versus channels.
-- **Content:** Core is state and the simulation. Channels are the pipes: assets in, audio out, UI out, network. A WAD, a pk3, and a uasset are different containers for the same idea.
+- **Content:** Core is state and simulation. Channels are assets, audio, UI, and network. A WAD, a pk3, and a uasset are different containers for the same channel.
 - **Visual:** a spine, pipes on the sides.
 - **Refs:** `ch01` §3.
 
-## S28 — Four ways to keep time
+## S28 — Fixed, variable, hybrid
 
 - **Goal:** the clock's four beats.
-- **Content:** Fixed steps are repeatable, and must catch up. Variable steps are smooth, and not repeatable. Hybrid keeps fixed physics inside a variable frame. Sometimes the app owns the clock. The loop stays. The beat changes.
+- **Content:** A fixed timestep is repeatable, and must catch up. A variable timestep is smooth, and not repeatable. Hybrid keeps fixed physics inside a variable frame. Sometimes the app owns the clock. The loop stays. The timestep changes.
 - **Visual:** four rows.
 - **Refs:** `ch01` §4.
 
 ## S29 — Four ways engines differ
 
 - **Goal:** the whole difference list.
-- **Content:** How the world is stored. How time is kept. How work is split. Which pipes exist. No engine grows a sixth part. Read the fill, not the brand name.
+- **Content:** World model. Timestep. How work is threaded. Which channels exist. No engine grows a sixth part. Read those four, not the brand name.
 - **Visual:** four cards.
 - **Refs:** `ch01` §5.
 
@@ -222,31 +222,31 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 
 # ACT B — THE WORLD AND THE MACHINE
 
-## S30 — Section 8 intro: How the world is remembered *(divider)*
+## S30 — Section 8 intro: World models *(divider)*
 
 - **Goal:** open the longest section, on the state slot.
-- **Content:** How does the engine remember the world? That choice decides what your day feels like.
+- **Content:** The world model is how the engine stores the world. That choice decides what your day feels like.
 - **Visual:** the state box, enlarged.
 - **Refs:** `ch02`.
 
-## S31 — Three questions. That is the world.
+## S31 — Three questions make the world model
 
 - **Goal:** the classification key.
 - **Content:** How is it stored? How are things related? How do you search it? Those three answers are the world model. Everything else follows.
 - **Visual:** three question cards.
 - **Refs:** `ch02` §1.
 
-## S32 — Three ways to remember a world
+## S32 — Scene graph, BSP, ECS
 
 - **Goal:** the landscape, before any depth.
-- **Content:** A tree, for people. A baked map, plus a flat list. Tables, for the machine. Most engines you will meet are one of these, or a mix.
+- **Content:** Scene graph. BSP plus a flat entity list. ECS. Most engines are one of these, or a mix.
 - **Visual:** three columns of engine names.
 - **Refs:** `ch02` §1–4, `engines`.
 
-## S33 — A tree people can use
+## S33 — Scene graph
 
 - **Goal:** what a scene graph is for.
-- **Content:** Things hang off other things. Attach a sword to a hand, and the hand moves the sword. Artists and designers like this. The cost is walking the tree every frame.
+- **Content:** A scene graph is a parent-child transform tree. Attach a sword to a hand, and the hand moves the sword. The cost is traversing the tree every frame.
 - **Visual:** a small tree, sword on a hand.
 - **Refs:** `ch02` §3–4.
 
@@ -267,14 +267,14 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 ## S36 — Pick the shape your team can feed
 
 - **Goal:** kill the one-true-way idea.
-- **Content:** Trees for people. Baked maps for static levels. Tables for huge counts. Real games mix them. The choice is what your team lives in every day.
+- **Content:** Scene graphs for people. BSP for static levels. ECS for large counts. Shipping engines mix them. The choice is what your team works in every day.
 - **Visual:** three columns into one card.
 - **Refs:** `ch02` §7–8.
 
-## S37 — The world is a box of facts
+## S37 — The world model is a state store
 
 - **Goal:** the store, and why a game is not a web app.
-- **Content:** Input changes the facts. The picture reads the facts. A game pulls those facts every frame, and it simulates. You can rewind a spreadsheet. You cannot rewind a simulation the same way.
+- **Content:** The world model is a state store. Input updates it. The renderer reads it. A game samples that store every frame, and it simulates. You can rewind a store. You cannot rewind a simulation the same way.
 - **Visual:** two flows, three differences.
 - **Refs:** `ch02` §7–8, `ch00` §6.4.
 
@@ -285,14 +285,14 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** world layer, UI layer on top.
 - **Refs:** `ch02` §7.
 
-## S39 — Two kinds of computer, one frame
+## S39 — CPU and GPU
 
 - **Goal:** CPU, GPU, and what a frame can be stuck on.
 - **Content:** The CPU does a few hard jobs, one step at a time. The GPU does one simple job on a huge amount of data. A frame gets stuck on the CPU, the GPU, loading, or memory. The counter often hides which one.
 - **Visual:** one careful worker, one large crew, four chips.
 - **Refs:** `ch03` §1, §7.
 
-## S40 — Read the numbers. Don't guess.
+## S40 — stat unit
 
 - **Goal:** one tool, one method.
 - **Content:** In Unreal, stat unit prints Frame, Game, and Draw. If Game is high and Draw is low, stop tuning shaders. Change one thing at a time. Only the part that can run in parallel gets faster when you add cores.
@@ -306,10 +306,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** two questions, a short ladder.
 - **Refs:** `ch04` §1–7.
 
-## S42 — Whose copy is the real one?
+## S42 — Authority and replication
 
 - **Goal:** memory and truth.
-- **Content:** Shared memory is one whiteboard. Messages are mail. Copies are useful, and they go stale on purpose. On a network, one machine is the authority. A little wrong, for a few milliseconds, is how the game stays playable.
+- **Content:** Shared memory is one copy. Message passing sends copies. Replication keeps those copies on purpose, and they go stale. On a network, one machine is authoritative. A few milliseconds of staleness is how the game stays playable.
 - **Visual:** whiteboard versus mail, a staleness line.
 - **Refs:** `ch04` §8–13, §19–21.
 
@@ -323,42 +323,42 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 ## S44 — Section 11 intro: Three quiet seams *(divider)*
 
 - **Goal:** three short ideas, then leave the machine.
-- **Content:** A contract for what bytes mean. A map of where things are. A landlord between you and the hardware. Three seams. Then we go to people.
-- **Visual:** three chips: contract, map, landlord.
+- **Content:** Schema, spatial index, and the operating system. Three seams. Then people.
+- **Visual:** three chips: schema, spatial index, OS.
 - **Refs:** `ch05`–`ch07`.
 
-## S45 — A file means nothing until both sides agree
+## S45 — A schema is a contract
 
 - **Goal:** schema in one breath.
 - **Content:** A schema is three agreements: what fields exist, how they are laid out, and what the values mean together. If the reader breaks and the file looks fine, the agreement was broken. Not the file.
 - **Visual:** one card, three parts.
 - **Refs:** `ch05` §1.
 
-## S46 — Three clothes for the same truth
+## S46 — Authoring, runtime, and wire
 
 - **Goal:** authoring, runtime, wire.
-- **Content:** Authoring files are for people, and they load slowly. Runtime files are for speed. Network packets are for travel. Same truth, three clothes. A multiplayer desync means the two sides stopped agreeing.
+- **Content:** Authoring files are for people, and they load slowly. Runtime files are cooked for speed. Wire formats are packets. Same data, three formats. A desync means the two sides stopped agreeing on the schema.
 - **Visual:** three vertices.
 - **Refs:** `ch05` §7–9.
 
-## S47 — A map, not a warehouse
+## S47 — A spatial index
 
 - **Goal:** why a spatial index exists.
-- **Content:** "What is near this door?" You can open every crate. Or you can read the map. The map is a cache of where things are. If the map lies, it is worse than no map. The same map serves drawing and collision.
+- **Content:** A spatial index answers what is near a point without testing everything. It is a cache of positions. If it is stale, it is worse than none. The same index serves rendering and collision.
 - **Visual:** warehouse beside a map.
 - **Refs:** `ch06` §1–2.
 
-## S48 — The operating system is the landlord
+## S48 — The OS and system calls
 
-- **Goal:** no direct touches.
-- **Content:** Your game does not touch the disk or the GPU directly. It asks. The operating system schedules, hands out tickets, and fronts the GPU. Your game is a process in a walled room.
+- **Goal:** no direct hardware access.
+- **Content:** The game does not touch the disk or the GPU directly. It makes a system call. The OS schedules the process, issues handles, and fronts the GPU.
 - **Visual:** app, kernel, hardware, one door.
 - **Refs:** `ch07` §1–8.
 
-## S49 — Read the record. Don't guess.
+## S49 — Read the OS counters
 
 - **Goal:** the diagnosis habit.
-- **Content:** The operating system keeps a record of every process. Task Manager and stat unit only show what that record knows. Name it, watch it, read the record. Then ask: game bug, or a limit the OS imposed?
+- **Content:** Task Manager and stat unit show what the kernel recorded. Name the process, watch it, read the counters. Then ask: game bug, or an OS limit?
 - **Visual:** a ledger, two outcomes.
 - **Refs:** `ch07` §9–10.
 
@@ -373,38 +373,38 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** four role cards.
 - **Refs:** `ch00` §7.
 
-## S51 — Someone builds it. Someone fills it.
+## S51 — Owners and feeders
 
 - **Goal:** owners and feeders.
 - **Content:** Owners build and maintain a part. Feeders fill it. Nobody owns the whole machine. The clock has no feeder. Everyone obeys it. A lot of team fights are two people standing on different sides of one box.
 - **Visual:** owner column, feeder column, clock row marked.
 - **Refs:** `ch00` §7, `ch01` §2.
 
-## S52 — One gun, four steps
+## S52 — One weapon, four stages
 
 - **Goal:** one object that touches every job.
-- **Content:** Design it. Make the files. Hook the files into the engine. Code plays them back. Until the last step, the gun does nothing.
+- **Content:** Design, data, engine integration, gameplay code. Until gameplay code runs, the weapon is inert data.
 - **Visual:** four chevrons.
 - **Refs:** `ch08` §1.
 
 ## S53 — Design it. Make the files. Nothing fires yet.
 
 - **Goal:** stages 1 and 2.
-- **Content:** Design decides what the gun is. That document is already a contract. Then art and audio make files: model, rig, textures, sound. Those files do not fire. They sit there.
+- **Content:** Design decides what the weapon is. That document is already a schema. Then art and audio produce the data: model, rig, textures, sound. Those files do nothing yet.
 - **Visual:** two cards, the second full of inert files.
 - **Refs:** `ch08` §2–3.
 
-## S54 — Hook it up. Then code plays it.
+## S54 — Import, then gameplay code
 
 - **Goal:** stages 3 and 4.
-- **Content:** Import turns files into assets the engine can find. Some load when needed. Some are baked in. Gameplay code reads the recipe and plays it: animation, sound, particles, damage. The finger on the button is the input.
+- **Content:** Import turns files into assets. Soft references load on demand. Hard references stay loaded. Gameplay code plays the asset: animation, sound, particles, damage. The button press is the input.
 - **Visual:** files become a firing loop.
 - **Refs:** `ch08` §4–5.
 
 ## S55 — Same chain in DOOM 3
 
 - **Goal:** this is not an Unreal story.
-- **Content:** DOOM 3 did the same four steps in 2004. Design, files, a placed entity, a script that plays them. The last step only plays what the first three made. Engines change. The chain does not.
+- **Content:** DOOM 3 used the same four stages in 2004. Design, data, a placed entity, a script that plays them. Gameplay code only plays what the earlier stages produced. Engines change. The chain does not.
 - **Visual:** the same four steps, id Tech labels.
 - **Refs:** `ch08` §6, `Eng/DOOM3`.
 
@@ -419,7 +419,7 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** four chips.
 - **Refs:** `ch09`.
 
-## S57 — An agent is four pieces
+## S57 — Backend, model, harness, knowledge
 
 - **Goal:** the four pieces, plainly.
 - **Content:** A backend runs the model. The model is the trained brain. The harness is the program on your machine, and the only piece that touches your files. Knowledge is your files, docs, and notes. A model alone is a chat box. A harness turns words into actions.
@@ -454,10 +454,10 @@ say are in [`speaker-cards.md`](speaker-cards.md).
 - **Visual:** two panels, one loop across both.
 - **Refs:** `ch10` §1–2.
 
-## S62 — The engine stays. Parts get smarter.
+## S62 — The hybrid engine
 
-- **Goal:** the future machine, without the slogan.
-- **Content:** The engine we mapped stays. Pieces of it get replaced by learned systems, one at a time. Neural rendering already ships. Shared real-time worlds are where those systems watch people play.
+- **Goal:** the future machine, in ordinary terms.
+- **Content:** The engine stays as the structure. Subsystems get replaced by learned models, one at a time. Neural rendering already ships. Shared real-time worlds are where those models watch people play.
 - **Visual:** a base bar, a few inserts.
 - **Refs:** `ch10` §3–4.
 
