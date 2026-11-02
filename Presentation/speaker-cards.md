@@ -216,7 +216,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 
 - A schema is the description of what data must look like: its fields, their types, and what is allowed.
 - With a schema, "this file is valid" stops being an opinion and becomes a check any tool can run consistently.
-- JSON Schema, typed engine assets, and data tables are all the same idea in different clothes.
+- The shape follows the intent. FBX, glTF, and MDL are all 3D-model formats, but each was designed for a different job: FBX for authoring interchange, glTF to ship between tools, MDL for the engine to load fast. Different goals, different schemas.
 - Think of the weapon files: names, units, and ranges. A schema is what makes them machine-checkable before they ever reach a consumer.
 
 **Show / ask**
@@ -226,6 +226,7 @@ The numbers for the example weapon are invented teaching values, not a claim abo
 **If asked**
 
 - Schemas range from implicit convention to formal languages (JSON Schema, Protocol Buffers) to compiled types; the value appears when producer and consumer are separate parties.
+- ch05 §3–4 grounds the example: FBX is the de-facto authoring interchange nobody openly owns, glTF is the open "JPEG of 3D" (indexed and runtime-conscious), and the `.mdl` family is tied to the engine's renderer. §5 is the rule: each schema is designed for its job, which is why engines convert between them.
 - This is the reference's one-idea from ch05 §1: no data ever works without a declared shape-and-meaning contract. JSON, YAML, and binary forms are all covered in ch05 §6.
 
 **Next**

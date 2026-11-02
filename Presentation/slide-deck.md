@@ -96,9 +96,9 @@ Audience text is the **Content** line. The words to say are in
 ## S12 — A schema says what the data must look like
 
 - **Goal:** define the schema idea.
-- **Content:** A **schema** describes the shape, meaning, and limits of data | Names, types, defaults, and allowed ranges become checkable | Without one, "the file is valid" is only an opinion; with one, any tool can check a handoff | JSON Schema, typed assets, and data tables all play the same role
+- **Content:** A **schema** describes the shape, meaning, and limits of data | Shape follows the data's **intent**: **.fbx** authors, **.gltf** ships, **.mdl** runs — three 3D-model formats, three goals | Names, types, defaults, and allowed ranges become checkable by any tool | Without one, "the file is valid" is only an opinion; JSON Schema, typed assets, and tables all play the same role
 - **Visual:** a data record with named, typed fields.
-- **Refs:** `ch05` §1, §6.
+- **Refs:** `ch05` §1, §3–6.
 
 ## S13 — Contracts bind producers and consumers
 
