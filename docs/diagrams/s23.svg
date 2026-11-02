@@ -12,14 +12,14 @@
     <g><rect x="74" y="107" width="100" height="34" rx="8" fill="#1F2937" stroke="#38BDF8" stroke-width="1.5"/><text x="124" y="128">ACTS</text></g>
   </g>
 
-  <g fill="#94A3B8" transform="translate(287,91) rotate(22.5)"><polygon points="7,-8 7,8 -7,0"/></g>
-  <g fill="#94A3B8" transform="translate(368,173) rotate(67.5)"><polygon points="7,-8 7,8 -7,0"/></g>
-  <g fill="#94A3B8" transform="translate(368,287) rotate(112.5)"><polygon points="7,-8 7,8 -7,0"/></g>
-  <g fill="#94A3B8" transform="translate(287,369) rotate(157.5)"><polygon points="7,-8 7,8 -7,0"/></g>
-  <g fill="#94A3B8" transform="translate(173,369) rotate(202.5)"><polygon points="7,-8 7,8 -7,0"/></g>
-  <g fill="#94A3B8" transform="translate(92,287) rotate(247.5)"><polygon points="7,-8 7,8 -7,0"/></g>
-  <g fill="#94A3B8" transform="translate(92,173) rotate(292.5)"><polygon points="7,-8 7,8 -7,0"/></g>
-  <g fill="#94A3B8" transform="translate(173,91) rotate(337.5)"><polygon points="7,-8 7,8 -7,0"/></g>
+  <g fill="#94A3B8" transform="translate(287,91) rotate(22.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
+  <g fill="#94A3B8" transform="translate(368,173) rotate(67.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
+  <g fill="#94A3B8" transform="translate(368,287) rotate(112.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
+  <g fill="#94A3B8" transform="translate(287,369) rotate(157.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
+  <g fill="#94A3B8" transform="translate(173,369) rotate(202.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
+  <g fill="#94A3B8" transform="translate(92,287) rotate(247.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
+  <g fill="#94A3B8" transform="translate(92,173) rotate(292.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
+  <g fill="#94A3B8" transform="translate(173,91) rotate(337.5)"><polygon points="-7,-8 -7,8 7,0"/></g>
 
   <rect x="163" y="176" width="134" height="108" rx="14" fill="#312E81" stroke="#6366F1" stroke-width="2"/>
   <rect x="163" y="176" width="134" height="6" rx="3" fill="#6366F1"/>

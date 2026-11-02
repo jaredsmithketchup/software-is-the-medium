@@ -8,8 +8,8 @@
   <rect x="328" y="16" width="124" height="66" rx="12" fill="#064E3B"/>
   <text x="390" y="53" font-size="13" font-weight="700" fill="#D1FAE5" text-anchor="middle">OUTPUT</text>
 
-  <polygon points="390,82 382,112 398,112" fill="#34D399"/>
-  <polygon points="70,112 62,82 78,82" fill="#34D399"/>
+  <polygon points="382,94 398,94 390,118" fill="#34D399"/>
+  <polygon points="62,116 78,116 70,88" fill="#34D399"/>
 
   <rect x="18" y="118" width="424" height="56" rx="12" fill="#1F2937" stroke="#34D399" stroke-width="1.5" stroke-dasharray="6 5"/>
   <text x="230" y="141" font-size="13" font-weight="600" fill="#6EE7B7" text-anchor="middle">perceive → decide → act</text>
